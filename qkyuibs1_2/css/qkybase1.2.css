@@ -184,9 +184,9 @@ body{font-family: Microsoft YaHei,"Hiragino Sans GB W3", Helvetica, Arial, sans-
 @media (min-width: 1200px){
 .container {width: 1080px;}
 }
-footer{ position:absolute; bottom:0; padding:15px 0; text-align:center; left:0; width:100%; background:#fff; color:#a5a5a5;}
-footer.inverse{ background:#515151;}
-footer.default{ background:#fff; }
+.footer{ position:absolute; bottom:0; padding:15px 0; text-align:center; left:0; width:100%; background:#fff; color:#a5a5a5;}
+.footer.inverse{ background:#515151;}
+.footer.default{ background:#fff; }
 
 
 /*导航条改装*/
