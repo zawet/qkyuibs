@@ -17,7 +17,7 @@ define({
 		"morebtn":true,
 		"common":[["个人办公","href='#'"],["行政办公","href='#'"],["流程审批","href='#'"]],
 		"lately":[["个人办公","href='#'"],["行政办公","href='#'"],["流程审批","href='#'"]],
-		"tea_info":{"name":"张晓明","photo":""},
+		"tea_info":{"name":"张晓明","isphoto":true,"photo":"images/tx01.png"},
 		"otherli":[["个人空间","href='#'"],["退出","id='toOut'"]]
 	}
 });
