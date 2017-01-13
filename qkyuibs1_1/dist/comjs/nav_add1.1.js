@@ -19,6 +19,8 @@ define(function(require) {
 				$(".nav_logo img").attr("src",opts.logosrc);
 				$(".nav_pjname").html(opts.pjname);
 				$(".other_name").html(opts.tea_info.name);
+				if(opts.tea_info.isphoto)$(".user_photo").html("<img src='"+opts.tea_info.photo+"' />");
+				else $(".user_photo").addClass("dist");
 				tofor($("#navbar .nav"),opts.navli,"lia",opts.navli_active);
 				tofor($("#common"),opts.common,"a");
 				tofor($("#lately"),opts.lately,"a");
@@ -32,6 +34,7 @@ define(function(require) {
 				}
 				if(opts.morebtn)$(".navbtn").on("click",function(){$(".nav_more").slideToggle(300);});
 				else $(".navbtn").hide();
+				
 		    })
 		}
 	});
