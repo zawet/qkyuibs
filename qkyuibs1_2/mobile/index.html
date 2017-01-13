@@ -6,54 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="qky2.ico">
-    <title>全课云OA（移动版）行政值班</title>
+    <link rel="icon" href="../qky2.ico">
+    <title>行政值班</title>
     <!-- Bootstrap 基础样式 CSS -->
     <link href="../dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
     
     <!--全课云基础样式覆盖-->
+    <link href="../css/iconfont.css" rel="stylesheet">
     <link href="../css/qkybase1.2.css" rel="stylesheet">
+    <link href="../css/box.css" rel="stylesheet">
+    <link href="../css/quickcss.css" rel="stylesheet">
     
   </head>
-  <body class="qkybody">
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="qkynav"></nav>
-    <div class="container">
-    
-        <div class="box_ff pl10 pr10 pt10 pb10 mt10">
-            <h4 class="page-header mt10 mb5">值班管理</h4>
-            <div class="qkytable_btn pl0 clear">
-                <a class="btn btn-default mr10" role="button" href="index_gl_zb.html"><i class="qkyicon_14 mr5">&#xe603;</i>值班安排</a>
-                <a class="btn btn-default" role="button" href="index_gl_db.html"><i class="qkyicon_14 mr5">&#xe6b0;</i>代班记录</a>
-                <span class="mian_color  fz_we fz_16 fr height30">2017-01-04</span>
+  <body class="qkybody pt0 pb0">
+    <div class="container-fluid pl0 pr0">
+        <div class="box_ff_mobile pa10">
+            <div class="btn-group btn-group-justified">
+                <a class="btn btn-success" role="button"><i class="qkyicon_14 mr5">&#xe603;</i>值班安排</a>
+                <a class="btn btn-default" role="button"><i class="qkyicon_14 mr5">&#xe6b0;</i>代班记录</a>  
             </div>
-            <div class="qkytable table-responsive">
-                    <table class="table table-striped table-bordered">
-                        <thead>
-                            <tr><th>日期</th><th>值班人员</th><th>记录情况</th><th>操作</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>星期一</td><td>董建，赵广荣，<label class="nav_color">许志勤</label></td><td>已记录</td>
-                            <td><a class="table_btn mr5" href="index_jlb.html" title="编辑"><i class="qkyicon_14 mr5">&#xe60f;</i>编辑</a></td>
-                            </tr>
-                            <tr><td>星期二</td><td>王俊鹏，刘华林，<label class="nav_color">李萍</label></td><td>未记录</td>
-                            <td><a class="table_btn mr5" href="index_jlb.html" title="编辑"><i class="qkyicon_14 mr5">&#xe60f;</i>编辑</a></td>
-                            </tr>
-                            <tr class="today"><td class="txt">星期三</td><td class="txt">季新明，王曙光，<label class="nav_color">陆瑢</label></td><td>未记录</td>
-                            <td><a class="table_btn mr5" href="index_jlb.html" title="编辑"><i class="qkyicon_14 mr5">&#xe60f;</i>编辑</a></td>
-                            </tr>
-                            <tr><td>星期四</td><td>蔡长春，蔡春，<label class="nav_color">黄敏</label></td><td></td><td></td></tr>
-                            <tr><td>星期五</td><td>殷荣安，黄波，<label class="nav_color">李晶</label></td><td></td><td></td></tr>
-                            <tr><td>星期六（单周）</td><td>刘海，杨立根，<label class="nav_color">吴宁</label></td><td></td><td></td></tr>
-                            <tr><td>星期六（双周）</td><td>刘海，曹浩明，<label class="nav_color">宋洋</label></td><td></td><td></td></tr>
-                            <tr><td>星期日（单周）</td><td>刘鸿康，徐剑，<label class="nav_color">潘凌云</label></td><td></td><td></td></tr>
-                            <tr><td>星期日（双周）</td><td>刘鸿康，徐剑，<label class="nav_color">潘凌云</label></td><td></td><td></td></tr>
-                        </tbody>
-                    </table>
-             </div>
+            <div class="ub ub-ac pt10 pb10">
+            <div class="ub-f1"><a><i class="qkyicon_20">&#xe609;</i></a></div>
+            <div class="ub-f4 mian_color fz_we fz_16 t_c">2017-01-04   <span>星期一</span></div>
+            <div class="ub-f1 t_r"><a>已记录</a></div>
+            </div>
+            
             
         </div>
         
-        <div class="box_ff mt10 mb10 dist_box">
+        <div class="box_ff_mobile mt10 mb10 dist_box yc">
             <i class="qkyicon_100 mian_color">&#xe637;</i>
             <div class="dist_txt">初次登录请先</div>
             <a class="btn btn-default mian_line mian_color" role="button" href="index_gl_zb.html"><i class="qkyicon_14 mr5">&#xe603;</i>值班安排</a>
@@ -61,13 +42,12 @@
         
       
     </div>
-    <footer class="inverse">全通教育集团（广东）股份有限公司  版权所有  ©2007-2015</footer>
     <script src="../dist/jq/1.11.1/jquery.min.js"></script>
     <!--模块化js-->
     <script src="../dist/sea.js"></script>
     <script src="../dist/seaconfig.js"></script>
     <script>
-     seajs.use(["bs","nav","navicon"],function(){$("#qkynav").qkynav({"logosrc":"../images/nav_logo/logo.png"});});
+     seajs.use(["bs","nav","navicon"],function(){});
     </script>
   </body>
 </html>
