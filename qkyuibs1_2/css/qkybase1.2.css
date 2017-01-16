@@ -131,7 +131,7 @@ body{font-family: Microsoft YaHei,"Hiragino Sans GB W3", Helvetica, Arial, sans-
 
 
 /*按钮改装*/
-.btn{ padding:4px 15px; min-width:80px; height:30px; border-radius:3px;}
+.btn.qkybtn{ padding:4px 15px; min-width:80px; height:30px; border-radius:3px; }
 .auto{ min-width:auto;}
 
 
@@ -225,6 +225,8 @@ a.checkbox_a{display:block; width:16px; height:16px; border:1px solid #dadada; b
 .table-calendar > tbody > tr > td .today{ background:#72D572; color:#fff;}
 .table-calendar > tbody > tr > td.oldday{ background:#f5f5f5;}
 .table-calendar > tbody > tr > td .calday .calli{ display:block; text-decoration:inherit; cursor:pointer; color:#2baf2b;  padding:0 5px 5px;}
+.table-calendar > tbody > tr > td .calday .callis{display:block; text-align:center; margin:10% auto; padding:6px 0; background:#2baf2b; color:#fff; width:80%; border-radius:6px;text-decoration:inherit; cursor:pointer;box-shadow:1px 3px 5px #e1e1e1;}
+.table-calendar > tbody > tr > td .calday .callis:hover{box-shadow:1px 3px 5px #d8d8d8; font-weight:bold;}
 .table-calendar > tbody > tr > td .calday .calli.more{ color:#72D572;}
 .table-calendar > tbody > tr > td .calday .calli:hover{ color:#72D572;}
 .table-calendar > tbody > tr > td .today.calday .calli.out{ color:#fff;}
