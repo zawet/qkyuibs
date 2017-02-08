@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../qky2.ico">
+    <title>行政值班</title>
+    <!-- Bootstrap 基础样式 CSS -->
+    <link href="../dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+    <link href="../dist/swiper/3.4.1/css/swiper.css" rel="stylesheet">
+    <!--全课云基础样式覆盖-->
+    <link href="../css/iconfont.css" rel="stylesheet">
+    <link href="../css/qkybase1.2.css" rel="stylesheet">
+    <link href="../css/box.css" rel="stylesheet">
+    <link href="../css/quickcss.css" rel="stylesheet">
+    
+  </head>
+  <body class="mobile_qkybody">
+
+        <div class="mobile_box pa10 top mobile_header">
+            <div class="btn-group btn-group-justified">
+                <a class="btn btn-default qkybtn" role="button" href="index.html"><i class="qkyicon_14 mr5">&#xe603;</i>值班安排</a>
+                <a class="btn btn-success qkybtn" role="button" href="index_jl_admin.html"><i class="qkyicon_14 mr5">&#xe6b0;</i>值班记录</a>    
+            </div>
+            <div class="ub ub-ac pt10">
+                <a class="l mobile_btn"><i class="qkyicon_14 fz_18 fz_we">&#xe604;</i></a>
+                <div class="ub-f1 mian_color fz_we fz_16 t_c">
+                <span class="thisday mr10"><span class="year"></span>年<span class="moon"></span>月<span class="day"></span>日</span>
+                <span class="thisweek">2017-01-21</span>
+                </div>
+                <a class="r mobile_btn"><i class="qkyicon_14 fz_18 fz_we">&#xe6b3;</i></a>
+            </div>    
+        </div>
+        
+        <div class="mobile_mian">
+        	<div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide inbox"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--模板-->
+        <div class="yc" id="ji_cadr_mb">
+        	<div class="mobile_cadr have pt0 pb0 mt10">
+                <div class="mobile_cadr_list ub ub-ac"><div class="list1">内容：</div><div class="ub-f1 t_r content">无</div></div>
+                <div class="mobile_cadr_list ub ub-ac"><div class="list1">发现问题：</div><div class="ub-f1 t_r problem">无</div></div>
+                <div class="mobile_cadr_list ub ub-ac"><div class="list1">处理结果：</div><div class="ub-f1 t_r result">无</div></div>
+                <div class="mobile_cadr_list ub ub-ac end"><div class="list1">反馈部门：</div><div class="ub-f1 t_r feedback">德育处</div></div>
+            </div>
+        </div>
+        <div class="yc" id="ji_cadr_mb_dist">
+        	<div class="mobile_cadr have t_c pa20 co_a3 mt10">
+                暂无数据
+            </div>
+        </div>
+
+
+        <script src="../dist/jq/1.11.1/jquery.min.js"></script>
+        <script  src="../dist/swiper/3.4.1/js/swiper.min.js"></script>
+        <script src="js/week_cadr.js"></script>
+        <script>
+		
+		//数据
+		var jl_datas={
+			"2017-2-1":[{"content":"2017-2-1","problem":"无","result":"无","feedback":"德育处"},{"content":"无","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-2":[{"content":"2017-2-2","problem":"无","result":"无","feedback":"德育处"},{"content":"无","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-3":[{"content":"2017-2-3","problem":"无","result":"无","feedback":"德育处"},{"content":"无","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-4":[{"content":"2017-2-4","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-5":[{"content":"2017-2-5","problem":"无","result":"无","feedback":"德育处"},{"content":"无","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-6":[{"content":"2班午休吵闹","problem":"吵闹","result":"安抚后安静了","feedback":"德育处"},{"content":"无","problem":"无","result":"无","feedback":"德育处"},{"content":"无","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-7":[{"content":"2017-2-7","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-8":[{"content":"2017-2-8","problem":"无","result":"无","feedback":"德育处"},{"content":"无","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-9":[{"content":"2017-2-9","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-10":[{"content":"2017-2-10","problem":"无","result":"无","feedback":"德育处"}],
+			}
+		
+		//滑动装置	
+       	var swiper= new Swiper('.swiper-container',{
+			onSlidePrevEnd:function(swiper){goday("","","","prv");},//向前滑动的时候
+			onSlideNextEnd: function(swiper){goday("","","","next");}//向后滑动的时候
+		});
+		
+		//主体执行	
+        $(function(){
+           	goday(toy,tom+1,tod);
+            $(".mobile_btn.l").on("click",function(){swiper.slidePrev();});
+            $(".mobile_btn.r").on("click",function(){swiper.slideNext();});
+			jl_cadr(toy,tom+1,tod,"prv");
+			jl_cadr(toy,tom+1,tod,"next");
+        })
+		
+        </script>
+  </body>
+</html>

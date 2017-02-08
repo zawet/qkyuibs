@@ -10,7 +10,7 @@
     <title>行政值班</title>
     <!-- Bootstrap 基础样式 CSS -->
     <link href="../dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
-    
+    <link href="../dist/swiper/3.4.1/css/swiper.css" rel="stylesheet">
     <!--全课云基础样式覆盖-->
     <link href="../css/iconfont.css" rel="stylesheet">
     <link href="../css/qkybase1.2.css" rel="stylesheet">
@@ -18,36 +18,122 @@
     <link href="../css/quickcss.css" rel="stylesheet">
     
   </head>
-  <body class="qkybody pt0 pb0">
-    <div class="container-fluid pl0 pr0">
-        <div class="box_ff_mobile pa10">
+  <body class="mobile_qkybody">
+
+        <div class="mobile_box pa10 top mobile_header">
             <div class="btn-group btn-group-justified">
-                <a class="btn btn-success" role="button"><i class="qkyicon_14 mr5">&#xe603;</i>值班安排</a>
-                <a class="btn btn-default" role="button"><i class="qkyicon_14 mr5">&#xe6b0;</i>代班记录</a>  
+                <a class="btn btn-success qkybtn" role="button" href="index.html"><i class="qkyicon_14 mr5">&#xe603;</i>值班安排</a>
+                <a class="btn btn-default qkybtn" role="button" href="index_jl.html"><i class="qkyicon_14 mr5">&#xe6b0;</i>值班记录</a>  
             </div>
-            <div class="ub ub-ac pt10 pb10">
-            <div class="ub-f1"><a><i class="qkyicon_20">&#xe609;</i></a></div>
-            <div class="ub-f4 mian_color fz_we fz_16 t_c">2017-01-04   <span>星期一</span></div>
-            <div class="ub-f1 t_r"><a>已记录</a></div>
-            </div>
-            
-            
+            <div class="ub ub-ac pt10">
+                <a class="l mobile_btn"><i class="qkyicon_14 fz_18 fz_we">&#xe604;</i></a>
+                <div class="ub-f1 mian_color fz_we fz_16 t_c"><span class="week_s">2017-01-15</span> 至 <span class="week_e">2017-01-21</span></div>
+                <a class="r mobile_btn"><i class="qkyicon_14 fz_18 fz_we">&#xe6b3;</i></a>
+            </div>    
         </div>
         
-        <div class="box_ff_mobile mt10 mb10 dist_box yc">
-            <i class="qkyicon_100 mian_color">&#xe637;</i>
-            <div class="dist_txt">初次登录请先</div>
-            <a class="btn btn-default mian_line mian_color" role="button" href="index_gl_zb.html"><i class="qkyicon_14 mr5">&#xe603;</i>值班安排</a>
+        <div class="mobile_mian">
+        	<div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide inbox"></div>
+                </div>
+            </div>
         </div>
+
         
-      
+    <!--模板-->
+    <div class="yc" id="cadr_mb">
+        <div class="mobile_cadr ub ub-ac die">
+            <div class="ub-f1">
+            <div class="mobile_cadr_txt"><label class="mian_color fz_18 cal">2017-01-20</label><span class="week ml5">星期五</span></div>
+            <div class="mobile_cadr_txt">值班人员:<label class="m zb">未安排</label></div>
+            <div class="mobile_cadr_txt">记录人:<label class="m jl">未安排</label></div>
+            </div>
+            <a class="btn  btn-default btn-xs ">未记录</a>
+        </div>
     </div>
+    <div class="yc" id="today_mb"><div class="day_tips">今天</div></div>
+
     <script src="../dist/jq/1.11.1/jquery.min.js"></script>
-    <!--模块化js-->
-    <script src="../dist/sea.js"></script>
-    <script src="../dist/seaconfig.js"></script>
+    <script  src="../dist/swiper/3.4.1/js/swiper.min.js"></script>
+    <script src="js/week_cadr.js"></script>
     <script>
-     seajs.use(["bs","nav","navicon"],function(){});
+    var zb_data={
+        "2017-1-1":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-2":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-3":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-4":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-5":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-6":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-7":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-8":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-9":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-10":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-11":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-12":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-13":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-14":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-15":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-16":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-17":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-18":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-19":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-1-20":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-1-21":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-1-22":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-1-23":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-1-24":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-1-25":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-1-26":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-1-27":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-1-28":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-1-29":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-1-30":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-1-31":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+		"2017-2-1":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-2-2":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-2-3":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-2-4":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-2-5":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-2-6":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":true},
+        "2017-2-7":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-8":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-9":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-10":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-11":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-12":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-13":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-14":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-15":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-16":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-17":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-18":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-19":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-20":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-21":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-22":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-23":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-24":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-25":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-26":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-27":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false},
+        "2017-2-28":{"zb":"董建,赵广荣,许志勤","jl":"许志勤","isjl":false}
+        };
+
+	
+	//滑动装置	
+    var swiper= new Swiper('.swiper-container',{
+		onSlidePrevEnd:function(swiper){goweek("","","","prv");},//向前滑动的时候
+		onSlideNextEnd: function(swiper){ goweek("","","","next");}//向后滑动的时候
+	});
+		
+    $(function(){
+        goweek(toy,tom+1,tod,"");//初始化
+        $(".mobile_btn.l").click(function(){swiper.slidePrev();});
+        $(".mobile_btn.r").click(function(){swiper.slideNext();});
+		ap_xr("","prv");
+		ap_xr("","next");
+    })
     </script>
   </body>
 </html>

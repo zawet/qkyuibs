@@ -107,7 +107,7 @@ define(function(require) {
 			}
 			
 			for(var key in qkydata.table_data){
-				if(key==thisrl){
+				/*if(key==thisrl){
 					//console.log(morebox);
 					$(this).find(".calbox").html("");
 					$(this).append(morebox);//插入更多框架
@@ -126,7 +126,15 @@ define(function(require) {
 							if(i>2) $(this).hide();
 						});
 					}
+				}*/
+				if(key==thisrl){
+				$(this).find(".calbox").html("");
+				
+				$(this).find(".calbox").append(
+						"<a class='callis dian3'>"+qkydata.table_data[thisrl].length+"项记录</a>"
+						);//插入日历事件
 				}
+				
 			}
 			
     	});
