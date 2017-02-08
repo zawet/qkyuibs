@@ -34,9 +34,11 @@ body{font-family: Microsoft YaHei,"Hiragino Sans GB W3", Helvetica, Arial, sans-
 .nav_color{color:#0A7E07;}
 .nav_qkymc a{ color:#2baf2b;} 
 .box_ff{ border:1px solid #d8d8d8; background:#fff;}
-.box_ff_mobile{ border:1px solid #d8d8d8; background:#fff; border-left:0; border-right:0;}
+
 .cadr_hbg{ background:#f4f4f4;}
 
+.a_tdn{text-decoration:none;}
+.a_tdn:hover{ text-decoration:none;}
 
 /*****主导航条改装*****/
 .nav_box{ width:100%;}
