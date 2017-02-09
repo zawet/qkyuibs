@@ -361,7 +361,12 @@ a.checkbox_a{display:block; width:16px; height:16px; border:1px solid #dadada; b
 
 
 /***版本2特殊模块css***/
+.header_nav{ float:left; color:#535353; padding:0 20px; margin-top:7px; }
+.header_nav:nth-child(1){ border-right:1px solid #666; padding-left:0;}
+.header_nav.active{ font-weight:bold;}
+.header_nav:hover{ text-decoration:inherit; color:#222;}
 
+.error_tips{ color:#F0485F !important}
 /*星期卡片*/
 .cadr_box{ margin-bottom:5px;}
 .cadr_head{  padding:15px; background:#f9f9f9; margin:0;}
