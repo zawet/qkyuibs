@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="qky2.ico">
+    <title>全课云—毕业生网上报到系统</title>
+    <!-- Bootstrap 基础样式 CSS -->
+    <link href="dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+    
+    <!--全课云基础样式覆盖-->
+    <link href="css/iconfont.css" rel="stylesheet">
+    <link href="css/qkybase1.3.css" rel="stylesheet">
+    <link href="css/quickcss.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="qkybody ff_background">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="qkynav"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container_left col-sm-4">
+                <div class="row">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <ul class="container_left_nav">
+                        <li class="nav_title">报到步骤</li>
+                        <li >
+                            <a href="index.html">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td><div class="xu">1</div></td><td><label>第一步</label></td><td><span>阅读注意事项填写身份证号</span></td></tr>
+                            </table>
+                            </a>
+                        </li>
+                        <li class=" active"><a href="index_dj.html">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td><div class="xu">2</div></td><td><label>第二步</label></td><td><span>毕业生报到情况登记表</span></td></tr>
+                            </table></a>
+                        </li>
+                        <li><a href="index_qr.html">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td><div class="xu">3</div></td><td><label>第三步</label></td><td><span>确认您所填写资料的正确性</span></td></tr>
+                            </table></a>
+                        </li>
+                        <li><a href="index_wc.html">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td><div class="xu">4</div></td><td><label>第四步</label></td><td><span>完成报道</span></td></tr>
+                            </table></a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container_right col-sm-8 col-sm-offset-4">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label  pl0">姓名：</label>
+                        <div class="col-sm-4 pl0"><input type="text" class="form-control"  placeholder="请输入姓名"></div>
+                        <div class="col-sm-5  error_tips height34">姓名中间不能有空格</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2  height30 t_r mb0 ">性别：</label>
+                        <div class="col-sm-10 pl0" id="sex_radio">
+                        <label class="radio-inline clear pl0 pt0">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">男</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">女</span>
+                        </label>
+                    	</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label  pl0">报到证编号：</label>
+                        <div class="col-sm-4 pl0"><input type="text" class="form-control"  placeholder="请输入报到证编号"></div>
+                        <div class="col-sm-6  error_tips height34">请用半角阿拉伯数字</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label  pl0">身份证：</label>
+                        <div class="col-sm-4 pl0"><input type="text" class="form-control"  placeholder="请输入身份证"></div>
+                        <div class="col-sm-6  error_tips height34">请用半角阿拉伯数字</div>
+                        <div class="col-sm-2 col-sm-offset-2 pl0 mt10 pr0"><a class="btn btn-success po_r">选择文件<input type="file" class="ycfile"></a></div>
+                        <div class="col-sm-8 error_tips height34 mt10 pl0">正反身份证扫描件或照片，文件不大于3M</div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label class="col-sm-2  control-label">毕业学校：</label>
+                      <div class="col-sm-4 pl0">
+                          <div class="dropdown qkydropdown havechoose">
+                              <a class="btn btn-default dropdown-toggle auto" id="dropdownMenu1" data-toggle="dropdown">
+                                  <span class="value">孝感第一中学</span>
+                                  <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">孝感第一中学</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="col-sm-1 pl0 "><a class="btn btn-success">搜索</a></div>
+                      <div class="col-sm-4 error_tips height34">以毕业证的毕业学校全称为准</div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label class="col-sm-2  control-label">所学专业：</label>
+                      <div class="col-sm-4 pl0">
+                          <div class="dropdown qkydropdown havechoose">
+                              <a class="btn btn-default dropdown-toggle auto" id="dropdownMenu1" data-toggle="dropdown">
+                                  <span class="value">信息工程</span>
+                                  <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">信息工程</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="col-sm-1 pl0 "><a class="btn btn-success">搜索</a></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-sm-2  height30 t_r mb0">学历层次：</label>
+                        <div class="col-sm-10 pl0" id="xl_radio">
+                        <label class="radio-inline clear pl0 pt0">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">博士</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">硕士</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">本科</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">大专</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">高中及以下</span>
+                        </label>
+                    	</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-sm-2  control-label">毕业时间：</label>
+                        <div class="col-sm-6 pl0">
+                        <div class="row">
+                        <div class="col-sm-6 col-xs-6">
+                        <input type="text" class="form-control laydate-icon" onClick="laydate()">  
+                        </div>
+                        <div class="col-sm-6 col-xs-6">
+                        <input type="text" class="form-control laydate-icon" onClick="laydate()">  
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-sm-2 height30 t_r mb0">生源地：</label>
+                        <div class="col-sm-8 pl0" id="sy_radio">
+                        <label class="radio-inline clear pl0 pt0 ml0 mr10">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">孝感市</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0 ml0 mr10">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">孝感县</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0 ml0 mr10">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">大悟县</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0 ml0 mr10">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">云梦县</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0 ml0 mr10">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">影城县</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0 ml0 mr10">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">孝感市</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0 ml0 mr10">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">孝感县</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0 ml0 mr10">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">大悟县</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0 ml0 mr10">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">云梦县</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0 ml0 mr10">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">影城县</span>
+                        </label>
+                    	</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-sm-2 height30 t_r mb0">就业情况：</label>
+                        <div class="col-sm-8 pl0" id="jy_radio">
+                        <label class="radio-inline clear pl0 pt0 ml0 mr10 select" id="jy">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">已就业</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0 ml0 mr10" id="dy">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">待业</span>
+                        </label>
+                    	</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label  pl0">就业单位：</label>
+                        <div class="col-sm-4 pl0"><input type="text" class="form-control"  placeholder="请输入就业单位" id="jydw" ></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-sm-2 height30 t_r mb0">升学情况：</label>
+                        <div class="col-sm-8 pl0" id="sx_radio">
+                        <label class="radio-inline clear pl0 pt0 ml0 mr10">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">已升学</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0 ml0 mr10">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">肄业</span>
+                        </label>
+                    	</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label  pl0">手机号码：</label>
+                        <div class="col-sm-4 pl0"><input type="text" class="form-control" maxlength="11"  onkeyup="this.value=this.value.replace(/[^\d]/ig,'')" id="phone"></div>
+                        <div class="col-sm-6  error_tips height34">已输<span class="phone-size">0</span>位</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label  pl0">家庭电话：</label>
+                        <div class="col-sm-1 pl0 pr0"><input type="text" class="form-control"></div>
+                        <div class="fl height34 pl5 pr5">-</div>
+                        <div class="col-sm-3 pl0"><input type="text" class="form-control" ></div>
+                        <div class="col-sm-5  error_tips height34">区号-电话号码</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-sm-2 height30 t_r mb0">是否双困生：</label>
+                        <div class="col-sm-8 pl0" id="sk_radio">
+                        <label class="radio-inline clear pl0 pt0 ml0 mr10">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">是</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0 ml0 mr10">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">否</span>
+                        </label>
+                    	</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label  pl0">家庭地址：</label>
+                        <div class="col-sm-4 pl0"><input type="text" class="form-control" ></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label  pl0">上传影像：</label>
+                        <div class="col-sm-2 pl0"><a class="btn btn-success po_r">选择文件<input type="file" class="ycfile"></a></div>
+                        <div class="col-sm-6  error_tips height34">毕业证，报到证扫描件或照片，文件不大于3M</div>
+                    </div>
+                    <div class="form-group pt20">
+                        <div class="col-sm-11 pl0 error_tips col-sm-offset-1">*请按照报到证的内容填写登记表, 认真核对报到信息，确认报到后不能修改。</div>
+                        <div class="col-sm-2 col-sm-offset-3 pt20"><a class="btn btn-success">确认报到</a></div>
+                    </div>
+                </form>
+            </div>
+        </div> 
+    </div>
+    <div class="footer inverse">全通教育集团（广东）股份有限公司  版权所有  ©2007-2015</div>
+    <script src="dist/jq/1.11.1/jquery.min.js"></script>
+    <!--模块化js-->
+    <script src="dist/sea.js"></script>
+    <script src="dist/seaconfig.js"></script>
+    <script src="dist/laydate/laydate.js"></script>
+    <script>
+     seajs.use(["bs","nav","navicon","com/radio_checkbox1.1","com/dropdown_havevalue"],function(){
+		 $("#qkynav").qkynav({isinfo:false,morebtn:false});
+		 laydate.skin('zwt');
+	 });
+	 $(function(){
+	 	$("#jy_radio label").on("click",function(){
+			if($(this).attr("id")=="jy"){
+				$("#jydw").removeAttr("disabled");
+			}else{
+				$("#jydw").attr("disabled","disabled");
+			}
+		});
+		$("#phone").keydown(function(e) {
+			var num=$(this).val().length+1;
+			if(num>11)num=11;
+			if(num==1)num=0;
+            $(".phone-size").html(num);
+        });
+	 })
+    </script>
+  </body>
+</html>

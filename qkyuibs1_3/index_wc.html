@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="qky2.ico">
+    <title>全课云—毕业生网上报到系统</title>
+    <!-- Bootstrap 基础样式 CSS -->
+    <link href="dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+    
+    <!--全课云基础样式覆盖-->
+    <link href="css/iconfont.css" rel="stylesheet">
+    <link href="css/qkybase1.3.css" rel="stylesheet">
+    <link href="css/quickcss.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="qkybody ff_background">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="qkynav"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container_left col-sm-4">
+                <div class="row">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <ul class="container_left_nav">
+                        <li class="nav_title">报到步骤</li>
+                        <li >
+                            <a href="index.html">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td><div class="xu">1</div></td><td><label>第一步</label></td><td><span>阅读注意事项填写身份证号</span></td></tr>
+                            </table>
+                            </a>
+                        </li>
+                        <li><a href="index_dj.html">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td><div class="xu">2</div></td><td><label>第二步</label></td><td><span>毕业生报到情况登记表</span></td></tr>
+                            </table></a>
+                        </li>
+                        <li><a href="index_qr.html">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td><div class="xu">3</div></td><td><label>第三步</label></td><td><span>确认您所填写资料的正确性</span></td></tr>
+                            </table></a>
+                        </li>
+                        <li class="active"><a href="index_wc.html">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td><div class="xu">4</div></td><td><label>第四步</label></td><td><span>完成报道</span></td></tr>
+                            </table></a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container_right col-sm-8 col-sm-offset-4">
+                <div class="cx_main ">
+            		<h4 class="mt20 fz_we co_63 pb20"><a class="co_33">陈自豪</a> ,已完成毕业生报到手续，可根据以下条件查询毕业生报到情况。</h4>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label  t_l pr0">姓名：</label>
+                        <div class="col-sm-4"><input type="text" class="form-control"  placeholder="请输入姓名"></div>
+                        <div class="col-sm-5  error_tips height34">姓名中间不能有空格</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-1 control-label  t_l pr0">身份证：</label>
+                        <div class="col-sm-4"><input type="text" class="form-control"  placeholder="请输入身份证"></div>
+                        <div class="col-sm-6  error_tips height34">请用半角阿拉伯数字</div>  
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4 col-sm-offset-1"><a class="btn btn-success mr20" data-toggle="modal" data-target="#info_modal">点击查询</a><a class="btn  btn-default">返回首页</a></div>
+                    </div>
+                </form>
+                </div>   
+                <!--审核中-->
+                <div class="pass ing yc">
+                    <div class="pass_tit">档案正在审核</div>
+                    <img src="images/passing.png" class="pass_icon">
+                    <div class="pass_txt">你的毕业生档案正在审核中，请耐心等待</div>
+                    <div class="t_c"><a class="btn btn-success">返回</a></div>
+                </div>
+                <!--审核未通过-->
+                <div class="pass no yc">
+                    <div class="pass_tit">档案未通过审核</div>
+                    <img src="images/nopass.png" class="pass_icon">
+                    <div class="pass_txt">您的毕业生档案未通过审核，请重新提交资料</div>
+                    <div class="pass_oth">原因：带星号资料有误</div>
+                    <div class="t_c"><a class="btn btn-success">返回</a></div>
+                </div>
+                
+            </div>
+        </div> 
+    </div>
+    <div class="footer inverse">全通教育集团（广东）股份有限公司  版权所有  ©2007-2015</div>
+    
+    
+    <!--模态窗口 Modal -->
+    <div class="modal fade" id="info_modal" tabindex="-1" role="dialog" aria-labelledby="dbtit" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title fz_we" id="dbtit">陈自豪 ,已完成毕业生报到手续，以下为毕业生详细档案</h4>
+          </div>
+          <div class="modal-body modal_auto">
+              <table class="qr_info mt0">
+                <tbody>
+                <tr><td width="20%">姓名：</td><td>陈自豪</td><td width="20%">性别：</td><td>男</td></tr>
+                <tr><td>报到证编号：</td><td>442365362633632635</td><td>身份证：</td><td>442333200363625986</td></tr>
+                <tr><td>毕业学校：</td><td>孝感第一中学</td><td>所学专业：</td><td>信息工程</td></tr>
+                <tr><td>学历层次：</td><td>博士</td><td>升学情况：</td><td>已升学</td></tr>
+                <tr><td>毕业时间：</td><td>1998-09-01</td><td>生源地：</td><td>孝感市</td></tr>
+                <tr><td>就业情况：</td><td>已就业</td><td>就业单位：</td><td>云南省教育局</td></tr>
+                <tr><td>升学情况：</td><td>已升学</td><td>手机号码：</td><td>13685963222</td></tr>
+                <tr><td>家庭电话：</td><td>0760-36236598</td><td>是否双困生：</td><td>是</td></tr>
+                <tr><td>家庭地址：</td><td colspan="3">云南省孝感市一二三街道</td></tr>
+                <tr>
+                <td valign="top">身份证：</td>
+                <td><div class="img_box"><img src="images/sfz2.png"><a href="images/sfz2.png" target="_blank">点击预览</a></div></td>
+                <td valign="top">报到证或毕业证：</td>
+                <td><div class="img_box"><img src="images/sfz-b.png"><a href="images/sfz-b.png" target="_blank">点击预览</a></div></td>
+                </tr>
+                </tbody>
+                </table>
+          </div>
+          <div class="modal-footer">
+          	<button type="button" class="btn  btn-success"  data-dismiss="modal">确定</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="dist/jq/1.11.1/jquery.min.js"></script>
+    <!--模块化js-->
+    <script src="dist/sea.js"></script>
+    <script src="dist/seaconfig.js"></script>
+    <script>
+     seajs.use(["bs","nav","navicon"],function(){$("#qkynav").qkynav({isinfo:false,morebtn:false});});
+    </script>
+  </body>
+</html>
