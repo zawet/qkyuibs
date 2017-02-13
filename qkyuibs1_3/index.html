@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="qky2.ico">
+    <title>全课云—毕业生网上报到系统</title>
+    <!-- Bootstrap 基础样式 CSS -->
+    <link href="dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+    
+    <!--全课云基础样式覆盖-->
+    <link href="css/iconfont.css" rel="stylesheet">
+    <link href="css/qkybase1.3.css" rel="stylesheet">
+    <link href="css/quickcss.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="qkybody ff_background">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="qkynav"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container_left col-sm-4">
+                <div class="row">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <ul class="container_left_nav">
+                        <li class="nav_title">报到步骤</li>
+                        <li class=" active">
+                            <a href="index.html">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td><div class="xu">1</div></td><td><label>第一步</label></td><td><span>阅读注意事项填写身份证号</span></td></tr>
+                            </table>
+                            </a>
+                        </li>
+                        <li><a href="index_dj.html">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td><div class="xu">2</div></td><td><label>第二步</label></td><td><span>毕业生报到情况登记表</span></td></tr>
+                            </table></a>
+                        </li>
+                        <li><a href="index_qr.html">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td><div class="xu">3</div></td><td><label>第三步</label></td><td><span>确认您所填写资料的正确性</span></td></tr>
+                            </table></a>
+                        </li>
+                        <li><a href="index_wc.html">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td><div class="xu">4</div></td><td><label>第四步</label></td><td><span>完成报道</span></td></tr>
+                            </table></a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container_right col-sm-8 col-sm-offset-4">
+            	<div class="letter">
+                	<span class="mb20">各位应届毕业生（含往届今年到期暂缓生）：</span>
+                    <p>为了简化程序，方便毕业生随时随地报到,本局已在2011年开通了孝感市毕业生网上报到登记系统。现将有关事项通知如下：</p>
+                    <p>一、请认真填写毕业生报到登记表，确保信息的真实性，不要重复报到，完成报到手续后请妥善保管好《报到证》，不需要到现场报到盖章；</p>
+                    <p>二、因特殊原因未能在网上报到的同学，仍可选择现场报到，报到地点按原户口（或生源）所在地各区、县级市人力资源和社会保障局报到；属于原孝感市区户口的同学，请到孝感市人才开发管理办公室报到；</p>
+                    <p>三、有正式单位（是指具有人事档案管理权的单位）接收的毕业生，报到登记后请将《报到证》交给单位，由单位统一到有关部门办理派遣分配手续；</p>
+                    <p>四、需要办理入户手续的同学，请到入学前生源地各区、县级市人才服务机构办理，非本市生源（户籍）的请到接收单位所在地主管毕业生分配部门办理入户手续；</p>
+                    <p>五、需要办理改派手续的同学，请提供对方主管毕业生报到部门的《接收函》及《报到证》到孝感市人才开发管理办公室办理； </p>
+                    <p>六、未就业毕业生可通过本系统查找档案去向，需要办理人事档案保管手续的请咨询档案所在地的人才服务机构；</p>
+                    <p>七、学生档案请不要自带，要由学校通过EMS邮政快递或派专人寄送回孝感市人才开发管理办公室保管转递（地址：湖北省孝感市光华南路xxx号，电话：xxxx-xxxxxx）；</p>
+                    <p>八、温馨提示：毕业生报到登记表的个人就业情况和联系电话可在毕业生报到手机号码变更处进入修改。 </p>
+                    <span class="mt20">孝感市人力资源和社会保障局</span>
+                    <span>二〇一六年一月一日</span>
+                </div>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label class="col-sm-4  control-label">身份证号码</label>
+                        <div class="col-sm-4"><input type="text" class="form-control" id="renyuan" placeholder="请输入身份证号码"></div>
+                        <div class="col-sm-4"><a class="btn btn-success mr5">开始报到</a><a class="btn btn-success">查验</a></div>
+                    </div>
+                </form>
+                <div class="row error_tips">
+                <div class="col-sm-1 col-sm-offset-3 t_r  pr0">注：</div><div class="col-sm-7 pl0"> 1、请填写真实、有效的第二代身份证号码，核对无误后开始报到；</div>
+                <div class="col-sm-7 col-sm-offset-4 pl0 mt10 mb10">2、正确的身份证号码由全部数字或末位大写X组成；</div>
+                <div class="col-sm-7 col-sm-offset-4 pl0">3、每个身份证号码只能报到一次，不能重复报到</div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div class="footer inverse">全通教育集团（广东）股份有限公司  版权所有  ©2007-2015</div>
+    <script src="dist/jq/1.11.1/jquery.min.js"></script>
+    <!--模块化js-->
+    <script src="dist/sea.js"></script>
+    <script src="dist/seaconfig.js"></script>
+    <script>
+     seajs.use(["bs","nav","navicon"],function(){
+		 $("#qkynav").qkynav({isinfo:false,morebtn:false});
+	});
+    </script>
+  </body>
+</html>
