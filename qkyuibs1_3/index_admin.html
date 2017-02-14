@@ -28,55 +28,85 @@
         	<h4 class="page-header mt20 mb10">查询条件</h4>
             <form class="form-horizontal" role="form">
               	<div class="form-group">
-                    <label class="col-sm-1  control-label">生源地：</label>
-                    <div class="col-sm-2">
+                    <label class="col-sm-1  control-label pr0">生源地：</label>
+                    <div class="col-sm-2  pl0">
                       <div class="dropdown qkydropdown havechoose">
-                          <a class="btn btn-default dropdown-toggle auto" id="dropdownMenu1" data-toggle="dropdown">
+                          <a class="btn btn-default dropdown-toggle auto" data-toggle="dropdown">
                             <span class="value">孝感全市</span>
                             <span class="caret"></span>
                           </a>
-                          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                          <ul class="dropdown-menu maxh" role="menu" >
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">孝感全市</a></li>
                           </ul>
                       </div>
                     </div>
                     
                     <label class="col-sm-1  control-label pl0 pr0">学校筛选：</label>
-                    <div class="col-sm-2">
+                    <div class="col-sm-2  pl0">
                       <div class="dropdown qkydropdown havechoose">
-                          <a class="btn btn-default dropdown-toggle auto" id="dropdownMenu1" data-toggle="dropdown">
+                          <a class="btn btn-default dropdown-toggle auto" data-toggle="dropdown">
                             <span class="value">孝感第一中学</span>
                             <span class="caret"></span>
                           </a>
-                          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                          <ul class="dropdown-menu maxh" role="menu">
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">孝感第一中学</a></li>
                           </ul>
                       </div>
                     </div>
                     
                     <label class="col-sm-1  control-label  pl0 pr0">审核状态：</label>
-                    <div class="col-sm-2">
+                    <div class="col-sm-2  pl0">
                       <div class="dropdown qkydropdown havechoose">
-                          <a class="btn btn-default dropdown-toggle auto" id="dropdownMenu1" data-toggle="dropdown">
+                          <a class="btn btn-default dropdown-toggle auto" data-toggle="dropdown">
                             <span class="value">已审核</span>
                             <span class="caret"></span>
                           </a>
-                          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">已审核</a></li>
+                          <ul class="dropdown-menu maxh" role="menu">
+                            <li role="presentation"><a href="#">已审核</a></li>
+                            <li role="presentation"><a href="#">待审核</a></li>
                           </ul>
                       </div>
                     </div>
                     
-                    <label class="col-sm-1  control-label pl0 pr0">日期选择：</label>
-                    <div class="col-sm-2">
+                    <label class="col-sm-1  control-label pl0  pr0">日期选择：</label>
+                    <div class="col-sm-1 pr0 pl0">
                       <div class="dropdown qkydropdown havechoose">
-                          <a class="btn btn-default dropdown-toggle auto" id="dropdownMenu1" data-toggle="dropdown">
-                            <span class="value">2017年1月</span>
-                            <span class="caret"></span>
+                          <a class="btn btn-default dropdown-toggle auto"  data-toggle="dropdown">
+                          <span class="value" id="year">2017年</span><span class="caret"></span>
                           </a>
-                          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2017年1月</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2017年2月</a></li>
+                          <ul class="dropdown-menu maxh" role="menu">
+                          	<li role="presentation"><a href="#">2012年</a></li>
+                          	<li role="presentation"><a href="#">2013年</a></li>
+                            <li role="presentation"><a href="#">2014年</a></li>
+                            <li role="presentation"><a href="#">2015年</a></li>
+                            <li role="presentation"><a href="#">2016年</a></li>
+                            <li role="presentation"><a href="#">2017年</a></li>
+                            <li role="presentation"><a href="#">2018年</a></li>
+                            <li role="presentation"><a href="#">2019年</a></li>
+                            <li role="presentation"><a href="#">2020年</a></li>
+                            <li role="presentation"><a href="#">2021年</a></li>
+                            <li role="presentation"><a href="#">2022年</a></li>
+                          </ul>
+                      </div>
+                    </div>
+                    <div class="col-sm-1 pl0">
+                      <div class="dropdown qkydropdown havechoose">
+                          <a class="btn btn-default dropdown-toggle auto"  data-toggle="dropdown">
+                          <span class="value" id="moon">1月</span><span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu maxh" role="menu">
+                            <li role="presentation"><a href="#">1月</a></li>
+                            <li role="presentation"><a href="#">2月</a></li>
+                            <li role="presentation"><a href="#">3月</a></li>
+                            <li role="presentation"><a href="#">4月</a></li>
+                            <li role="presentation"><a href="#">5月</a></li>
+                            <li role="presentation"><a href="#">6月</a></li>
+                            <li role="presentation"><a href="#">7月</a></li>
+                            <li role="presentation"><a href="#">8月</a></li>
+                            <li role="presentation"><a href="#">9月</a></li>
+                            <li role="presentation"><a href="#">10月</a></li>
+                            <li role="presentation"><a href="#">11月</a></li>
+                            <li role="presentation"><a href="#">12月</a></li>
                           </ul>
                       </div>
                     </div>
@@ -162,7 +192,7 @@
        </div>
         
     </div>
-    <div class="footer inverse">全通教育集团（广东）股份有限公司  版权所有  ©2007-2015</div>
+    <div class="footer open inverse">全通教育集团（广东）股份有限公司  版权所有  ©2007-2015</div>
     
     
     <!--模态窗口 Modal -->
@@ -226,7 +256,10 @@
     <script src="dist/sea.js"></script>
     <script src="dist/seaconfig.js"></script>
     <script>
-     seajs.use(["bs","nav","navicon","com/radio_checkbox1.1","com/dropdown_havevalue"],function(){$("#qkynav").qkynav();});
+     seajs.use(["bs","nav","navicon","com/radio_checkbox1.1","com/dropdown_havevalue"],function(){
+		 $("#qkynav").qkynav();
+		 
+	 });
     </script>
   </body>
 </html>
