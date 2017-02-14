@@ -5,8 +5,8 @@
 define(function(require,exports) {
 	exports.havevalue = function() {
 		$(".dropdown.havechoose").on('shown.bs.dropdown', function () {
-			var value_box=$(this).find(".value");
-			$(this).find(".dropdown-menu li").on("click","a", function() {
+			var value_box=$(this).find(".value").first();
+			$(this).find(".dropdown-menu li a").on("click", function() {
 				value_box.html($(this).text());
 			});
 	    })

@@ -18,6 +18,7 @@ body{font-family: Microsoft YaHei,"Hiragino Sans GB W3", Helvetica, Arial, sans-
 @media (min-width: 992px){.container {width: 970px;}}
 @media (min-width: 1200px){.container {width: 1080px;}}
 .footer{ position: absolute; bottom:0; padding:15px 0; text-align:center; left:0; width:100%; background:#fff; color:#a5a5a5;z-index: 1001; display:none;}
+.footer.open{ display:block;}
 .footer.inverse{ background:#515151;}
 .footer.default{ background:#fff; }
 
@@ -127,7 +128,7 @@ body{font-family: Microsoft YaHei,"Hiragino Sans GB W3", Helvetica, Arial, sans-
 
 /*下拉组改装*/
 .qkydropdown .btn{ width:100%; text-align:left; position:relative; height:34px; padding:6px 15px; }
-.qkydropdown .btn .caret{ position:absolute; right:15px; top:13px;}
+.qkydropdown .btn .caret{ position:absolute; right:8px; top:15px;}
 .qkydropdown .dropdown-menu{ width:100%;}
 .maxh{ max-height:200px; overflow-y:auto;}
 
