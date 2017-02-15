@@ -35,6 +35,9 @@ body{font-family: Microsoft YaHei,"Hiragino Sans GB W3", Helvetica, Arial, sans-
 .nav_color{color:#0A7E07;}
 .nav_qkymc a{ color:#2baf2b;} 
 .box_ff{ border:1px solid #d8d8d8; background:#fff;}
+.error_tips{ color:#F0485F !important; }
+ul.error_tips{ padding:0; margin:0;list-style:none;}
+ul.error_tips li{ padding:4px 0 ; margin:0;}
 
 .cadr_hbg{ background:#f4f4f4;}
 
@@ -371,7 +374,7 @@ a.checkbox_a{display:block; width:16px; height:16px; border:1px solid #dadada; b
 .header_nav:nth-child(1){ border-right:1px solid #666; padding-left:0;}
 .header_nav.active{ font-weight:bold;}
 .header_nav:hover{ text-decoration:inherit; color:#222;}
-.error_tips{ color:#F0485F !important}
+
 
 /*星期卡片*/
 .cadr_box{ margin-bottom:5px;}
