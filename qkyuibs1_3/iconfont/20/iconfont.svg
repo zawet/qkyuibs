@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>
-Created by FontForge 20120731 at Fri Dec 30 10:22:58 2016
+Created by FontForge 20120731 at Wed Feb 15 10:49:18 2017
  By admin
 </metadata>
 <defs>
@@ -154,5 +154,8 @@ t133.5 -55.5t54.5 -134.5t-55.5 -135t-132.5 -56zM509 612q-55 0 -93 -40.5t-38 -96.
     <glyph glyph-name="jingyin" unicode="&#xe62b;" 
 d="M890 381l88 -88q11 -11 11 -27t-10.5 -27t-27 -11t-27.5 11l-88 88l-88 -88q-11 -11 -27 -11t-27 11t-11 27t11 27l88 88l-91 88q-11 11 -11 27.5t11 27t27.5 10.5t26.5 -11l88 -88l88 88q11 11 27.5 11t27 -10.5t10.5 -27t-10 -27.5zM577 893q-12 8 -28 -3l-341 -239
 h-168q-10 0 -18 -7t-8 -16v-489q0 -10 7.5 -16t18.5 -6h168l344 -239q11 -6 14 -6q9 0 11 3q15 5 15 20v978q0 15 -15 20z" />
+    <glyph glyph-name="gantanhao_icon" unicode="&#xe60b;" 
+d="M954 61l-401 695q-5 10 -17.5 17t-23.5 7t-23.5 -7t-17.5 -17l-402 -696q-7 -11 -7 -24q0 -20 14 -34t34 -14h804q20 0 34 14t14 34q0 14 -8 25v0zM553 134q0 -17 -12 -29t-29 -12t-29 12t-12 29v1q0 17 12 29t29 12t29 -12t12 -29v-1zM553 283q0 -17 -12 -28.5
+t-29 -11.5t-29 11.5t-12 28.5v218q0 17 12 29t29 12t29 -12t12 -29v-218z" />
   </font>
 </defs></svg>
