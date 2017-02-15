@@ -118,7 +118,7 @@
         <div class="qkytable box_ff pl20 pr20 mt20">
           <div class="qkytable_btn pl0">
           <a class="btn btn-default mr10" role="button"><i class="qkyicon_14 mr5">&#xe61a;</i>列表筛选</a>
-          <a class="btn btn-default" role="button" ><i class="qkyicon_14 mr5">&#xe614;</i>批量导入</a>
+          <a class="btn btn-default" role="button" data-toggle="modal" data-target="#plinput_modal"><i class="qkyicon_14 mr5">&#xe614;</i>批量导入</a>
           </div>	
           <div class="table-responsive pb10">
             <table class="table table-striped">
@@ -251,6 +251,49 @@
         </div>
       </div>
     </div>
+    
+    <div class="modal fade" id="plinput_modal" tabindex="-1" role="dialog" aria-labelledby="nopasstit" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="nopasstit">批量导入</h4>
+          </div>
+          <div class="modal-body modal_auto">
+              <div class="t_c"><i class="qkyicon_20 fz_60 co_83">&#xe60b;</i></div>
+              <div class="co_53 t_c">请先下载相应模板，按模板要求填写，否则信息会出错</div>
+              <div class="t_c pb20"><a class="btn btn-link mian_color" data-toggle="modal" data-target="#tips">下载模板</a></div>
+              <div class="t_c"><a class="btn btn-success po_r">上传文件<input type="file" class="ycfile"></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade"  id="tips" tabindex="-1" role="dialog" aria-labelledby="tips_tit" aria-hidden="true">
+      <div class="modal-dialog modal-xs">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="tips_tit">信息提示</h4>
+          </div>
+          <div class="modal-body modal_auto">
+            <div class="t_l pb10">成功导入<span class="mian_color">0</span>条，不成功导入<span class="error_tips">4</span>条，愿因：</div>
+            <ul class="error_tips t_l">
+            <li>第3行，xxxxxxx</li>
+            <li>第4行，xxxxxxx</li>
+            <li>第5行，xxxxxxx</li>
+            <li>第6行，xxxxxxx</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn  btn-success" data-dismiss="modal">确定</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    
     <script src="dist/jq/1.11.1/jquery.min.js"></script>
     <!--模块化js-->
     <script src="dist/sea.js"></script>
