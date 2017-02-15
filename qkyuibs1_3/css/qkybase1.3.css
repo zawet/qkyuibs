@@ -35,8 +35,10 @@ body{font-family: Microsoft YaHei,"Hiragino Sans GB W3", Helvetica, Arial, sans-
 .nav_color{color:#0A7E07;}
 .nav_qkymc a{ color:#2baf2b;} 
 .box_ff{ border:1px solid #d8d8d8; background:#fff;}
-.error_tips{ color:#F0485F !important; }
-ul.error_tips{ padding:0; margin:0;list-style:none;}
+
+.remind_tips{ color:#999 !important;}/*注意提示颜色*/
+.error_tips{ color:#F0485F !important; }/*错误提示颜色*/
+ul.error_tips{ padding:0; margin:0;list-style:none;}/*错误信息列表*/
 ul.error_tips li{ padding:4px 0 ; margin:0;}
 
 .cadr_hbg{ background:#f4f4f4;}
