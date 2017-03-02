@@ -2,26 +2,64 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>全课云2017UI规范</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="qky2.ico">
+<title>全课云2017UI示例</title>
 </head>
 <style>
 body{ margin:0; padding:0; background:#fff; color:#535353;font-family: Microsoft YaHei,"Hiragino Sans GB W3", Helvetica, Arial, sans-serif; font-size:16px;}
-.box{ max-width:1080px; width:100%; margin:0 auto; background:#fff; border:1px solid #d8d8d8; padding:20px; box-sizing:border-box; margin-top:20px; border-radius:8px;}
+.trn{-webkit-transition: all 0.25s ease-out 0s;-moz-transition: all 0.25s ease-out 0s;transition: all 0.25s ease-out 0s;}/*过度执行动画  ie8以及以下没作用*/
 p{ line-height:32px;}
 a{ text-decoration:inherit;}
+h1{ padding:10px 0; margin:0; display:block; text-align:center;}
+h2{ padding:0;margin:0;display:block; text-align:center;}
+h3{ padding:6px 0;margin:0;display:block; text-align:center; font-weight:normal;}
+.clear3:before,.clear3:after{ content: " "; display: table;}
+.clear3:after {clear: both;}
+.box{ max-width:1080px; width:100%; margin:0 auto;  box-sizing:border-box;}
+.box_title{ border-bottom:1px dashed #ddd;margin-bottom:20px; background:#f9f9f9; padding:20px;}
+
+.box_ul{ width:100%;}
+.box_li{ display:block; float:left; width:30%; margin:0 0 2.5% 2.5%;  padding:10px; box-sizing:border-box; border-radius:6px; cursor:pointer; border:1px solid #f1f1f1;}
+.box_li img{ width:100%; margin:auto; display:block;}
+.box_li{-webkit-transition: all 0.25s ease-out 0s;-moz-transition: all 0.25s ease-out 0s;transition: all 0.25s ease-out 0s;}/*过度执行动画  ie8以及以下没作用*/
+.box_li label{ display:block; line-height:32px; font-size:16px;color:#333;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}/*单行文字超出显示...*/
+.box_li span{ display:block; line-height:24px; color:#737373; font-size:14px; height:48px; overflow-y:auto;}
+.box_li:hover{background:#f1f1f1; border-color:#ddd;}
 </style>
 <body>
 <div class="box">
-<h1><strong>qkyuibs</strong></h1>
-<h2>全课云2017UI规范迭代</h2>
-<h3>此规范由自主设计规范+前端框架bootstrap3.0+模块化js seajs作为支架建立</h3>
-<p>
-<strong>按接手应用进行实践优化</strong><br/>
-<a href="qkyuibs1_0">#1_0（OA应用-行政值班初始版）</a><br/>
-<a href="qkyuibs1_1">#1_1（基础应用-学生电子信息）</a><br/>
-<a href="qkyuibs1_2">#1_2（OA应用-行政值班优化版）</a> 此版本后加入seajs config,使文件结构更加模块化，并加入手机移动端分支优化<br/>
-<a href="qkyuibs1_3">#1_3（基础应用-毕业生网上报名系统）</a> 在1_2基础上，增加了复选父子类联动交互，和导航个人信息支持是否显示<br/>
-</p>
+<div class="box_title">
+<h2>QKYUIBS</h2>
+<h1>全课云2017UI规范应用实例迭代</h1>
+<h3>此规范由自主设计规范+前端框架bootstrap3.0+模块化js seajs作为支架建立，此基础上按应用进行实践优化。</h3>
+</div>
+<div class="box_ul clear3">
+<a class="box_li" href="qkyuibs1_0">
+<img src="bin/1.gif"/>
+<label>#1_0（OA应用-行政值班初始版）</label>
+<span>版本说明：无</span>
+</a>
+<a class="box_li" href="qkyuibs1_1">
+<img src="bin/2.gif"/>
+<label>#1_1（基础应用-学生电子信息）</label>
+<span>版本说明：无</span>
+</a>
+<a class="box_li" href="qkyuibs1_2">
+<img src="bin/3.gif"/>
+<label>#1_2（OA应用-行政值班优化版）</label>
+<span>版本说明：此版本后加入seajs config,使文件结构更加模块化，并加入手机移动端分支优化。</span>
+</a>
+<a class="box_li" href="qkyuibs1_3">
+<img src="bin/4.gif"/>
+<label>#1_3（基础应用-毕业生网上报名系统）</label>
+<span>版本说明：在1_2基础上，增加了复选父子类联动交互，和导航个人信息支持是否显示。</span>
+</a>
+</div>
+
 </div>
 
 </body>
