@@ -309,7 +309,7 @@ a.checkbox_a{display:block; width:16px; height:16px; border:1px solid #dadada; b
 
 
 
-/***************************其他版本css，可删除******start/
+/***************************其他版本css，不是本版本的可删除******start/
 
 /**版本1特殊模块css**/
 
@@ -393,7 +393,7 @@ a.checkbox_a{display:block; width:16px; height:16px; border:1px solid #dadada; b
 .cho_name a:hover{text-decoration:inherit; color:#72D572; background:#f9f9f9;}
 .cho_name a.select{ background:#72D572; color:#fff;}
 
-/***************************其他版本css，可删除******end/
+
 
 /***版本3特殊模块css***/
 
@@ -438,6 +438,9 @@ a.checkbox_a{display:block; width:16px; height:16px; border:1px solid #dadada; b
 .img_box a{ display:block; position:absolute; bottom:0; left:0; background:url(../images/bg_back_03.png); width:100%; color:#fff; text-align:center; line-height:34px; text-decoration:inherit; cursor:pointer;}
 .img_box a:hover{-webkit-transition: all 0.25s ease-out 0s;-moz-transition: all 0.25s ease-out 0s;transition: all 0.25s ease-out 0s;}
 .img_box a:hover{ height:100%; line-height:106px;}
+
+.img_box a.img_colse{ width:30px; height:30px; border-radius:50px; left:auto; right:5px; line-height:30px; bottom:auto; top:5px; text-align:center;}
+.img_box a.img_colse:hover{ background:#F0485F;}
 
 /*审核通过状态模块*/
 .pass{ width:80%; margin-top:8px;}
