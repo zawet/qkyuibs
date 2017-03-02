@@ -11,7 +11,7 @@
 </head>
 <style>
 body{ margin:0; padding:0; background:#fff; color:#535353;font-family: Microsoft YaHei,"Hiragino Sans GB W3", Helvetica, Arial, sans-serif; font-size:16px;}
-
+.trn{-webkit-transition: all 0.25s ease-out 0s;-moz-transition: all 0.25s ease-out 0s;transition: all 0.25s ease-out 0s;}/*过度执行动画  ie8以及以下没作用*/
 p{ line-height:32px;}
 a{ text-decoration:inherit;}
 h1{ padding:10px 0; margin:0; display:block; text-align:center;}
@@ -23,11 +23,12 @@ h3{ padding:6px 0;margin:0;display:block; text-align:center; font-weight:normal;
 .box_title{ border-bottom:1px dashed #ddd;margin-bottom:20px; background:#f9f9f9; padding:20px;}
 
 .box_ul{ width:100%;}
-.box_li{ display:block; float:left; width:32%; margin:0 0 1% 1%;  padding:10px; box-sizing:border-box; border-radius:6px; cursor:pointer;}
+.box_li{ display:block; float:left; width:30%; margin:0 0 2.5% 2.5%;  padding:10px; box-sizing:border-box; border-radius:6px; cursor:pointer; border:1px solid #f1f1f1;}
 .box_li img{ width:100%; margin:auto; display:block;}
+.box_li{-webkit-transition: all 0.25s ease-out 0s;-moz-transition: all 0.25s ease-out 0s;transition: all 0.25s ease-out 0s;}/*过度执行动画  ie8以及以下没作用*/
 .box_li label{ display:block; line-height:32px; font-size:16px;color:#333;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}/*单行文字超出显示...*/
 .box_li span{ display:block; line-height:24px; color:#737373; font-size:14px; height:48px; overflow-y:auto;}
-.box_li:hover{background:#f6f6f6;}
+.box_li:hover{background:#f1f1f1; border-color:#ddd;}
 </style>
 <body>
 <div class="box">
