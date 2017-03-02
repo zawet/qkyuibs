@@ -59,6 +59,7 @@
             <div class="container_right col-sm-8 col-sm-offset-4">
                 <form class="form-horizontal" role="form">
                     <div class="form-group">
+                    
                         <label class="col-sm-2 control-label  pl0">姓名：</label>
                         <div class="col-sm-4 pl0"><input type="text" class="form-control"  placeholder="请输入姓名"></div>
                         <div class="col-sm-5  remind_tips height34">姓名中间不能有空格</div>
@@ -85,6 +86,12 @@
                         <div class="col-sm-6  remind_tips height34">请用半角阿拉伯数字</div>
                         <div class="col-sm-2 col-sm-offset-2 pl0 mt10 pr0"><a class="btn btn-success po_r">选择文件<input type="file" class="ycfile"></a></div>
                         <div class="col-sm-8 remind_tips height34 mt10 pl0">正反身份证扫描件或照片，文件不大于3M</div>
+                        <div class="col-sm-10 col-sm-offset-2  pl0 mt10 pr0 yc">
+                            <div class="img_box">
+                            <div id="xxxxx"><img src="images/tx01.png"></div>
+                            <a class="img_colse"><i class="qkyicon_14">&#xe618;</i></a>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="form-group">
@@ -275,9 +282,10 @@
     <script src="dist/seaconfig.js"></script>
     <script src="dist/laydate/laydate.js"></script>
     <script>
-     seajs.use(["bs","nav","navicon","com/radio_checkbox1.1","com/dropdown_havevalue"],function(){
+     seajs.use(["bs","nav","navicon","com/radio_checkbox1.1","com/dropdown_havevalue"],function(bs,nav,ni,rc,dh){
 		 $("#qkynav").qkynav({isinfo:false,morebtn:false});
 		 laydate.skin('zwt');
+		 dh.havevalue();
 	 });
 	 $(function(){
 	 	$("#jy_radio label").on("click",function(){
