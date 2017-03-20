@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* 
+主要存放oa项目里的css
+ */
+.qkybody{ background:#535353;}
+.oabasebg{background:#eaf3e3; position:absolute; left:0; top:0; width:100%; height:100%; overflow:hidden;}
+.container-fluid{ padding:0;}
+
+.navbar-default{ border-bottom:1px solid #d8d8d8;}
+
+.windows_mian{height:100%;position: fixed;top:51px; left:0;z-index: 999; padding:0;background:#eaf3e3;}
+.windows_mian.open{margin-top:0;z-index: 1000;}
+
+.windows_mian_left{ height:100%; position: absolute; left:0; overflow: hidden; padding-bottom:101px; padding-right:0;}
+.windows_mian_right{height:100%; position:absolute; right:0; overflow: hidden; padding-bottom:101px;}
+
+.scrrol_box{ width:140%; height:100%; overflow-y:scroll ; padding-right:40%;}
+
+.right_box{ width:100%; height:100%;position:absolute; right:0;padding-bottom:101px; z-index:1001;transform:translateY(100%);}
+.right_box.open{ z-index:1002;transform:translateY(0);}
+
+.windows_bar{ padding-left:0; position:fixed; top:51px; right:0; z-index:1002; overflow-y:auto; min-height:100%;}
+.windows_bar a{ display:block; width:90%; margin-left:5%; background:#f1f1f1; text-align:center; color:#737373; padding:15px 0; margin-top:10px; cursor:pointer;  border-radius:8px;position:relative;}
+.windows_bar a:hover,.windows_bar a:focus{ background:#fff;text-decoration:inherit;}
+.windows_bar a.active{ text-decoration:inherit; background:#eaf3e3; margin-left:-1px; border-left:none; border-radius:0 8px 8px 0; color:#2baf2b;}
+.windows_bar a.active:hover,.windows_bar a.active:focus{ color:#72D572;}
+.windows_bar a i{ display: none; position:absolute; right:-2px; top:-2px; width:20px; height:20px; background:#F0485F; border-radius:50%; color: #fff; text-align:center; line-height:20px;}
+.windows_bar a:hover i{ display:block;}
+
+
+/*首页css*/
+.OA_calendar{}
+.OA_calendar_day{ border-right:1px solid #d8d8d8; padding:5px 15px 5px 30px; text-align:center;}
+.OA_calendar_day label{ display:block; color:#2baf2b; font-size:40px; line-height:42px; margin:0;}
+.OA_calendar_day span{ display:block; color:#333; line-height:24px;}
+.OA_calendar_years{ line-height:74px; text-align:center;}
+.OA_calendar_years>p{ font-size:18px; display:inline-block; padding:0 20px; margin:0; color:#2baf2b;}
+.OA_calendar_years a{ display:inline-block; cursor:pointer;}
+.OA_calendar_years a:hover{ text-decoration:inherit;}
+.OA_calendar_years a i{ font-size:16px;}
+.OA_calendar_mian .table>thead>tr>th{ padding:7px 0; text-align:center; border-bottom:1px solid #d8d8d8; border-top:1px solid #d8d8d8 !important; background:#fcfcfc;}
+.OA_calendar_mian .table>tbody>tr>td{ border:0; padding:4px 0;text-align:center;}
+.OA_calendar_mian .table>tbody>tr>td a{ color:#737373; display:inline-block; width:30px; height:30px; line-height:28px;text-align:center;border-radius:50%; border:2px solid #fff; cursor:pointer;}
+.OA_calendar_mian .table>tbody>tr>td a:hover{background:#eee;text-decoration:inherit;border-color:#ddd;}
+.OA_calendar_mian .table>tbody>tr>td a.havedata{background:#72D572;  color:#fff;border-color:#72D572; position:relative;}
+.OA_calendar_mian .table>tbody>tr>td a.havedata:hover{background:#2baf2b;border-color:#2baf2b;}
+.OA_calendar_mian .table>tbody>tr>td a.today{background:#fff; color:#2baf2b; border-color:#2baf2b;}
+.OA_calendar_mian .table>tbody>tr>td a.today:hover{background:#2baf2b; color:#fff;}
+.OA_calendar_mian .table>tbody>tr>td a.havedata .databox{ position:absolute; width:100px; left:104%; top:0;background:#fff; border:1px solid #d8d8d8; padding:10px; display:none; color:#737373;}
+.OA_calendar_mian .table>tbody>tr>td a.havedata:hover .databox{display:block;}
+
+
+.table_box{ width:100%;position:relative; overflow:hidden; min-height:195px;}
+.table.bt{transform:translateX(100%); position:absolute; left:0; top:0;}
+.table.bt.open{transform:translateX(0);}
+.table.bt>tbody >tr >td,.table.bt>tbody >tr >th{  border-bottom:1px  dashed #dfdfdf; border-top:0; color:#535353; font-size:13px;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+.nav.nav-tabs li{ cursor:pointer;}
+.nav.nav-tabs li a{ color:#535353; font-size:16px;}
+.nav.nav-tabs li.active a{ color:#2baf2b;}
+
+#index_desktops{ position:absolute; right:5px; top:10px;}
+
+.tips_box label{ padding:5px 10px; border:1px solid #d8d8d8; border-radius:4px; background:#f1f1f1;}
+.tips_box label i{ position:absolute; right:-8px; top:-8px;display: inline-block; width:20px; height:20px; background:#F0485F; border-radius:50%; color: #fff; text-align:center; line-height:20px; margin-left:5px; cursor:pointer;}
+.setting_box{padding:15px 30px 5px; margin-top:20px;}
+.setting_box h3{ margin:0 0 20px}
+.signed_box{ width:100%; margin:10px 0 20px; padding:10px; border:1px dashed #d8d8d8; background:#fff; border-radius:8px;}
+.signed_box img{ min-width:30%; margin:0 auto; display:block; max-width:80%;}
+
+
+/*通讯录css*/
+.menu_box{ padding:15px;}
+.menu_box h3{ margin:0; border-bottom:1px dashed #d8d8d8; padding:10px; padding-top:0;}
+.menu_list a{ display:block; padding:10px; color:#535353; font-size:16px; cursor:pointer; margin-top:5px; line-height:30px;}
+.menu_list a i{ width:30px; height:30px; background:#d8d8d8; border-radius:6px; text-align:center; line-height:30px; display:inline-block; font-size:18px; margin-right:10px;}
+.menu_list a:hover,.menu_list a:focus{ text-decoration:inherit; background:#f5f5f5; border-radius:4px;}
+.menu_list a.active{ color:#2baf2b;}
+.menu_list a.active i{ background:#2baf2b; color:#fff;}
+
+/*动画执行*/
+.windows_mian,
+.index_,
+.windows_bar a,
+.right_box,
+.OA_calendar_mian .table>tbody>tr>td a,
+.table.bt{
+	-webkit-transition: all 0.25s ease-out 0s;
+	-moz-transition: all 0.25s ease-out 0s;
+	transition: all 0.25s ease-out 0s;
+}
+
+/*透明度0%*/
+.windows_mian,
+.index_,
+.right_box,
+.table.bt{
+	opacity:0;
+	-webkit-opacity:0;
+	-moz-opacity:0;
+	filter:alpha(opacity=0);
+	filter:"alpha(opacity=0)";
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+
+/*透明度100%*/
+.windows_mian.open,
+.index_.open,
+.right_box.open,
+.table.bt.open{
+	opacity:1;
+	-webkit-opacity:1;
+	-moz-opacity:1;
+	filter:alpha(opacity=100);
+	filter:"alpha(opacity=100)";
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+}
+
+
