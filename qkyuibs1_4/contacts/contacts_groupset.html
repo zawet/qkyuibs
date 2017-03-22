@@ -21,24 +21,427 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" href="../dist/zTree_v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
   </head>
   <body class="oabasebg">
      <div class="scrrol_box pl15">
          <div class="row mt20">
-         <div class="col-sm-6">1</div>
-         <div class="col-sm-6">2</div>
+             <div class="col-sm-12"><h3 class="header_title">群组设置</h3></div>
+             <div class="col-sm-6">
+                <div class="qkycadr pa15 minheight">
+                     <h4 class="header_title clear">群组列表
+                     <a class="btn btn-default btn-sm fr changebox_button" changebox_id="group_add">新增群组</a>
+                     </h4>
+                     <div class="group_list">
+                     <a class="clear trn active">
+                     <span>示例群组</span>
+                     <i class="qkyicon_14 delete fr" title="删除" data-toggle="modal" data-target="#group_delete">&#xe613;</i>
+                     <i class="qkyicon_14 edit fr mr10 changebox_button" title="修改" changebox_id="group_edit">&#xe60f;</i> 
+                     </a>
+                     <a class="clear trn">
+                     <span>示例群组2</span>
+                     <i class="qkyicon_14 delete fr" title="删除" data-toggle="modal" data-target="#group_delete">&#xe613;</i>
+                     <i class="qkyicon_14 edit fr mr10 changebox_button" title="修改" changebox_id="group_edit">&#xe60f;</i> 
+                     </a>
+                     <a class="clear trn">
+                     <span>示例群组3</span>
+                     <i class="qkyicon_14 delete fr" title="删除" data-toggle="modal" data-target="#group_delete">&#xe613;</i>
+                     <i class="qkyicon_14 edit fr mr10 changebox_button" title="修改" changebox_id="group_edit">&#xe60f;</i> 
+                     </a>
+                     <a class="clear trn">
+                     <span>示例群组4</span>
+                     <i class="qkyicon_14 delete fr" title="删除" data-toggle="modal" data-target="#group_delete">&#xe613;</i>
+                     <i class="qkyicon_14 edit fr mr10 changebox_button" title="修改" changebox_id="group_edit">&#xe60f;</i> 
+                     </a>
+                     <a class="clear trn">
+                     <span>示例群组5</span>
+                     <i class="qkyicon_14 delete fr" title="删除" data-toggle="modal" data-target="#group_delete">&#xe613;</i>
+                     <i class="qkyicon_14 edit fr mr10 changebox_button" title="修改" changebox_id="group_edit">&#xe60f;</i> 
+                     </a>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-sm-6 pl0">
+                 <div class="qkycadr minheight">
+                     <div class="group_changebox open" changebox_id="group_info">
+                         <h4 class="header_title clear">示例群组 
+                         <a class="btn btn-default btn-sm fr" id="search_box_oc">高级搜索</a>
+                         <a class="btn btn-default btn-sm fr mr10 showModal" showid="tolist">新增</a>
+                         </h4>
+                         <div class="search_box">
+                                     <form class="form-horizontal">
+                                     <div class="form-group">
+                                        <label for="inputname" class="col-sm-2 control-label pr0">姓名：</label>
+                                        <div class="col-sm-10">
+                                          <input type="text" class="form-control" id="inputname" placeholder="name">
+                                        </div>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="inputphone" class="col-sm-2 control-label pr0">手机：</label>
+                                        <div class="col-sm-10">
+                                          <input type="text" class="form-control" id="inputphone" placeholder="phone">
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="form-group mb0">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                          <button type="submit" class="btn btn-primary">搜索</button>
+                                        </div>
+                                      </div>
+                                     </form>
+                                 </div>        
+                         <div class="table-responsive mt10 qkycadr">
+                                    <table class="table table-condensed" id="userlist"> 
+                                     <thead>
+                                      <tr>
+                                       <th>姓名</th>
+                                       <th>部门</th>
+                                       <th>职位</th>
+                                       <th>手机</th>
+                                       <th></th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                       <td>王霖</td>
+                                       <td>全课云产品部</td>
+                                       <td>教师</td>
+                                       <td>12345678988</td>
+                                       <td><i class="qkyicon_14" data-toggle="modal" data-target="#groupuser_delete">&#xe613;</i></td>
+                                      </tr>
+                                      <tr>
+                                       <td>杨鹏</td>
+                                       <td>全课云产品部</td>
+                                       <td>教师</td>
+                                       <td>12345678988</td>
+                                       <td><i class="qkyicon_14" data-toggle="modal" data-target="#groupuser_delete">&#xe613;</i></td>
+                                      </tr>
+                                      </tbody>
+                                    </table>
+                                    
+                                    <table class="yc" id="userlist_mould">
+                                    <tbody>
+                                    <tr>
+                                       <td></td>
+                                       <td>全课云产品部</td>
+                                       <td>教师</td>
+                                       <td>12345678988</td>
+                                       <td><i class="qkyicon_14" data-toggle="modal" data-target="#groupuser_delete">&#xe613;</i></td>
+                                      </tr>
+                                      </tbody>
+                                    </table>
+                                 </div>
+                                 <div class="qkypage row mt15 mb5">
+                                   <div class="col-md-4 col-sm-5 pageinfo pr0">1-10 of 48 项目</div>
+                                   <div class="col-md-8 col-sm-7 col-xs-8 pl0">
+                                    <ul class="nav nav-pills"> 
+                                     <li class="disabled page_prv"><a href="#">上一页</a></li>
+                                     <li class="active"><a href="#">1</a></li>
+                                     <li class="disabled page_next"><a href="#">下一页</a></li>
+                                    </ul> 
+                                   </div>
+                                  </div>        
+                     </div>
+                     <div class="group_changebox" changebox_id="group_add">
+                         <h4 class="header_title clear">新增群组
+                         <a class="btn btn-default btn-sm fr changebox_button" changebox_id="group_info">返回群组信息</a>
+                         </h4>
+                         <form class="form-horizontal mt10">
+                          <div class="form-group">
+                            <label for="inputname" class="col-sm-3 control-label pr0">名称：</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" id="inputname" >
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="inputshare" class="col-sm-3 control-label pr0">共享范围：</label>
+                            <div class="col-sm-9">
+                              <div class="dropdown qkydropdown havechoose">
+                                <a class="btn btn-default dropdown-toggle auto" id="dropdownMenu1" data-toggle="dropdown">
+                                 <span class="value">不共享</span>
+                                 <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                 <li role="presentation"><a>不共享</a></li>
+                                 <li role="presentation"><a>科室共享</a></li>
+                                 <li role="presentation"><a>下级单位共享</a></li>
+                                 <li role="presentation"><a>全校共享</a></li>
+                                 <li role="presentation"><a>自定义共享</a></li>
+                                </ul>
+                               </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="inputshareuser" class="col-sm-3 control-label pr0">共享用户：</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control showModal" showid="addinput">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label pr0">描述：</label>
+                            <div class="col-sm-9">
+                              <textarea class="form-control" rows="4"></textarea>
+                            </div>
+                          </div>
+                          
+                          
+                          <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-9">
+                              <button type="submit" class="btn  btn-primary mr20">确定</button>
+                              <button type="submit" class="btn btn-default">取消</button>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                          <div class="col-sm-11 error_color col-sm-offset-1">
+                          <p>温馨提示：</p>
+                          <p>1、可以多个人使用同一个群组，由创建者维护群组中的用户群体</p>
+                          <p>2、需要使用通讯录功能来为群组添加和移除用户</p>
+                          </div>
+                          </div>
+                        </form>
+                     </div>
+                     <div class="group_changebox" changebox_id="group_edit">
+                         <h4 class="header_title clear">修改群组
+                         <a class="btn btn-default btn-sm fr changebox_button" changebox_id="group_info">返回群组信息</a>
+                         </h4>
+                         <form class="form-horizontal mt10">
+                          <div class="form-group">
+                            <label for="inputname" class="col-sm-3 control-label pr0">名称：</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control" id="inputname" >
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="inputshare" class="col-sm-3 control-label pr0">共享范围：</label>
+                            <div class="col-sm-9">
+                              <div class="dropdown qkydropdown havechoose">
+                                <a class="btn btn-default dropdown-toggle auto" id="dropdownMenu1" data-toggle="dropdown">
+                                 <span class="value">不共享</span>
+                                 <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                 <li role="presentation"><a>不共享</a></li>
+                                 <li role="presentation"><a>科室共享</a></li>
+                                 <li role="presentation"><a>下级单位共享</a></li>
+                                 <li role="presentation"><a>全校共享</a></li>
+                                 <li role="presentation"><a>自定义共享</a></li>
+                                </ul>
+                               </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="inputshareuser" class="col-sm-3 control-label pr0">共享用户：</label>
+                            <div class="col-sm-9">
+                              <input type="text" class="form-control showModal" showid="editinput">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label pr0">描述：</label>
+                            <div class="col-sm-9">
+                              <textarea class="form-control" rows="4"></textarea>
+                            </div>
+                          </div>
+                          
+                          
+                          <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-9">
+                              <button type="submit" class="btn  btn-primary mr20">确定</button>
+                              <button type="submit" class="btn btn-default">取消</button>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                          <div class="col-sm-11 error_color col-sm-offset-1">
+                          <p>温馨提示：</p>
+                          <p>1、可以多个人使用同一个群组，由创建者维护群组中的用户群体</p>
+                          <p>2、需要使用通讯录功能来为群组添加和移除用户</p>
+                          </div>
+                          </div>
+                        </form>
+                     </div>      
+                 </div>   
+             </div>
          </div>
          <div class="pt20"></div>                  
-     </div>        
+     </div>
+     
+     <!-- Modal -->
+        <div class="modal fade" id="group_delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-xs" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="group_deleteLabel">删除提示</h4>
+              </div>
+              <div class="modal-body modal_auto t_c error_color">
+                删除该群组会连同下属的群组人员一起删除！你确定删除吗？
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal fade" id="groupuser_delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-xs" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="groupuser_deleteLabel">删除提示</h4>
+              </div>
+              <div class="modal-body modal_auto t_c error_color">
+                你确定删除吗？
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        
+        <div class="modal fade" id="groupuser_choose" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="groupuser_chooseLabel">人员选择面板</h4>
+              </div>
+              <div class="modal-body">
+                <div class="row userChoose_box">
+                    <div class="col-sm-4 userChoose_cont">
+                        <h4>部门/群组选择</h4>
+                        <ul class="nav nav-tabs mt15">
+                            <li role="presentation" class="active"><a>部门</a></li>
+                            <li role="presentation"><a>群组</a></li>
+                        </ul>
+                        <div class="userChoose_ul">
+                            <div class="userChoose_list open">
+                            	<div class="scrrol_box">
+                            	<div class="checkbox">
+                                   <label class="checkbox-qky checkbox-inline clear pl0 select">
+                                   <a class="checkbox_a fl"><i class="qkyicon_14">&#xe619;</i></a>
+                                   <span class="fl">显示所有组织</span>
+                                   </label>
+                                   <label class="checkbox-qky checkbox-inline clear pl0 select">
+                                   <a class="checkbox_a fl"><i class="qkyicon_14">&#xe619;</i></a>
+                                   <span class="fl">包含下级组织人员</span>
+                                   </label>
+                                </div>
+                                <ul id="tree" class="ztree"></ul>
+                            </div>
+                            </div>
+                            <div class="userChoose_list">
+                            	<div class="scrrol_box">
+                                <div class="group_list">
+                                     <a class="clear trn active">
+                                     <span>示例群组</span> 
+                                     </a>
+                                     <a class="clear trn">
+                                     <span>示例群组2</span>
+                                     </a>
+                                     <a class="clear trn">
+                                     <span>示例群组3</span> 
+                                     </a>
+                                     <a class="clear trn">
+                                     <span>示例群组4</span>
+                                     </a>
+                                     <a class="clear trn">
+                                     <span>示例群组5</span>
+                                     </a> 
+                                 </div>	
+                            </div>
+                            </div>
+                         </div>     
+                    </div>
+                    
+                    <div class="col-sm-4 userChoose_cont">
+                        <h4>人员选择</h4>
+                        <div class="row userChoose_cao">
+                            <div class="col-sm-3 pr0 checkbox mt0 mb0">
+                                <label class="checkbox-qky clear pl0 parent" lj="userchoose" isc="no">
+                                    <a class="checkbox_a fl">
+                                        <i class="qkyicon_14">&#xe619;</i>
+                                    </a>
+                                    <span class="fl">全选</span>
+                                </label> 
+                            </div>
+                            <div class="col-sm-9">
+                                 <div class="input-group">
+                                     <input type="text" class="form-control" placeholder="输入人员姓名">
+                                     <span class="input-group-btn">
+                                         <button class="btn btn-default" type="button">
+                                            <i class="qkyicon_14 fz_we">&#xe671;</i>
+                                         </button>
+                                     </span>
+                                  </div> 
+                            </div>
+                        </div>
+                        <div class="userChoose_ul">
+                            <div class="userChoose_list open">
+                                <div class="scrrol_box">
+                                    <div class="checkbox userChoose_name">
+                                       <label class="checkbox-qky clear pl0 child" lj="userchoose">
+                                       <a class="checkbox_a fl">
+                                       <i class="qkyicon_14">&#xe619;</i>
+                                       </a><span class="fl">超级管理员1</span>
+                                       </label>
+                                       <label class="checkbox-qky clear pl0 child" lj="userchoose">
+                                       <a class="checkbox_a fl">
+                                       <i class="qkyicon_14">&#xe619;</i>
+                                       </a><span class="fl">超级管理员2</span>
+                                       </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="col-sm-4 userChoose_cont">
+                    	<h4>已选人员</h4>
+                        <div class="row userChoose_cao">
+                            <div class="col-sm-6">
+                                <button type="button" class="btn btn-default" id="userchoose_allout">全部删除</button>
+                            </div>
+                            <div class="col-sm-6 t_r height30_line mian_color">
+                                 共<span id="userNumber">0</span>人 
+                            </div>
+                        </div>
+                        <div class="userChoose_ul">
+                            <div class="userChoose_list open">
+                                <div class="scrrol_box">
+                                    <div class="userchoose_on"></div>
+                                    <div class="yc" id="userchoose_on_mould">
+                                    	<a><span></span><i class="qkyicon_14">&#xe618;</i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>
+                    
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="userChoose_submit">确定选择</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              </div>
+            </div>
+          </div>
+        </div>        
     <script src="../dist/jq/1.11.1/jquery.min.js"></script>
     <!--模块化js-->
     <script src="../dist/sea.js"></script>
     <script src="../dist/seaconfig.js"></script>
     <script>
-     seajs.use(["bs"],
-	 function(bs){
 
+     seajs.use(["bs","oascd/oacontacts","d-dw","d-ra_ch","tree","oascd/tree_run"],
+	 function(bs,con){
+		con.contacts_run();	
 	 });
-    </script>
+	
+	  
+  </script>
   </body>
 </html>

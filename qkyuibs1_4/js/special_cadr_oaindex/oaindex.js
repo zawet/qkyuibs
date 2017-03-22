@@ -6,6 +6,7 @@ define(function(require,exports) {
 	//主导航（头部导航点击）事件
 	exports.windows_qkynav=function(){
 		$("#qkynav .nav li").on("click",function(){
+			if(!$(this).hasClass("dropdown")){
 			//改变自身样式颜色先
 			$(this).addClass("active").siblings().removeClass("active");
 			//获取id和名字
@@ -37,6 +38,7 @@ define(function(require,exports) {
 			//窗口标签点击事件添加
 			windows_bar();
 			menu_list_item();
+			}
 		});    
 	}
 	//窗口标签开关
@@ -76,7 +78,7 @@ define(function(require,exports) {
 			$(this).parent().addClass("yc");
 			$(this).parent().siblings().removeClass("yc");
 			$(this).parents(".windows_mian").find(".right_box").removeClass("open");
-			$(".right_box[box_id='"+$(this).attr("id")+"']").addClass("open");
+			$(".windows_mian .right_box[box_id='"+$(this).attr("id")+"']").addClass("open");
 		})
 	}
 	exports.tips_create=function(){
@@ -103,7 +105,7 @@ define(function(require,exports) {
 		$(".menu_list_item").on("click",function(){
 			$(this).addClass("active").siblings().removeClass("active");
 			$(this).parents(".windows_mian").find(".right_box").removeClass("open");
-			$(".right_box[box_id='"+$(this).attr("id")+"']").addClass("open");
+			$(".windows_mian .right_box[box_id='"+$(this).attr("id")+"']").addClass("open");
 		})
 	}
 	
