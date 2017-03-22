@@ -19,7 +19,7 @@ define(function(require) {
 	//复选父子链接选择
 	$(".checkbox-qky.parent").on("click",function(){
 		var key=$(this).attr("lj");
-		var keychild=$(".checkbox-inline.child[lj="+key+"]");
+		var keychild=$(".checkbox-qky.child[lj="+key+"]");
 		if(!keychild.hasClass("disabled")){
 			if($(this).attr("isc")=="no"){
 				keychild.addClass("select");$(this).attr("isc","yes");
@@ -28,5 +28,20 @@ define(function(require) {
 			}
 		}
 	});
+	//复选子类全没选和全选中后，父类改变样式
+	$(".checkbox-qky.child").on("click",function(){
+		child_in_parent($(this));
+	});
+	function child_in_parent(id){
+		var key=id.attr("lj");
+		var childnumber=$(".checkbox-qky.child[lj="+key+"]").length;
+		var selectnumber=$(".checkbox-qky.select.child[lj="+key+"]").length;
+		if(selectnumber<childnumber){
+			$(".checkbox-qky.parent[lj="+key+"]").removeClass("select").attr("isc","no");
+		}
+		if(selectnumber>=childnumber){
+			$(".checkbox-qky.parent[lj="+key+"]").addClass("select").attr("isc","yes");
+		}
+	}
 
 })

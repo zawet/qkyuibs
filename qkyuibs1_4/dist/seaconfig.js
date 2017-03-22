@@ -12,6 +12,8 @@ seajs.config({
 	'sw':'swiper/3.4.1/js/swiper.min',//3.4轮播插件
 	'sw2':'swiper/2.0/idangerous.swiper.min',//2.0轮播插件
 	
+	'tree':'zTree_v3/js/jquery.ztree.core.min',//2.0轮播插件
+	
 	'ra_ch':'./js/common_cadr/radio_checkbox1.1',
 	'dw':'./js/common_cadr/dropdown_havevalue',
 	'upfile':'./js/common_cadr/file',

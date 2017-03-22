@@ -79,7 +79,7 @@ define(function(require) {
             temwidth+=$(this).width();
 			if(havewidth<=temwidth){
 				if(onefor){
-					muchli[0](opts.navli[i-1]);
+					muchli.push(opts.navli[i-1]);
 					onefor=false;
 				}
 				muchli.push(opts.navli[i]);

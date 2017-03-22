@@ -21,22 +21,94 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" href="../dist/zTree_v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
   </head>
   <body class="oabasebg">
      <div class="scrrol_box pl15">
          <div class="row mt20">
-         <div class="col-sm-6">1</div>
-         <div class="col-sm-6">2</div>
+             <div class="col-sm-12"><h3 class="header_title">内部通讯录</h3></div>
+             <div class="col-sm-6 ">
+             <div class="qkycadr pa15 minheight">
+                 <h4 class="header_title">组织结构</h4> 
+                 <ul id="tree" class="ztree mt5"></ul>
+             </div>
+             </div>
+             <div class="col-sm-6 pl0">
+                 <div class="qkycadr pa15 minheight">
+                     <h4 class="header_title clear">默认部门 <a class="btn btn-default btn-sm fr" id="search_box_oc">高级搜索</a></h4>
+                     <div class="search_box">
+                         <form class="form-horizontal">
+                         <div class="form-group">
+                            <label for="inputname" class="col-sm-2 control-label pr0">姓名：</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="inputname" placeholder="name">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="inputphone" class="col-sm-2 control-label pr0">手机：</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="inputphone" placeholder="phone">
+                            </div>
+                          </div>
+                          
+                          <div class="form-group mb0">
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <button type="submit" class="btn btn-primary">搜索</button>
+                            </div>
+                          </div>
+                         </form>
+                     </div>
+                     <div class="table-responsive mt10 qkycadr">
+                        <table class="table table-condensed"> 
+                         <thead>
+                          <tr>
+                           <th>姓名</th>
+                           <th>部门</th>
+                           <th>职位</th>
+                           <th>手机</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                           <td>王霖</td>
+                           <td>全课云产品部</td>
+                           <td>教师</td>
+                           <td>12345678988</td>
+                          </tr>
+                          <tr>
+                           <td>杨鹏</td>
+                           <td>全课云产品部</td>
+                           <td>教师</td>
+                           <td>12345678988</td>
+                          </tr>
+                          </tbody>
+                        </table>
+                     </div>
+                     <div class="qkypage row mt15 mb5">
+                       <div class="col-md-4 col-sm-5 pageinfo pr0">1-10 of 48 项目</div>
+                       <div class="col-md-8 col-sm-7 col-xs-8 pl0">
+                        <ul class="nav nav-pills"> 
+                         <li class="disabled page_prv"><a href="#">上一页</a></li>
+                         <li class="active"><a href="#">1</a></li>
+                         <li class="disabled page_next"><a href="#">下一页</a></li>
+                        </ul> 
+                       </div>
+                      </div>
+                 </div>
+             </div>
          </div>
+         
          <div class="pt20"></div>                  
      </div> 
     <script src="../dist/jq/1.11.1/jquery.min.js"></script>
     <!--模块化js-->
     <script src="../dist/sea.js"></script>
     <script src="../dist/seaconfig.js"></script>
-    <script>
-     seajs.use(["bs"],
-	 function(bs){});
-    </script>
+    <script type="text/javascript">
+     seajs.use(["bs","oascd/oacontacts","tree","oascd/tree_run"],
+	 function(bs,con){
+		con.search_box_oc();
+	});
+  </script>
   </body>
 </html>

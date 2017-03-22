@@ -54,7 +54,7 @@ define({
             '</div>'+
         '</div>'+
      '</div>',
-	 navmuchhtml:'<li class="dropdown ">'+
+	 navmuchhtml:'<li class="dropdown">'+
               '<a href="#" class="dropdown-toggle clear" data-toggle="dropdown">'+
               '<span class="fl">更多</span>'+
               '<span class="caret"></span>'+
