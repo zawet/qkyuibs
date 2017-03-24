@@ -24,9 +24,61 @@
   </head>
   <body class="oabasebg">
      <div class="scrrol_box pl15">
-         <div class="row mt20">
-         <div class="col-sm-6">1</div>
-         <div class="col-sm-6">2</div>
+         <div class="qkycadr mt20">
+         	<h3 class="header_title mb0 pl15 pt15"><i class="qkyicon_14_ mr5 fz_28">&#xe62f;</i>收件箱</h3>
+            
+            <div class="mail_toolbar clear">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default checkbox-qky mb0">
+                  <a class="checkbox_a mt0 mr0" style="display:inline-block"><i class="qkyicon_14">&#xe619;</i></a>
+                  </button>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">全选</a></li>
+                    <li><a href="#">不选</a></li>
+                    <li><a href="#">未读</a></li>
+                    <li><a href="#">已读</a></li>
+                  </ul>
+                </div>
+                
+                
+                <button type="button" class="btn btn-default">删除</button>
+                
+                <div class="btn-group" role="group" >
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      标记为
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">已读</a></li>
+                      <li><a href="#">未读</a></li>
+                      <li><a href="#">全部设为已读</a></li>
+                    </ul>
+                  </div>
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      移动到
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">文件夹1</a></li>
+                      <li><a href="#">文件夹2</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">新建文件夹并移动</a></li>
+                    </ul>
+                  </div>
+                </div>
+                
+                
+                <button type="button" class="btn btn-default fr">高级搜索</button>
+                <a  class="btn btn-onlytxt fr mr20"><i class="qkyicon_20 fz_16">&#xe609;</i></a>
+                
+   			</div>
+            
          </div>
          <div class="pt20"></div>                  
      </div> 
@@ -35,7 +87,7 @@
     <script src="../dist/sea.js"></script>
     <script src="../dist/seaconfig.js"></script>
     <script>
-     seajs.use(["bs"],
+     seajs.use(["bs","d-ra_ch"],
 	 function(bs){});
     </script>
   </body>
