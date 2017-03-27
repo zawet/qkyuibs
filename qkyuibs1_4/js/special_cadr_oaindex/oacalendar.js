@@ -17,7 +17,7 @@ define(function(require,exports) {
 		
 		
 		//日历月份选择
-		OA_calendar_choose=function(id,type){
+		OA_calendar_choose=function(id,type,indata){
 			var thisyear=Number(id.parent().find("p .year").text());
 			var thismoon=Number(id.parent().find("p .moon").text());
 			//console.log(thisyear,thismoon);
@@ -29,11 +29,11 @@ define(function(require,exports) {
 			thismoon=thismoon+addnumber;
 			if(ifcode){thismoon=distmoon;thisyear=thisyear+addnumber;}
 			else{thismoon=thismoon;thisyear=thisyear;}
-			OA_calendar_opt(thisyear,thismoon,tod,id.parents(".OA_calendar"));
+			OA_calendar_opt(thisyear,thismoon,tod,id.parents(".OA_calendar"),indata);
 		}
 		
 		//日历整体渲染
-		OA_calendar_opt=function(y,m,d,id){
+		OA_calendar_opt=function(y,m,d,id,indata){
 			var week=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"]	;
 			var thisdata=new Date(y,m-1,d);
 			var weeks=thisdata.getDay();
@@ -41,11 +41,11 @@ define(function(require,exports) {
 			id.find(".OA_calendar_day span").html(week[weeks]);
 			id.find(".OA_calendar_years .year").html(y);
 			id.find(".OA_calendar_years .moon").html(m);
-			OA_calendar(y,m,d,id.find(".OA_calendar_mian .table"));
+			OA_calendar(y,m,d,id.find(".OA_calendar_mian .table"),indata);
 		}
 		
 		//日历表格渲染
-		function OA_calendar(y,m,d,id){
+		function OA_calendar(y,m,d,id,indata){
 			var weekHtml="<tbody><tr>";
 			var moomHtml="";
 			md=DayNumOfMonth(y,m);//获取当前月天数
@@ -81,16 +81,18 @@ define(function(require,exports) {
 			//console.log(moomHtml);
 			id.append(moomHtml+"</tbody>");
 			
-			//增加数据条数
-			id.find("a").each(function(i) {
-				var thisrl=$(this).attr("date");
-				for(var key in datas){
-					if(key==thisrl){
-						$(this).addClass("havedata").attr("title","有"+datas[key].length+"条数据");
-						//$(this).append("<div class='databox'>有"+hwrldatas[key].length+"条数据</div>");
+			if(indata){
+				//增加数据条数
+				id.find("a").each(function(i) {
+					var thisrl=$(this).attr("date");
+					for(var key in datas){
+						if(key==thisrl){
+							$(this).addClass("havedata").attr("title","有"+datas[key].length+"条数据");
+							//$(this).append("<div class='databox'>有"+hwrldatas[key].length+"条数据</div>");
+						}
 					}
-				}
-			});
+				});
+			}
 		}
 		
 		//获取指定年月的天数
@@ -100,12 +102,41 @@ define(function(require,exports) {
 		}
 		
 		//暴露执行体
-		exports.OA_calendar_implement =function(){
-			OA_calendar_opt(toy,tom+1,tod,$(".OA_calendar"));
+		exports.OA_calendar_implement =function(indata,clickday_function){
+			//创建日历表格和左右换月执行事件
+			OA_calendar_opt(toy,tom+1,tod,$(".OA_calendar"),indata);
 			 $(".OA_calendar_chooose_button").on("click",function(){
-					if($(this).hasClass("perv")) OA_calendar_choose($(this),"perv");
-					if($(this).hasClass("next")) OA_calendar_choose($(this),"next");
+					if($(this).hasClass("perv")) OA_calendar_choose($(this),"perv",indata);
+					if($(this).hasClass("next")) OA_calendar_choose($(this),"next",indata);
 			 });
+			 
+			 //邮件那边，在不传数据下时进行点击
+			 if(!indata){ 
+			  $(document).on("click",":not('.inmail_calendar_box')",function(){
+				  //console.log("out");
+				 $(".inmail_calendar").slideUp(200);
+				 $(".inmail_calendar_btn").removeClass("active");
+			  })
+			  $(".inmail_calendar_box").on("click",function(event){
+				 event.stopPropagation();
+				 //console.log("in");
+			  });	 
+			  $(".inmail_calendar_btn").on("click",function(){
+				  //event.stopPropagation();
+				  //console.log("in2");
+				 
+			  	 $(this).toggleClass("active").next(".inmail_calendar").slideToggle(200);
+			  });
+			  
+			  //日数点击
+			  $(".inmail_calendar_box .OA_calendar_mian table tbody tr td a").each(function(i) {
+					$(this).click(function(){
+						$(this).parents("tbody").find("a").removeClass("active");
+						$(this).addClass("active");
+						clickday_function($(this));
+					});
+			   });
+			 }
 		
 		}
 		

@@ -90,15 +90,16 @@
 
 /*首页日历*/
 .OA_calendar{}
-.OA_calendar_day{ border-right:1px solid #d8d8d8; padding:5px 15px 5px 30px; text-align:center;}
+
+.OA_calendar_day{ border-right:1px solid #d8d8d8; padding:5px 15px 5px 30px; text-align:center; border-bottom:1px solid #d8d8d8;}
 .OA_calendar_day label{ display:block; color:#2baf2b; font-size:40px; line-height:42px; margin:0;}
 .OA_calendar_day span{ display:block; color:#333; line-height:24px;}
-.OA_calendar_years{ line-height:74px; text-align:center;}
+.OA_calendar_years{ line-height:74px; text-align:center;border-bottom:1px solid #d8d8d8;}
 .OA_calendar_years>p{ font-size:18px; display:inline-block; padding:0 20px; margin:0; color:#2baf2b;}
-.OA_calendar_years a{ display:inline-block; cursor:pointer;}
-.OA_calendar_years a:hover{ text-decoration:inherit;}
+.OA_calendar_years a{ display:inline-block; cursor:pointer;color:#2baf2b;}
+.OA_calendar_years a:hover{ text-decoration:inherit;color:#2baf2b;}
 .OA_calendar_years a i{ font-size:16px;}
-.OA_calendar_mian .table>thead>tr>th{ padding:7px 0; text-align:center; border-bottom:1px solid #d8d8d8; border-top:1px solid #d8d8d8 !important; background:#fcfcfc;}
+.OA_calendar_mian .table>thead>tr>th{ padding:7px 0; text-align:center; border:0; background:#f5f5f5;}
 .OA_calendar_mian .table>tbody>tr>td{ border:0; padding:4px 0;text-align:center;}
 .OA_calendar_mian .table>tbody>tr>td a{ color:#737373; display:inline-block; width:30px; height:30px; line-height:28px;text-align:center;border-radius:50%; border:2px solid #fff; cursor:pointer;}
 .OA_calendar_mian .table>tbody>tr>td a:hover{background:#eee;text-decoration:inherit;border-color:#ddd;}
@@ -106,8 +107,16 @@
 .OA_calendar_mian .table>tbody>tr>td a.havedata:hover{background:#2baf2b;border-color:#2baf2b;}
 .OA_calendar_mian .table>tbody>tr>td a.today{background:#fff; color:#2baf2b; border-color:#2baf2b;}
 .OA_calendar_mian .table>tbody>tr>td a.today:hover{background:#2baf2b; color:#fff;}
-.OA_calendar_mian .table>tbody>tr>td a.havedata .databox{ position:absolute; width:100px; left:104%; top:0;background:#fff; border:1px solid #d8d8d8; padding:10px; display:none; color:#737373;}
-.OA_calendar_mian .table>tbody>tr>td a.havedata:hover .databox{display:block;}
+.OA_calendar_mian .table>tbody>tr>td a.active{background:#72D572;  color:#fff;border-color:#72D572; position:relative;}
+.OA_calendar_mian .table>tbody>tr>td a.active:hover{background:#2baf2b;border-color:#2baf2b;}
+
+
+.inmail_calendar_box a.inmail_calendar_btn{ color:#333;}
+.inmail_calendar_box a.inmail_calendar_btn.active{ background:#fff; text-decoration:inherit; color:#2baf2b;}
+.inmail_calendar_box .OA_calendar.inmail_calendar{ display:none;}
+.inmail_calendar{ width:240px; position:absolute; right:0; top:100%; z-index:1003;}
+.inmail_calendar .OA_calendar_years{ width:100%; line-height:40px;border-bottom:0;}
+.inmail_calendar .OA_calendar_mian{ width:100%;}
 
 /*首页表格导航头*/
 .nav.nav-tabs li{ cursor:pointer;}
@@ -181,4 +190,12 @@ h4.header_title{ border-bottom:1px dashed #d8d8d8; padding:10px 0; margin:0; lin
 .enclosure_ing{ float:right; width:20%; text-align:right;}
 .enclosure_list_txt i{ width:16px; height:16px; line-height:16px; text-align: center; display:inline-block; background:#F0485F; border-radius:50%; color:#fff; position:absolute; right:-4px; top:2px;}
 
-.mail_toolbar{ background:#f9f9f9; padding:15px;}
+.mail_toolbar{ background:#f9f9f9; padding:15px; border-bottom:1px solid #d8d8d8;}
+
+.collect_type_box{ padding:15px 15px 0;}
+.collect_list_box{ padding:15px;}
+.collect_list_box table tbody tr{ cursor:pointer;}
+.collect_list_box .checkbox_a{ margin-top:3px;}
+.collect_list_box .mail_state{ color:#F8C634 !important;}
+.collect_list_box .mail_state_read{ color:#d8d8d8 !important;}
+.collect_list_box .mail_state_edit{ color:#2baf2b !important;}

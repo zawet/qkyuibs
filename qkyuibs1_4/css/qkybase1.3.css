@@ -35,23 +35,23 @@ a:hover,a:focus {color: #008283;}
 .assist_color{ color:#72D572}/*字辅色调*/
 .minor_color{ color:#A3E9A4}/*字次色调*/
 
-.h1_background{background:#333;}
-.h2_background{background:#737373;}
-.h3_background{background:#999;}
-.error_background{background:#F0485F;}
-.h1_color{ color:#333;}
-.h2_color{color:#737373;}
-.h3_color{color:#999;}
-.error_color{color:#F0485F }
+.h1_background{background:#333!important;}
+.h2_background{background:#737373!important;}
+.h3_background{background:#999!important;}
+.error_background{background:#F0485F!important;}
+.h1_color{ color:#333!important;}
+.h2_color{color:#737373!important;}
+.h3_color{color:#999!important;}
+.error_color{color:#F0485F!important; }
 
-.ba_f5{ background:#f5f5f5;}
-.ba_f4{ background:#f4f4f4;}
-.br_df{ border-color:#dfdfdf;}
-.br_d8{ border-color:#d8d8d8;}
-.br_d4{ border-color:#d4d4d4;}
+.ba_f5{ background:#f5f5f5!important;}
+.ba_f4{ background:#f4f4f4!important;}
+.br_df{ border-color:#dfdfdf!important;}
+.br_d8{ border-color:#d8d8d8!important;}
+.br_d4{ border-color:#d4d4d4!important;}
 
 .mian_line{ border:1px solid #2baf2b}/*边框次色调*/
-.ff_background{ background:#fff;}
+.ff_background{ background:#fff!important;}
 .nav_color{color:#0A7E07;}
 .nav_qkymc a{ color:#2baf2b;} 
 .box_ff{ border:1px solid #d8d8d8; background:#fff;}

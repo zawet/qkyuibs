@@ -24,19 +24,246 @@
   </head>
   <body class="oabasebg">
      <div class="scrrol_box pl15">
-         <div class="row mt20">
-         <div class="col-sm-6">1</div>
-         <div class="col-sm-6">2</div>
+         <div class="qkycadr mt20">
+         	<h3 class="header_title mb0 pl15 pt15"><i class="qkyicon_14_ mr5 fz_28">&#xe60a;</i>已发送</h3>
+            
+            <div class="mail_toolbar clear">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default checkbox-qky mb0 parent" lj="mail_list" isc="no">
+                  <a class="checkbox_a mt0 mr0" style="display:inline-block"><i class="qkyicon_14">&#xe619;</i></a>
+                  </button>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">全选</a></li>
+                    <li><a href="#">不选</a></li>
+                    <li><a href="#">未读</a></li>
+                    <li><a href="#">已读</a></li>
+                  </ul>
+                </div>
+                    
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mail_delete">删除</button>
+                
+                <div class="btn-group" role="group" >
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      标记为
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">已读</a></li>
+                      <li><a href="#">未读</a></li>
+                      <li><a href="#">全部设为已读</a></li>
+                    </ul>
+                  </div>
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      移动到
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">文件夹1</a></li>
+                      <li><a href="#">文件夹2</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a  data-toggle="modal" data-target="#add_file">新建文件夹并移动</a></li>
+                    </ul>
+                  </div>
+                </div>
+                       
+                <button type="button" class="btn btn-default fr" id="search_box_oc">高级搜索</button>
+                
+                     
+                <div class="btn btn-onlytxt fr mr20 po_r inmail_calendar_box"> 
+                    <a class="inmail_calendar_btn" ><i class="qkyicon_20 fz_16">&#xe609;</i></a>               
+                    <div class="inmail_calendar qkycadr OA_calendar ">     
+                        <div class="OA_calendar_years ">
+                            <a class="OA_calendar_chooose_button perv"><i class="qkyicon_14">&#xe604;</i></a>
+                            <p><span class="year"></span>年<span class="moon"></span>月</p>
+                            <a class="OA_calendar_chooose_button next"><i class="qkyicon_14">&#xe6b3;</i></a>
+                        </div>
+                        <div class="OA_calendar_mian" >
+                        	<table class="table table-condensed"></table>
+                        </div>
+                    </div>
+                    <span class="inmail_calendar_dateshow"></span>
+                </div>
+                <div class="search_box mt15 qkycadr">
+                         <form class="form-horizontal">
+                         <div class="row">
+                             <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <label for="search_theme" class="col-sm-2 control-label pr0 pl0">主题：</label>
+                                    <div class="col-sm-10">
+                                      <input type="text" class="form-control" id="search_theme" placeholder="主题">
+                                    </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <label for="search_sender" class="col-sm-2 control-label pr0 pl0">发件人：</label>
+                                    <div class="col-sm-10">
+                                      <input type="text" class="form-control" id="search_sender" placeholder="发件人">
+                                    </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <label for="search_consignee" class="col-sm-2 control-label pr0 pl0">收件人：</label>
+                                    <div class="col-sm-10">
+                                      <input type="text" class="form-control" id="search_consignee" placeholder="收件人">
+                                    </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <label for="search_include_enclosure" class="col-sm-2 control-label pr0 pl0">包含附件：</label>
+                                    <div class="col-sm-10">
+                                      <div class="dropdown qkydropdown havechoose">
+                                        <a class="btn btn-default dropdown-toggle auto" id="dropdownMenu1" data-toggle="dropdown">
+                                         <span class="value">全部</span>
+                                         <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                         <li role="presentation"><a>全部</a></li>
+                                         <li role="presentation"><a>不包含</a></li>
+                                        </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <label for="search_starttime" class="col-sm-2 control-label pr0 pl0">开始时间：</label>
+                                    <div class="col-sm-10">
+                                      <input type="text" class="form-control laydate-icon" onClick="laydate()" id="search_starttime" placeholder="开始时间">
+                                    </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <label for="search_endtime" class="col-sm-2 control-label pr0 pl0">结束时间：</label>
+                                    <div class="col-sm-10">
+                                      <input type="text" class="form-control laydate-icon" onClick="laydate()" id="search_endtime" placeholder="结束时间">
+                                    </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-12 t_c">
+                             <button type="submit" class="btn btn-primary">搜索</button>
+                             <button type="button" class="btn btn-default">重置</button>
+                             <button type="button" class="btn btn-default">取消</button>
+                             </div>
+                         </div>
+                         </form>
+                     </div>	               
+   			</div>
+            
+            
+            <div class="collect_list_box">
+                <table class="table table-condensed qkycadr table-hover">
+                    <tbody>
+                        <tr mail_loadstate="check">
+                            <td class="noclick"><label class="checkbox-qky mb0 child" lj="mail_list"><a class="checkbox_a mr0"><i class="qkyicon_14">&#xe619;</i></a></label></td>
+                            <td>田永康（Wiki）</td>
+                            <td>[Wiki]Operations > 知了tomcat日志接入脚本</td>
+                            <td class="noclick"><a href="#">接收情况</a></td>
+                            <td class="t_r">10:13</td>
+                        </tr>
+                        <tr mail_loadstate="check">
+                            <td class="noclick"><label class="checkbox-qky mb0 child" lj="mail_list"><a class="checkbox_a mr0"><i class="qkyicon_14">&#xe619;</i></a></label></td>
+                            <td>田永康（Wiki）</td>
+                            <td>[Wiki]Operations > 知了tomcat日志接入脚本</td>
+                            <td class="noclick"><a href="#">接收情况</a></td>
+                            <td class="t_r">10:13</td>
+                        </tr>
+                        <tr mail_loadstate="check">
+                            <td class="noclick"><label class="checkbox-qky mb0 child" lj="mail_list"><a class="checkbox_a mr0"><i class="qkyicon_14">&#xe619;</i></a></label></td>
+                            <td>田永康（Wiki）</td>
+                            <td>[Wiki]Operations > 知了tomcat日志接入脚本</td>
+                            <td class="noclick"><a href="#">接收情况</a></td>
+                            <td class="t_r">10:13</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <div class="qkypage row mt15 mb5">
+                   <div class="col-md-2 col-sm-3 pageinfo">1-10 of 48 项目</div>
+                   <div class="col-md-8 col-sm-7 col-md-offset-2 col-sm-offset-2 col-xs-8 col-xs-offset-4">
+                    <ul class="nav nav-pills"> 
+                     <li class="disabled page_prv"><a href="#">上一页</a></li>
+                     <li class="active"><a href="#">1</a></li>
+                     <li><a href="#">2</a></li>
+                     <li><a href="#">...</a></li>
+                     <li><a href="#">4</a></li>
+                     <li><a href="#">5</a></li>
+                     <li class="page_next"><a href="#">下一页</a></li>
+                     <li class="form-group mb0 page_input"><input class="form-control" placeholder="输入页面" type="text"></li>
+                     <li class="page_input"><a class="btn btn-default">GO</a></li>
+                    </ul>
+                   </div>
+                 </div>
+            </div>
          </div>
          <div class="pt20"></div>                  
-     </div> 
+     </div>
+     
+     
+     
+     <!--modal-->
+     <div class="modal fade" id="add_file" tabindex="-1" role="dialog" aria-labelledby="add_fileLabel">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="add_fileLabel">新建文件夹</h4>
+              </div>
+              <div class="modal-body modal_auto ">
+              <form class="form-horizontal">
+                <div class="form-group mb0">
+                <label for="newfile_name" class="col-sm-4 control-label pr0 pl0">输入新建文件夹名称：</label>
+                <div class="col-sm-8">
+                <input type="text" class="form-control" id="newfile_name">
+                </div>
+                </div>
+               </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        
+     <div class="modal fade" id="mail_delete" tabindex="-1" role="dialog" aria-labelledby="mail_deleteLabel">
+          <div class="modal-dialog modal-xs" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="mail_deleteLabel">删除提示</h4>
+              </div>
+              <div class="modal-body modal_auto t_c error_color">
+                是否删除选中的邮件？
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              </div>
+            </div>
+          </div>
+        </div>   
     <script src="../dist/jq/1.11.1/jquery.min.js"></script>
     <!--模块化js-->
     <script src="../dist/sea.js"></script>
     <script src="../dist/seaconfig.js"></script>
+    <script src="../dist/laydate/laydate.js"></script>
     <script>
-     seajs.use(["bs"],
-	 function(bs){});
+	 seajs.use(["bs","oascd/oamail","d-ra_ch","d-dw"],
+	 function(bs,mail){
+		laydate.skin('zwt');
+		mail.oamail_run();
+	 });
     </script>
   </body>
 </html>
