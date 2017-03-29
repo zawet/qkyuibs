@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="qky2.ico">
+    <title>全课云UI</title>
+    <!-- Bootstrap 基础样式 CSS -->
+    <link href="../dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+    
+    <!--全课云基础样式覆盖-->
+    <link href="../css/iconfont.css" rel="stylesheet">
+    <link href="../css/qkybase1.3.css" rel="stylesheet">
+    <link href="../css/oabase.css" rel="stylesheet">
+    <link href="../css/quickcss.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="oabasebg">
+     <div class="scrrol_box pl15 mt20 pb20">
+ 		 <div class="fixed_header">
+         	<h3 class="header_title mb0"><i class="qkyicon_14_ mr5 fz_28">&#xe70f;</i>接收情况</h3>
+         	<div class="mail_toolbar clear">
+                <a class="btn btn-default" href="javascript:history.go(-1)"><i class="qkyicon_14">&#xe604;</i>返回</a>
+                <button type="button" class="btn btn-default">撤回</button>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mail_back">一键撤回未读</button>
+            </div>
+         </div>
+         <div class="qkycadr mt_fixed_two">
+         	
+            <div class="pa15">
+                <div class="check_list_box">
+                  <div class="check_list">[JIRA](QKY-2135) 【金湾区OA】列表页首页、末页、上一页、下一页按钮显示问题</div>   
+                  <div class="check_list clear">
+                  <div class="one">时间：</div>
+                  <div class="two">2016年06月30日 11:08（星期四）</div>
+                  </div> 
+                </div>
+                
+                <table class="table table-condensed qkycadr mt15">
+            <thead>
+            <tr>
+            <th>
+            <label class=" checkbox-qky mb0 parent" lj="mail_list" isc="no">
+            <a class="checkbox_a mt0 mr0"><i class="qkyicon_14">&#xe619;</i></a>
+            </label>
+            </th>
+            <th>接收人</th>
+            <th>接收状态</th>
+            <th>接收时间</th>
+            </tr>
+            </thead>
+            <tbody>
+               <tr mail_loadstate="tofile">
+                  <td class="noclick"><label class="checkbox-qky mb0 child " lj="mail_list"><a class="checkbox_a mr0 mt0"><i class="qkyicon_14">&#xe619;</i></a></label></td>
+                  <td>王老师</td>
+                  <td class="mail_state_read"><i class="qkyicon_14_">&#xe604;</i></td>
+                  <td>2016-07-07 12:00</td>
+                  
+               </tr> 
+               <tr mail_loadstate="tofile">
+                  <td class="noclick"><label class="checkbox-qky mb0 child" lj="mail_list"><a class="checkbox_a mr0 mt0"><i class="qkyicon_14">&#xe619;</i></a></label></td>
+                  <td>李老师</td>
+                  <td class="mail_state"><i class="qkyicon_14_">&#xe627;</i></td>
+                  <td></td>
+                  
+               </tr>      
+             </tbody>
+             </table>
+                
+            </div>
+          </div>
+         <div class="pt20"></div>                  
+     </div>  
+     
+     <div class="modal fade" id="mail_back" tabindex="-1" role="dialog" aria-labelledby="mail_backLabel">
+          <div class="modal-dialog modal-xs" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="mail_backLabel">提示信息</h4>
+              </div>
+              <div class="modal-body modal_auto t_c error_color">
+               是否确定撤回已发邮件，撤回后将无法恢复?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              </div>
+            </div>
+          </div>
+        </div>      
+    <script src="../dist/jq/1.11.1/jquery.min.js"></script>
+    <!--模块化js-->
+    <script src="../dist/sea.js"></script>
+    <script src="../dist/seaconfig.js"></script>
+    <script>
+     seajs.use(["bs","d-ra_ch"],
+	 function(bs){
+		
+	 });
+    </script>
+  </body>
+</html>
