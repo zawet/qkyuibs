@@ -19,7 +19,9 @@ seajs.config({
 	'upfile':'./js/common_cadr/file',
 	'd-ra_ch':'../js/common_cadr/radio_checkbox1.1',
 	'd-dw':'../js/common_cadr/dropdown_havevalue',
-	'd-upfile':'../js/common_cadr/file'
+	'd-upfile':'../js/common_cadr/file',
+	
+	
   },
 
   // 路径配置

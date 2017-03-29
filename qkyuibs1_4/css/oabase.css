@@ -90,7 +90,7 @@
 
 /*首页日历*/
 .OA_calendar{}
-
+.OA_calendar_ondate{ display:none;}
 .OA_calendar_day{ border-right:1px solid #d8d8d8; padding:5px 15px 5px 30px; text-align:center; border-bottom:1px solid #d8d8d8;}
 .OA_calendar_day label{ display:block; color:#2baf2b; font-size:40px; line-height:42px; margin:0;}
 .OA_calendar_day span{ display:block; color:#333; line-height:24px;}
@@ -110,11 +110,25 @@
 .OA_calendar_mian .table>tbody>tr>td a.active{background:#72D572;  color:#fff;border-color:#72D572; position:relative;}
 .OA_calendar_mian .table>tbody>tr>td a.active:hover{background:#2baf2b;border-color:#2baf2b;}
 
+.OA_calendar_times{ background:#fff; padding: 5px; margin:0; border-top:1px solid #eee; background:#f9f9f9; display:none;}
+.OA_calendar_times .times_control{ line-height:20px; position:relative; padding:5px 15%; margin:0 auto; text-align:center;}
+.OA_calendar_times .times_control .time_chooseicon{ position:absolute; right:5%; top:0; height:30px; display:none;}
+.OA_calendar_times .times_control:hover .time_chooseicon{ display:block;}
+.OA_calendar_times .times_control i{ display:block; line-height:15px; height:15px; font-size:16px; cursor:pointer; color:#2baf2b;}
+.OA_calendar_times .times_control i:hover{ color:#737373;color:#72D572;}
+
+
+
 
 .inmail_calendar_box a.inmail_calendar_btn{ color:#333;}
 .inmail_calendar_box a.inmail_calendar_btn.active{ background:#fff; text-decoration:inherit; color:#2baf2b;}
 .inmail_calendar_box .OA_calendar.inmail_calendar{ display:none;}
 .inmail_calendar{ width:240px; position:absolute; right:0; top:100%; z-index:1003;}
+.inmail_calendar.po_leftup{ top:auto; left:0; bottom:100%;}
+.inmail_calendar.po_leftdown{ left:0; top:100%;}
+.inmail_calendar.po_rightup{ right:0; bottom:100%;top:auto;}
+.inmail_calendar .OA_calendar_ondate{ display:block; background:#2baf2b; color:#fff; line-height:26px;}
+.inmail_calendar .OA_calendar_day{ display:none;}
 .inmail_calendar .OA_calendar_years{ width:100%; line-height:40px;border-bottom:0;}
 .inmail_calendar .OA_calendar_mian{ width:100%;}
 
@@ -142,7 +156,7 @@
 
 /***通讯录css***/
 .minheight{ min-height:500px;}
-h3.header_title{ margin:0 0 15px; border-bottom:1px solid #d8d8d8; padding:0 0 15px;}
+h3.header_title{ margin:0 0 15px; border:1px solid #d8d8d8; padding:15px; background:#fff;}
 h4.header_title{ border-bottom:1px dashed #d8d8d8; padding:10px 0; margin:0; line-height:25px;}
 
 .search_box{ padding:15px 20px; background:#f6f6f6; display:none;}
@@ -180,6 +194,16 @@ h4.header_title{ border-bottom:1px dashed #d8d8d8; padding:10px 0; margin:0; lin
 .userchoose_on a:hover i{ display:block;}
 
 /***邮箱css***/
+
+.fixed_header{ position:fixed; top:0; left:0; width:100%; z-index:1039; padding:20px 17px 0 15px;}
+
+.mt_fixed_one{ margin-top:61px;}
+.mt_fixed_two{ margin-top:120px;}
+
+.mail_toolbar{ background:#f9f9f9; padding:15px; border-bottom:1px solid #d8d8d8;}
+.fixed_header .mail_toolbar{ border:1px solid #d8d8d8;}
+.fixed_header h3.header_title{border:1px solid #d8d8d8; border-bottom:0;}
+
 .enclosure_listbox{ width:100%; margin-top:10px;}
 .enclosure_list{ width:100%; margin-right:10px; display:block; color:#333; padding:5px 10px 1px; background:#f5f5f5; border-radius:4px 4px 0 0;  cursor:pointer; margin-bottom:14px; position:relative; float:left;}
 .enclosure_list:hover{ text-decoration:inherit; background:#eee; }
@@ -190,12 +214,32 @@ h4.header_title{ border-bottom:1px dashed #d8d8d8; padding:10px 0; margin:0; lin
 .enclosure_ing{ float:right; width:20%; text-align:right;}
 .enclosure_list_txt i{ width:16px; height:16px; line-height:16px; text-align: center; display:inline-block; background:#F0485F; border-radius:50%; color:#fff; position:absolute; right:-4px; top:2px;}
 
-.mail_toolbar{ background:#f9f9f9; padding:15px; border-bottom:1px solid #d8d8d8;}
-
 .collect_type_box{ padding:15px 15px 0;}
 .collect_list_box{ padding:15px;}
 .collect_list_box table tbody tr{ cursor:pointer;}
 .collect_list_box .checkbox_a{ margin-top:3px;}
-.collect_list_box .mail_state{ color:#F8C634 !important;}
-.collect_list_box .mail_state_read{ color:#d8d8d8 !important;}
-.collect_list_box .mail_state_edit{ color:#2baf2b !important;}
+.collect_list_box .mail_state,.mail_state{ color:#F8C634 !important;}
+.collect_list_box .mail_state_read,.mail_state_read{ color:#d8d8d8 !important;}
+.collect_list_box .mail_state_edit,.mail_state_edit{ color:#2baf2b !important;}
+
+.check_list_box{ padding:5px 0; background:#f5f5f5; border:1px solid #d8d8d8;}
+.check_list{ padding:10px 15px; font-size:18px; color:#222; line-height:24px;}
+.check_list .one{ float:left; width:auto;font-size:16px;color:#232323;}
+.check_list .two{ float:left; width:auto; color:#737373;font-size:14px; max-width:90%;}
+.check_list .two span{ display:none; background:#72D572; border-radius:8px; color:#fff; padding:5px 10px; line-height:16px; margin-left:5px; height:26px;}
+.check_list .two span.firse{border-radius:8px 0 0 8px; border-right:1px  solid #2baf2b; display:inline-block; margin-left:0;}
+.check_list .two span.spanshow{ display:inline-block; margin-bottom:5px;}
+.check_list .two i.morelist{ display:inline-block; background:#72D572; border-radius:0 8px  8px 0; color:#fff; padding:5px 10px; line-height:16px;}
+.check_list .two .morelist_close{ background:#F0485F;}
+
+.mail_check_cont{ padding: 15px;}
+.mail_check_enclosure{ border:1px solid #d8d8d8; background:#fff; padding:0 15px;}
+.mail_check_enclosure h4{ margin:0; padding:15px 0; border-bottom:1px dashed #d8d8d8;}
+.mail_check_enclosure h4 a{ font-size:14px;cursor:pointer;}
+.mail_check_enclosure ul{ list-style:none; margin:0; padding:0;}
+.mail_check_enclosure li{ list-style:none; float:left; width:20%;}
+.mail_check_enclosure li a{ display:block; padding:15px 10px;}
+.mail_check_enclosure li a:hover{ text-decoration:inherit; cursor:pointer; background:#f9f9f9;}
+.mail_check_enclosure li i{ display:block; font-size:40px; text-align:center; color:#535353;}
+.mail_check_enclosure li label{ text-align:center;display:block; color:#333;}
+.mail_check_enclosure li span{ text-align:center;display:block; color:#737373;}

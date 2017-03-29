@@ -30,21 +30,24 @@
   </head>
   <body class="oabasebg">
      <div class="scrrol_box pl15 mt20 pb20">
-<h3 class="header_title pl15 pt15 mb0"><i class="qkyicon_14_ mr5 fz_28">&#xe70f;</i>写邮件</h3>
-            <div class="qkycadr">
+ 			<div class="fixed_header">
+            <h3 class="header_title mb0"><i class="qkyicon_14_ mr5 fz_28">&#xe70f;</i>回复邮件</h3>
+            <div class="mail_toolbar ">
+                <a class="btn btn-default" href="javascript:history.go(-1)"><i class="qkyicon_14">&#xe604;</i>返回</a>
+                
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mail_draftinfo">存草稿</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mail_sendsuccess">发送</button>
+                  
+            </div>
+            </div>	
+            <div class="qkycadr mt_fixed_two">
          	
-            
             <form class="form-horizontal pa15">
-              <div class="form-group">
-                <label for="sendname" class="col-sm-2 col-lg-1 control-label pr0">发件人：</label>
-                <div class="col-sm-9 col-lg-11">
-                  <input type="text" class="form-control" id="sendname" value="王老师" readonly>
-                </div>
-              </div>
+              
               <div class="form-group">
                 <label for="collectname" class="col-sm-2 col-lg-1 control-label pr0">收件人：</label>
                 <div class="col-sm-9 col-lg-11">
-                  <input type="text" class="form-control showModal" showid="collectname" id="collectname">
+                  <input type="text" class="form-control " id="collectname" value="“毛娅宁 (JIRA)”<jira@qtonecloud.cn>;" readonly>
                 </div>
               </div>
               
@@ -57,7 +60,7 @@
               <div class="form-group">
                 <label for="mailtheme" class="col-sm-2 col-lg-1 control-label pr0">邮件主题：</label>
                 <div class="col-sm-9 col-lg-11">
-                  <input type="text" class="form-control" id="mailtheme" >
+                  <input type="text" class="form-control" id="mailtheme" value="Re:[JIRA] (QKY-2135) 【金湾区OA】列表页首页、末页、上一页、下一页按钮显示问题">
                 </div>
               </div>
               
@@ -80,7 +83,6 @@
                           </div>
                           <div class="enclosure_list_txt clear"><span class="enclosure_name dian3">测试实例.rar (26.39 KB)</span><span class="enclosure_ing dian3">上传中</span><i class="qkyicon_14">&#xe618;</i></div>
                       </div>
-                      
                   </div>
                 </div>
               </div>
@@ -93,19 +95,21 @@
               
               <div class="form-group">
                 <div class="col-sm-offset-2 col-lg-offset-1 col-sm-1 col-lg-1 col-xs-2">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mail_sendsuccess">发送</button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mail_sendfail">发送</button>
                 </div>
                 <div class="col-sm-1 col-lg-1 col-xs-2">
                   <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mail_draftinfo">草稿</button>
                 </div>
                 <div class="col-sm-4 col-lg-6 col-xs-6">
-                  <div class="checkbox pt0 height30_line po_r inmail_calendar_box">
-                      <label class="checkbox-qky clear pl0 inmail_calendar_btn_hover">
+                
+                  <div class="checkbox pt0 height30_line po_r inmail_calendar_box clear">
+                      <label class="checkbox-qky clear pl0 inmail_calendar_btn_hover fl">
                       <a class="checkbox_a fl"><i class="qkyicon_14">&#xe619;</i></a>
                       <span class="fl">定时发送</span>
                       </label>
                       <div class="inmail_calendar qkycadr OA_calendar po_leftup"></div>
                   </div>
+                  
 				</div>
               </div>
             </form>
@@ -147,7 +151,7 @@
           </div>
         </div>
         
-        <div class="modal fade" id="mail_sendfail" tabindex="-1" role="dialog" aria-labelledby="mail_sendfailLabel">
+     <div class="modal fade" id="mail_sendfail" tabindex="-1" role="dialog" aria-labelledby="mail_sendfailLabel">
           <div class="modal-dialog modal-xs" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -163,7 +167,7 @@
               </div>
             </div>
           </div>
-        </div> 
+        </div>     
      
      <div class="modal fade" id="groupuser_choose" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog modal-lg" role="document">
@@ -293,7 +297,7 @@
               </div>
             </div>
           </div>
-        </div>         
+        </div>            
     <script src="../dist/jq/1.11.1/jquery.min.js"></script>
     <!--模块化js-->
     <script src="../dist/sea.js"></script>

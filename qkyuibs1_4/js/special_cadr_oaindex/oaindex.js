@@ -116,7 +116,7 @@ define(function(require,exports) {
 	//暴露执行体
 	exports.OA_index_implement=function(){
 		/**首页交互**/
-		oacal.OA_calendar_implement(true);//渲染和执行日历插件
+		oacal.OA_calendar_run({indata:true});//渲染和执行日历插件
 		navtabs();//首页表格导航条开关
 	}
 	

@@ -23,12 +23,14 @@
     <![endif]-->
   </head>
   <body class="oabasebg">
-  
      <div class="scrrol_box pl15 mt20 pb20">
        <div class="fixed_header">
-       		<h3 class="header_title mb0 pl15 pt15"><i class="qkyicon_14_ mr5 fz_28">&#xe60a;</i>已发送</h3>
+       		<h3 class="header_title mb0 pl15 pt15 clear"><i class="qkyicon_14_ mr5 fz_28">&#xe632;</i>123123
+            <a class="btn btn-default fr " href="javascript:history.go(-1)"><i class="qkyicon_14">&#xe604;</i>返回</a> 
+            </h3>
             
             <div class="mail_toolbar clear">
+                
                 <div class="btn-group">
                   <button type="button" class="btn btn-default checkbox-qky mb0 parent" lj="mail_list" isc="no">
                   <a class="checkbox_a mt0 mr0" style="display:inline-block"><i class="qkyicon_14">&#xe619;</i></a>
@@ -72,7 +74,7 @@
                     </ul>
                   </div>
                 </div>
-                       
+                    
                 <button type="button" class="btn btn-default fr" id="search_box_oc">高级搜索</button>
                 
                      
@@ -141,6 +143,24 @@
                                     </div>
                                  </div>
                              </div>
+                             <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <label for="search_mail_state" class="col-sm-2 control-label pr0 pl0">邮件状态：</label>
+                                    <div class="col-sm-10">
+                                      <div class="dropdown qkydropdown havechoose">
+                                        <a class="btn btn-default dropdown-toggle auto" id="dropdownMenu1" data-toggle="dropdown">
+                                         <span class="value">全部</span>
+                                         <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                         <li role="presentation"><a>全部</a></li>
+                                         <li role="presentation"><a>已读</a></li>
+                                         <li role="presentation"><a>未读</a></li>
+                                        </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                             </div>
                              <div class="col-sm-12 t_c">
                              <button type="submit" class="btn btn-primary">搜索</button>
                              <button type="button" class="btn btn-default">重置</button>
@@ -152,30 +172,33 @@
    			</div>
        </div>
          <div class="qkycadr mt_fixed_two">
-            
+         	
             
             <div class="collect_list_box">
                 <table class="table table-condensed qkycadr table-hover">
                     <tbody>
                         <tr mail_loadstate="check">
                             <td class="noclick"><label class="checkbox-qky mb0 child" lj="mail_list"><a class="checkbox_a mr0"><i class="qkyicon_14">&#xe619;</i></a></label></td>
+                            <td class="mail_state"><i class="qkyicon_14_ fz_16">&#xe627;</i></td>
                             <td>田永康（Wiki）</td>
+                            <td class="h3_color"><i class="qkyicon_14_ fz_16">&#xe6dc;</i></td>
                             <td>[Wiki]Operations > 知了tomcat日志接入脚本</td>
-                            <td class="noclick"><a href="oa_mail_receive.html">接收情况</a></td>
                             <td class="t_r">10:13</td>
                         </tr>
                         <tr mail_loadstate="check">
                             <td class="noclick"><label class="checkbox-qky mb0 child" lj="mail_list"><a class="checkbox_a mr0"><i class="qkyicon_14">&#xe619;</i></a></label></td>
+                            <td class="mail_state_read"><i class="qkyicon_14_ fz_16">&#xe604;</i></td>
                             <td>田永康（Wiki）</td>
+                            <td class="h3_color"><i class="qkyicon_14_ fz_16">&#xe6dc;</i></td>
                             <td>[Wiki]Operations > 知了tomcat日志接入脚本</td>
-                            <td class="noclick"><a href="oa_mail_receive.html">接收情况</a></td>
                             <td class="t_r">10:13</td>
                         </tr>
-                        <tr mail_loadstate="check">
+                        <tr mail_loadstate="edit">
                             <td class="noclick"><label class="checkbox-qky mb0 child" lj="mail_list"><a class="checkbox_a mr0"><i class="qkyicon_14">&#xe619;</i></a></label></td>
+                            <td class="mail_state_edit"><i class="qkyicon_14_ fz_16">&#xe64f;</i></td>
                             <td>田永康（Wiki）</td>
+                            <td class="h3_color"><i class="qkyicon_14_ fz_16">&#xe6dc;</i></td>
                             <td>[Wiki]Operations > 知了tomcat日志接入脚本</td>
-                            <td class="noclick"><a href="oa_mail_receive.html">接收情况</a></td>
                             <td class="t_r">10:13</td>
                         </tr>
                         
