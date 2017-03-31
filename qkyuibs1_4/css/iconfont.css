@@ -15,20 +15,20 @@
 
 @font-face {
   font-family: 'qkyicon_14_';  /* project id 256023 */
-  src: url('//at.alicdn.com/t/font_pb59x87bivlmzpvi.eot');
-  src: url('//at.alicdn.com/t/font_pb59x87bivlmzpvi.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_pb59x87bivlmzpvi.woff') format('woff'),
-  url('//at.alicdn.com/t/font_pb59x87bivlmzpvi.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_pb59x87bivlmzpvi.svg#iconfont') format('svg');
+  src: url('../iconfont/14_/iconfont.eot'); /* IE9*/
+  src: url('../iconfont/14_/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../iconfont/14_/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('../iconfont/14_/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../iconfont/14_/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 @font-face {
   font-family: 'qkyicon_14';  /* project id 202497 */
-  src: url('//at.alicdn.com/t/font_4ascilz3f5z8h0k9.eot');
-  src: url('//at.alicdn.com/t/font_4ascilz3f5z8h0k9.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_4ascilz3f5z8h0k9.woff') format('woff'),
-  url('//at.alicdn.com/t/font_4ascilz3f5z8h0k9.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_4ascilz3f5z8h0k9.svg#iconfont') format('svg');
+  src: url('../iconfont/14/iconfont.eot'); /* IE9*/
+  src: url('../iconfont/14/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../iconfont/14/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('../iconfont/14/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../iconfont/14/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 @font-face {
