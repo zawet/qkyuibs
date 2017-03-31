@@ -5,6 +5,17 @@
 define(function(require,exports) {
 	
 	var activeModal="";//缓存哪个元素点击弹窗的
+	var comfun=require("../common_cadr/com_function");
+	var rach_run=require("../common_cadr/radio_checkbox1.1");
+	
+	//异步获取弹框
+	exports.userChoose_ajaxrun=function(){
+		comfun.htmlajax("../mould/userchoose_mould.html",function(userchoosehtml){//异步过来html主体
+			$("body").append(userchoosehtml);
+			rach_run.rach_run();
+			exports.userChoose_run();
+		});
+	}
 	
 	exports.userChoose_run=function(){
 		//部门，群组切换交互
@@ -18,17 +29,13 @@ define(function(require,exports) {
 		$(".userChoose_name .checkbox-qky ,.checkbox-qky.parent[lj='userchoose']").on("click",function(){
 			userChoose_on();
 		});
-		
 		userChoose_out("all");
-		
-		
 		$(".showModal").on("click",function(){
 			$("#groupuser_choose").modal("show");
 			activeModal=$(this).attr("showid");
 	    });
 		userChoose_submit();
 	}
-	
 	
 	//人员选择进入选区
 	function userChoose_on(){
