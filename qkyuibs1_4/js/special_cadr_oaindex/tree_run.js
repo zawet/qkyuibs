@@ -106,5 +106,9 @@ define(function(require,exports) {
 		var t = $("#tree");
 		t = $.fn.zTree.init(t, setting, zNodes);
 	
+	exports.tree_run=function(){
+		var t = $("#tree");
+		t = $.fn.zTree.init(t, setting, zNodes);
+	}
 
 })

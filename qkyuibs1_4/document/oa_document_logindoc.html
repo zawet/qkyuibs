@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="qky2.ico">
+    <title>全课云UI</title>
+    <!-- Bootstrap 基础样式 CSS -->
+    <link href="../dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+    
+    <!--全课云基础样式覆盖-->
+    <link href="../css/iconfont.css" rel="stylesheet">
+    <link href="../css/qkybase1.3.css" rel="stylesheet">
+    <link href="../css/oabase.css" rel="stylesheet">
+    <link href="../css/quickcss.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="oabasebg">
+     <div class="scrrol_box pl15 mt20 pb20">
+         <div class="fixed_header">
+             <h3 class="header_title pl15 pt15 mb0 clear"><i class="qkyicon_14_ mr5 fz_28 fl">&#xe6a4;</i><span class="fl">收文登记</span></h3>
+         </div>
+         <div class="qkycadr mt_fixed_one2 pa15">
+         	<ul class="nav nav-tabs doc_nav">
+                 <li role="presentation" class="active"><a pid="getdoc">收文</a></li>
+                 <li role="presentation"><a pid="setdoc">发文</a></li>
+                 <button type="button" class="btn btn-primary fr" id="search_box_oc">高级搜索</button>
+                 <div class="col-xs-4 fr">
+                   <div class="input-group">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><i class="qkyicon_14">&#xe671;</i></button>
+                      </span>
+                      <input type="text" class="form-control" placeholder="请输入关键字搜索">
+                    </div>
+                 </div> 
+             </ul>
+             <div class="search_box qkycadr bor_nb">
+                  <form class="form-horizontal">
+                         <div class="row">
+                             <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <label for="search_theme" class="col-sm-2 control-label pr0 pl0">标题：</label>
+                                    <div class="col-sm-10">
+                                      <input type="text" class="form-control" id="search_theme" placeholder="主题">
+                                    </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-6">
+                             <div class="form-group">
+                                 <div class="radio pt0">
+                                   <label class="radio-qky clear radio-inline pt0 pl0"><a class="radio_a fl mr5"><b></b></a><span class="fr ml4">收文</span></label>
+                                   <label class="radio-qky clear radio-inline pt0"><a class="radio_a fl mr5"><b></b></a><span class="fr ml4">发文</span></label>
+                                  </div>
+                             </div>
+                             </div>
+                             
+                             <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <label for="search_include_enclosure" class="col-sm-2 control-label pr0 pl0">工作流名：</label>
+                                    <div class="col-sm-10">
+                                      <div class="dropdown qkydropdown havechoose">
+                                        <a class="btn btn-default dropdown-toggle auto" id="dropdownMenu1" data-toggle="dropdown">
+                                         <span class="value">请选择</span>
+                                         <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                         <li role="presentation"><a>金湾教育局收文</a></li>
+                                         <li role="presentation"><a>广东教育厅收文</a></li>
+                                        </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <label for="search_mail_state" class="col-sm-2 control-label pr0 pl0">流程状态：</label>
+                                    <div class="col-sm-10">
+                                      <div class="dropdown qkydropdown havechoose">
+                                        <a class="btn btn-default dropdown-toggle auto" id="dropdownMenu1" data-toggle="dropdown">
+                                         <span class="value">全部</span>
+                                         <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                         <li role="presentation"><a>拟稿</a></li>
+                                         <li role="presentation"><a>执行中</a></li>
+                                         <li role="presentation"><a>已结束</a></li>
+                                        </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <label for="search_starttime" class="col-sm-2 control-label pr0 pl0">开始时间：</label>
+                                    <div class="col-sm-10">
+                                      <input type="text" class="form-control laydate-icon" onClick="laydate()" id="search_starttime" placeholder="开始时间">
+                                    </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <label for="search_endtime" class="col-sm-2 control-label pr0 pl0">结束时间：</label>
+                                    <div class="col-sm-10">
+                                      <input type="text" class="form-control laydate-icon" onClick="laydate()" id="search_endtime" placeholder="结束时间">
+                                    </div>
+                                 </div>
+                             </div>
+                             
+                             <div class="col-sm-12 t_c">
+                             <button type="submit" class="btn btn-primary">搜索</button>
+                             <button type="button" class="btn btn-default">取消</button>
+                             </div>
+                         </div>
+                         </form>       
+             </div>
+             <div class="qkycadr onepage getdoc open ">
+
+                 <table class="table table-condensed atd bor_b">
+                 <thead><tr><th>工作流名称</th><th>标题</th><th>创建人</th><th>创建时间</th><th>步骤</th><th>操作</th></tr></thead>
+                 <tbody>
+                     <tr>
+                         <td><a href="oa_document_docinfo.html?pid=form">金湾教育局收文</a></td>
+                         <td>现代化教育的普及精神</a></td>
+                         <td>王霖</td><td>2017-03-20 15:14:29</td><td>拟稿</td>
+                         <td>
+                         <a class="mr10" href="oa_document_docinfo.html?pid=form"><i class="qkyicon_14_ mr5">&#xe6bd;</i>办理</a>
+                         <a class="mr10" href="oa_document_docinfo.html?pid=following"><i class="qkyicon_14_ mr5">&#xe73f;</i>流程跟踪</a>
+                         <a data-toggle="modal" data-target="#doc_delete"><i class="qkyicon_14_ mr5">&#xe62c;</i>删除</a>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td><a href="oa_document_docinfo.html?pid=form">广东教育厅收文</a></td>
+                         <td>现代化教育的普及精神</a></td>
+                         <td>王霖</td><td>2017-03-20 15:14:29</td><td>审核</td>
+                         <td>
+                         <a class="mr10" href="oa_document_docinfo.html?pid=form"><i class="qkyicon_14_ mr5">&#xe6bd;</i>办理</a>
+                         <a class="mr10" href="oa_document_docinfo.html?pid=following"><i class="qkyicon_14_ mr5">&#xe73f;</i>流程跟踪</a>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td><a href="oa_document_docinfo.html?pid=form">珠海教育局收文</a></td>
+                         <td>现代化教育的普及精神</a></td>
+                         <td>王霖</td><td>2017-03-20 15:14:29</td><td>传阅</td>
+                         <td>
+                         <a class="mr10" href="oa_document_docinfo.html?pid=form"><i class="qkyicon_14_ mr5">&#xe6bd;</i>办理</a>
+                         <a class="mr10" href="oa_document_docinfo.html?pid=following"><i class="qkyicon_14_ mr5">&#xe73f;</i>流程跟踪</a>
+                         </td>
+                     </tr>
+                 </tbody>
+                 </table>
+                 
+                 <div class="qkypage row  pa15">
+                   <div class="col-md-2 col-sm-3 pageinfo">1-10 of 48 项目</div>
+                   <div class="col-md-8 col-sm-7 col-md-offset-2 col-sm-offset-2 col-xs-8 col-xs-offset-4">
+                    <ul class="nav nav-pills"> 
+                     <li class="disabled page_prv"><a href="#">上一页</a></li>
+                     <li class="active"><a href="#">1</a></li>
+                     <li><a href="#">2</a></li>
+                     <li><a href="#">...</a></li>
+                     <li><a href="#">4</a></li>
+                     <li><a href="#">5</a></li>
+                     <li class="page_next"><a href="#">下一页</a></li>
+                     <li class="form-group mb0 page_input"><input class="form-control" placeholder="输入页面" type="text"></li>
+                     <li class="page_input"><a class="btn btn-default">GO</a></li>
+                    </ul>
+                   </div>
+                  </div>
+             </div>
+             <div class="qkycadr onepage setdoc">
+  
+                 <table class="table table-condensed atd bor_b">
+                 <thead><tr><th>工作流名称</th><th>标题</th><th>创建人</th><th>创建时间</th><th>步骤</th><th>操作</th></tr></thead>
+                 <tbody>
+                     <tr>
+                         <td><a href="oa_document_docinfo.html?pid=form">金湾教育局发文</a></td>
+                         <td>现代化教育的普及精神</a></td>
+                         <td>王霖</td><td>2017-03-20 15:14:29</td><td>拟稿</td>
+                         <td>
+                         <a class="mr10" href="oa_document_docinfo.html?pid=form"><i class="qkyicon_14_ mr5">&#xe6bd;</i>办理</a>
+                         <a class="mr10" href="oa_document_docinfo.html?pid=following"><i class="qkyicon_14_ mr5">&#xe73f;</i>流程跟踪</a>
+                         <a data-toggle="modal" data-target="#doc_delete"><i class="qkyicon_14_ mr5">&#xe62c;</i>删除</a>
+                         </td>
+                     </tr>
+                     <tr>
+                     <td><a href="oa_document_docinfo.html?pid=form">广东教育厅发文</a></td>
+                     <td>现代化教育的普及精神</a></td>
+                     <td>王霖</td><td>2017-03-20 15:14:29</td><td>会签</td>
+                     <td>
+                     <a class="mr10" href="oa_document_docinfo.html?pid=form"><i class="qkyicon_14_ mr5">&#xe6bd;</i>办理</a>
+                     <a class="mr10" href="oa_document_docinfo.html?pid=following"><i class="qkyicon_14_ mr5">&#xe73f;</i>流程跟踪</a>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td><a href="oa_document_docinfo.html?pid=form">珠海教育局发文</a></td>
+                     <td>现代化教育的普及精神</a></td>
+                     <td>王霖</td><td>2017-03-20 15:14:29</td><td>传阅</td>
+                     <td>
+                     <a class="mr10" href="oa_document_docinfo.html?pid=form"><i class="qkyicon_14_ mr5">&#xe6bd;</i>办理</a>
+                     <a class="mr10" href="oa_document_docinfo.html?pid=following"><i class="qkyicon_14_ mr5">&#xe73f;</i>流程跟踪</a>
+                     </td>
+                 </tr>
+                 </tbody>
+                 </table>
+                 
+                 <div class="qkypage row pa15">
+                   <div class="col-md-2 col-sm-3 pageinfo">1-10 of 48 项目</div>
+                   <div class="col-md-8 col-sm-7 col-md-offset-2 col-sm-offset-2 col-xs-8 col-xs-offset-4">
+                    <ul class="nav nav-pills"> 
+                     <li class="disabled page_prv"><a href="#">上一页</a></li>
+                     <li class="active"><a href="#">1</a></li>
+                     <li><a href="#">2</a></li>
+                     <li><a href="#">...</a></li>
+                     <li><a href="#">4</a></li>
+                     <li><a href="#">5</a></li>
+                     <li class="page_next"><a href="#">下一页</a></li>
+                     <li class="form-group mb0 page_input"><input class="form-control" placeholder="输入页面" type="text"></li>
+                     <li class="page_input"><a class="btn btn-default">GO</a></li>
+                    </ul>
+                   </div>
+                  </div>
+             </div>
+         </div>
+         <div class="pt20"></div>                  
+     </div>      
+    <script src="../dist/jq/1.11.1/jquery.min.js"></script>
+    <!--模块化js-->
+    <script src="../dist/sea.js"></script>
+    <script src="../dist/seaconfig.js"></script>
+    <script src="../dist/laydate/laydate.js"></script>
+    <script>
+	 seajs.use(["bs","oascd/oadocument"],
+	 function(bs,doc){
+		 laydate.skin('zwt');
+		 doc.oadocument_list_run();
+	 });
+    </script>
+  </body>
+</html>
