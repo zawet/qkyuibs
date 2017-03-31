@@ -125,7 +125,7 @@ define(function(require,exports) {
 		}	
 	    
 		//日历月份选择
-		OA_calendar_choose=function(id,type,indata){
+		function OA_calendar_choose(id,type,indata){
 			var thisyear=Number(id.parent().find("p .year").text());
 			var thismoon=Number(id.parent().find("p .moon").text());
 			//console.log(thisyear,thismoon);
@@ -141,7 +141,7 @@ define(function(require,exports) {
 		}
 		
 		//日历整体渲染,输入年月日和渲染id和是否添加数据，是否显示时分秒
-		OA_calendar_opt=function(y,m,d,id,indata){
+		function OA_calendar_opt(y,m,d,id,indata){
 			var week=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"]	;
 			var thisdata=new Date(y,m-1,d);
 			var weeks=thisdata.getDay();
@@ -154,7 +154,7 @@ define(function(require,exports) {
 			
 		}
 		
-		OA_calendar_dayclick=function(){
+		function OA_calendar_dayclick(){
 			if(!opts.indata){ 
 				//日数点击
 				$(".inmail_calendar_box .OA_calendar_mian table tbody tr td a").each(function(i) {
@@ -178,7 +178,7 @@ define(function(require,exports) {
 			}
 		}
 		
-		OA_calendar_times=function(h,m,s){
+		function OA_calendar_times(h,m,s){
 			$(".OA_calendar_times .hour").html(h);
 			$(".OA_calendar_times .min").html(m);
 			$(".OA_calendar_times .second").html(s);

@@ -85,7 +85,7 @@ define(function(require,exports) {
 	}
 	
 	//点击确认选择按钮的事件
-	userChoose_submit=function (id){
+	 function  userChoose_submit(id){
 		$("#userChoose_submit").on("click",function(){
 			$('#groupuser_choose').modal('hide');
 			var userdata=[];
@@ -104,7 +104,7 @@ define(function(require,exports) {
 	}
 	
 	//获取选区里的所有人员
-	get_userChoose=function (){
+	function get_userChoose(){
 		var userChoose_on=[];
 		$(".userchoose_on a").each(function(i) {
             userChoose_on[i]=$(this).find("span").html();

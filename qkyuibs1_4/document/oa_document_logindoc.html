@@ -28,9 +28,8 @@
              <h3 class="header_title pl15 pt15 mb0 clear"><i class="qkyicon_14_ mr5 fz_28 fl">&#xe6a4;</i><span class="fl">收文登记</span></h3>
          </div>
          <div class="qkycadr mt_fixed_one2 pa15">
-         	<ul class="nav nav-tabs doc_nav">
-                 <li role="presentation" class="active"><a pid="getdoc">收文</a></li>
-                 <li role="presentation"><a pid="setdoc">发文</a></li>
+         	<div class=" clear mb15">
+                 <a class="btn btn-default fl" href="oa_document_docinfo.html" >新建收文</a>
                  <button type="button" class="btn btn-primary fr" id="search_box_oc">高级搜索</button>
                  <div class="col-xs-4 fr">
                    <div class="input-group">
@@ -40,7 +39,7 @@
                       <input type="text" class="form-control" placeholder="请输入关键字搜索">
                     </div>
                  </div> 
-             </ul>
+             </div>
              <div class="search_box qkycadr bor_nb">
                   <form class="form-horizontal">
                          <div class="row">
@@ -120,37 +119,37 @@
                          </div>
                          </form>       
              </div>
-             <div class="qkycadr onepage getdoc open ">
+             <div class="qkycadr onepage open ">
 
                  <table class="table table-condensed atd bor_b">
-                 <thead><tr><th>工作流名称</th><th>标题</th><th>创建人</th><th>创建时间</th><th>步骤</th><th>操作</th></tr></thead>
+                 <thead><tr><th>工作流名称</th><th>标题</th><th>创建人</th><th>创建时间</th><th>状态</th><th>操作</th></tr></thead>
                  <tbody>
                      <tr>
                          <td><a href="oa_document_docinfo.html?pid=form">金湾教育局收文</a></td>
                          <td>现代化教育的普及精神</a></td>
-                         <td>王霖</td><td>2017-03-20 15:14:29</td><td>拟稿</td>
+                         <td>王霖</td><td>2017-03-20 15:14:29</td><td class="error_color">未接收</td>
                          <td>
-                         <a class="mr10" href="oa_document_docinfo.html?pid=form"><i class="qkyicon_14_ mr5">&#xe6bd;</i>办理</a>
-                         <a class="mr10" href="oa_document_docinfo.html?pid=following"><i class="qkyicon_14_ mr5">&#xe73f;</i>流程跟踪</a>
-                         <a data-toggle="modal" data-target="#doc_delete"><i class="qkyicon_14_ mr5">&#xe62c;</i>删除</a>
+                         <a class="mr10" href="oa_document_docinfo.html?pid=form"><i class="qkyicon_14 mr5">&#xe63a;</i>收文转发</a>
+                         <a class="mr10" data-toggle="modal" data-target="#doc_repeat"><i class="qkyicon_14 mr5">&#xe600;</i>直接转发</a>
+                         
                          </td>
                      </tr>
                      <tr>
                          <td><a href="oa_document_docinfo.html?pid=form">广东教育厅收文</a></td>
                          <td>现代化教育的普及精神</a></td>
-                         <td>王霖</td><td>2017-03-20 15:14:29</td><td>审核</td>
+                         <td>王霖</td><td>2017-03-20 15:14:29</td><td class="error_color">未接收</td>
                          <td>
-                         <a class="mr10" href="oa_document_docinfo.html?pid=form"><i class="qkyicon_14_ mr5">&#xe6bd;</i>办理</a>
-                         <a class="mr10" href="oa_document_docinfo.html?pid=following"><i class="qkyicon_14_ mr5">&#xe73f;</i>流程跟踪</a>
+                         <a class="mr10" href="oa_document_docinfo.html?pid=form"><i class="qkyicon_14 mr5">&#xe63a;</i>收文转发</a>
+                         <a class="mr10" data-toggle="modal" data-target="#doc_repeat"><i class="qkyicon_14 mr5">&#xe600;</i>直接转发</a>
                          </td>
                      </tr>
                      <tr>
                          <td><a href="oa_document_docinfo.html?pid=form">珠海教育局收文</a></td>
                          <td>现代化教育的普及精神</a></td>
-                         <td>王霖</td><td>2017-03-20 15:14:29</td><td>传阅</td>
+                         <td>王霖</td><td>2017-03-20 15:14:29</td><td class=" mian_color">已收文</td>
                          <td>
-                         <a class="mr10" href="oa_document_docinfo.html?pid=form"><i class="qkyicon_14_ mr5">&#xe6bd;</i>办理</a>
-                         <a class="mr10" href="oa_document_docinfo.html?pid=following"><i class="qkyicon_14_ mr5">&#xe73f;</i>流程跟踪</a>
+                         <a class="mr10" href="oa_document_docinfo.html?pid=form"><i class="qkyicon_14 mr5">&#xe63a;</i>收文转发</a>
+                         <a class="mr10" data-toggle="modal" data-target="#doc_repeat"><i class="qkyicon_14 mr5">&#xe600;</i>直接转发</a>
                          </td>
                      </tr>
                  </tbody>
@@ -173,62 +172,38 @@
                    </div>
                   </div>
              </div>
-             <div class="qkycadr onepage setdoc">
-  
-                 <table class="table table-condensed atd bor_b">
-                 <thead><tr><th>工作流名称</th><th>标题</th><th>创建人</th><th>创建时间</th><th>步骤</th><th>操作</th></tr></thead>
-                 <tbody>
-                     <tr>
-                         <td><a href="oa_document_docinfo.html?pid=form">金湾教育局发文</a></td>
-                         <td>现代化教育的普及精神</a></td>
-                         <td>王霖</td><td>2017-03-20 15:14:29</td><td>拟稿</td>
-                         <td>
-                         <a class="mr10" href="oa_document_docinfo.html?pid=form"><i class="qkyicon_14_ mr5">&#xe6bd;</i>办理</a>
-                         <a class="mr10" href="oa_document_docinfo.html?pid=following"><i class="qkyicon_14_ mr5">&#xe73f;</i>流程跟踪</a>
-                         <a data-toggle="modal" data-target="#doc_delete"><i class="qkyicon_14_ mr5">&#xe62c;</i>删除</a>
-                         </td>
-                     </tr>
-                     <tr>
-                     <td><a href="oa_document_docinfo.html?pid=form">广东教育厅发文</a></td>
-                     <td>现代化教育的普及精神</a></td>
-                     <td>王霖</td><td>2017-03-20 15:14:29</td><td>会签</td>
-                     <td>
-                     <a class="mr10" href="oa_document_docinfo.html?pid=form"><i class="qkyicon_14_ mr5">&#xe6bd;</i>办理</a>
-                     <a class="mr10" href="oa_document_docinfo.html?pid=following"><i class="qkyicon_14_ mr5">&#xe73f;</i>流程跟踪</a>
-                     </td>
-                 </tr>
-                 <tr>
-                     <td><a href="oa_document_docinfo.html?pid=form">珠海教育局发文</a></td>
-                     <td>现代化教育的普及精神</a></td>
-                     <td>王霖</td><td>2017-03-20 15:14:29</td><td>传阅</td>
-                     <td>
-                     <a class="mr10" href="oa_document_docinfo.html?pid=form"><i class="qkyicon_14_ mr5">&#xe6bd;</i>办理</a>
-                     <a class="mr10" href="oa_document_docinfo.html?pid=following"><i class="qkyicon_14_ mr5">&#xe73f;</i>流程跟踪</a>
-                     </td>
-                 </tr>
-                 </tbody>
-                 </table>
-                 
-                 <div class="qkypage row pa15">
-                   <div class="col-md-2 col-sm-3 pageinfo">1-10 of 48 项目</div>
-                   <div class="col-md-8 col-sm-7 col-md-offset-2 col-sm-offset-2 col-xs-8 col-xs-offset-4">
-                    <ul class="nav nav-pills"> 
-                     <li class="disabled page_prv"><a href="#">上一页</a></li>
-                     <li class="active"><a href="#">1</a></li>
-                     <li><a href="#">2</a></li>
-                     <li><a href="#">...</a></li>
-                     <li><a href="#">4</a></li>
-                     <li><a href="#">5</a></li>
-                     <li class="page_next"><a href="#">下一页</a></li>
-                     <li class="form-group mb0 page_input"><input class="form-control" placeholder="输入页面" type="text"></li>
-                     <li class="page_input"><a class="btn btn-default">GO</a></li>
-                    </ul>
-                   </div>
+             <div class="qkycadr nodata mt10 mb10">
+                        <div class="nadata_icon"><i class="qkyicon_100">&#xe637;</i></div>
+                        <span class="nadata_txt">您暂时还没有收到新的公文,您可以点击上方按钮新建收文</span>
                   </div>
-             </div>
          </div>
          <div class="pt20"></div>                  
-     </div>      
+     </div>    
+     
+     <div class="modal fade" id="doc_repeat" tabindex="-1" role="dialog" aria-labelledby="doc_repeatLabel">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="doc_repeatLabel">转发人员选择</h4>
+              </div>
+              <div class="modal-body modal_auto ">
+              <form class="form-horizontal">
+                <div class="form-group mb0">
+                <label for="doc_repeat_names" class="col-sm-3 control-label pr0 pl0">选择传阅人：</label>
+                <div class="col-sm-8">
+                <input type="text" class="form-control showModal" showid="doc_repeat_names" id="doc_repeat_names">
+                </div>
+                </div>
+               </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              </div>
+            </div>
+          </div>
+        </div>   
     <script src="../dist/jq/1.11.1/jquery.min.js"></script>
     <!--模块化js-->
     <script src="../dist/sea.js"></script>
@@ -238,7 +213,7 @@
 	 seajs.use(["bs","oascd/oadocument"],
 	 function(bs,doc){
 		 laydate.skin('zwt');
-		 doc.oadocument_list_run();
+		 doc.oadocument_list_run(true);
 	 });
     </script>
   </body>
