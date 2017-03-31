@@ -42,7 +42,7 @@ define(function(require,exports) {
 		});    
 	}
 	//窗口标签开关
-	windows_bar=function(){
+	function windows_bar(){
 		$(".windows_bar a").on("click",function(){
 			$(this).addClass("active").siblings().removeClass("active");
 			$(".windows_mian").removeClass("open");
@@ -66,7 +66,7 @@ define(function(require,exports) {
 	//首页交互事件
 	
 	
-	navtabs=function(){
+	function navtabs(){
 		$(".nav.nav-tabs li").on("click",function(){
 			$(this).addClass("active").siblings().removeClass("active");
 			$(this).parents(".qkycadr").find(".table").removeClass("open");
@@ -91,7 +91,7 @@ define(function(require,exports) {
 			}
 		});
 	}
-	tips_close=function(){
+	function tips_close(){
 		$(".tips_box label i").on("click",function(){
 			$(this).parent().remove();
 		});
@@ -101,7 +101,7 @@ define(function(require,exports) {
 	
 	
 	//本域公用函数
-	menu_list_item=function(){
+	function menu_list_item(){
 		$(".menu_list_item").on("click",function(){
 			$(this).addClass("active").siblings().removeClass("active");
 			$(this).parents(".windows_mian").find(".right_box").removeClass("open");
@@ -109,7 +109,7 @@ define(function(require,exports) {
 		})
 	}
 	
-	isNull=function (data){ 
+	function isNull(data){ 
     	return (data == "" || data == undefined || data == null) ? "kong" : data; 
 	}	
 	

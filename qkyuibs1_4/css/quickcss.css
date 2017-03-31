@@ -29,11 +29,9 @@
 .t_r{ text-align:right !important;}
 .bor_nb{ border-bottom:none !important;}
 .bor_nt{ border-top:none !important;}
-
-.atd a:hover,.atd:hover{ text-decoration:inherit;}
-
-
+.atd a:hover,.atd:hover{ text-decoration:inherit; cursor:pointer;}
 .wd100{ width:100%;}
+
 .co_a3{ color:#a3a3a3!important;}
 .co_93{ color:#939393!important;}
 .co_83{ color:#838383!important;}

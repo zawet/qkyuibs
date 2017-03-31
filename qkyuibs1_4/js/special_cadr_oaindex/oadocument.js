@@ -5,6 +5,7 @@ define(function(require,exports) {
 	var cal=require("./oacalendar");
 	var uch=require("./userchoose");
 	var comfun=require("../common_cadr/com_function");
+	var dw=require("../common_cadr/dropdown_havevalue");
 	
 	exports.oadocument_run=function(){
 	    dist_onepage();
@@ -12,12 +13,11 @@ define(function(require,exports) {
 		twopage();
 		uch.userChoose_ajaxrun();
 	}
-	exports.oadocument_list_run=function(){
-
+	exports.oadocument_list_run=function(hasuch){
+		dw.havevalue();
 		onepage(); 
 		comfun.search_box_oc();
-
-
+		if(hasuch)uch.userChoose_ajaxrun();
 	}
 	
 	function twopage(){
