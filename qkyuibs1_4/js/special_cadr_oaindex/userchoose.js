@@ -6,18 +6,18 @@ define(function(require,exports) {
 	
 	var activeModal="";//缓存哪个元素点击弹窗的
 	var comfun=require("../common_cadr/com_function");
-	var rach_run=require("../common_cadr/radio_checkbox1.1");
+	var rach_run=require("../common_cadr/radio_checkbox1.2");
 	
 	//异步获取弹框
 	exports.userChoose_ajaxrun=function(){
 		comfun.htmlajax("../mould/userchoose_mould.html",function(userchoosehtml){//异步过来html主体
 			$("body").append(userchoosehtml);
-			rach_run.rach_run();
 			exports.userChoose_run();
 		});
 	}
 	
 	exports.userChoose_run=function(){
+		rach_run.rach_run(function(thiss){},function(thiss){});
 		//部门，群组切换交互
 		$(".userChoose_cont .nav-tabs li").on("click",function(){
 			$(this).addClass("active").siblings().removeClass("active");

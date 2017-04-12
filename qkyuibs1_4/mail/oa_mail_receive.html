@@ -102,8 +102,8 @@
     <script src="../dist/seaconfig.js"></script>
     <script>
      seajs.use(["bs","d-ra_ch"],
-	 function(bs){
-		
+	 function(bs,rach_run){
+		rach_run.rach_run(function(tt){},function(tt){})
 	 });
     </script>
   </body>

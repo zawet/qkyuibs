@@ -250,7 +250,7 @@ h4.header_title{ border-bottom:1px dashed #d8d8d8; padding:10px 0; margin:0; lin
 
 /****公文****/
 
-.table .title{ background:#eee; vertical-align:middle; width:12%;}
+.table .title{ background:#eee; vertical-align:middle; width:12%; font-weight:bold;}
 .doc_nav{ border-bottom:none;}
 .doc_nav > li.active > a, .doc_nav > li.active > a:hover, .doc_nav > li.active > a:focus{ background:#f5f5f5;}
 

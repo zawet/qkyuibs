@@ -26,6 +26,7 @@ define(function(require,exports) {
 			$(this).toggleClass("select").siblings().removeClass("select");
 		});
 		$(".checkbox-qky").on("click",function(){
+			console.log(222);
 			if(!$(this).hasClass("disabled"))
 			$(this).toggleClass("select");
 		});

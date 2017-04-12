@@ -4,9 +4,11 @@ define(function(require,exports) {
 	var con=require("./oacontacts");
 	var cal=require("./oacalendar");
 	var uch=require("./userchoose");
+	var rach_run=require("../common_cadr/radio_checkbox1.2");
 	
 	exports.oamail_run=function(){
 	   con.search_box_oc();
+	   rach_run.rach_run(function(tt){},function(tt){})
 	   cal.OA_calendar_run({indata:false});
 	   $(".collect_list_box td").on("click",function(){
 			var loadtype=$(this).parent().attr("mail_loadstate");
