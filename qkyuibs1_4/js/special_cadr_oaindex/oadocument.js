@@ -17,7 +17,7 @@ define(function(require,exports) {
 		dw.havevalue();
 		onepage(); 
 		comfun.search_box_oc();
-		if(hasuch)uch.userChoose_ajaxrun();
+		if(hasuch){uch.userChoose_ajaxrun();}
 	}
 	
 	function twopage(){
