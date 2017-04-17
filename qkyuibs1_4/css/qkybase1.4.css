@@ -385,6 +385,7 @@ ul.error_tips li{ padding:4px 0 ; margin:0;}
 .qkydropdown .btn .caret{ position:absolute; right:10px; top:7px; border:0; width:14px; height:14px; text-align:center; line-height:14px; color:#333;}
 .qkydropdown .btn .caret{font-family:"qkyicon_14" !important;font-size:12px;font-style:normal;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
 .qkydropdown .btn .caret:before{content:'\e617';}
+.qkydropdown.dropup .btn .caret:before{content:'\e67d';}
 .qkydropdown .dropdown-menu{ width:100%;}
 .maxh{ max-height:200px; overflow-y:auto;}
 
