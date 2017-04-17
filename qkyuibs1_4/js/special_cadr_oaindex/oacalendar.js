@@ -27,14 +27,14 @@ define(function(require,exports) {
 				"hoverid":".inmail_calendar_btn_hover",
 				"indata":false,
 				"isshowtime":false,
-				"clickday":function(id,cthis,istime){//日数点击，可以外接函数蹭掉默认函数，默认是把选中的日期加到日历组建底部
-					$(id).find(".OA_calendar_ondate").html(redate(cthis,istime));
+				"clickday":function(id,istime,thisday){//日数点击，可以外接函数蹭掉默认函数，默认是把选中的日期加到日历组建底部
+					$(id).find(".OA_calendar_ondate").html(exports.redate($(id),istime));
 			    },
 				"choosetimes":function(id,istime){//时间转换，可以外接函数蹭掉默认函数，默认是把选中的日期加到日历组建底部
-					$(id).find(".OA_calendar_ondate").html(redate($(id).find(".OA_calendar_mian .table a.active"),istime));
+					$(id).find(".OA_calendar_ondate").html(exports.redate($(id),istime));
 				},
 				"calendarhide":function(id,istime){//日历收起后，可以外接函数蹭掉默认函数，默认是把选中的日期加到日历组建底部
-					$(id).find(".OA_calendar_ondate").html(redate($(id).find(".OA_calendar_mian .table a.active"),istime));
+					$(id).find(".OA_calendar_ondate").html(exports.redate($(id),istime));
 				}
 		}
 
@@ -59,59 +59,78 @@ define(function(require,exports) {
 						OA_calendar_times(hour,minute,second);
 					 }
 					 //在不传值的情况下，有点击元素才出来日历
-					 if(!opts.indata){ 
-						  $(document).on("click",":not('.inmail_calendar_box')",function(){
-							 $(".inmail_calendar").slideUp(200,function(){ opts.calendarhide(opts.drawid,opts.isshowtime)});
-							 $(opts.cilckid).removeClass("active");
-						  })
-						  $(".inmail_calendar_box").on("click",function(event){
-							 event.stopPropagation();
-						  });	 
-						  $(opts.cilckid+","+opts.hoverid).attr("isc","no");
-						  
+					 if(!opts.indata){
+						 $(opts.cilckid+","+opts.hoverid).attr("isc","no");
+						 var huncundrawid= opts.drawid;
+						 $(document).on("click",":not('.inmail_calendar_box')",function(){
+								$(".OA_calendar").slideUp(200);
+								$(opts.cilckid).removeClass("active").attr("isc","no");
+								$(opts.hoverid).attr("isc","no");
+							  })
+							  $(".inmail_calendar_box").on("click",function(event){
+								event.stopPropagation();
+							  });	
+						 
 						  $(opts.cilckid).on("click",function(){
+							  $(opts.cilckid).not($(this)).removeClass("active").attr("isc","no").next(".inmail_calendar").slideUp(0);
 							  if($(this).attr("isc")=="no"){
-							  $(this).addClass("active").next(".inmail_calendar").slideDown(200);
-							  $(this).attr("isc","yes");
+								  $(this).addClass("active").next(".inmail_calendar").slideDown(100);
+								  $(this).attr("isc","yes");
+								  huncundrawid=$(this).next(opts.drawid);
 							  }else{
-							  $(this).removeClass("active").next(".inmail_calendar").slideUp(200,function(){opts.calendarhide(opts.drawid,opts.isshowtime)});
-							  $(this).attr("isc","no");
-							  }
+								  $(this).removeClass("active").next(".inmail_calendar").slideUp(100,function(){opts.calendarhide($(this).next(opts.drawid),opts.isshowtime)});
+								  $(this).attr("isc","no");
+								  huncundrawid=opts.drawid;
+							  }					  
 						  });
 						  
 						  $(opts.hoverid).hover(function(){
+							 $(opts.hoverid).not($(this)).removeClass("active").attr("isc","no").next(".inmail_calendar").slideUp(0);
 							 if($(this).attr("isc")=="no"){
-							  $(this).next(".inmail_calendar").slideDown(200);
+							  $(this).next(".inmail_calendar").slideDown(100);
 							  $(this).attr("isc","yes");
+							  huncundrawid=$(this).next(opts.drawid);
 							  }else{
-							  $(this).next(".inmail_calendar").slideUp(200,function(){opts.calendarhide(opts.drawid,opts.isshowtime)});
+							  $(this).next(".inmail_calendar").slideUp(100,function(){opts.calendarhide($(this).next(opts.drawid),opts.isshowtime)});
 							  $(this).attr("isc","no");
+							  huncundrawid=opts.drawid;
 							  }
+							   
 						   },function(){});
-						   $(".inmail_calendar_box").hover(function(){},function(){
+						   
+						   /*$(".inmail_calendar_box").hover(function(){},function(){
 							   $(this).find(opts.hoverid).attr("isc","no");
 							   $(opts.cilckid).removeClass("active").attr("isc","no");
-							   $(".inmail_calendar").slideUp(200,function(){ opts.calendarhide(opts.drawid,opts.isshowtime)});
-							});
+							   $(huncundrawid).slideUp(200,function(){ opts.calendarhide(huncundrawid,opts.isshowtime)});
+							});*/
 						  
 					 }
 			})
 		}
+		function getclass_indian(id){
+			var classdata=id.attr("class").split(" ");
+			var reclass="";
+			for(var i=0;i<classdata.length;i++){
+				reclass+="."+classdata[i];
+			}
+			return reclass;
+		};
 
 		//通过指定的日期元素和时间控件获取选中的日期和时间
-		function redate(onday,istime){
+		 exports.redate=function(id,istime){
 			var data=[];
 			var html="";
+			var onday=id.find(".OA_calendar_mian .table a.active");
 			if(comfun.isNull(onday.attr("date"))!="kong"){
 				data.push(onday.attr("date"));
 			}else{
-				data.push("");
+				data.push(toy+"-"+(tom+1)+"-"+tod);
 			}
 			if(istime&&comfun.isNull(istime)!="kong"){
-				data.push($("."+istime).find(".hour").html());
-				data.push($("."+istime).find(".min").html());
+				data.push(id.find("."+istime+" .hour").html());
+				data.push(id.find("."+istime+" .min").html());
 				if(istime=="hms")
-				data.push($("."+istime).find(".second").html());
+				data.push(id.find("."+istime+" .second").html());
 			}
 			for(var i=0;i<data.length;i++){
 				if(i>0&&i<data.length-1)
@@ -161,7 +180,7 @@ define(function(require,exports) {
 					$(this).click(function(){
 						$(this).parents("tbody").find("a").removeClass("active");
 						$(this).addClass("active");
-						opts.clickday(opts.drawid,$(this),opts.isshowtime);
+						opts.clickday($(this).parents(opts.drawid),opts.isshowtime,$(this));
 					});
 				});
 			}else{
@@ -183,7 +202,7 @@ define(function(require,exports) {
 			$(".OA_calendar_times .min").html(m);
 			$(".OA_calendar_times .second").html(s);
 			
-			$(".time_chooseicon i").click(function(){
+			$(".time_chooseicon i").on("click",function(){
 				var level=Number($(this).parent().attr("level"));
 				var minl=Number($(this).parent().attr("min"));
 				var maxl=Number($(this).parent().attr("max"));
@@ -202,7 +221,8 @@ define(function(require,exports) {
 				}
 				temval=temval < 10 ? '0' + temval: temval;
 				val.html(temval);
-				opts.choosetimes(opts.drawid,opts.isshowtime);
+				opts.choosetimes($(this).parents(opts.drawid),opts.isshowtime);
+				//opts.choosetimes(opts.drawid,opts.isshowtime);
 			})
 		}
 		

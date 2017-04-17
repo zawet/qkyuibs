@@ -106,7 +106,7 @@ define(function(require,exports) {
 			$(this).addClass("active").siblings().removeClass("active");
 			$(this).parents(".windows_mian").find(".right_box").removeClass("open");
 			$(".windows_mian .right_box[box_id='"+$(this).attr("id")+"']").addClass("open");
-			$('iframe[name="'+$(this).attr("id")+'"]').attr('src',$('iframe[name="'+$(this).attr("id")+'"]').attr('src'));
+			//$('iframe[name="'+$(this).attr("id")+'"]').attr('src',$('iframe[name="'+$(this).attr("id")+'"]').attr('src'));
 		})
 	}
 	

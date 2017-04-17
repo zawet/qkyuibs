@@ -27,7 +27,7 @@ define(function(require,exports) {
 	}
 	
 	exports.oamail_send_run=function(){
-		uch.userChoose_run();
+		uch.userChoose_run(function(t){},function(t){});
 		cal.OA_calendar_run({isshowtime:"hms"});
 	}
 })

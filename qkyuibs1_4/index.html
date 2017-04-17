@@ -28,6 +28,7 @@
             <div class="windows_mian col-sm-11 trn open" mould_id="oa_index">
                 <div class="windows_mian_left col-sm-2 pr0">
                     <div class="scrrol_box">
+                    
                     	<div class="qkycadr row mt20 ml0 pb20">
                             <div class="col-sm-12">
                                 <h3>王霖</h3>
@@ -80,8 +81,8 @@
             <div class="menu_box qkycadr">
                 <h3>通讯录</h3>
                 <div class="menu_list">
-                  <a id="oa_contacts_in" class="menu_list_item active"><i class="qkyicon_14">&#xe61c;</i>内部通讯录</a>
-                  <a id="oa_contacts_groupset" class="menu_list_item"><i class="qkyicon_14">&#xe606;</i>群组设置</a> 
+                  <a id="oa_contacts_in" class="menu_list_item active"><i class="qkyicon_14_">&#xe678;</i>内部通讯录</a>
+                  <a id="oa_contacts_groupset" class="menu_list_item"><i class="qkyicon_14_">&#xe606;</i>群组设置</a> 
                 </div>
             </div>
             <div class="pt20"></div>  
@@ -176,6 +177,37 @@
         </div>
     </div>
     
+    <!--日程模块存放-->
+    <div class="yc" id="oa_schedule_cadr">
+        <!--左边模块存放-->
+        <div class="left_cadr">
+            <div class="menu_box qkycadr">
+                <h3>日程</h3>
+                <div class="menu_list">
+                  <a id="oa_schedule_add" class="menu_list_item active"><i class="qkyicon_14_">&#xe6d3;</i>新建日程</a>
+                  <a id="oa_schedule_weekview" class="menu_list_item"><i class="qkyicon_14_">&#xe62d;</i>周历视图</a>
+                  <a id="oa_schedule_list" class="menu_list_item"><i class="qkyicon_14_">&#xe6d5;</i>日程列表</a>
+
+                </div>
+            </div>
+            <div class="pt20"></div>  
+        </div>
+        <!--右边边模块存放-->
+        <div class="right_cadr">
+            <div class="right_box open" box_id="oa_schedule_add">
+            <iframe src="schedule/oa_schedule_add.html" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_schedule_add"></iframe> 
+            </div>
+            <div class="right_box" box_id="oa_schedule_weekview">
+            <iframe src="schedule/oa_schedule_weekview.html" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_schedule_weekview"></iframe>
+            </div>
+            <div class="right_box" box_id="oa_schedule_list">
+            <iframe src="schedule/oa_schedule_list.html" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_schedule_list"></iframe>
+            </div>
+            
+            <div class="pt20"></div>
+        </div>
+    </div>
+    
     <!--邮箱模块存放-->
     <div class="yc" id="oa_mail_cadr">
         <!--左边模块存放-->
@@ -218,13 +250,13 @@
     </div>
     
     
-    <script src="dist/jq/1.11.1/jquery.min.js"></script>
+   <!-- <script src="dist/jq/1.11.1/jquery.min.js"></script>-->
     <!--模块化js-->
     <script src="dist/sea.js"></script>
     <script src="dist/seaconfig.js"></script>
     <script>
-     seajs.use(["bs","nav","oasc/oaindex"],
-	 function(bs,nav,oaindex){
+     seajs.use(["jq","bs","nav","oasc/oaindex"],
+	 function(jq,bs,nav,oaindex){
 		$("#qkynav").qkynav({
 			qkynavafter:function(){
 				oaindex.windows_qkynav();//主导航条点击事件
