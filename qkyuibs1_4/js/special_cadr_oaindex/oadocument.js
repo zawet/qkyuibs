@@ -11,13 +11,13 @@ define(function(require,exports) {
 	    dist_onepage();
 		onepage(); 
 		twopage();
-		uch.userChoose_ajaxrun();
+		uch.userChoose_ajaxrun(function(t){},function(t){});
 	}
 	exports.oadocument_list_run=function(hasuch){
 		dw.havevalue();
 		onepage(); 
 		comfun.search_box_oc();
-		if(hasuch){uch.userChoose_ajaxrun();}
+		if(hasuch){uch.userChoose_ajaxrun(function(t){},function(t){});}
 	}
 	
 	function twopage(){

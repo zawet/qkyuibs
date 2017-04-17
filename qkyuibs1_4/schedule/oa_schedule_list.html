@@ -25,7 +25,7 @@
   <body class="oabasebg">
      <div class="scrrol_box pl15 mt20 pb20">
          <div class="fixed_header">
-             <h3 class="header_title pl15 pt15 mb0 clear"><i class="qkyicon_14_ mr5 fz_28 fl">&#xe6a0;</i><span class="fl">我的流程</span></h3>
+             <h3 class="header_title pl15 pt15 mb0 clear"><i class="qkyicon_14_ mr5 fz_28 fl">&#xe6d5;</i><span class="fl">日程列表</span></h3>
          </div>
          <div class="qkycadr mt_fixed_one2 pa15">
          	<div class="clear mb15">
@@ -50,11 +50,18 @@
                                     </div>
                                  </div>
                              </div>
-                             
+                             <div class="col-sm-6">
+                             <div class="form-group">
+                                 <div class="radio pt0">
+                                   <label class="radio-qky clear radio-inline pt0"><a class="radio_a fl mr5"><b></b></a><span class="fr ml4">个人日程</span></label>
+                                   <label class="radio-qky clear radio-inline pt0"><a class="radio_a fl mr5"><b></b></a><span class="fr ml4">共享日程</span></label>
+                                  </div>
+                             </div>
+                             </div>
                              
                              <div class="col-sm-6">
                                  <div class="form-group">
-                                    <label for="search_include_enclosure" class="col-sm-2 control-label pr0 pl0">工作流名：</label>
+                                    <label for="search_include_enclosure" class="col-sm-2 control-label pr0 pl0">类型：</label>
                                     <div class="col-sm-10">
                                       <div class="dropdown qkydropdown havechoose">
                                         <a class="btn btn-default dropdown-toggle auto" id="dropdownMenu1" data-toggle="dropdown">
@@ -62,63 +69,43 @@
                                          <span class="caret"></span>
                                         </a>
                                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                         <li role="presentation"><a>金湾教育局收文</a></li>
-                                         <li role="presentation"><a>广东教育厅收文</a></li>
+                                         <li role="presentation"><a>活动</a></li>
+                                         <li role="presentation"><a>培训</a></li>
+                                         <li role="presentation"><a>会议</a></li>
+                                         <li role="presentation"><a>调研</a></li>
+                                         <li role="presentation"><a>出差</a></li>
+                                         <li role="presentation"><a>其他</a></li>
                                         </ul>
                                        </div>
                                     </div>
                                  </div>
                              </div>
                              <div class="col-sm-6">
+                             <div class="form-group">
+                                 <div class="radio pt0">
+                                   <label class="radio-qky clear radio-inline pt0"><a class="radio_a fl mr5"><b></b></a><span class="fr ml4">本周</span></label>
+                                   <label class="radio-qky clear radio-inline pt0"><a class="radio_a fl mr5"><b></b></a><span class="fr ml4">本月</span></label>
+                                   <label class="radio-qky clear radio-inline pt0"><a class="radio_a fl mr5"><b></b></a><span class="fr ml4">本季</span></label>
+                                  </div>
+                             </div>
+                             </div>
+                             
+                             <div class="col-sm-12">
                                  <div class="form-group">
-                                    <label for="search_mail_state" class="col-sm-2 control-label pr0 pl0">流程状态：</label>
-                                    <div class="col-sm-10">
-                                      <div class="dropdown qkydropdown havechoose">
-                                        <a class="btn btn-default dropdown-toggle auto" id="dropdownMenu1" data-toggle="dropdown">
-                                         <span class="value">全部</span>
-                                         <span class="caret"></span>
-                                        </a>
-                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                         <li role="presentation"><a>拟稿</a></li>
-                                         <li role="presentation"><a>执行中</a></li>
-                                         <li role="presentation"><a>已结束</a></li>
-                                        </ul>
-                                       </div>
+                                    <label for="search_starttime" class="col-sm-1 control-label pr0 pl0">时间：</label>
+                                    <div class="col-sm-5 po_r inmail_calendar_box one">
+                                      <input type="text" class="form-control  inmail_calendar_btn"  id="schedule_starttime" placeholder="开始时间" >
+                                      <div class="inmail_calendar qkycadr OA_calendar po_leftdown ml15"></div>
+                                    </div>
+                                    <div class="col-sm-5 po_r inmail_calendar_box two">
+                                      <input type="text" class="form-control inmail_calendar_btn" id="schedule_endtime" placeholder="结束时间">
+                                      <div class="inmail_calendar qkycadr OA_calendar po_leftdown ml15"></div>
                                     </div>
                                  </div>
                              </div>
-                             <div class="col-sm-6">
-                                 <div class="form-group">
-                                    <label for="search_starttime" class="col-sm-2 control-label pr0 pl0">开始时间：</label>
-                                    <div class="col-sm-10">
-                                      <input type="text" class="form-control laydate-icon" onClick="laydate()" id="search_starttime" placeholder="开始时间">
-                                    </div>
-                                 </div>
-                             </div>
-                             <div class="col-sm-6">
-                                 <div class="form-group">
-                                    <label for="search_endtime" class="col-sm-2 control-label pr0 pl0">结束时间：</label>
-                                    <div class="col-sm-10">
-                                      <input type="text" class="form-control laydate-icon" onClick="laydate()" id="search_endtime" placeholder="结束时间">
-                                    </div>
-                                 </div>
-                             </div>
-                             <div class="col-sm-6">
-                                 <div class="form-group">
-                                    <label for="search_group" class="col-sm-2 control-label pr0 pl0">所属机构：</label>
-                                    <div class="col-sm-10">
-                                      <input type="text" class="form-control" id="search_group" placeholder="请选择机构">
-                                    </div>
-                                 </div>
-                             </div>
-                             <div class="col-sm-6">
-                                 <div class="form-group">
-                                    <label for="search_crname" class="col-sm-2 control-label pr0 pl0">创建人：</label>
-                                    <div class="col-sm-10">
-                                      <input type="text" class="form-control" id="search_crname" placeholder="请选择发起人">
-                                    </div>
-                                 </div>
-                             </div>
+                             
+                             
+                             
                              
                              <div class="col-sm-12 t_c">
                              <button type="submit" class="btn btn-primary">搜索</button>
@@ -130,35 +117,39 @@
              <div class="qkycadr">
 
                  <table class="table table-condensed atd bor_b">
-                 <thead><tr><th>工作流名称</th><th>标题</th><th>当前办理人</th><th>创建时间</th><th>状态</th><th>操作</th></tr></thead>
+                 <thead><tr><th>类型</th><th></th><th>主题</th><th>开始时间</th><th>结束时间</th><th>地点</th><th>操作</th></tr></thead>
                  <tbody>
                      <tr>
-                         <td><a href="oa_flow_info.html?pid=form">办公流程</a></td>
-                         <td>现代化教育的普及精神</a></td>
-                         <td>王霖</td><td>2017-03-20 15:14:29</td><td>拟稿</td>
+                         <td>其他</td>
+                         <td><i class="qkyicon_14_ fz_18">&#xe607;</i></td>
+                         <td><a href="oa_schedule_info.html">汇报材料</a></td>
+                         <td>2017-04-07 10:00</td><td>2017-04-07 12:00</td><td>会议室</td>
                          <td>
-                         <a class="mr10" href="oa_flow_info.html?pid=following"><i class="qkyicon_14_ mr5">&#xe73f;</i>流程跟踪</a>
-                         <a class="mr10" href="oa_flow_info.html?pid=form"><i class="qkyicon_14 mr5">&#xe603;</i>查看</a>
+                         <a class="mr10" href="oa_schedule_edit.html"><i class="qkyicon_14 mr5">&#xe60f;</i>修改</a>
+                         <a class="mr10" data-toggle="modal" data-target="#delete"><i class="qkyicon_14 mr5">&#xe613;</i>删除</a>
                          </td>
                      </tr>
                      <tr>
-                         <td><a href="oa_flow_info.html?pid=form">办公流程</a></td>
-                         <td>现代化教育的普及精神</a></td>
-                         <td>王霖</td><td>2017-03-20 15:14:29</td><td class="mian_color">执行中</td>
+                         <td>会议</td>
+                         <td><i class="qkyicon_14_ fz_18">&#xe607;</i></td>
+                         <td><a href="oa_schedule_info.html">全校动员大会</a></td>
+                         <td>2017-04-07 08:00</td><td>2017-04-07 16:00</td><td>室内体育馆</td>
                          <td>
-                         <a class="mr10" href="oa_flow_info.html?pid=following"><i class="qkyicon_14_ mr5">&#xe73f;</i>流程跟踪</a>
-                         <a class="mr10" href="oa_flow_info.html?pid=form"><i class="qkyicon_14 mr5">&#xe603;</i>查看</a>
+                         <a class="mr10" href="oa_schedule_edit.html"><i class="qkyicon_14 mr5">&#xe60f;</i>修改</a>
+                         <a class="mr10" data-toggle="modal" data-target="#delete"><i class="qkyicon_14 mr5">&#xe613;</i>删除</a>
                          </td>
                      </tr>
                      <tr>
-                         <td><a href="oa_flow_info.html?pid=form">办公流程</a></td>
-                         <td>现代化教育的普及精神</a></td>
-                         <td>王霖</td><td>2017-03-20 15:14:29</td><td>传阅</td>
+                         <td>会议</td>
+                         <td><i class="qkyicon_14_ fz_18">&#xe607;</i></td>
+                         <td><a href="oa_schedule_info.html">月度总结文案</a></td>
+                         <td>2017-04-05 14:00</td><td>2017-04-05 16:00</td><td>会议室</td>
                          <td>
-                         <a class="mr10" href="oa_flow_info.html?pid=following"><i class="qkyicon_14_ mr5">&#xe73f;</i>流程跟踪</a>
-                         <a class="mr10" href="oa_flow_info.html?pid=form"><i class="qkyicon_14 mr5">&#xe603;</i>查看</a>
+                         <a class="mr10" href="oa_schedule_edit.html"><i class="qkyicon_14 mr5">&#xe60f;</i>修改</a>
+                         <a class="mr10" data-toggle="modal" data-target="#delete"><i class="qkyicon_14 mr5">&#xe613;</i>删除</a>
                          </td>
                      </tr>
+                     
                  </tbody>
                  </table>
                  
@@ -181,7 +172,7 @@
              </div>
              <div class="qkycadr nodata mt10 mb10">
                         <div class="nadata_icon"><i class="qkyicon_100">&#xe637;</i></div>
-                        <span class="nadata_txt">您暂时还没有创建新的流程,您可以点击左侧新建流程</span>
+                        <span class="nadata_txt">您还没有日程可以查看，请先新建日程</span>
                   </div>
          </div>
          <div class="pt20"></div>                  
@@ -190,12 +181,10 @@
     <!--模块化js-->
     <script src="../dist/sea.js"></script>
     <script src="../dist/seaconfig.js"></script>
-    <script src="../dist/laydate/laydate.js"></script>
     <script>
-	 seajs.use(["bs","oascd/oadocument"],
-	 function(bs,doc){
-		 laydate.skin('zwt');
-		 doc.oadocument_list_run();
+	 seajs.use(["jq","bs","oascd/oaschedule","d-dw"],
+	 function(jq,bs,sch){
+		 sch.schedule_list_run();
 	 });
     </script>
   </body>

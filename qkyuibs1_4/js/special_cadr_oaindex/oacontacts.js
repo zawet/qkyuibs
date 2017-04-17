@@ -18,7 +18,7 @@ define(function(require,exports) {
 			$(".group_changebox").removeClass("open");
 			$(".group_changebox[changebox_id='"+$(this).attr("changebox_id")+"']").addClass("open");
 		});
-		userchoose.userChoose_run();
+		userchoose.userChoose_run(function(t){},function(t){});
 	}
 
 })

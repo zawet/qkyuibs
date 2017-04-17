@@ -9,15 +9,15 @@ define(function(require,exports) {
 	var rach_run=require("../common_cadr/radio_checkbox1.2");
 	
 	//异步获取弹框
-	exports.userChoose_ajaxrun=function(){
+	exports.userChoose_ajaxrun=function(radio,checkbox){
 		comfun.htmlajax("../mould/userchoose_mould.html",function(userchoosehtml){//异步过来html主体
 			$("body").append(userchoosehtml);
-			exports.userChoose_run();
+			exports.userChoose_run(radio,checkbox);
 		});
 	}
 	
-	exports.userChoose_run=function(){
-		rach_run.rach_run(function(thiss){},function(thiss){});
+	exports.userChoose_run=function(radio,checkbox){
+		rach_run.rach_run(radio,checkbox);
 		//部门，群组切换交互
 		$(".userChoose_cont .nav-tabs li").on("click",function(){
 			$(this).addClass("active").siblings().removeClass("active");

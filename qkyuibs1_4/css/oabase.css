@@ -58,7 +58,7 @@
 .OA_calendar_mian .table>tbody>tr>td a.active{background:#72D572;  color:#fff;border-color:#72D572; position:relative;}
 .OA_calendar_mian .table>tbody>tr>td a.active:hover{background:#2baf2b;border-color:#2baf2b;}
 
-.OA_calendar_times{ background:#fff; padding: 5px; margin:0; border-top:1px solid #eee; background:#f9f9f9; display:none;}
+.OA_calendar_times{ background:#fff; padding: 5px; margin:0; border-top:1px solid #eee; background:#f9f9f9; display:none; border-radius:0 0 4px 4px;}
 .OA_calendar_times .times_control{ line-height:20px; position:relative; padding:5px 15%; margin:0 auto; text-align:center;}
 .OA_calendar_times .times_control .time_chooseicon{ position:absolute; right:5%; top:0; height:30px; display:none;}
 .OA_calendar_times .times_control:hover .time_chooseicon{ display:block;}
@@ -67,15 +67,19 @@
 
 .inmail_calendar_box a.inmail_calendar_btn{ color:#333;}
 .inmail_calendar_box a.inmail_calendar_btn.active{ background:#fff; text-decoration:inherit; color:#2baf2b;}
+.inmail_calendar_box input.inmail_calendar_btn{ background:url(../images/calicon.png) no-repeat 98% center #fff; padding-right:30px;}
 .inmail_calendar_box .OA_calendar.inmail_calendar{ display:none;}
-.inmail_calendar{ width:240px; position:absolute; right:0; top:100%; z-index:1003;}
-.inmail_calendar.po_leftup{ top:auto; left:0; bottom:100%;}
-.inmail_calendar.po_leftdown{ left:0; top:100%;}
-.inmail_calendar.po_rightup{ right:0; bottom:100%;top:auto;}
+.inmail_calendar{ width:240px; position:absolute; right:0; top:110%; z-index:1003; border-radius:4px;}
+.inmail_calendar.po_leftup{ top:auto; left:0; bottom:110%;}
+.inmail_calendar.po_leftdown{ left:0; top:110%}
+.inmail_calendar.po_rightup{ right:0; bottom:110%;top:auto;}
 .inmail_calendar .OA_calendar_ondate{ display:block; background:#2baf2b; color:#fff; line-height:26px;}
 .inmail_calendar .OA_calendar_day{ display:none;}
 .inmail_calendar .OA_calendar_years{ width:100%; line-height:40px;border-bottom:0;}
 .inmail_calendar .OA_calendar_mian{ width:100%;}
+.inmail_calendar .OA_calendar_mian .table>thead>tr>th{ padding:7px 0; text-align:center; border:0; background:#2baf2b; color:#fff;}
+
+
 
 /********切换动画***********/
 /*动画执行*/
@@ -248,7 +252,7 @@ h4.header_title{ border-bottom:1px dashed #d8d8d8; padding:10px 0; margin:0; lin
 .mail_check_enclosure li label{ text-align:center;display:block; color:#333;}
 .mail_check_enclosure li span{ text-align:center;display:block; color:#737373;}
 
-/****公文****/
+/****公文,流程****/
 
 .table .title{ background:#eee; vertical-align:middle; width:12%; font-weight:bold;}
 .doc_nav{ border-bottom:none;}
@@ -270,3 +274,23 @@ h4.header_title{ border-bottom:1px dashed #d8d8d8; padding:10px 0; margin:0; lin
 .readinfo_list.read a label{color:#72D572;}
 .readinfo_list.waitread i{ color:#F0485F;}
 .readinfo_list.waitread a label{color:#F0485F;}
+
+
+.sch_week tbody tr td{ padding:10px 0 ; text-align:center; vertical-align:middle;}
+.sch_week thead tr th{ text-align:center;}
+.sch_week tbody tr.today td{ background:#eaf3e3;}
+.sch_week tbody tr td.sch_listbox{ padding:10px 10px 5px;}
+.sch_list{ padding:8px 10px; background:#f5f5f5; color:#535353; margin-bottom:5px; display:block; cursor:pointer; border-radius:4px;}
+.sch_list:hover,.sch_list.hover{ color:#333; text-decoration:inherit; background:#e1e1e1}
+.sch_list i{color:#51b351;}
+.sch_list:hover i{ color:#2baf2b}
+.sch_list.group i{ color:#FFCA28;}
+.sch_list.group:hover i{color:#ddaa16;}
+.sch_list i{ font-size:16px; margin-right:5px;}
+.sch_id{ position:absolute; height:38px; width:4px; border-radius:4px 0 0 4px; top:0; left:0; background:#2baf2b;}
+.sch_id.right{ left:auto; right:0;border-radius:0 2px 2px 0;}
+.sch_list.group .sch_id{ background:#FFCA28;}
+.sch_add{ position:absolute; right:20px; top:50%; margin-top:-15px; width:30px; height:30px; border-radius:50%; border:2px solid #fff; text-align:center; line-height:26px; color:#2baf2b; font-weight:bold; background:#fff; z-index:4;}
+
+.sch_add:hover{ color:#fff; border-color:#2baf2b; text-decoration:inherit; background:#2baf2b;}
+
