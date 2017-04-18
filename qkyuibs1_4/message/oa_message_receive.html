@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="qky2.ico">
+    <title>全课云UI</title>
+    <!-- Bootstrap 基础样式 CSS -->
+    <link href="../dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+    
+    <!--全课云基础样式覆盖-->
+    <link href="../css/iconfont.css" rel="stylesheet">
+    <link href="../css/qkybase1.4.css" rel="stylesheet">
+    <link href="../css/oabase.css" rel="stylesheet">
+    <link href="../css/quickcss.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="oabasebg">
+     <div class="scrrol_box pl15 mt20 pb20">
+         <div class="fixed_header">
+             <h3 class="header_title pl15 pt15 mb0 clear"><i class="qkyicon_14_ mr5 fz_28 fl">&#xe6d4;</i><span class="fl">接收短信</span></h3>
+         </div>
+         <div class="qkycadr mt_fixed_one2 pa15">
+             <div class="clear mb15">
+            	<a class="btn btn-default fl" data-toggle="modal" data-target="#delete_message">删除</a>
+                 <button type="button" class="btn btn-primary fr" id="search_box_oc">高级搜索</button>
+             </div>
+             <div class="search_box qkycadr bor_nb">
+                  <form class="form-horizontal">
+                         <div class="row">
+                             <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <label for="search_theme" class="col-sm-2 control-label pr0 pl0">内容：</label>
+                                    <div class="col-sm-10">
+                                      <input type="text" class="form-control" id="search_theme" placeholder="主题">
+                                    </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <label for="search_rename" class="col-sm-2 control-label pr0 pl0">接收人：</label>
+                                    <div class="col-sm-10">
+                                      <input type="text" class="form-control " id="search_rename" placeholder="选择接收人员">
+                                    </div>
+                                 </div>
+                             </div>
+                             
+                             
+                             <div class="col-sm-6">
+                                 <div class="form-group">
+                                    <label for="search_starttime" class="col-sm-2 control-label pr0 pl0">时间：</label>
+                                    <div class="col-sm-5 po_r inmail_calendar_box one">
+                                      <input type="text" class="form-control  inmail_calendar_btn"  id="schedule_starttime" placeholder="开始时间" >
+                                      <div class="inmail_calendar qkycadr OA_calendar po_leftdown ml15"></div>
+                                    </div>
+                                    <div class="col-sm-5 po_r inmail_calendar_box two">
+                                      <input type="text" class="form-control inmail_calendar_btn" id="schedule_endtime" placeholder="结束时间">
+                                      <div class="inmail_calendar qkycadr OA_calendar po_leftdown ml15"></div>
+                                    </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-6">
+                             <div class="form-group">
+                                 <div class="radio pt0">
+                                   <label class="radio-qky clear radio-inline pt0"><a class="radio_a fl mr5"><b></b></a><span class="fr ml4">本周</span></label>
+                                   <label class="radio-qky clear radio-inline pt0"><a class="radio_a fl mr5"><b></b></a><span class="fr ml4">本月</span></label>
+                                   <label class="radio-qky clear radio-inline pt0"><a class="radio_a fl mr5"><b></b></a><span class="fr ml4">本季</span></label>
+                                  </div>
+                             </div>
+                             </div>
+                             
+                             
+                             
+                             <div class="col-sm-12 t_c">
+                             <button type="submit" class="btn btn-primary">搜索</button>
+                             <button type="button" class="btn btn-default">取消</button>
+                             </div>
+                         </div>
+                         </form>       
+             </div>
+             <div class="qkycadr">
+
+                 <table class="table table-condensed atd bor_b">
+                 <thead><tr>
+                 <th><label class="checkbox-qky mb0 parent" lj="mail_list" isc="no"><a class="checkbox_a mt0 mr0"><i class="qkyicon_14">&#xe619;</i></a></label></th>
+                  <th>发送人</th><th>内容</th><th>接收时间</th><th>操作</th></tr></thead>
+                 <tbody>
+                     <tr>
+                     <td><label class="checkbox-qky mb0 child" lj="mail_list"><a class="checkbox_a mr0"><i class="qkyicon_14">&#xe619;</i></a></label></td>
+                         <td>李老师</td>
+                         <td>请协助办理领导接待事宜</td>
+                         <td>2017-04-07 10:00</td>
+                         <td>
+                         <a class="mr10" href="oa_message_info.html"><i class="qkyicon_14 mr5">&#xe603;</i>查看</a>
+                         <a class="mr10" data-toggle="modal" data-target="#delete_message"><i class="qkyicon_14 mr5">&#xe613;</i>删除</a>
+                         </td>
+                     </tr>
+                     <tr>
+                     <td><label class="checkbox-qky mb0 child" lj="mail_list"><a class="checkbox_a mr0"><i class="qkyicon_14">&#xe619;</i></a></label></td>
+                         <td>李老师</td>
+                         <td>【OA系统】流程待办：请阅读并签收请假流程申请</td>
+                         <td>2017-04-07 10:00</td>
+                         <td>
+                         <a class="mr10" href="oa_message_info.html"><i class="qkyicon_14 mr5">&#xe603;</i>查看</a>
+                         <a class="mr10" data-toggle="modal" data-target="#delete_message"><i class="qkyicon_14 mr5">&#xe613;</i>删除</a>
+                         </td>
+                     </tr>
+                     <tr>
+                     <td><label class="checkbox-qky mb0 child" lj="mail_list"><a class="checkbox_a mr0"><i class="qkyicon_14">&#xe619;</i></a></label></td>
+                         <td>张老师</td>
+                         <td>【OA系统】公文待办：请阅读并签收新的公文申请</td>
+                         <td>2017-04-07 10:00</td>
+                         <td>
+                         <a class="mr10" href="oa_message_info.html"><i class="qkyicon_14 mr5">&#xe603;</i>查看</a>
+                         <a class="mr10" data-toggle="modal" data-target="#delete_message"><i class="qkyicon_14 mr5">&#xe613;</i>删除</a>
+                         </td>
+                     </tr>
+                     
+                     
+                 </tbody>
+                 </table>
+                 
+                 <div class="qkypage row  pa15">
+                   <div class="col-md-2 col-sm-3 pageinfo">1-10 of 48 项目</div>
+                   <div class="col-md-8 col-sm-7 col-md-offset-2 col-sm-offset-2 col-xs-8 col-xs-offset-4">
+                    <ul class="nav nav-pills"> 
+                     <li class="disabled page_prv"><a href="#">上一页</a></li>
+                     <li class="active"><a href="#">1</a></li>
+                     <li><a href="#">2</a></li>
+                     <li><a href="#">...</a></li>
+                     <li><a href="#">4</a></li>
+                     <li><a href="#">5</a></li>
+                     <li class="page_next"><a href="#">下一页</a></li>
+                     <li class="form-group mb0 page_input"><input class="form-control" placeholder="输入页面" type="text"></li>
+                     <li class="page_input"><a class="btn btn-default">GO</a></li>
+                    </ul>
+                   </div>
+                  </div>
+             </div>
+             <div class="qkycadr nodata mt10 mb10">
+                        <div class="nadata_icon"><i class="qkyicon_100">&#xe633;</i></div>
+                        <span class="nadata_txt">您还没有收到短信</span>
+                  </div>
+         </div>
+         <div class="pt20"></div>                  
+     </div>    
+     
+     
+     
+        
+    <script src="../dist/jq/1.11.1/jquery.min.js"></script>
+    <!--模块化js-->
+    <script src="../dist/sea.js"></script>
+    <script src="../dist/seaconfig.js"></script>
+    <script src="../dist/laydate/laydate.js"></script>
+    <script>
+	 seajs.use(["jq","bs","oascd/oamessage"],
+	 function(jq,bs,mes){
+		mes.message_sendrun();
+	 });
+    </script>
+  </body>
+</html>
