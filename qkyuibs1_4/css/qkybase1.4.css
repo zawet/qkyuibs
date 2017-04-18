@@ -195,6 +195,7 @@ ul.error_tips li{ padding:4px 0 ; margin:0;}
 .navbar-default .navbar-nav > li > a:hover{ background:#f5f5f5; color:#333;}
 .navbar-default .navbar-nav > .active > a { background: #2baf2b;color:#fff;}
 .navbar-default .navbar-nav > .active > a:hover { background: #2baf2b; color:#fff;}
+.navbar-default .navbar-nav .dropdown-menu>.active>a{ background:#2baf2b !important;}
 .navbar-default .nav_other li .dropdown-menu{ background:#fff; border:1px solid #d8d8d8; border-top:0;}
 .navbar-default .nav_other li .dropdown-menu li a{ color:#737373;}
 .navbar-default .nav_other li .dropdown-menu li a:hover{ color:#333; background:#f5f5f5;}
@@ -424,14 +425,17 @@ a.checkbox_a{display:block; width:16px; height:16px; border:1px solid #dadada; b
 .ns{ overflow: inherit;}/*表格外框不出现滚动条*/
 .table_card a{ color:#737373; cursor:pointer; text-decoration:inherit;}
 .table_card a:hover{ color:#333;}
+
 .table{ margin-bottom:0;}
 .table >thead >tr >th{ padding:10px 20px; background:#f5f5f5; font-weight:normal; color:#737373; border-bottom:1px solid #f5f5f5;}
 .table>tbody >tr >td,.table >tbody >tr >th{ padding:20px; border-top:1px  solid #dfdfdf;  color:#333;}
+.table.bor_b>tbody >tr >td,.table.bor_b>tbody >tr >th{ border-bottom:1px  solid #dfdfdf; border-top:none; vertical-align:middle;}
 .table>tbody >tr{background:#fff;}
 .table.table-striped > tbody > tr:nth-child(odd) {background-color:#ffffff;}
 .table.table-striped > tbody > tr:nth-child(even) {background-color:#fbfbfb;}
 .table.table-bordered  >thead >tr >th{ border-bottom:1px solid #dfdfdf;}
 .table.table-bordered  >tbody >tr >td{ border-top:1px solid #dfdfdf;}
+
 .table-hover> tbody > tr:hover >td {background-color:#f9f9f9;}
 .table-condensed > thead > tr > th, 
 .table-condensed > tbody > tr > th, 
@@ -455,6 +459,7 @@ a.checkbox_a{display:block; width:16px; height:16px; border:1px solid #dadada; b
 .table > tfoot > tr.active > th {
     background-color: #f9f9f9;
 }
+
 
 /*禁区父类*/
 .no_open{ opacity:0.6; background:#f1f1f1;} 

@@ -39,6 +39,7 @@ define(function(require,exports) {
 			windows_bar();
 			menu_list_item();
 			}
+			$(this).siblings().removeClass("active");
 		});    
 	}
 	//窗口标签开关
