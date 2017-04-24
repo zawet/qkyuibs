@@ -16,12 +16,13 @@ define(function(require,exports) {
 		"modalcontent_color":"mian_color",
 		"buttons":true,
 		"buttons_name":["确定","取消"],
-		"okeybutton_click":function(){}		
+		"okeybutton_click":function(){},
+		"modalsrc":	"../mould/poptips_mould.html"	
 	}
 		if (!isValid(options))return this;
 		opts = $.extend({}, opts, options);//有传值进来后，进行对默认覆盖
 		
-		com.htmlajax("../mould/poptips_mould.html",function(pophtml){//异步过来html主体
+		com.htmlajax(opts.modalsrc,function(pophtml){//异步过来html主体
 			id.append("<div class='yc' id='poptips_hc'></div>");
 			$("#poptips_hc").html(pophtml);
 			$("#poptips_hc .modal").attr("id",opts.modalid);

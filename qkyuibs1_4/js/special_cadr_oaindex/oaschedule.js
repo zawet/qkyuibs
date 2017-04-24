@@ -111,6 +111,21 @@ define(function(require,exports) {
 	
 	exports.schedule_add_run=function(){
 	   cal.OA_calendar_run({
+		   boxid:".inmail_calendar_box.one",
+		   cilckid:".inmail_calendar_btn.s",
+		   drawid:".OA_calendar.ss",
+		   isinput:true,
+		   isshowtime:"hms",
+		   clickday:function(id,istime,thisday){$(id).parent().find("input.inmail_calendar_btn").val(cal.redate($(id),istime));},
+		   choosetimes:function(id,istime){$(id).parent().find("input.inmail_calendar_btn").val(cal.redate($(id),istime));},
+		   calendarhide:function(id,istime){$(id).parent().find("input.inmail_calendar_btn").val(cal.redate($(id),istime));}
+		});
+		
+		cal.OA_calendar_run({
+		   boxid:".inmail_calendar_box.two",
+		   cilckid:".inmail_calendar_btn.e",
+		   drawid:".OA_calendar.ee",
+		   isinput:true,
 		   isshowtime:"hms",
 		   clickday:function(id,istime,thisday){$(id).parent().find("input.inmail_calendar_btn").val(cal.redate($(id),istime));},
 		   choosetimes:function(id,istime){$(id).parent().find("input.inmail_calendar_btn").val(cal.redate($(id),istime));},

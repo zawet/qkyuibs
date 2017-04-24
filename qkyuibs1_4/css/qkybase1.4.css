@@ -596,13 +596,13 @@ a.checkbox_a{display:block; width:16px; height:16px; border:1px solid #dadada; b
 .data_view_limain{ height:300px;}
 
 /*登录模块*/
-.login_box{ width:100%; height:90%;background:url(../images/loginbg.png) no-repeat center center;  left:0; top:50px; padding:20% 0;}
+.login_box{ width:100%; height:100%;background:url(../images/loginbg.png) no-repeat center center;  left:0; top:0;}
 .login_box.bgfluid{position: absolute; background-size:100% 100%; padding:0;}
-.login_mian{ width:60%; max-width:470px; background:#fff;box-shadow:0 0 22px 0 rgba(86,177,175,0.59);border-radius:10px;padding:20px; margin:0 auto;}
+.login_mian{ width:470px; background:#fff;box-shadow:0 0 22px 0 rgba(86,177,175,0.59);border-radius:10px;padding:20px; margin:0 auto; }
 .login_mian.pjmian{ width:96%; max-width:900px; padding:10px;}
-.login_mian.juzhong{ position:absolute; left:50%; top:6%; margin-left:-235px; padding:40px;}
+.login_mian.juzhong{ position:absolute; left:50%; top:50%; margin-left:-235px; margin-top:-250px; padding:40px; height:500px;}
 .login_mian.pjmian.juzhong{margin-left:-450px; padding:20px; top:15%;}
-.login_logo{ background:url(../images/loginlogobg.png) no-repeat right center; width:100%; background-size:100%; padding:10% 0 20%;}
+.login_logo{ background:url(../images/loginlogobg.png) no-repeat right center; width:100%; background-size:100%; padding:10% 0 10%;}
 .login_logo img{ width:40%; display:block; margin:0 auto;}
 .login_mian.pjmian .login_logo{ background:none; padding:10px 0 0;}
 .login_mian.pjmian .login_logo img{ width:30%; margin:0;}

@@ -17,9 +17,25 @@ define(function(require,exports) {
 		poptips.poptips_run($("body"),{modalid:"send",modaltitle:"发送提示",modalcontent:"短信发送成功，用户可以在<a>已发短信</a>中查看",modalcontent_color:"",buttons:false});
 		poptips.poptips_run($("body"),{modalid:"return",modaltitle:"重置页面",modalcontent:"是否清空页面内容？",modalcontent_color:"error_color",buttons:true});
 	}
+	
 	exports.message_sendrun=function(){
 		comfun.search_box_oc();
-	   cal.OA_calendar_run({
+		cal.OA_calendar_run({
+		   boxid:".inmail_calendar_box.one",
+		   cilckid:".inmail_calendar_btn.s",
+		   drawid:".OA_calendar.ss",
+		   isinput:true,
+		   isshowtime:"hms",
+		   clickday:function(id,istime,thisday){$(id).parent().find("input.inmail_calendar_btn").val(cal.redate($(id),istime));},
+		   choosetimes:function(id,istime){$(id).parent().find("input.inmail_calendar_btn").val(cal.redate($(id),istime));},
+		   calendarhide:function(id,istime){$(id).parent().find("input.inmail_calendar_btn").val(cal.redate($(id),istime));}
+		});
+		
+		cal.OA_calendar_run({
+		   boxid:".inmail_calendar_box.two",
+		   cilckid:".inmail_calendar_btn.e",
+		   drawid:".OA_calendar.ee",
+		   isinput:true,
 		   isshowtime:"hms",
 		   clickday:function(id,istime,thisday){$(id).parent().find("input.inmail_calendar_btn").val(cal.redate($(id),istime));},
 		   choosetimes:function(id,istime){$(id).parent().find("input.inmail_calendar_btn").val(cal.redate($(id),istime));},
@@ -30,6 +46,8 @@ define(function(require,exports) {
 		//创建弹层
 		poptips.poptips_run($("body"),{modalid:"delete_message",modaltitle:"删除短信",modalcontent:"是否删除选择的短信？",modalcontent_color:"error_color",buttons:true});
 	}
+	
+	
 	exports.message_inforun=function(){
 		//创建弹层
 		poptips.poptips_run($("body"),{modalid:"delete_message",modaltitle:"删除短信",modalcontent:"是否删除选择的短信？",modalcontent_color:"error_color",buttons:true});

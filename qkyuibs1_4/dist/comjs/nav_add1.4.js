@@ -44,8 +44,8 @@ define(function(require) {
 						}
 						
 						//获取未读消息并渲染
-						var newsdata=qkydata.news_analogdata;
-						$(".nav_news_badge").html(qkydata.news_analogdata.length>99 ? 99 : qkydata.news_analogdata.length);
+						var newsdata=opts.news_analogdata;
+						$(".nav_news_badge").html(newsdata.length>99 ? 99 : newsdata.length);
 						for(var i=0;i<newsdata.length;i++){
 							if(i<5){//只显示5条
 								var appicon=getpy.getpy(newsdata[i].appname);//获取应用名的拼音

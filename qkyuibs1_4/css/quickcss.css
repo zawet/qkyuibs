@@ -11,7 +11,8 @@
 .clear:after {clear: both;}
 .po_r{ position:relative;}
 .po_ab{ position:absolute; top:0; left:0;}
-.po_ab_r{ position:absolute; top:0; right:0}
+.po_ab_r{ position:absolute; top:0; right:0;}
+.zindex{ z-index:10}
 .kuai{ display:block;}
 .kuai_line{ display:inline-block;}
 .box_b{ box-sizing:border-box;}/*块元素浮动算宽度时，忽略边框和内边距*/
