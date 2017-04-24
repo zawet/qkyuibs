@@ -35,6 +35,7 @@ define(function(require,exports) {
 			$(".windows_bar a[bar_id='"+mould_id+"']").addClass("active");
 			$(".windows_mian").removeClass("open");
 			$(".windows_mian[mould_id='"+mould_id+"']").addClass("open");
+			$(".windows_mian[mould_id='"+mould_id+"'] .right_box.open iframe").attr("src",$("#"+$(".windows_mian[mould_id='"+mould_id+"'] .right_box.open").attr("box_id")).attr("ifsrc"));//默认打开第一个右窗的页面
 			//窗口标签点击事件添加
 			windows_bar();
 			menu_list_item();
@@ -106,7 +107,7 @@ define(function(require,exports) {
 		$(".menu_list_item").on("click",function(){
 			$(this).addClass("active").siblings().removeClass("active");
 			$(this).parents(".windows_mian").find(".right_box").removeClass("open");
-			$(".windows_mian .right_box[box_id='"+$(this).attr("id")+"']").addClass("open");
+			$(".windows_mian .right_box[box_id='"+$(this).attr("id")+"']").addClass("open").find("iframe").attr("src",$(this).attr("ifsrc"));
 			//$('iframe[name="'+$(this).attr("id")+'"]').attr('src',$('iframe[name="'+$(this).attr("id")+'"]').attr('src'));
 		})
 	}
@@ -118,7 +119,7 @@ define(function(require,exports) {
 	//暴露执行体
 	exports.OA_index_implement=function(){
 		/**首页交互**/
-		oacal.OA_calendar_run({indata:true});//渲染和执行日历插件
+		oacal.OA_calendar_run({indata:true,boxid:".OA_calendar_box"});//渲染和执行日历插件
 		navtabs();//首页表格导航条开关
 	}
 	

@@ -54,8 +54,8 @@ define({
 				$("#comapp_setup").modal('show');
 			});	
 		},
-		qkynavafter:function(){}
-	},
+		qkynavafter:function(){},
+	
 	news_analogdata:[/*推送消息模拟数据*/
 		{
 			appname:"学习管理平台",
@@ -93,7 +93,8 @@ define({
 			newsgettime:"2017-03-27 11:00",
 			newscont:"课程中国文化概论的作业文化解析已有6名学生提交，提交率23%"
 		}
-	],
+	]
+	},
 	//已经有的图标名记录数组;
 	haveicon:["changyongshezhi","wangshangwenjuan","xiaoyuanbangong","xiaoyuanzhifu","yidongxiaoyuan","zhihuikongjian","zhihuixiaoyuan","zhinengpaike","zhinengxiaoyuan","zonghepingjia","zonghesuzhifenxi","zonghesuzhipingjia","jichushujufenxi","jiaoshichengchangdangan","xuexiguanlipingtai"] 
 });

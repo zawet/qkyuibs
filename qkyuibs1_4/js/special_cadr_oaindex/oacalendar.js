@@ -21,10 +21,19 @@ define(function(require,exports) {
 		}
 		
 		//日历默认参数
-		var opts={
+
+var opts={
+				"boxid":".inmail_calendar_box",
 			 	"drawid":".OA_calendar",
 				"cilckid":".inmail_calendar_btn",
 				"hoverid":".inmail_calendar_btn_hover",
+				"year":toy,
+				"moon":tom,
+				"day":tod,
+				"minutes":minute,
+				"hours":hour,
+				"seconds":second,
+				"isinput":false,//是否从输入框里的时间来做初始值
 				"indata":false,
 				"isshowtime":false,
 				"clickday":function(id,istime,thisday){//日数点击，可以外接函数蹭掉默认函数，默认是把选中的日期加到日历组建底部
@@ -36,86 +45,10 @@ define(function(require,exports) {
 				"calendarhide":function(id,istime){//日历收起后，可以外接函数蹭掉默认函数，默认是把选中的日期加到日历组建底部
 					$(id).find(".OA_calendar_ondate").html(exports.redate($(id),istime));
 				}
-		}
-
-		
-		//暴露执行体
-		exports.OA_calendar_run =function(options){
-			 
-			 if (!isValid(options))
-                return this;
-			 opts = $.extend({}, opts, options);//有传值进来后，进行对默认覆盖
-			 
-			 comfun.htmlajax("../mould/calendar_mould.html",function(calhtml){//异步过来html主体
-					$(opts.drawid).html(calhtml);
-					//创建日历表格和左右换月执行事件
-					OA_calendar_opt(toy,tom+1,tod,$(opts.drawid),opts.indata);
-					 $(".OA_calendar_chooose_button").on("click",function(){
-						if($(this).hasClass("perv")) OA_calendar_choose($(this),"perv",opts.indata);
-						if($(this).hasClass("next")) OA_calendar_choose($(this),"next",opts.indata);
-					 });
-					 if(comfun.isNull(opts.isshowtime)!="kong"){
-						$("."+opts.isshowtime).show();
-						OA_calendar_times(hour,minute,second);
-					 }
-					 //在不传值的情况下，有点击元素才出来日历
-					 if(!opts.indata){
-						 $(opts.cilckid+","+opts.hoverid).attr("isc","no");
-						 var huncundrawid= opts.drawid;
-						 $(document).on("click",":not('.inmail_calendar_box')",function(){
-								$(".OA_calendar").slideUp(200);
-								$(opts.cilckid).removeClass("active").attr("isc","no");
-								$(opts.hoverid).attr("isc","no");
-							  })
-							  $(".inmail_calendar_box").on("click",function(event){
-								event.stopPropagation();
-							  });	
-						 
-						  $(opts.cilckid).on("click",function(){
-							  $(opts.cilckid).not($(this)).removeClass("active").attr("isc","no").next(".inmail_calendar").slideUp(0);
-							  if($(this).attr("isc")=="no"){
-								  $(this).addClass("active").next(".inmail_calendar").slideDown(100);
-								  $(this).attr("isc","yes");
-								  huncundrawid=$(this).next(opts.drawid);
-							  }else{
-								  $(this).removeClass("active").next(".inmail_calendar").slideUp(100,function(){opts.calendarhide($(this).next(opts.drawid),opts.isshowtime)});
-								  $(this).attr("isc","no");
-								  huncundrawid=opts.drawid;
-							  }					  
-						  });
-						  
-						  $(opts.hoverid).hover(function(){
-							 $(opts.hoverid).not($(this)).removeClass("active").attr("isc","no").next(".inmail_calendar").slideUp(0);
-							 if($(this).attr("isc")=="no"){
-							  $(this).next(".inmail_calendar").slideDown(100);
-							  $(this).attr("isc","yes");
-							  huncundrawid=$(this).next(opts.drawid);
-							  }else{
-							  $(this).next(".inmail_calendar").slideUp(100,function(){opts.calendarhide($(this).next(opts.drawid),opts.isshowtime)});
-							  $(this).attr("isc","no");
-							  huncundrawid=opts.drawid;
-							  }
-							   
-						   },function(){});
-						   
-						   /*$(".inmail_calendar_box").hover(function(){},function(){
-							   $(this).find(opts.hoverid).attr("isc","no");
-							   $(opts.cilckid).removeClass("active").attr("isc","no");
-							   $(huncundrawid).slideUp(200,function(){ opts.calendarhide(huncundrawid,opts.isshowtime)});
-							});*/
-						  
-					 }
-			})
-		}
-		function getclass_indian(id){
-			var classdata=id.attr("class").split(" ");
-			var reclass="";
-			for(var i=0;i<classdata.length;i++){
-				reclass+="."+classdata[i];
-			}
-			return reclass;
+				
 		};
-
+		var ys,ms,ds,hs,mis,ss;
+		
 		//通过指定的日期元素和时间控件获取选中的日期和时间
 		 exports.redate=function(id,istime){
 			var data=[];
@@ -124,7 +57,7 @@ define(function(require,exports) {
 			if(comfun.isNull(onday.attr("date"))!="kong"){
 				data.push(onday.attr("date"));
 			}else{
-				data.push(toy+"-"+(tom+1)+"-"+tod);
+				data.push(opts.year+"-"+(opts.moon+1)+"-"+opts.day);
 			}
 			if(istime&&comfun.isNull(istime)!="kong"){
 				data.push(id.find("."+istime+" .hour").html());
@@ -142,9 +75,129 @@ define(function(require,exports) {
 			}
 			return html;
 		}	
+		
+		$.fn.extend({
+			"qky_calendar": function (options) {
+				if (!isValid(options)) return this;
+			 	opts = $.extend({}, opts, options);//有传值进来后，进行对默认覆盖
+				return this.each(function (i) {
+					opts.cilckid=$(this).find(opts.cilckid);
+					opts.drawid=$(this).find(opts.drawid);
+					opts.hoverid=$(this).find(opts.hoverid);
+					OA_calendar_draw(opts);
+				});	
+			}
+		});
+		
+
+		//暴露执行体
+		exports.OA_calendar_run =function(options){
+			 if (!isValid(options)) return this;
+			 opts = $.extend({}, opts, options);//有传值进来后，进行对默认覆盖
+			 opts.cilckid=$(opts.boxid).find(opts.cilckid);
+			 opts.drawid=$(opts.boxid).find(opts.drawid);
+			 opts.hoverid=$(opts.boxid).find(opts.hoverid);
+			 OA_calendar_draw(opts);	
+		}
+		
+		//日历整体执行渲染
+		function OA_calendar_draw(opts){
+			
+			 comfun.htmlajax("../mould/calendar_mould.html",function(calhtml){//异步过来html主体
+			 
+					opts.drawid.html(calhtml);
+					
+					if(opts.isinput&&comfun.isNull(opts.cilckid.val)!="kong"){//判断是否从输入框获取值来进行初始化 格式2017-05-05 14:30:30
+						var inputdate=opts.cilckid.val();
+						var inpymd=inputdate.split(" ")[0].split("-");
+						var inphms=inputdate.split(" ")[1].split(":");
+						ys=Number(inpymd[0]);
+						ms=Number(inpymd[1])-1;
+						ds=Number(inpymd[2]);
+						hs=Number(inphms[0]);
+						mis=Number(inphms[1]);
+						ss=Number(inphms[2]);
+			 		}else{
+						ys=opts.year;
+						ms=opts.moon;
+						ds=opts.day;
+						hs=opts.hours;
+						mis=opts.minutes;
+						ss=opts.seconds;
+					}
+			 		
+			 
+					//年月日数据初始化渲染 
+					OA_calendar_drawymd(ys,ms+1,ds,opts.drawid,opts.indata);
+					
+					//时分秒数据初始化渲染 
+					 if(comfun.isNull(opts.isshowtime)!="kong"){
+						$("."+opts.isshowtime).show();
+						OA_calendar_times(hs,mis,ss,opts.drawid);
+					 }
+					 //左右转换月按钮
+					 $(".OA_calendar_chooose_button").on("click",function(){
+						if($(this).hasClass("perv")) OA_calendar_choose($(this),"perv",opts.indata,opts.drawid);
+						if($(this).hasClass("next")) OA_calendar_choose($(this),"next",opts.indata,opts.drawid);
+					 });
+					 
+					 //外层日历出来已否交互
+					 //在不传值的情况下，有点击元素才出来日历
+					 if(!opts.indata){
+						 opts.cilckid.attr("isc","no");
+						 opts.hoverid.attr("isc","no");
+						 var huncundrawid= opts.drawid;
+						 $(document).on("click",":not('.inmail_calendar_box')",function(){
+								$(".OA_calendar").slideUp(200);
+								opts.cilckid.removeClass("active").attr("isc","no");
+								opts.hoverid.attr("isc","no");
+						})
+						$(".inmail_calendar_box").on("click",function(event){
+								event.stopPropagation();
+						});	
+						 
+						  opts.cilckid.on("click",function(){
+							 $(".inmail_calendar_btn").not($(this)).removeClass("active").attr("isc","no").next(".inmail_calendar").slideUp(0);
+							  if($(this).attr("isc")=="no"){
+								  $(this).addClass("active").next(".inmail_calendar").slideDown(100);
+								  $(this).attr("isc","yes");
+								  huncundrawid=$(this).next(".inmail_calendar");
+							  }else{
+								  $(this).removeClass("active").next(".inmail_calendar").slideUp(100,function(){opts.calendarhide($(this).next(".inmail_calendar"),opts.isshowtime)});
+								  $(this).attr("isc","no");
+								  huncundrawid=$(this).next(".inmail_calendar");
+							  }					  
+						  });
+						  
+						  $(opts.hoverid).hover(function(){
+							 $(".inmail_calendar_btn_hover").not($(this)).removeClass("active").attr("isc","no").next(".inmail_calendar").slideUp(0);
+							 if($(this).attr("isc")=="no"){
+							  $(this).next(".inmail_calendar").slideDown(100);
+							  $(this).attr("isc","yes");
+							  huncundrawid=$(this).next(".OA_calendar");
+							  }else{
+							  $(this).next(".inmail_calendar").slideUp(100,function(){opts.calendarhide($(this).next(".inmail_calendar"),opts.isshowtime)});
+							  $(this).attr("isc","no");
+							  huncundrawid=$(this).next(".OA_calendar");
+							  }
+							   
+						   },function(){});
+						   
+						   /*$(".inmail_calendar_box").hover(function(){},function(){
+							   $(this).find(opts.hoverid).attr("isc","no");
+							   $(opts.cilckid).removeClass("active").attr("isc","no");
+							   $(huncundrawid).slideUp(200,function(){ opts.calendarhide(huncundrawid,opts.isshowtime)});
+							});*/
+						  
+					 }
+			})
+		}
+		
+
+		
 	    
 		//日历月份选择
-		function OA_calendar_choose(id,type,indata){
+		function OA_calendar_choose(id,type,indata,drawid){
 			var thisyear=Number(id.parent().find("p .year").text());
 			var thismoon=Number(id.parent().find("p .moon").text());
 			//console.log(thisyear,thismoon);
@@ -156,11 +209,11 @@ define(function(require,exports) {
 			thismoon=thismoon+addnumber;
 			if(ifcode){thismoon=distmoon;thisyear=thisyear+addnumber;}
 			else{thismoon=thismoon;thisyear=thisyear;}
-			OA_calendar_opt(thisyear,thismoon,tod,id.parents(opts.drawid),indata);
+			OA_calendar_drawymd(thisyear,thismoon,ds,drawid,indata);
 		}
 		
 		//日历整体渲染,输入年月日和渲染id和是否添加数据，是否显示时分秒
-		function OA_calendar_opt(y,m,d,id,indata){
+		function OA_calendar_drawymd(y,m,d,id,indata){
 			var week=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"]	;
 			var thisdata=new Date(y,m-1,d);
 			var weeks=thisdata.getDay();
@@ -173,6 +226,7 @@ define(function(require,exports) {
 			
 		}
 		
+		//日历天数点击事件，或者给天数上添加数据显示
 		function OA_calendar_dayclick(){
 			if(!opts.indata){ 
 				//日数点击
@@ -180,7 +234,7 @@ define(function(require,exports) {
 					$(this).click(function(){
 						$(this).parents("tbody").find("a").removeClass("active");
 						$(this).addClass("active");
-						opts.clickday($(this).parents(opts.drawid),opts.isshowtime,$(this));
+						opts.clickday($(this).parents(".inmail_calendar"),opts.isshowtime,$(this));
 					});
 				});
 			}else{
@@ -196,36 +250,6 @@ define(function(require,exports) {
 				});
 			}
 		}
-		
-		function OA_calendar_times(h,m,s){
-			$(".OA_calendar_times .hour").html(h);
-			$(".OA_calendar_times .min").html(m);
-			$(".OA_calendar_times .second").html(s);
-			
-			$(".time_chooseicon i").on("click",function(){
-				var level=Number($(this).parent().attr("level"));
-				var minl=Number($(this).parent().attr("min"));
-				var maxl=Number($(this).parent().attr("max"));
-				var val=$(this).parents(".times_control").find(".time_val");
-				var thisval=Number(val.html());
-				var temval=0;
-				if($(this).hasClass("timeup")){
-					temval=thisval;
-					temval=temval+level;
-					if(temval>maxl)temval=0;
-				}
-				if($(this).hasClass("timedown")){
-					temval=thisval
-					temval=temval-level;
-					if(temval<minl)temval=maxl;
-				}
-				temval=temval < 10 ? '0' + temval: temval;
-				val.html(temval);
-				opts.choosetimes($(this).parents(opts.drawid),opts.isshowtime);
-				//opts.choosetimes(opts.drawid,opts.isshowtime);
-			})
-		}
-		
 		//日历表格渲染
 		function OA_calendar(y,m,d,id,indata){
 			
@@ -250,8 +274,10 @@ define(function(require,exports) {
 						}else {
 							var ds='';
 							if(thisday<10)ds="0"+thisday;else ds=thisday;
-							if(thisday==d&&y==toy&&m==tom+1){
+							if(thisday==tod&&y==toy&&m==tom+1){
 								weekHtml+='<td><a date="'+y+'-'+m+'-'+thisday+'" class="today" title="今天">'+thisday+'</a></td>';
+							}else if(thisday==d&&y==ys&&m==ms+1){
+								weekHtml+='<td><a date="'+y+'-'+m+'-'+thisday+'" class="active">'+thisday+'</a></td>';
 							}else{
 								weekHtml+='<td><a date="'+y+'-'+m+'-'+thisday+'">'+thisday+'</a></td>';
 							}
@@ -261,11 +287,40 @@ define(function(require,exports) {
 				moomHtml+=weekHtml+"</tr>";
 				weekHtml="<tr>";
 			}
-			//console.log(moomHtml);
-			id.append(moomHtml+"</tbody>");
-			
-			
+			id.append(moomHtml+"</tbody>");	
 		}
+		
+		//渲染时分秒，并执行交互事件
+		function OA_calendar_times(h,m,s,drawid){
+			drawid.find(".OA_calendar_times .hour").html(h);
+			drawid.find(".OA_calendar_times .min").html(m);
+			drawid.find(".OA_calendar_times .second").html(s);
+			
+			$(".time_chooseicon i").on("click",function(){
+				var level=Number($(this).parent().attr("level"));
+				var minl=Number($(this).parent().attr("min"));
+				var maxl=Number($(this).parent().attr("max"));
+				var val=$(this).parents(".times_control").find(".time_val");
+				var thisval=Number(val.html());
+				var temval=0;
+				if($(this).hasClass("timeup")){
+					temval=thisval;
+					temval=temval+level;
+					if(temval>maxl)temval=0;
+				}
+				if($(this).hasClass("timedown")){
+					temval=thisval
+					temval=temval-level;
+					if(temval<minl)temval=maxl;
+				}
+				temval=temval < 10 ? '0' + temval: temval;
+				val.html(temval);
+				opts.choosetimes($(this).parents(".inmail_calendar"),opts.isshowtime);
+				//opts.choosetimes(opts.drawid,opts.isshowtime);
+			})
+		}
+		
+		
 		
 		//获取指定年月的天数
 		function DayNumOfMonth(Year,Month){
@@ -277,5 +332,14 @@ define(function(require,exports) {
 		function isValid(options) {
 			return !options || (options && typeof options === "object") ? true : false;
 		} 
+		//获取一个元素的所有class
+		function getclass_indian(id){
+			var classdata=id.attr("class").split(" ");
+			var reclass="";
+			for(var i=0;i<classdata.length;i++){
+				reclass+="."+classdata[i];
+			}
+			return reclass;
+		};
 
 })
