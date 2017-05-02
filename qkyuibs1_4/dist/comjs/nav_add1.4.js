@@ -12,7 +12,7 @@ define(function(require) {
 	var qkyhtml=require("../define/qkyhtml");//获取默认要加载html
 	var getpy=require("./getpy");//拼音获取引用
 	var opts=qkydata.navdata;
-	
+	var appname=[];var apphref=[];//缓存所有应用名字/应用跳转
 	$.fn.extend({
         "qkynav": function (options) {
             //检测用户传进来的参数是否合法
@@ -43,39 +43,48 @@ define(function(require) {
 							$(".user_photo").addClass("dist");
 						}
 						
-						//获取未读消息并渲染
-						var newsdata=opts.news_analogdata;
-						$(".nav_news_badge").html(newsdata.length>99 ? 99 : newsdata.length);
-						for(var i=0;i<newsdata.length;i++){
-							if(i<5){//只显示5条
-								var appicon=getpy.getpy(newsdata[i].appname);//获取应用名的拼音
-								if($.inArray(appicon,qkydata.haveicon)!=-1){//判断是否有图标了，有的话就加上图标，没有就显示默认app图标
-									$("#nav_news_li_mould .app_icon").html('<img src="images/appicon/'+appicon+'.png" alt="">');
-								}else{
-									$("#nav_news_li_mould .app_icon").html("APP");
+						var newsdata=opts.news_analogdata;//获取消息数据
+						//判断是否显示消息
+						if(opts.isnews){
+							$(".nav_news_box").show();
+							if(newsdata.length<=0){
+								$(".nav_news_badge").hide();
+							} else{
+								$(".nav_news_badge").show();
+								//获取未读消息并渲染
+								$(".nav_news_badge").html(newsdata.length>99 ? 99 : newsdata.length);
+								for(var i=0;i<newsdata.length;i++){
+									if(i<5){//只显示5条
+										var appicon=getpy.getpy(newsdata[i].appname);//获取应用名的拼音
+										if($.inArray(appicon,qkydata.haveicon)!=-1){//判断是否有图标了，有的话就加上图标，没有就显示默认app图标
+											$("#nav_news_li_mould .app_icon").html('<img src="images/appicon/'+appicon+'.png" alt="">');
+										}else{
+											$("#nav_news_li_mould .app_icon").html("APP");
+										}
+										$("#nav_news_li_mould .nav_news_name").html(newsdata[i].newsname);
+										$("#nav_news_li_mould .nav_news_times").html(newsdata[i].newsgettime);
+										$("#nav_news_li_mould .nav_news_appname").html(newsdata[i].appname);
+										$("#nav_news_li_mould .nav_news_cont").html(newsdata[i].newscont);
+										$(".nav_news_libox").append($("#nav_news_li_mould").html());
+									}
+									var newspoph=$(".nav_news_popup").outerHeight();
+									if(newspoph>500)$(".nav_news_popup").css("height","500px");//超过500的高度自动变可以滚动
 								}
-								$("#nav_news_li_mould .nav_news_name").html(newsdata[i].newsname);
-								$("#nav_news_li_mould .nav_news_times").html(newsdata[i].newsgettime);
-								$("#nav_news_li_mould .nav_news_appname").html(newsdata[i].appname);
-								$("#nav_news_li_mould .nav_news_cont").html(newsdata[i].newscont);
-								$(".nav_news_libox").append($("#nav_news_li_mould").html());
+								
+								$(document).on("click",":not('.nav_news_box')",function(){
+									 $(".nav_news_box .nav_news_popup").slideUp(50);
+								  })
+								  $(".nav_news_box").on("click",function(event){
+									 event.stopPropagation();
+								  });
+								$(".nav_news_icon").click(function(){
+									$(this).parent().find(".nav_news_popup").slideToggle(50);
+									$(this).find("span").hide();
+									$(".nav_more").slideUp(50);
+									 $(".navbtn").removeClass("active");
+								});
 							}
-							var newspoph=$(".nav_news_popup").outerHeight();
-							if(newspoph>500)$(".nav_news_popup").css("height","500px");//超过500的高度自动变可以滚动
-						}
-						
-						$(document).on("click",":not('.nav_news_box')",function(){
-							 $(".nav_news_box .nav_news_popup").slideUp(50);
-						  })
-						  $(".nav_news_box").on("click",function(event){
-							 event.stopPropagation();
-						  });
-						$(".nav_news_icon").click(function(){
-							$(this).parent().find(".nav_news_popup").slideToggle(50);
-							$(this).find("span").hide();
-							$(".nav_more").slideUp(50);
-							 $(".navbtn").removeClass("active");
-						});
+						}else{$(".nav_news_box").hide();}
 						
 					}
 					//是否显示更多弹窗
@@ -96,18 +105,69 @@ define(function(require) {
 						
 						tofor($("#common"),opts.common,"a");//渲染常用app
 						tofor($("#lately"),opts.lately,"a");//渲染最近app
-						//渲染全部app
-						var rowi=0;
-						for(var key in opts.allapp){
-							$("#nav_more_lli_mould h5 span").html(key);
-							tofor($("#nav_more_lli_mould .li_a"),opts.allapp[key],"a");
-							if(rowi%2==0){
-							$(".row_left").append($("#nav_more_lli_mould").html());
-							}else{
-							$(".row_right").append($("#nav_more_lli_mould").html());
+						if( opts.allapp == "" || opts.allapp == undefined || opts.allapp == null){
+							$(".nav_more_havedata").hide();
+							$(".nav_more_nodata").show();
+						}else{
+							//渲染全部app
+							var rowi=0;
+							for(var key in opts.allapp){
+								$("#nav_more_lli_mould h5 span").html(key);
+								tofor($("#nav_more_lli_mould .li_a"),opts.allapp[key],"a");
+								if(rowi%2==0){
+								$(".row_left").append($("#nav_more_lli_mould").html());
+								}else{
+								$(".row_right").append($("#nav_more_lli_mould").html());
+								}
+								$("#nav_more_lli_mould .li_a").html("");
+								rowi++;
+								for(var k=0;k<opts.allapp[key].length;k++){
+									appname.push(opts.allapp[key][k][0]);
+									apphref.push(opts.allapp[key][k][1]);
+								}
 							}
-							$("#nav_more_lli_mould .li_a").html("");
-							rowi++;
+							//搜索框放开时
+							$("#seachapp_inp").focusout(function(){
+								
+								var seach_cont=$(this).val();
+								if(seach_cont == "" || seach_cont== undefined || seach_cont== null){
+									$(".seachApp_showbox").hide();
+								    $(".scroll_box").show();
+								}else{
+									$(".seachApp_showbox").show();
+								    $(".scroll_box").hide();
+									
+									//正则表达式
+									var len = appname.length;
+									var seachappname =[]; var seachapphref= [];
+									var reg = new RegExp(seach_cont);
+									for(var i=0;i<len;i++){
+										//如果字符串中不包含目标字符会返回-1
+										if(appname[i].match(reg)){
+											seachappname.push(appname[i]);
+											seachapphref.push(apphref[i])
+										}
+									}
+									if(seachappname.length>0){
+										$(".seachApp_showbox .nav_more_lli").removeClass("yc");
+										$(".seachApp_showbox .nodata").addClass("yc");
+										$("#seachapp_num").html(seachappname.length);
+										$("#seachapp_over").html("");
+										for(var s=0;s<seachappname.length;s++){
+											seachappname[s]=[seachappname[s],seachapphref[s]];
+										}
+										tofor($("#seachapp_over"),seachappname,"a");//渲染常用app
+									}else{
+										$(".seachApp_showbox .nav_more_lli").addClass("yc");
+										$(".seachApp_showbox .nodata").removeClass("yc");;
+									}
+								}
+							});
+							//搜索结果页点x时
+							$(".seachApp_showbox h5 i").click(function(){
+								$(".scroll_box").show();
+								$(".seachApp_showbox").hide();
+							});
 						}
 						
 					}else{
@@ -137,7 +197,6 @@ define(function(require) {
 			id.append(thishtml);
 		}
 	};
-	
 	tonavhtml =function(){
 		var leftwidth;
 		if(opts.morebtn)leftwidth=$(".navbtn").outerWidth(true)+$(".nav_pjname").outerWidth(true)+$(".nav_logo").width()+1;
@@ -169,6 +228,7 @@ define(function(require) {
 			tofor($("#navmuchli"),muchli,"lia");
 		}
 	}
+	
 	
 	//私有方法，检测参数是否合法
     function isValid(options) {

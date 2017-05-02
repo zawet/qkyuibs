@@ -48,14 +48,14 @@ define({
 			},
 		"isinfo":true,//是否支持登录显示个人信息
 		"tea_info":{"name":"张晓明","isphoto":true,"photo":"images/tx01.png"},
-		"otherli":[["切换身份","href='#'"],["账户设置","href='account_settings.html'"],["个人设置","href='#'"],["退出","id='toOut'"]],
+		"otherli":[["切换身份","href='switch_user.html'"],["账户设置","href='account_settings.html'"],["个人设置","href='#'"],["退出","href='login.html'"]],
 		setup:function(){
 			$(".setup").on("click",function(){
 				$("#comapp_setup").modal('show');
 			});	
 		},
 		qkynavafter:function(){},
-	
+	isnews:true,
 	news_analogdata:[/*推送消息模拟数据*/
 		{
 			appname:"学习管理平台",
