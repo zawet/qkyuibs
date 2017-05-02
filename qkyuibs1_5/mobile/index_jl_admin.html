@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../qky2.ico">
+    <title>行政值班</title>
+    <!-- Bootstrap 基础样式 CSS -->
+    <link href="../dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+    <link href="../dist/swiper/3.4.1/css/swiper.css" rel="stylesheet">
+    <!--全课云基础样式覆盖-->
+    <link href="../css/iconfont.css" rel="stylesheet">
+    <link href="../css/qkybase1.2.css" rel="stylesheet">
+    <link href="../css/box.css" rel="stylesheet">
+    <link href="../css/quickcss.css" rel="stylesheet">
+    
+  </head>
+  <body class="mobile_qkybody">
+
+        <div class="mobile_box pa10 top mobile_header">
+            <div class="btn-group btn-group-justified">
+                <a class="btn btn-default qkybtn" role="button" href="index.html"><i class="qkyicon_14 mr5">&#xe603;</i>值班安排</a>
+                <a class="btn btn-success qkybtn" role="button" href="index_jl.html"><i class="qkyicon_14 mr5">&#xe6b0;</i>值班记录</a>    
+            </div>
+            <div class="ub ub-ac pt10">
+                <a class="l mobile_btn"><i class="qkyicon_14 fz_18 fz_we">&#xe604;</i></a>
+                <div class="ub-f1 mian_color fz_we fz_16 t_c">
+                <span class="thisday mr5"><span class="year"></span>年<span class="moon"></span>月<span class="day"></span>日</span>
+                <span class="thisweek"></span>
+                <a class="addlist" onClick="popIn('#add')"><i class="qkyicon_14">&#xe616;</i></a>
+                </div>
+                <a class="r mobile_btn"><i class="qkyicon_14 fz_18 fz_we">&#xe6b3;</i></a>
+            </div>    
+        </div>
+        
+        <div class="mobile_mian">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide inbox"></div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!--模板-->
+        <div class="yc" id="ji_cadr_mb">
+        	<div class="mobile_cadr have pt0 pb0 mt10">
+                <div class="mobile_cadr_list ub ub-ac"><div class="list1">内容：</div><div class="ub-f1 t_r content txt2" >无</div></div>
+                <div class="mobile_cadr_list ub ub-ac"><div class="list1">发现问题：</div><div class="ub-f1 t_r problem txt2" >无</div></div>
+                <div class="mobile_cadr_list ub ub-ac"><div class="list1">处理结果：</div><div class="ub-f1 t_r result txt2" >无</div></div>
+                <div class="mobile_cadr_list ub ub-ac"><div class="list1">反馈部门：</div><div class="ub-f1 t_r feedback txt2" >德育处</div></div>
+                <div class="mobile_cadr_handle ub ub-ac">
+                <a class="ub-f1 list_edit" isc="no" onClick="jl_edit($(this))"><i class="qkyicon_14 mr5">&#xe60f;</i>编辑</a>
+                <a class="ub-f1"  onClick="alert_msg('删除记录','是否删除对应的记录')"><i class="qkyicon_14 mr5">&#xe613;</i>删除</a>
+                </div>
+            </div>
+        </div>
+        <div class="yc" id="ji_cadr_mb_dist">
+        	<div class="mobile_cadr have mt10 t_c pa20 co_a3">
+                暂无数据
+            </div>
+        </div>
+        <div class="yc" id="jl_input">
+        <input type="text" class="list_input">
+        </div>
+        
+        <!--弹窗---------------------------------->
+        <!--单信息弹框-->
+        <div class="qky_maskbox" id="del_msg">
+            <div class="qky_maskbg"></div>
+            <div class="qky_maskmian">
+                <div class="qky_masktit">删除</div>
+                <div class="qky_maskcont sigtext">是否确认删除该预约申请？</div>
+                <div class="qky_maskbuts ub ub-ac">
+                    <a class=" co_89 one ub-f1" onClick="popOut('#del_msg')">取消</a>
+                    <a class="co_gr ub-f1">确认</a>
+                </div>
+            </div>
+        </div>
+        
+        <!--添加信息-->
+        <div class="qky_maskbox" id="add">
+            <div class="qky_maskbg"></div>
+            <div class="qky_maskmian">
+                <div class="qky_masktit">添加信息</div>
+                <div class="qky_maskcont">
+                    <div class=" pl10 pr10">
+                        <div class="mobile_cadr_list ub ub-ac">
+                        <div class="list1">内容：</div><div class="ub-f1 t_r content txt2" ><input type="text" class="list_input t_l"></div>
+                        </div>
+                        <div class="mobile_cadr_list ub ub-ac">
+                        <div class="list1">发现问题：</div><div class="ub-f1 t_r problem txt2" ><input type="text" class="list_input t_l"></div>
+                        </div>
+                        <div class="mobile_cadr_list ub ub-ac">
+                        <div class="list1">处理结果：</div><div class="ub-f1 t_r result txt2" ><input type="text" class="list_input t_l"></div>
+                        </div>
+                        <div class="mobile_cadr_list ub ub-ac end">
+                        <div class="list1">反馈部门：</div><div class="ub-f1 t_r feedback txt2" ><input type="text" class="list_input t_l"></div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="qky_maskbuts ub ub-ac">
+                    <a class=" co_89 one ub-f1" onClick="popOut('#add')">取消</a>
+                    <a class="co_gr ub-f1">添加</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="../dist/jq/1.11.1/jquery.min.js"></script>
+        <script  src="../dist/swiper/3.4.1/js/swiper.min.js"></script>
+        <script src="js/week_cadr.js"></script>
+        
+        <script>
+		
+		var jl_datas={
+			"2017-2-1":[{"content":"2017-2-1","problem":"无","result":"无","feedback":"德育处"},{"content":"无","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-2":[{"content":"2017-2-2","problem":"无","result":"无","feedback":"德育处"},{"content":"无","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-3":[{"content":"2017-2-3","problem":"无","result":"无","feedback":"德育处"},{"content":"无","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-4":[{"content":"2017-2-4","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-5":[{"content":"2017-2-5","problem":"无","result":"无","feedback":"德育处"},{"content":"无","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-6":[{"content":"2班午休吵闹","problem":"吵闹","result":"安抚后安静了","feedback":"德育处"},{"content":"无","problem":"无","result":"无","feedback":"德育处"},{"content":"无","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-7":[{"content":"2017-2-7","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-8":[{"content":"2017-2-8","problem":"无","result":"无","feedback":"德育处"},{"content":"无","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-9":[{"content":"2017-2-9","problem":"无","result":"无","feedback":"德育处"}],
+			"2017-2-10":[{"content":"2017-2-10","problem":"无","result":"无","feedback":"德育处"}],
+			}
+			
+			
+		
+			var swiper= new Swiper('.swiper-container',{
+				onSlidePrevEnd:function(swiper){
+					goday("","","","prv");
+				},
+				onSlideNextEnd: function(swiper){
+				  goday("","","","next");
+				}
+			});
+			
+        $(function(){
+           	goday(toy,tom+1,tod);
+            $(".mobile_btn.l").on("click",function(){swiper.slidePrev();});
+            $(".mobile_btn.r").on("click",function(){swiper.slideNext();});
+			jl_cadr(toy,tom+1,tod,"prv");
+			jl_cadr(toy,tom+1,tod,"next");
+        })
+		
+		
+		/***************************************************************************** 弹窗**************/
+		function alert_msg(tit,txt){
+			$("#del_msg .qky_masktit").html(tit);
+			$("#del_msg .sigtext").html(txt);
+			popIn('#del_msg');
+		}
+		function popOut(i){$(i).fadeOut('fast');};
+		function popIn(i){$(i).fadeIn('fast');qkymaskmian_td(i+" .qky_maskmian");};
+		//弹窗拖动和始终上下左右居中对齐
+		function qkymaskmian_td(id){
+			var left=0;var top=0;var thisw=0;var thish=0;
+			thisw=$(id).width();
+			thish=$(id).outerHeight();
+			left=$(window).width()-thisw;
+			tops=$(window).outerHeight()-thish;
+			if(tops<=0){tops=0;}else{tops=tops/2;}
+			if(left<=0){left=0;}else{left=left/2;}
+			$(id).css({"top":tops+"px","left":left+"px","bottom":"auto"});
+			
+		}
+		
+        </script>
+  </body>
+</html>

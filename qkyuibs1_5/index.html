@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="qky2.ico">
+    <title>全课云OA—行政值班</title>
+    <!-- Bootstrap 基础样式 CSS -->
+    <link href="dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+    
+    <!--全课云基础样式覆盖-->
+    <link href="css/iconfont.css" rel="stylesheet">
+    
+    <link href="css/qkybase1.4.css" rel="stylesheet">
+    <link href="css/quickcss.css" rel="stylesheet">
+    <link href="css/xzbase.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="qkybody">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="qkynav"></div>
+    <div class="container">
+    
+        <div class="qkycadr pa10 mt10 mb10">
+            <h4 class="page-header mt10 mb0">值班管理</h4>
+            <div class=" pt10 pb10 clear">
+                <a class="btn btn-default mr10" role="button" href="index_gl_zb.html"><i class="qkyicon_14 mr5">&#xe603;</i>值班安排</a>
+                <a class="btn btn-default mr10" data-toggle="modal" data-target="#zbyq"><i class="qkyicon_14 mr5">&#xe603;</i>值班要求</a>
+                <a class="btn btn-default mr10" data-toggle="modal" data-target="#zbyq_edit"><i class="qkyicon_14 mr5">&#xe603;</i>值班要求(可编辑)</a>
+                <a class="btn btn-default" role="button" href="index_gl_db.html"><i class="qkyicon_14 mr5">&#xe6b0;</i>代班记录</a>
+                <div class="fr">你还有<span class="mian_color">2</span>条需要处理的内容，<a class="btn btn-link pl0 pr0" href="index_cl.html">点击查看</a></div>
+            </div>
+            
+            
+            
+            <div class="table-responsive mb10">
+                    <table class="table table-striped table-bordered table-condensed">
+                        <thead>
+                            <tr><th>日期</th><th>值班人员</th><th>记录情况</th><th>操作</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>2017-04-23 18:00——2017-04-24 18:00 星期一</td><td>董建，赵广荣，许志勤</td><td>已记录</td>
+                            <td><a class="table_btn mr5" href="index_jlb.html" title="编辑"><i class="qkyicon_14 mr5">&#xe60f;</i>编辑</a></td>
+                            </tr>
+                            <tr><td>2017-04-24 18:00——2017-04-25 18:00 星期二</td><td>王俊鹏，刘华林，李萍</td><td>未记录</td>
+                            <td><a class="table_btn mr5" href="index_jlb.html" title="编辑"><i class="qkyicon_14 mr5">&#xe60f;</i>编辑</a></td>
+                            </tr>
+                            <tr ><td class="txt">2017-04-25 18:00——2017-04-26 18:00 星期三</td><td class="txt">季新明，王曙光，陆瑢</td><td>未记录</td>
+                            <td><a class="table_btn mr5" href="index_jlb.html" title="编辑"><i class="qkyicon_14 mr5">&#xe60f;</i>编辑</a></td>
+                            </tr>
+                            <tr><td>2017-04-26 18:00——2017-04-27 18:00 星期四</td><td>蔡长春，蔡春，黄敏</td><td></td><td></td></tr>
+                            <tr><td class="zb_today">2017-04-27 18:00——2017-04-28 18:00 星期五</td><td class="zb_today">殷荣安，黄波，李晶</td><td></td><td></td></tr>
+                            <tr><td>2017-04-28 18:00——2017-04-29 18:00 星期六</td><td>刘海，杨立根，吴宁</td><td></td><td></td></tr>
+                            <tr><td>2017-04-29 18:00——2017-04-30 18:00 星期日</td><td>刘海，曹浩明，宋洋</td><td></td><td></td></tr>
+                        </tbody>
+                    </table>
+             </div>
+             
+             <div class=" pb10 qkycadr  ">
+            	<h4 class="page-header mt0 mb0 pt10  pl15 error_color ba_f5">时间说明</h4>
+                <div class="clear mb5 pl15 pt10">
+                <label class="ma0 kuai fl height30_line">每日值班起始时间</label>
+                <div class="col-xs-3 inmail_calendar_box"><input type="text" class="form-control inmail_calendar_btn" placeholder="18:00" readonly></div>
+                <div class="col-xs-6 height30_line error_color">这里的输入框只是演示说明作用，修改需要前往基础信息的时间周期设置</div>
+                </div>   
+                <label class="ma0 kuai pb5 pl15">本日到明日的两个起始时间区间为当天的值班时间段</label>
+                <span class=" co_73 pl15">例:每日值班起始时间是18:00，则星期一的18:00到星期二的18:00就是星期一的值班时间</span>
+            </div>
+             
+            
+        </div>
+        
+        <div class="nodata qkycadr mt10 mb10">
+            <i class="qkyicon_100 mian_color">&#xe637;</i>
+            <div class=" fz_16 co_33 mb10">初次登录请先</div>
+            <a class="btn btn-primary" role="button" href="index_gl_zb.html"><i class="qkyicon_14 mr5">&#xe603;</i>值班安排</a>
+        </div>
+        
+      
+    </div>
+    <div class="footer inverse">全通教育集团（广东）股份有限公司  版权所有  ©2007-2015</div>
+	
+    <!-- Modal -->
+<div class="modal fade" id="zbyq_edit" tabindex="-1" role="dialog" aria-labelledby="zbyq_editLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="zbyq_editLabel">值班要求</h4>
+      </div>
+      <div class="modal-body">
+        <textarea class="form-control" rows="14">
+        为规范学校行政人员值班工作，特制定本制度: 
+        一、行政人员值班时间规定如下： 
+        1、晚间值班： 晚上18:00前签到，18:00值班人员于行政楼大厅内集合，由值班领导安排值班事宜，并在值班记录本内写好巡逻记录。 
+        2、节假日值班：根据晚班值班表安排情况，节假日时间当晚值班人员同时值日班，值班时间：18:30--第二天18:30，24小时。 
+        二、值班人员安排： 
+        值班安排表由办公室统一安排，由个人原因无法值班，由值班人员自己找代替值班人员后，于值班前一天报后勤部文员处，并报自已的值班领导申请记录
+        三、值班人员职责： 
+        1、负责园区范围内临时发生事件的应急处理； 
+        2、负责指挥监督保安人员工作； 
+        3、负责预防灾害、盗窃及其它危机事件； 
+        4、负责接待来访客人并将来访情况告之相关部门。
+        </textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">保存</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="zbyq" tabindex="-1" role="dialog" aria-labelledby="zbyqLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="zbyqLabel">值班要求</h4>
+      </div>
+      <div class="modal-body">
+        
+        为规范学校行政人员值班工作，特制定本制度:<br/> 
+        一、行政人员值班时间规定如下：<br/> 
+        1、晚间值班： 晚上18:00前签到，18:00值班人员于行政楼大厅内集合，由值班领导安排值班事宜，并在值班记录本内写好巡逻记录。 <br/>
+        2、节假日值班：根据晚班值班表安排情况，节假日时间当晚值班人员同时值日班，值班时间：18:30--第二天18:30，24小时。<br/> 
+        二、值班人员安排： <br/>
+        值班安排表由办公室统一安排，由个人原因无法值班，由值班人员自己找代替值班人员后，于值班前一天报后勤部文员处，并报自已的值班领导申请记录<br/>
+        三、值班人员职责： <br/>
+        1、负责园区范围内临时发生事件的应急处理； <br/>
+        2、负责指挥监督保安人员工作； <br/>
+        3、负责预防灾害、盗窃及其它危机事件； <br/>
+        4、负责接待来访客人并将来访情况告之相关部门。<br/>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!--模块化js-->
+    <script src="dist/sea.js"></script>
+    <script src="dist/seaconfig.js"></script>
+    <script>
+     seajs.use(["jq","bs","nav"],function(){
+		 $("#qkynav").qkynav();
+	});
+    </script>
+  </body>
+</html>

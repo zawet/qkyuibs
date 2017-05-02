@@ -1,0 +1,68 @@
+/*
+ * 全课云基础样式 zwt 2016-12-16 创建1.0
+   zwt 2017-01-13 变为分离式 成为1.2
+ */
+
+
+
+
+/***版本2特殊模块css***/
+.header_nav{ float:left; color:#535353; padding:0 20px; margin-top:7px; }
+.header_nav:nth-child(1){ border-right:1px solid #666; padding-left:0;}
+.header_nav.active{ font-weight:bold;}
+.header_nav:hover{ text-decoration:inherit; color:#222;}
+
+.error_tips{ color:#F0485F !important}
+/*星期卡片*/
+.cadr_box{ margin-bottom:5px;}
+.cadr_head{  padding:15px; background:#f9f9f9; margin:0;}
+.cadr_change{ position:absolute; right:15px; top:15px; text-decoration:inherit; color:#72D572; cursor:pointer}
+.cadr_change:hover{text-decoration:inherit; color:#2baf2b;}
+.cadr_body{ background:#f1f1f1; padding:20px 0 5px; display:none;border-top:1px solid #eee;}
+.cadr_box.active .cadr_body{ display:block;}
+
+/*双向选择人员*/
+.cho_name{ height:160px; overflow:hidden; width:100%; margin-top:5px; background:#fff; border:1px solid #ddd; border-radius:4px;}
+.cho_scroll{ height:100%; overflow-y:scroll; width:110%; padding:10px 10px 5px;}
+.cho_name a{ display:block; padding:5px 10px; text-decoration:inherit; color:#2baf2b; cursor:pointer; margin-bottom:5px; border-radius:4px;}
+.cho_name a:hover{text-decoration:inherit; color:#72D572; background:#f9f9f9;}
+.cho_name a.select{ background:#72D572; color:#fff;}
+
+.inmail_calendar_box input.inmail_calendar_btn {
+    background: url(../images/calicon.png) no-repeat 98% center ;
+    padding-right: 30px;
+}
+
+.zb_today{ background:#2baf2b !important; color:#fff!important;}
+
+.jlb_table>tbody>tr>td{ vertical-align:middle;}
+
+/*日历表格改装*/
+.table-calendar > thead > tr > th{ width:14.28%;}
+.table-calendar > tbody > tr > td{ padding:0;}
+.table-calendar > tbody > tr > td .calday{ color:#535353; height:115px; text-decoration:inherit; padding:10px; position: relative;}
+.table-calendar > tbody > tr > td .calday label{ display:block;}
+.table-calendar > tbody > tr > td .today{ background:#72D572; color:#fff;}
+.table-calendar > tbody > tr > td.oldday{ background:#f5f5f5;}
+.table-calendar > tbody > tr > td .calday .calli{ display:block; text-decoration:inherit; cursor:pointer; color:#2baf2b;  padding:0 5px 5px;}
+.table-calendar > tbody > tr > td .calday .callis{display:block; text-align:center; margin:10% auto; padding:6px 0; background:#2baf2b; color:#fff; width:80%; border-radius:6px;text-decoration:inherit; cursor:pointer;box-shadow:1px 3px 5px #e1e1e1;}
+.table-calendar > tbody > tr > td .calday .callis:hover{box-shadow:1px 3px 5px #d8d8d8; font-weight:bold;}
+.table-calendar > tbody > tr > td .calday .calli.more{ color:#72D572;}
+.table-calendar > tbody > tr > td .calday .calli:hover{ color:#72D572;}
+.table-calendar > tbody > tr > td .today.calday .calli.out{ color:#fff;}
+.table-calendar > tbody > tr > td .today.calday .calli.out.more{ color:#f1f1f1;}
+.table-calendar > tbody > tr > td .today.calday .calli.out:hover{ color:#f1f1f1;}
+.table-calendar > tbody > tr > td .calday .morebox{ position:absolute; width:100%; top:30px; left:0; background-color:#fff; z-index:66; padding:10px; display:none;
+-webkit-background-clip: padding-box;background-clip: padding-box;border: 1px solid #ccc;border: 1px solid rgba(0, 0, 0, .15);border-radius: 4px;-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);box-shadow: 0 6px 12px rgba(0, 0, 0, .175);}
+.table-calendar > tbody > tr > td .calday .morebox h4{ margin-top:5px; padding-bottom:10px; border-bottom:1px solid #eee; padding-left:5px; display:none;  color:#535353;}
+@media (min-width: 768px) {.table-calendar > tbody > tr > td .calday .morebox h4{ display:block;}}
+.table-calendar > tbody > tr > td .calday .moreclose{ position:absolute; right:5px; top:5px; text-decoration:inherit; color:#535353; cursor:pointer;}
+.table-calendar > tbody > tr.down > td .calday .morebox{ top:auto; bottom:0;}
+.calbox span{ width:50px; height:50px; line-height:50px; text-align:center; display:block; background:#fff; color:#2baf2b; border:1px  solid #eee; border-radius:50%; margin:0 auto; font-weight:bold; box-shadow:1px 3px 5px #d8d8d8;}
+
+.OA_calendar_times{ width:100%; border:1px solid #d8d8d8; border-radius:4px;}
+.OA_calendar_times .times_control{ line-height:20px; position:relative; padding:5px 15%; margin:0 auto; text-align:center;}
+.OA_calendar_times .times_control .time_chooseicon{ position:absolute; right:5%; top:0; height:30px; display:none;}
+.OA_calendar_times .times_control:hover .time_chooseicon{ display:block;}
+.OA_calendar_times .times_control i{ display:block; line-height:15px; height:15px; font-size:16px; cursor:pointer; color:#2baf2b;}
+.OA_calendar_times .times_control i:hover{ color:#737373;color:#72D572;}
