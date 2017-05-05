@@ -88,7 +88,6 @@
 .windows_bar a,
 .right_box,
 .OA_calendar_mian .table>tbody>tr>td a,
-.table.bt,
 .group_changebox,
 .userChoose_list{
 	-webkit-transition: all 0.25s ease-out 0s;
@@ -100,7 +99,6 @@
 .windows_mian,
 .index_,
 .right_box,
-.table.bt,
 .userChoose_list{
 	opacity:0;
 	-webkit-opacity:0;
@@ -114,7 +112,6 @@
 .windows_mian.open,
 .index_.open,
 .right_box.open,
-.table.bt.open,
 .userChoose_list.open{
 	opacity:1;
 	-webkit-opacity:1;
@@ -139,10 +136,17 @@
 .nav.nav-tabs li.active a{ color:#2baf2b;}
 
 /*首页表格*/
-.table_box{ width:100%;position:relative; overflow:hidden; min-height:195px;}
-.table.bt{transform:translateX(100%); position:absolute; left:0; top:0;}
-.table.bt.open{transform:translateX(0);}
-.table.bt>tbody >tr >td,.table.bt>tbody >tr >th{  border-bottom:1px  dashed #dfdfdf; border-top:0; color:#535353; font-size:13px;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+.table_box{ width:100%;position:relative;}
+.navcont_box{ display:none;}
+.navcont_box.open{ display:block;}
+.navlist{ display:block; width:100%; padding:10px 2px; border-bottom:1px dashed #d8d8d8; cursor:pointer;}
+.navlist:hover{ background:#f5f5f5;}
+.navlist span{ float:left; display:block;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+.navlist span.one{ width:54%; color:#333;}
+.navlist span.two{ width:12%; margin:0 1%; color:#a3a3a3; text-align: center;}
+.navlist span.three{ width:32%;color:#a3a3a3; text-align:right;}
+.navlist span.four{ width:46%;color:#a3a3a3; text-align:right;}
+.navmore{display:block;width:100%; padding:10px 2px; cursor:pointer; color:#636363; text-align:right;}
 
 /*首页个人设置*/
 .setting_box{padding:15px 30px 5px; margin-top:20px;}
@@ -234,10 +238,10 @@ h4.header_title{ border-bottom:1px dashed #d8d8d8; padding:10px 0; margin:0; lin
 .check_list{ padding:10px 15px; font-size:18px; color:#222; line-height:24px;}
 .check_list .one{ float:left; width:auto;font-size:16px;color:#232323;}
 .check_list .two{ float:left; width:auto; color:#737373;font-size:14px; max-width:90%;}
-.check_list .two span{ display:none; background:#72D572; border-radius:8px; color:#fff; padding:5px 10px; line-height:16px; margin-left:5px; height:26px;}
+.check_list .two span{ display:none; background:#72D572; border-radius:8px; color:#fff; padding:5px 10px; line-height:16px; margin-left:5px; height:26px; float:left;}
 .check_list .two span.firse{border-radius:8px 0 0 8px; border-right:1px  solid #2baf2b; display:inline-block; margin-left:0;}
 .check_list .two span.spanshow{ display:inline-block; margin-bottom:5px;}
-.check_list .two i.morelist{ display:inline-block; background:#72D572; border-radius:0 8px  8px 0; color:#fff; padding:5px 10px; line-height:16px;}
+.check_list .two i.morelist{ display:block; float:left; background:#72D572; border-radius:0 8px  8px 0; color:#fff; padding:5px 10px; line-height:16px;}
 .check_list .two .morelist_close{ background:#F0485F;}
 
 .mail_check_cont{ padding: 15px;}
@@ -279,7 +283,8 @@ h4.header_title{ border-bottom:1px dashed #d8d8d8; padding:10px 0; margin:0; lin
 .sch_week tbody tr td{ padding:10px 0 ; text-align:center; vertical-align:middle;}
 .sch_week thead tr th{ text-align:center;}
 .sch_week tbody tr.today td{ background:#eaf3e3;}
-.sch_week tbody tr td.sch_listbox{ padding:10px 10px 5px;}
+.sch_week tbody tr td .sch_listbox{ padding:10px 10px 5px; min-height:60px !important;}
+.sch_listbox{ padding:10px 10px 5px; min-height:60px !important;}
 .sch_list{ padding:8px 10px; background:#f5f5f5; color:#535353; margin-bottom:5px; display:block; cursor:pointer; border-radius:4px;}
 .sch_list:hover,.sch_list.hover{ color:#333; text-decoration:inherit; background:#e1e1e1}
 .sch_list i{color:#51b351;}
