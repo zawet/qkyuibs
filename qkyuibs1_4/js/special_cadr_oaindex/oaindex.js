@@ -69,10 +69,10 @@ define(function(require,exports) {
 	
 	
 	function navtabs(){
-		$(".nav.nav-tabs li").on("click",function(){
+		$(".nav.havetogo li").on("click",function(){
 			$(this).addClass("active").siblings().removeClass("active");
-			$(this).parents(".qkycadr").find(".table").removeClass("open");
-			$(this).parents(".qkycadr").find(".table").eq($(this).index()).addClass("open");
+			$(this).parents(".qkycadr").find(".navcont_box").removeClass("open");
+			$(this).parents(".qkycadr").find(".navcont_box").eq($(this).index()).addClass("open");
 		})
 	}
 	exports.right_boxoc=function(){
