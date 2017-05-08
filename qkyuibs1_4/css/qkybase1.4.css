@@ -35,7 +35,7 @@ body{font-family: Microsoft YaHei,"Hiragino Sans GB W3", Helvetica, Arial, sans-
 .container-xl{max-width:1440px;}
 
 /*底部规范*/
-.footer{ position: absolute; bottom:0; padding:15px 0; text-align:center; left:0; width:100%; background:none; color:#737373;z-index: 1001;}
+.footer{ position: absolute; bottom:0; padding:15px 0; text-align:center; left:0; width:100%; background:none; color:#737373;z-index: 1001; border-top:1px solid #d8d8d8;}
 .footer.open{ display:block;}
 .footer.inverse{ background:#515151;}
 .footer.default{ background:#fff; }
