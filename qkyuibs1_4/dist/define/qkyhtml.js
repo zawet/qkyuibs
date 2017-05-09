@@ -57,7 +57,7 @@ define({
 	 navmuchhtml:'<li class="dropdown">'+
               '<a href="#" class="dropdown-toggle clear" data-toggle="dropdown">'+
               '<span class="fl">更多</span>'+
-              '<span class="caret"></span>'+
+              '<span class="caret fl mt10 kuai"></span>'+
               '</a>'+
               '<ul class="dropdown-menu maxh" role="menu" id="navmuchli"></ul>'+
             '</li>'

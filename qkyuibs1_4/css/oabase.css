@@ -165,7 +165,7 @@ h3.header_title{ margin:0 0 15px; border:1px solid #d8d8d8; padding:15px; backgr
 h3.header_title>i{ color:#2baf2b;line-height:22px; display:inline-block;}
 h4.header_title{ border-bottom:1px dashed #d8d8d8; padding:10px 0; margin:0; line-height:25px;}
 
-.search_box{ padding:15px 20px; background:#f6f6f6; display:none;}
+.search_box{ padding:15px 20px; background:#f6f6f6; display:none; border-bottom:1px solid #d8d8d8;}
 
 .group_list{}
 .group_list a{ display:block; position:relative;}
