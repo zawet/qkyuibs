@@ -56,7 +56,8 @@ define(function(require,exports) {
 		 var following_viewdata=[
 		 {txt:"[拟办]-王老师",time:"2017-05-15 10:39:07",state:"",stateicon:"&#xe759;"},
 		 {txt:"[部门审批]-李主任",time:"2017-05-15 10:39:07",state:"",stateicon:"&#xe759;"},
-		 {txt:"[领导审批]-王校长",time:"",state:"wait",stateicon:"&#xe617;"}
+		 {txt:"[领导审批]-王校长",time:"",state:"wait",stateicon:"&#xe617;"},
+		 {txt:"[领导审批]-王校长",time:"",state:"stop",stateicon:"&#xe617;"}
 		 ]
 		 
 		$(".showtable").on("click",function(){
