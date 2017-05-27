@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="qky2.ico">
+<title>全课云UI</title>
+<link href="js/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+
+<!--全课云基础样式覆盖-->
+<link href="css/iconfont2.0.css" rel="stylesheet">
+<link href="css/qkybase2.0.css" rel="stylesheet">
+<link href="css/gzglbase.css" rel="stylesheet">
+<link href="css/quickcss2.0.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="qkybody">
+<div id="qkynav"></div>
+<div class="container-xl">
+  <div class="qkycadr pa20 mt20 mb20">
+    <h4 class="page-header mt0 pb10 mb0 clear">
+        <span class="height30_line fl">修改模板</span>
+    </h4>
+    <div class="wd80 mauto">
+    <form class="form-horizontal mt20">
+        <div class="row">
+         <div class="col-sm-8 col-sm-offset-2">
+            <div class="form-group ">
+              <label class="col-sm-2 control-label pa0 lh30">模板名字：</label>
+              <div class="col-sm-10 ">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="form-group ">
+              <label class="col-sm-2 control-label pa0 lh30">选择导入文件：</label>
+              <div class="col-sm-10 ">
+                 <div class="input-group"> 
+                  <input type="text" class="form-control file">
+                  <span class="input-group-btn">
+                  <a class="btn btn-primary po_r btn_file" role="button">浏览上传<input type="file" class="ycfile"></a>
+                  </span>
+                 </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="form-group ">
+              <div class="col-sm-10 col-sm-offset-2 ">
+                 <div class="checkbox">
+                  <label class="checkbox-qky clear pl0">
+                   <a class="checkbox_a fl"><i class="qkyicon_14">&#xe619;</i></a><span class="fl">允许相同数据多次导入</span>
+                  </label>
+                 </div>
+              </div>
+            </div>
+          </div>
+          
+        <div class="col-sm-7 col-sm-offset-3 error_color mb15 lh22">
+            <span class="kuai">温馨提示：</span>
+            <span class="kuai">1、模板的标题部分需要分成两行,有且只能分成两行；</span>
+            <span class="kuai">2、工资模板必须包含六个标准项目（年月、姓名、手机号、应发合计、应扣合计、实发金额）和其他自定义项目; 特别指出：六个标准项目（年月、姓名、手机号、应发合计、应扣合计、实发金额）必须各自独立一列，即不能为合并复合列</span>
+            <span class="kuai">3、模板名称不能重复</span> 
+            <span class="kuai">4、默认勾选“允许相同数据多次导入”，同一用户相同月份可以有重复数据</span>
+        </div>
+
+          <div class="col-sm-12 t_c">
+            <a class="btn btn-primary mr20" data-toggle="modal" data-target="#up_success">确定(成功后)</a>
+            <a class="btn btn-primary mr20" data-toggle="modal" data-target="#up_error">确定(失败后)</a>
+            <a class="btn btn-default" href="javascript:history.go(-1)">返回</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  
+  </div>
+</div>
+<div class="footer default">全通教育集团（广东）股份有限公司  版权所有  ©2007-2015</div>
+
+<!--模态窗-->
+<div class="modal fade" id="up_success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-xs" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" >验证模板</h4>
+              </div>
+              <div class="modal-body modal_auto t_c">
+                上传模板成功
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal fade" id="up_error" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-xs" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" >验证模板</h4>
+              </div>
+              <div class="modal-body modal_auto t_c error_color">
+                上传模板失败，模板名称重复/数据验证错误，请重新上传
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+
+<!--模块化js--> 
+<script src="js/sea.js"></script> 
+<script src="js/seaconfig2.0.js"></script> 
+<script>
+     seajs.use(["jq","bs","nav","gzgl/mygzt","rach"],function(j,b,n,mygzt,rach){
+		 opt.navli_j[2].isactive=true;
+		 $("#qkynav").qkynav(opt);
+		rach.rach_run(function(t){},function(t){});	 
+		mygzt.mygzt_run();
+		$(".qky_switch").on("click",function(){
+			$(this).toggleClass("active");
+		});
+		$(".qidong").on("click",function(){
+			var isqi=$(this).attr("isqi");
+			if(isqi=="no"){
+				$(this).html('<i class="qkyicon_14 mr5">&#xe673;</i>停用');
+				$(this).parents("tr").find(".qistart").removeClass("error_color").addClass("mian_color").html("已启动");
+				$(this).attr("isqi","yes");
+			}else{
+				$(this).html('<i class="qkyicon_14 mr5">&#xe619;</i>启用');
+				$(this).parents("tr").find(".qistart").removeClass("mian_color").addClass("error_color").html("已停用");
+				$(this).attr("isqi","no");
+			}
+		});
+	});
+    </script>
+</body>
+</html>

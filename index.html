@@ -10,7 +10,7 @@
 <title>全课云2017UI示例</title>
 </head>
 <style>
-body{ margin:0; padding:0; background:#fff; color:#535353;font-family: Microsoft YaHei,"Hiragino Sans GB W3", Helvetica, Arial, sans-serif; font-size:16px;}
+body{ margin:0; padding:0; background:#eee; color:#535353;font-family: Microsoft YaHei,"Hiragino Sans GB W3", Helvetica, Arial, sans-serif; font-size:16px;}
 .trn{-webkit-transition: all 0.25s ease-out 0s;-moz-transition: all 0.25s ease-out 0s;transition: all 0.25s ease-out 0s;}/*过度执行动画  ie8以及以下没作用*/
 p{ line-height:32px;}
 a{ text-decoration:inherit;}
@@ -19,55 +19,85 @@ h2{ padding:0;margin:0;display:block; text-align:center;}
 h3{ padding:6px 0;margin:0;display:block; text-align:center; font-weight:normal;}
 .clear3:before,.clear3:after{ content: " "; display: table;}
 .clear3:after {clear: both;}
-.box{ max-width:1080px; width:100%; margin:0 auto;  box-sizing:border-box;}
-.box_title{ border-bottom:1px dashed #ddd;margin-bottom:20px; background:#f9f9f9; padding:20px;}
+.box{ width:100%; margin:0 auto;  box-sizing:border-box;}
+.box_title{margin-bottom:20px; background:#535353; padding:20px; color:#fff;}
 
-.box_ul{ width:100%;}
-.box_li{ display:block; float:left; width:30%; margin:0 0 2.5% 2.5%;  padding:10px; box-sizing:border-box; border-radius:6px; cursor:pointer; border:1px solid #f1f1f1;}
-.box_li img{ width:100%; margin:auto; display:block;}
+.box_ul{ width:100%; max-width:1600px; margin:0 auto;}
+.box_li_{ width:33%; float:left; padding:0 10px; box-sizing:border-box;}
+
+.box_li{ display:block;  width:100%; box-sizing:border-box; padding:10px; background:#fff;  cursor:pointer; margin-bottom:20px; border-radius:2px;}
+.box_li img{ width:100%;display:block; border-radius:2px;}
 .box_li{-webkit-transition: all 0.25s ease-out 0s;-moz-transition: all 0.25s ease-out 0s;transition: all 0.25s ease-out 0s;}/*过度执行动画  ie8以及以下没作用*/
 .box_li label{ display:block; line-height:32px; font-size:16px;color:#333;overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}/*单行文字超出显示...*/
-.box_li span{ display:block; line-height:24px; color:#737373; font-size:14px; height:48px; overflow-y:auto;}
-.box_li:hover{background:#f1f1f1; border-color:#ddd;}
+.box_li span{ display:block; line-height:24px; color:#737373; font-size:14px;}
+.box_li:hover{ background:#535353; padding:15px}
+.box_li:hover label{color:#fff;}
+.box_li:hover span{color:#f9f9f9;}
 </style>
 <body>
 <div class="box">
+
+
+
 <div class="box_title">
-<h2>QKYUIBS</h2>
+<h2>QKYUIBS1.x</h2>
 <h1>全课云2017UI规范应用实例迭代</h1>
 <h3>此规范由自主设计规范+前端框架bootstrap3.0+模块化js seajs作为支架建立，此基础上按应用进行实践优化。</h3>
 </div>
 <div class="box_ul clear3">
-<a class="box_li" href="qkyuibs1_0">
-<img src="bin/1.gif"/>
-<label>#1_0（OA应用-行政值班初始版）</label>
-<span>版本说明：无</span>
-</a>
-<a class="box_li" href="qkyuibs1_1">
-<img src="bin/2.gif"/>
-<label>#1_1（基础应用-学生电子信息）</label>
-<span>版本说明：无</span>
-</a>
-<a class="box_li" href="qkyuibs1_2">
-<img src="bin/3.gif"/>
-<label>#1_2（OA应用-行政值班优化版）</label>
-<span>版本说明：此版本后加入seajs config,使文件结构更加模块化，并加入手机移动端分支优化。</span>
-</a>
-<a class="box_li" href="qkyuibs1_3">
-<img src="bin/4.gif"/>
-<label>#1_3（基础应用-毕业生网上报名系统）</label>
-<span>版本说明：在1_2基础上，增加了复选父子类联动交互，和导航个人信息支持是否显示。</span>
-</a>
-<a class="box_li" href="qkyuibs1_4">
-<img src="bin/4.gif"/>
-<label>#1_4（OA应用-整体框架版）</label>
-<span>版本说明：在1_3基础上，做了整体性优化，项目独有性css独立开来，覆盖基础和快速css融合成一个，增加了完整模块css，优化表格基础，表单基础，按钮基础，优化了seajs的写法，统一用暴露执行体方式进行模块调用</span>
-</a>
-<a class="box_li" href="qkyuibs1_5">
-<img src="bin/3.gif"/>
-<label>#1_5（OA应用-行政值班再次优化版）</label>
-<span>版本说明：此版本实施1_4的基础页面上进行优化行政值班，内建了头部的页面，跟1_4一样独立自生css。</span>
-</a>
+    <div class="box_li_">
+        <a class="box_li" href="qkyuibs1_0">
+        <img src="bin/1.gif"/>
+        <label>#1_0（OA应用-行政值班初始版）</label>
+        <span>版本说明：无</span>
+        </a>
+        <a class="box_li" href="qkyuibs1_3">
+        <img src="bin/4.gif"/>
+        <label>#1_3（基础应用-毕业生网上报名系统）</label>
+        <span>版本说明：在1_2基础上，增加了复选父子类联动交互，和导航个人信息支持是否显示。</span>
+        </a>
+    </div>
+    <div class="box_li_">
+        <a class="box_li" href="qkyuibs1_1">
+        <img src="bin/2.gif"/>
+        <label>#1_1（基础应用-学生电子信息）</label>
+        <span>版本说明：无</span>
+        </a>
+        <a class="box_li" href="qkyuibs1_4">
+        <img src="bin/5.gif"/>
+        <label>#1_4（OA应用-整体框架版）</label>
+        <span>版本说明：在1_3基础上，做了整体性优化，项目独有性css独立开来，覆盖基础和快速css融合成一个，增加了完整模块css，优化表格基础，表单基础，按钮基础，优化了seajs的写法，统一用暴露执行体方式进行模块调用</span>
+        </a>
+    </div>
+    <div class="box_li_">
+        <a class="box_li" href="qkyuibs1_2">
+        <img src="bin/3.gif"/>
+        <label>#1_2（OA应用-行政值班优化版）</label>
+        <span>版本说明：此版本后加入seajs config,使文件结构更加模块化，并加入手机移动端分支优化。</span>
+        </a>
+        <a class="box_li" href="qkyuibs1_5">
+        <img src="bin/3.gif"/>
+        <label>#1_5（OA应用-行政值班再次优化版）</label>
+        <span>版本说明：此版本实施1_4的基础页面上进行优化行政值班，内建了头部的页面，跟1_4一样独立自生css。</span>
+        </a>
+    </div>
+
+</div>
+
+
+<div class="box_title">
+<h2>QKYUIBS2.x</h2>
+<h1>全课云2017UI规范2.0应用实例迭代</h1>
+<h3>2.0版本在实施1_4的基上础，然后进行一次大规模的文件结构变化，2_0的变化在于简化文件结构，和接近完善的头部插件，和一些头部跳转的页面！</h3>
+</div>
+<div class="box_ul clear3">
+    <div class="box_li_">
+    <a class="box_li" href="qkyuibs2_0">
+    <img src="bin/3.gif"/>
+    <label>#2_0（OA应用-工资管理）</label>
+    <span>版本说明：此版本实施1_4的基础，然后进行一次大规模的文件结构变化，2_0的变化在于简化文件结构，和接近完善的头部插件，和一些头部跳转的页面，工资管理以后的项目将全部应用新的文件结构！虽然变化了文件结构，但中心思想还是一样的，所有布局和基础css都是跟之前的一样，改变大的是js的路径调用，依旧在seajs的强大整洁能力下发挥着高效力！请充分注意seajs的seaconfig的配置js</span>
+    </a>
+    </div>
 </div>
 
 </div>
