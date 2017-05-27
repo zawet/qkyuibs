@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="qky2.ico">
+<title>全课云UI</title>
+<link href="js/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+
+<!--全课云基础样式覆盖-->
+<link href="css/iconfont2.0.css" rel="stylesheet">
+<link href="css/qkybase2.0.css" rel="stylesheet">
+<link href="css/gzglbase.css" rel="stylesheet">
+<link href="css/quickcss2.0.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="qkybody">
+<div id="qkynav"></div>
+<div class="container-xl">
+  <div class="qkycadr pa20 mt20 mb20">
+    <h4 class="page-header mt0 pb10 mb0 clear">
+        <span class="height30_line fl">查看数据</span>
+    </h4>
+    
+      <form class="form-horizontal mt20">
+        <div class="row">
+         <div class="col-sm-6">
+            <div class="form-group ">
+              <label for="search_starttime" class="col-sm-2 control-label pr0 pl0">工资模板：</label>
+              <div class="col-sm-10 ">
+                <input type="text" class="form-control"  readonly value="2017年全课云学校工资模板">
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-sm-6">
+            <div class="form-group ">
+              <label  class="col-sm-2 control-label pr0 pl0">时间月份：</label>  
+              <div class="col-sm-10  ">
+                <input type="text" class="form-control "  readonly value="2017-5">
+              </div> 
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label  class="col-sm-2 control-label pr0 pl0">姓名：</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control " readonly  value="王老师">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label class="col-sm-2 control-label pr0 pl0">应发合计：</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control " readonly value="4500">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label  class="col-sm-2 control-label pr0 pl0">应扣合计：</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control " readonly value="500">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label  class="col-sm-2 control-label pr0 pl0">实发金额：</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control " readonly value="4000">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12"><hr class="mt5"></div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label  class="col-sm-2 control-label pr0 pl0">手机号码：</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control " readonly value="13726068290">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label class="col-sm-2 control-label pr0 pl0">基本工资：</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control " readonly value="3000">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label  class="col-sm-2 control-label pr0 pl0">奖金：</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control "  readonly value="1000">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label  class="col-sm-2 control-label pr0 pl0">补贴：</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control " readonly value="500">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label  class="col-sm-1 control-label pr0 pl0">备注：</label>
+              <div class="col-sm-11">
+                <textarea  class="form-control" rows="5"  readonly >无</textarea>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="col-sm-12 t_c">
+            
+            <a class="btn btn-default" href="javascript:history.go(-1)">返回</a>
+          </div>
+        </div>
+      </form>
+
+  </div>
+</div>
+<div class="footer default">全通教育集团（广东）股份有限公司  版权所有  ©2007-2015</div>
+
+
+
+
+<!--模块化js--> 
+<script src="js/sea.js"></script> 
+<script src="js/seaconfig2.0.js"></script> 
+<script>
+     seajs.use(["jq","bs","nav"],function(j,b,n){
+		 $("#qkynav").qkynav({
+			 navli_j:[
+			 {name:"我的工资条",attrcont:"href='index.html'",isactive:false},
+			 {name:"工资管理",attrcont:"href='index_wage_manag.html'",isactive:true},
+			 {name:"工资模板管理",attrcont:"href='index_wagemould_manag.html'",isactive:false},
+			 {name:"工资统计查询",attrcont:"href='index_count.html'",isactive:false}
+			 ]
+		});
+		
+	});
+    </script>
+</body>
+</html>
