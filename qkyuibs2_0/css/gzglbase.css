@@ -31,3 +31,5 @@ ul,li{ padding:0; margin:0; list-style:none;}
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
+.table-responsive._sm .table>tbody>tr>td{ min-width:90px;}
+.table-responsive._sm .table>tbody>tr>td.big_mw{ min-width:180px;}
