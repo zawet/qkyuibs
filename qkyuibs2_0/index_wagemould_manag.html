@@ -52,8 +52,10 @@
                     <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                    <li role="presentation"><a>已启动</a></li>
-                    <li role="presentation"><a>未启动</a></li>
+                  <li role="presentation"><a>全部</a></li>
+                    <li role="presentation"><a>已停用</a></li>
+                    <li role="presentation"><a>已启用</a></li>
+                    <li role="presentation"><a>未启用</a></li>
                   </ul>
                 </div>
               </div>
@@ -81,7 +83,7 @@
                 <td>
                 <a class=" mr10 qidong" isqi="yes"><i class="qkyicon_14 mr5">&#xe673;</i>停用</a>
                 <a class=" mr10" data-toggle="modal" data-target="#Manag_project" ><i class="qkyicon_14 mr5">&#xe61a;</i>管理项目</a>
-                <a data-toggle="modal" data-target="#delete"><i class="qkyicon_14 mr5">&#xe613;</i>删除</a>
+                <a class="mould_delete" sta="delete_toty"><i class="qkyicon_14 mr5">&#xe613;</i>删除</a>
                 </td>
             </tr>
             <tr>
@@ -89,7 +91,7 @@
                 <td>
                 <a class=" mr10 qidong" isqi="no"><i class="qkyicon_14 mr5">&#xe619;</i>启用</a>
                 <a class=" mr10" data-toggle="modal" data-target="#Manag_project"><i class="qkyicon_14 mr5">&#xe61a;</i>管理项目</a>
-                <a data-toggle="modal" data-target="#delete"><i class="qkyicon_14 mr5">&#xe613;</i>删除</a>
+                <a class="mould_delete" sta="delete_ty"><i class="qkyicon_14 mr5">&#xe613;</i>删除</a>
                 </td>
             </tr>
             <tr>
@@ -98,7 +100,7 @@
                 <a class="mr10" href="index_wagemould_manag_edit.html"><i class="qkyicon_14 mr5">&#xe60f;</i>修改</a>
                 <a class="mr10 qidong" isqi="no"><i class="qkyicon_14 mr5">&#xe619;</i>启用</a>
                 <a class="mr10" data-toggle="modal" data-target="#Manag_project"><i class="qkyicon_14 mr5">&#xe61a;</i>管理项目</a>
-                <a data-toggle="modal" data-target="#delete"><i class="qkyicon_14 mr5">&#xe613;</i>删除</a>
+                <a class="mould_delete" sta="delete"><i class="qkyicon_14 mr5">&#xe613;</i>删除</a>
                 </td>
             </tr>
             
@@ -146,6 +148,38 @@
               </div>
             </div>
           </div>
+          
+        </div>
+        <div class="modal fade" id="delete_toty" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-xs" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="group_deleteLabel">删除数据</h4>
+              </div>
+              <div class="modal-body modal_auto t_c error_color">
+                该模板有数据关联无法删除，是否停用？
+              </div>
+              <div class="modal-footer">
+                <a class="btn btn-primary modal_ty" data-dismiss="modal">确定</a>
+                <a class="btn btn-default" data-dismiss="modal">取消</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="delete_ty" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-xs" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="group_deleteLabel">删除数据</h4>
+              </div>
+              <div class="modal-body modal_auto t_c error_color">
+                该模板有数据关联无法删除
+              </div>
+              
+            </div>
+          </div>
         </div>
         
 <div class="modal fade" id="Manag_project" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -181,27 +215,21 @@
 <script src="js/sea.js"></script> 
 <script src="js/seaconfig2.0.js"></script> 
 <script>
-     seajs.use(["jq","bs","nav","gzgl/mygzt","rach"],function(j,b,n,mygzt,rach){
+     seajs.use(["jq","bs","nav","gzgl/mygzt","rach","gzgl/qidong"],function(j,b,n,mygzt,rach,qd){
 		 opt.navli_j[2].isactive=true;
 		 $("#qkynav").qkynav(opt);
 		rach.rach_run(function(t){},function(t){});	 
 		mygzt.mygzt_run();
+		
 		$(".qky_switch").on("click",function(){
 			$(this).toggleClass("active");
 		});
-		$(".qidong").on("click",function(){
-			var isqi=$(this).attr("isqi");
-			if(isqi=="no"){
-				$(this).html('<i class="qkyicon_14 mr5">&#xe673;</i>停用');
-				$(this).parents("tr").find(".qistart").removeClass("error_color").addClass("mian_color").html("已启动");
-				$(this).attr("isqi","yes");
-			}else{
-				$(this).html('<i class="qkyicon_14 mr5">&#xe619;</i>启用');
-				$(this).parents("tr").find(".qistart").removeClass("mian_color").addClass("error_color").html("已停用");
-				$(this).attr("isqi","no");
-			}
-		});
+		qd.qidong_run();
+		
+		
 	});
+	
+	
     </script>
 </body>
 </html>
