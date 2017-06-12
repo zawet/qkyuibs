@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="qky2.ico">
+    <title>全课云—毕业生网上报到系统</title>
+    <!-- Bootstrap 基础样式 CSS -->
+    <link href="dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+    
+    <!--全课云基础样式覆盖-->
+    <link href="css/iconfont.css" rel="stylesheet">
+    <link href="css/qkybase1.3.css" rel="stylesheet">
+    <link href="css/quickcss.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="qkybody ">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="qkynav"></div>
+    <div class="container">
+        <div class="box_ff pa15">
+            <h4 class="mt0 mb10">查看调查问卷结果</h4>
+            <hr class="mt0 mb5">
+            <div class=" clear"><span class="fl height30_line">2017年报到事务/问卷<span class="fz_we">共收集40份</span></span><a class="btn btn-default fr">返回</a></div>
+        </div>
+          
+    </div>
+    <div class="footer open inverse">全通教育集团（广东）股份有限公司  版权所有  ©2007-2015</div>
+    
+    
+   
+    
+    
+
+    
+    
+    <script src="dist/jq/1.11.1/jquery.min.js"></script>
+    <!--模块化js-->
+    <script src="dist/sea.js"></script>
+    <script src="dist/seaconfig.js"></script>
+    <script>
+     seajs.use(["bs","nav","navicon","com/radio_checkbox1.1","com/dropdown_havevalue"],function(){
+		 
+		 $("#qkynav").qkynav({navli:[["毕业审批","href='index_admin.html'"],["毕业统计","href='#'"],["报到事务管理","href='index_admin_mange.html'"]],navli_active:2});
+		 
+	 });
+    </script>
+  </body>
+</html>
