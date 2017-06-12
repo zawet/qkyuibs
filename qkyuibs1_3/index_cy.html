@@ -42,12 +42,12 @@
                             <tr><td><div class="xu">2</div></td><td><label>第二步</label></td><td><span>毕业生报到情况登记表</span></td></tr>
                             </table></a>
                         </li>
-                        <li class=" active"><a href="index_qr.html">
+                        <li><a href="index_qr.html">
                             <table cellpadding="0" cellspacing="0" border="0">
                             <tr><td><div class="xu">3</div></td><td><label>第三步</label></td><td><span>确认您所填写资料的正确性</span></td></tr>
                             </table></a>
                         </li>
-                        <li><a href="index_cy.html">
+                        <li class=" active"><a href="index_cy.html">
                             <table cellpadding="0" cellspacing="0" border="0">
                             <tr><td><div class="xu">4</div></td><td><label>第四步</label></td><td><span>参与问卷调查</span></td></tr>
                             </table></a>
@@ -62,45 +62,55 @@
                 </div>
             </div>
             <div class="container_right col-sm-8 col-sm-offset-4">
-            	<table class="qr_info">
-                <tbody>
-                <tr><td width="16%">姓名：</td><td colspan="3">陈自豪</td></tr>
-                <tr><td>性别：</td><td colspan="3">男</td></tr>
-                <tr><td>报到证编号：</td><td colspan="3">442365362633632635</td></tr>
-                <tr><td>身份证：</td><td colspan="3">442333200363625986</td></tr>
-                <tr><td>毕业学校：</td><td colspan="3">孝感第一中学</td></tr>
-                <tr><td>所学专业：</td><td colspan="3">信息工程</td></tr>
-                <tr><td>学历层次：</td><td colspan="3">博士</td></tr>
-                <tr><td>升学情况：</td><td colspan="3">已升学</td></tr>
-                <tr><td>毕业时间：</td><td colspan="3">1998-09-01</td></tr>
-                <tr><td>生源地：</td><td colspan="3">孝感市</td></tr>
-                <tr><td>就业情况：</td><td colspan="3">已就业</td></tr>
-                <tr><td>就业单位：</td><td colspan="3">云南省教育局</td></tr>
-                <tr><td>升学情况：</td><td colspan="3">已升学</td></tr>
-                <tr><td>手机号码：</td><td colspan="3">13685963222</td></tr>
-                <tr><td>家庭电话：</td><td colspan="3">0760-36236598</td></tr>
-                <tr><td>是否双困生：</td><td colspan="3">是</td></tr>
-                <tr><td>家庭地址：</td><td colspan="3">云南省孝感市一二三街道</td></tr>
-                <tr>
-                <td valign="top">身份证：</td>
-                <td><div class="img_box"><img src="images/sfz2.png"><a href="images/sfz2.png" target="_blank">点击预览</a></div></td>
-                <td width="16%" valign="top">报到证或毕业证：</td>
-                <td><div class="img_box"><img src="images/sfz-b.png"><a href="images/sfz-b.png" target="_blank">点击预览</a></div></td>
-                </tr>
-                <tr><td></td><td colspan="3"><a class="btn btn-success  mr10">确认信息</a><a class="btn btn-default">返回修改</a></td>
-                </tr>
-                </tbody>
-                </table>
+            <div class="wj_pull">
+            <label>问卷调查</label>
+            <p class="one"></p><p></p><p></p><p></p><p></p><p></p><p></p><p class="wei"></p>
+            <p class="one"></p><p></p><p></p><p></p><p></p><p></p><p class="wei"></p>
+            <p class="one"></p><p></p><p></p><p class="wei"></p>
+            
+            <div class="t_c">
+            <a class="btn btn-success goto_wj" data-toggle="modal" data-target="#goto_wj">点击参与调查</a>
+            <a class="btn btn-default disabled ispass">我已参与</a>
+            </div>
+            </div>
+            
+                
+                
             </div>
         </div> 
     </div>
     <div class="footer inverse">全通教育集团（广东）股份有限公司  版权所有  ©2007-2015</div>
+    
+    
+    <!--模态窗口 Modal -->
+    <div class="modal fade" id="goto_wj" tabindex="-1" role="dialog" aria-labelledby="dbtit" aria-hidden="true">
+      <div class="modal-dialog modal-xs">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title fz_we" id="dbtit">提示</h4>
+          </div>
+          <div class="modal-body modal_auto">
+              您还没参与调查问卷，请先前往参与问卷调查
+          </div>
+          <div class="modal-footer">
+          	<button type="button" class="btn  btn-success"  data-dismiss="modal">前往参与</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <script src="dist/jq/1.11.1/jquery.min.js"></script>
     <!--模块化js-->
     <script src="dist/sea.js"></script>
     <script src="dist/seaconfig.js"></script>
     <script>
-     seajs.use(["bs","nav","navicon"],function(){$("#qkynav").qkynav({isinfo:false,morebtn:false});});
+     seajs.use(["bs","nav","navicon"],function(){
+		 $("#qkynav").qkynav({isinfo:false,morebtn:false});
+	 	$(".goto_wj").on("click",function(){
+			$(".ispass").removeClass("disabled").removeClass("btn-default").addClass("btn-success");
+		})
+	 });
     </script>
   </body>
 </html>

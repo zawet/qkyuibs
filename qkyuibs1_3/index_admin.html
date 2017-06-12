@@ -300,7 +300,8 @@
     <script src="dist/seaconfig.js"></script>
     <script>
      seajs.use(["bs","nav","navicon","com/radio_checkbox1.1","com/dropdown_havevalue"],function(){
-		 $("#qkynav").qkynav();
+		 
+		 $("#qkynav").qkynav({navli:[["毕业审批","href='index_admin.html'"],["毕业统计","href='#'"],["报到事务管理","href='index_admin_mange.html'"]]});
 		 
 	 });
     </script>

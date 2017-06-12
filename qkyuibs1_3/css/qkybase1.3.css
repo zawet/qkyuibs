@@ -259,10 +259,21 @@ a.checkbox_a{display:block; width:16px; height:16px; border:1px solid #dadada; b
 .dist_txt{ color:#333; font-size:16px; padding:0 0 15px;}
 
 /*没数据模块*/
-.nodata{ width:100%; border:1px solid #d8d8d8; background:#fff; text-align:center; padding:10% 0;}
+.nodata{ width:100%;text-align:center; padding:10% 0;}
 .nodata>h3{ color:#f0485f; margin-top:0;}
 .nadata_img{ padding:15px 0;}
-.nadata_txt{ font-size:16px; padding:10px 0 10px; color:#868686; display:inline-block;}
+.nadata_txt{ font-size:16px; padding:10px 0 10px; color:#333; display:inline-block;}
+
+.error_box{ width:100%;text-align:center; padding:10% 0;}
+.error_box>p{margin-top:0; display:block; font-size:60px;}
+.error_box_img{ padding:15px 0;}
+.error_box_img img{ display:block; max-width:80%; margin:0 auto;}
+.error_box_txt{ font-size:16px; padding:10px 0 10px; color:#737373; display:inline-block;}
+
+.err_400>p{ color:#ff7800; }
+.err_404>p{ color:#27b0f2; }
+.err_500>p{ color:#f0485f; }
+.err_fix>p{ color:#27b0f2; font-size:25px; }
 
 
 /*标签改装*/
@@ -450,3 +461,17 @@ a.checkbox_a{display:block; width:16px; height:16px; border:1px solid #dadada; b
 .pass_icon{ display:block; margin:0 auto; max-width:100%;}
 .pass_txt{ padding:30px 0; text-align:center; color:#868686; font-size:16px;}
 .pass_oth{ color:#ffb97b;font-size:16px;text-align:center; padding-bottom:30px;}
+
+.wj_pull{ width:70%; border:1px solid #d8d8d8; border-radius:4px; background:#fcfcfc; padding:15px; margin:0 auto;}
+.wj_pull label{ margin:0; padding:0 0 10px; text-align:center; font-size:16px; display:block;}
+.wj_pull p{ display:block; width:100%; height:16px; background:#eee; border-radius:2px; margin-bottom:10px;}
+.wj_pull p.one{ width:95%; margin-left:5%;}
+.wj_pull p.wei{ width:86%;}
+
+.title_box{ width:100%; box-sizing:border-box; padding:15px; background:#f5f5f5; margin-top:15px; border:1px solid #d8d8d8;border-radius:4px;}
+.title_mian{ width:50%; float:left; height:215px;}
+.title_tj{width:50%; float:left; height:215px;}
+.title_q{ background:#fff; border-radius:4px; padding:10px 5px; line-height:26px;}
+.title_q span{ width:25px; height:25px; margin-right:5px; text-align:center; line-height:25px; background:#64DC2A; border-radius:4px; color:#FFF; display:inline-block}
+.title_a .table>thead>tr>th{ background:#f9f9f9; color:#2baf2b;}
+.title_a .table>tbody>tr>td{ background:#fff;}
