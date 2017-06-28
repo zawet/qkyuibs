@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="qky2.ico">
+    <title>全课云—毕业生网上报到系统</title>
+    <!-- Bootstrap 基础样式 CSS -->
+    <link href="dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+    
+    <!--全课云基础样式覆盖-->
+    <link href="css/iconfont.css" rel="stylesheet">
+    <link href="css/qkybase1.3.css" rel="stylesheet">
+    <link href="css/quickcss.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="qkybody ">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="qkynav"></div>
+    <div class="container">
+        <div class="box_ff  pl20 pr20 mt20 pt15">
+            <form class="form-horizontal" role="form">
+            <div class="row">
+            <div class="col-sm-6">
+            	<div class="form-group">
+                    <label class="col-sm-3  control-label  pl0 pr0">报到事务名称：</label>
+                    <div class="col-sm-9  pl0">
+                    <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+            	<div class="form-group">
+                    <label class="col-sm-3  control-label pl0  pr0">报到年份：</label>
+                    <div class="col-sm-4  pl0">
+                      <div class="dropdown qkydropdown havechoose">
+                          <a class="btn btn-default dropdown-toggle auto"  data-toggle="dropdown">
+                          <span class="value" id="year">2017年</span><span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu maxh" role="menu">
+                          	<li role="presentation"><a href="#">2012年</a></li>
+                          	<li role="presentation"><a href="#">2013年</a></li>
+                            <li role="presentation"><a href="#">2014年</a></li>
+                            <li role="presentation"><a href="#">2015年</a></li>
+                            <li role="presentation"><a href="#">2016年</a></li>
+                            <li role="presentation"><a href="#">2017年</a></li>
+                            <li role="presentation"><a href="#">2018年</a></li>
+                            <li role="presentation"><a href="#">2019年</a></li>
+                            <li role="presentation"><a href="#">2020年</a></li>
+                            <li role="presentation"><a href="#">2021年</a></li>
+                            <li role="presentation"><a href="#">2022年</a></li>
+                          </ul>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 pl0">
+                      <div class="dropdown qkydropdown havechoose">
+                          <a class="btn btn-default dropdown-toggle auto"  data-toggle="dropdown">
+                          <span class="value" id="moon">1月</span><span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu maxh" role="menu">
+                            <li role="presentation"><a href="#">1月</a></li>
+                            <li role="presentation"><a href="#">2月</a></li>
+                            <li role="presentation"><a href="#">3月</a></li>
+                            <li role="presentation"><a href="#">4月</a></li>
+                            <li role="presentation"><a href="#">5月</a></li>
+                            <li role="presentation"><a href="#">6月</a></li>
+                            <li role="presentation"><a href="#">7月</a></li>
+                            <li role="presentation"><a href="#">8月</a></li>
+                            <li role="presentation"><a href="#">9月</a></li>
+                            <li role="presentation"><a href="#">10月</a></li>
+                            <li role="presentation"><a href="#">11月</a></li>
+                            <li role="presentation"><a href="#">12月</a></li>
+                          </ul>
+                      </div>
+                    </div>
+                    
+                 </div>
+            </div>
+            </div>      
+           </form>
+        </div>
+        
+        <div class="qkytable box_ff  pa20 mt20">
+          <div class="qkytable_btn pl0 pt0 pb10 clear">
+          <a class="btn btn-default" role="button" data-toggle="modal" data-target="#add_sw">新增报到事务</a>
+          <div class="error_tips t_r fr height30_line">备注：有且只能有一个报到事务是处于使用状态</div>
+          </div>
+          	
+          <div class="table-responsive pb10">
+            <table class="table table-bordered table-striped">
+                <thead><tr><th>报到事务名称</th><th>报到年份</th><th>是否有问卷</th><th>使用状态</th><th width="30%">操作</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td>2017年报到</td><td>2017年</td><td>是</td><td>使用中</td>
+                        <td>
+                        <a class="mian_color mr10" data-toggle="modal" data-target="#chack_sw">查看</a>
+                        <a class="mian_color mr10" data-toggle="modal" data-target="#qidong_tips">停用</a>
+                        <a class="mian_color mr10" href="index_admin_mange_tj.html">查看问卷结果</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2016年报到</td><td>2016年</td><td>是</td><td>已停用</td>
+                        <td>
+                        <a class="mian_color mr10" data-toggle="modal" data-target="#chack_sw">查看</a>
+                        <a class="mian_color mr10" data-toggle="modal" data-target="#add_sw">修改</a>
+                        <a class="mian_color mr10" data-toggle="modal" data-target="#qidong_tips">启用</a>
+                        <a class="mian_color mr10" data-toggle="modal" data-target="#delect_tips">删除</a>
+                        <a class="mian_color mr10"  href="index_admin_mange_tj.html">查看问卷结果</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2015年报到</td><td>2015年</td><td>否</td><td>已停用</td>
+                        <td>
+                        <a class="mian_color mr10" data-toggle="modal" data-target="#chack_sw">查看</a>
+                        <a class="mian_color mr10" data-toggle="modal" data-target="#add_sw">修改</a>
+                        <a class="mian_color mr10" data-toggle="modal" data-target="#qidong_tips">启用</a>
+                        <a class="mian_color mr10" data-toggle="modal" data-target="#delect_tips">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2014年报到</td><td>2014年</td><td>否</td><td>已停用</td>
+                        <td>
+                        <a class="mian_color mr10" data-toggle="modal" data-target="#chack_sw">查看</a>
+                        <a class="mian_color mr10" data-toggle="modal" data-target="#add_sw">修改</a>
+                        <a class="mian_color mr10" data-toggle="modal" data-target="#qidong_tips">启用</a>
+                        <a class="mian_color mr10" data-toggle="modal" data-target="#delect_tips">删除</a>
+                        </td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+          </div>
+          
+          <div class="qkypage row mt10" >
+              <div class="col-md-2 col-sm-3 pageinfo">1-10 of 48 项目</div>
+              <div class="col-md-8 col-sm-7 col-md-offset-2 col-sm-offset-2 col-xs-8 col-xs-offset-4">
+                  <ul class="nav nav-pills" >	
+                      <li class="disabled page_prv"><a href="#">上一页</a></li>
+                      <li class="active"><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">...</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li class="page_next"><a href="#">下一页</a></li>
+                      <li class="form-group mb0 page_input"><input type="text" class="form-control" placeholder="输入页面"></li>
+                      <li class="page_input"><a class="btn btn-default">GO</a></li>
+                  </ul>
+              </div>
+          </div>
+       </div>
+        
+    </div>
+    <div class="footer open inverse">全通教育集团（广东）股份有限公司  版权所有  ©2007-2015</div>
+    
+    
+    <!--模态窗口 Modal -->
+    <div class="modal fade" id="add_sw" tabindex="-1" role="dialog" aria-labelledby="dbtit" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title fz_we" id="dbtit">新增/修改 报到事务</h4>
+          </div>
+          <div class="modal-body modal_auto pb0">
+             <form class="form-horizontal" role="form">
+            
+            	<div class="form-group">
+                    <label class="col-sm-3  control-label  pl0 pr0">报到事务名称：</label>
+                    <div class="col-sm-9  pl0">
+                    <input type="text" class="form-control" placeholder="请输入报到事务名称">
+                    </div>
+                </div>
+            
+            	<div class="form-group">
+                    <label class="col-sm-3  control-label pl0  pr0">报到年份：</label>
+                    <div class="col-sm-5  pl0">
+                      <div class="dropdown qkydropdown havechoose">
+                          <a class="btn btn-default dropdown-toggle auto"  data-toggle="dropdown">
+                          <span class="value" id="year">2017年</span><span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu maxh" role="menu">
+                          	<li role="presentation"><a href="#">2012年</a></li>
+                          	<li role="presentation"><a href="#">2013年</a></li>
+                            <li role="presentation"><a href="#">2014年</a></li>
+                            <li role="presentation"><a href="#">2015年</a></li>
+                            <li role="presentation"><a href="#">2016年</a></li>
+                            <li role="presentation"><a href="#">2017年</a></li>
+                            <li role="presentation"><a href="#">2018年</a></li>
+                            <li role="presentation"><a href="#">2019年</a></li>
+                            <li role="presentation"><a href="#">2020年</a></li>
+                            <li role="presentation"><a href="#">2021年</a></li>
+                            <li role="presentation"><a href="#">2022年</a></li>
+                          </ul>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 pl0">
+                      <div class="dropdown qkydropdown havechoose">
+                          <a class="btn btn-default dropdown-toggle auto"  data-toggle="dropdown">
+                          <span class="value" id="moon">1月</span><span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu maxh" role="menu">
+                            <li role="presentation"><a href="#">1月</a></li>
+                            <li role="presentation"><a href="#">2月</a></li>
+                            <li role="presentation"><a href="#">3月</a></li>
+                            <li role="presentation"><a href="#">4月</a></li>
+                            <li role="presentation"><a href="#">5月</a></li>
+                            <li role="presentation"><a href="#">6月</a></li>
+                            <li role="presentation"><a href="#">7月</a></li>
+                            <li role="presentation"><a href="#">8月</a></li>
+                            <li role="presentation"><a href="#">9月</a></li>
+                            <li role="presentation"><a href="#">10月</a></li>
+                            <li role="presentation"><a href="#">11月</a></li>
+                            <li role="presentation"><a href="#">12月</a></li>
+                          </ul>
+                      </div>
+                    </div>
+            	</div>
+                
+                <div class="form-group">
+                        <label class="col-sm-3  height30 t_r mb0 pl0 pr0 ">是否需要做问卷：</label>
+                        <div class="col-sm-9 pl0" id="sex_radio">
+                        <label class="radio-inline clear pl0 pt0 select">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">是</span>
+                        </label>
+                        <label class="radio-inline clear pl0 pt0">
+                        <a class="radio_a fl"><b></b></a><span class="fr ml5 height30_line">否</span>
+                        </label>
+                    	</div>
+                    </div>
+                <div class="form-group mb0">
+                    <label class="col-sm-3  control-label  pl0 pr0">问卷地址：</label>
+                    <div class="col-sm-5  pl0">
+                    <input type="text" class="form-control" placeholder="请输入完整的问卷地址">
+                    </div>
+                    <label class="col-sm-2  control-label pl0 pr0">标识码：</label>
+                    <div class="col-sm-2  pl0">
+                    <input type="text" class="form-control">
+                    </div>
+                    <div class="col-sm-9 col-sm-offset-3  pl0 error_tips">问卷地址、问卷标识码，均通过问卷调查系统发布问卷时获取</div>
+                </div>      
+           </form>
+          </div>
+          <div class="modal-footer">
+          	<button type="button" class="btn  btn-success" >通定</button>
+            <button type="button" class="btn  btn-default"  data-dismiss="modal">取消</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="chack_sw" tabindex="-1" role="dialog" aria-labelledby="dbtit" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title fz_we">查看 报到事务</h4>
+          </div>
+          <div class="modal-body modal_auto pb0">
+             <form class="form-horizontal" role="form">
+            
+            	<div class="form-group">
+                    <label class="col-sm-3  control-label  pl0 pr0">报到事务名称：</label>
+                    <div class="col-sm-9  pl0"><input type="text" class="form-control" readonly value="2017年报到事务" ></div>
+                </div>
+            
+            	<div class="form-group">
+                    <label class="col-sm-3  control-label pl0  pr0">报到年份：</label>
+                    <div class="col-sm-9  pl0"><input type="text" class="form-control" readonly value="2017年" ></div> 
+            	</div>
+                
+              
+                <div class="form-group">
+                    <label class="col-sm-3  control-label  pl0 pr0">问卷地址：</label>
+                    <div class="col-sm-5  pl0">
+                   <input type="text" class="form-control" readonly value="http://XXXXX.html" >
+                    </div>
+                    <label class="col-sm-2  control-label pl0 pr0">标识码：</label>
+                    <div class="col-sm-2  pl0">
+                    <input type="text" class="form-control" readonly value="123" >
+                    </div>
+                    
+                </div>   
+                
+                <div class="form-group">
+                    <label class="col-sm-3  control-label pl0 pr0">使用状态：</label>
+                    <div class="col-sm-9  pl0"><input type="text" class="form-control" readonly value="使用中" ></div> 
+            	</div>
+                <div class="form-group">
+                    <label class="col-sm-3  control-label pl0  pr0">创建人：</label>
+                    <div class="col-sm-9  pl0"><input type="text" class="form-control" readonly value="关瑞荣" ></div> 
+            	</div>
+                <div class="form-group mb0">
+                    <label class="col-sm-3  control-label pl0  pr0">创建时间：</label>
+                    <div class="col-sm-9  pl0"><input type="text" class="form-control" readonly value="2017-6-6" ></div> 
+            	</div>   
+           </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn  btn-default"  data-dismiss="modal">关闭</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="delect_tips" tabindex="-1" role="dialog" aria-labelledby="nopasstit" aria-hidden="true">
+      <div class="modal-dialog modal-xs">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="nopasstit">提示</h4>
+          </div>
+          <div class="modal-body modal_auto">
+              该报到事务已存在毕业生报到记录，因此不能删除
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default"  data-dismiss="modal">关闭</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="qidong_tips" tabindex="-1" role="dialog" aria-labelledby="nopasstit" aria-hidden="true">
+      <div class="modal-dialog modal-xs">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="nopasstit">提示</h4>
+          </div>
+          <div class="modal-body modal_auto">       
+是否改用当前报到事务？<br/>
+若确定启用，则其他已在使用的事务将设置为停用
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success"  data-dismiss="modal">确定</button>
+            <button type="button" class="btn btn-default"  data-dismiss="modal">关闭</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+    
+    
+    <script src="dist/jq/1.11.1/jquery.min.js"></script>
+    <!--模块化js-->
+    <script src="dist/sea.js"></script>
+    <script src="dist/seaconfig.js"></script>
+    <script>
+     seajs.use(["bs","nav","navicon","com/radio_checkbox1.1","com/dropdown_havevalue"],function(){
+		 
+		 $("#qkynav").qkynav({navli:[["毕业审批","href='index_admin.html'"],["毕业统计","href='#'"],["报到事务管理","href='index_admin_mange.html'"]],navli_active:2});
+		 
+	 });
+    </script>
+  </body>
+</html>
