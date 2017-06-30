@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="qky2.ico">
+    <title>全课云UI</title>
+    <!-- Bootstrap 基础样式 CSS -->
+    <link href="../dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+    
+    <!--全课云基础样式覆盖-->
+    <link href="../css/iconfont.css" rel="stylesheet">
+    <link href="../css/qkybase1.4.css" rel="stylesheet">
+    <link href="../css/oabase.css" rel="stylesheet">
+    <link href="../css/quickcss.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="oabasebg">
+     <div class="scrrol_box pl15 mt20 pb20">
+         <div class="fixed_header">
+             <h3 class="header_title pl15 pt15 mb0 clear"><i class="qkyicon_14_ mr5 fz_28 fl">&#xe698;</i><span class="fl">新增工作流</span></h3>
+         </div>
+         <div class="qkycadr mt_fixed_one2 pa15">
+         	<div class="steps steps_l">
+              <a href="oa_flowmange_gzldyadd_one.html"><b></b><em>1</em><span>流程定义</span></a>
+              <a href="oa_flowmange_gzldyadd_two.html"><b></b><em>2</em><span>表单绑定</span></a>
+              <a href="oa_flowmange_gzldyadd_three.html"><b></b><em>3</em><span>流程设计</span></a>
+              <a class="active" href="oa_flowmange_gzldyadd_four.html"><b></b><em>4</em><span>步骤权限</span></a>
+              <a href="oa_flowmange_gzldyadd_five.html"><em>5</em><span>流程启用</span></a>
+              </div> 
+       
+           
+           <div class="steps_mian  mauto open" isid="four_5">  
+           
+           <div class="steps_title clear">
+               <div class="col-sm-8 col-sm-offset-2 clear pa0">
+               <div class="fl">当前操作：<label>设置待阅人</label></div>
+               <div class="fr">流程名称：<label>请假流程</label></div>
+               </div>
+           </div>  
+          	<form class="form-horizontal mt20 row">
+             <div class="col-sm-8 col-sm-offset-2 mb15">
+             <table class="table table-condensed atd bor_b table-bordered">
+                 <thead><tr>
+                
+                 <th width="20%">设置类型</th><th>类型描述</th></tr></thead>
+                 <tbody>
+                     <tr>
+                     <td><label class="radio-qky clear radio-inline pa0"><a class="radio_a  fl mr5"><b></b></a><span class=" ml4 fl height30_line">待阅</span></label></td>
+                     <td>流程可以分发给指定用户查看浏览</td>
+                     </tr>
+                     <tr>
+                     <td><label class="radio-qky clear radio-inline pa0"><a class="radio_a  fl mr5"><b></b></a><span class=" ml4 fl height30_line">待收文</span></label></td>
+                     <td>流程中的公文分发给指定的用户查收。在发文流程中用得比较多</td>
+                     </tr>
+                     <tr>
+                     <td><label class="radio-qky clear radio-inline pa0"><a class="radio_a  fl mr5"><b></b></a><span class=" ml4 fl height30_line">关闭本功能</span></label></td>
+                     <td>关闭本功能后，流程中不会出现指定分发用户控件，以上[待阅]和[待收文]被选中其中一项，视为开启本功能</td>
+                     </tr>  
+                        
+                 </tbody>
+                 </table>
+             </div>
+              </form>
+             
+              <div class="t_c">
+                <a class="btn btn-primary mr20">保存</a>
+                <a class="btn btn-default" href="oa_flowmange_gzldyadd_four.html">返回</a>
+              </div>
+           </div>
+           
+
+         </div>
+         <div class="pt20"></div>                  
+     </div>    
+     
+
+        
+    <script src="../dist/jq/1.11.1/jquery.min.js"></script>
+    <!--模块化js-->
+    <script src="../dist/sea.js"></script>
+    <script src="../dist/seaconfig.js"></script>
+    <script src="../dist/laydate/laydate.js"></script>
+    <script>
+	 seajs.use(["bs","oascd/folwmange","d-dw","d-ra_ch"],
+	 function(bs,fm,d,rc){
+		 rc.rach_run(function(u){
+			u.parents("tbody").find(".radio-qky").not(u).removeClass("select");	 
+		},function(u){});
+	 });
+    </script>
+  </body>
+</html>
