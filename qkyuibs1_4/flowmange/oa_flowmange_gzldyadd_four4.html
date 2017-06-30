@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="qky2.ico">
+    <title>全课云UI</title>
+    <!-- Bootstrap 基础样式 CSS -->
+    <link href="../dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+    
+    <!--全课云基础样式覆盖-->
+    <link href="../css/iconfont.css" rel="stylesheet">
+    <link href="../css/qkybase1.4.css" rel="stylesheet">
+    <link href="../css/oabase.css" rel="stylesheet">
+    <link href="../css/quickcss.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="oabasebg">
+     <div class="scrrol_box pl15 mt20 pb20">
+         <div class="fixed_header">
+             <h3 class="header_title pl15 pt15 mb0 clear"><i class="qkyicon_14_ mr5 fz_28 fl">&#xe698;</i><span class="fl">新增工作流</span></h3>
+         </div>
+         <div class="qkycadr mt_fixed_one2 pa15">
+         	<div class="steps steps_l">
+              <a href="oa_flowmange_gzldyadd_one.html"><b></b><em>1</em><span>流程定义</span></a>
+              <a href="oa_flowmange_gzldyadd_two.html"><b></b><em>2</em><span>表单绑定</span></a>
+              <a href="oa_flowmange_gzldyadd_three.html"><b></b><em>3</em><span>流程设计</span></a>
+              <a class="active" href="oa_flowmange_gzldyadd_four.html"><b></b><em>4</em><span>步骤权限</span></a>
+              <a href="oa_flowmange_gzldyadd_five.html"><em>5</em><span>流程启用</span></a>
+              </div> 
+       
+           
+           <div class="steps_mian  mauto open" isid="four_4"> 
+           <div class="steps_title clear">
+               <div class="col-sm-8 col-sm-offset-2 clear pa0">
+               <div class="fl">当前操作：<label>设置经办人</label></div>
+               <div class="fr">流程名称：<label>请假流程</label></div>
+               </div>
+           </div>
+              
+          	<form class="form-horizontal mt20 row">
+              <div class="col-sm-8 col-sm-offset-2">
+                <div class="form-group ">
+                  <label class="col-sm-2 control-label pr0 pl0 pt5">用户：</label>
+                  <div class="col-sm-10 "><input type="text" class="form-control" ></div>
+                </div>
+              </div>
+              <div class="col-sm-8 col-sm-offset-2">
+                <div class="form-group ">
+                  <label class="col-sm-2 control-label pr0 pl0 pt5">角色：</label>
+                  <div class="col-sm-10 "><input type="text" class="form-control" ></div>
+                </div>
+              </div>
+              <div class="col-sm-8 col-sm-offset-2">
+                <div class="form-group ">
+                  <div class="col-sm-2 checkbox height30 pa0 ">
+                  <label class="checkbox-qky clear  kuai pl0">
+                  <span class="fr">提交申请人</span>
+                  <a class="checkbox_a fr"><i class="qkyicon_14">&#xe619;</i></a>  
+                  </label>
+                  </div>
+                  <div class="col-sm-10 error_color fz_12 height30_line">当[用户]和[角色]都没设经办人时,勾上本选项,下一步办理人会自动取到流程发起人</div>
+                </div>
+              </div>
+              
+              <div class="col-sm-8 col-sm-offset-2">
+                <div class="form-group ">
+                  <div class="col-sm-2 checkbox height30 pa0 ">
+                  <label class="checkbox-qky clear  kuai pl0">
+                  <span class="fr">限定组织</span>
+                  <a class="checkbox_a fr"><i class="qkyicon_14">&#xe619;</i></a>  
+                  </label>
+                  </div>
+                  <div class="col-sm-2 checkbox height30 pa0 ">
+                  <label class="checkbox-qky clear  kuai pl0">
+                  <span class="fr">限定部门</span>
+                  <a class="checkbox_a fr"><i class="qkyicon_14">&#xe619;</i></a>  
+                  </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-sm-8 col-sm-offset-2">
+                <div class="form-group ">
+                  <div class="col-sm-2 checkbox height30 pa0 ">
+                  <label class="checkbox-qky clear  kuai pl0">
+                  <span class="fr">流程管理员</span>
+                  <a class="checkbox_a fr"><i class="qkyicon_14">&#xe619;</i></a>  
+                  </label>
+                  </div>
+                  <div class="col-sm-10 error_color fz_12 height30_line">该步骤的办理人作为本流程的流程管理员。流程管理员具有结束流程、跳转流程的权限</div>
+                </div>
+              </div>
+              
+              <div class="col-sm-8 col-sm-offset-2  error_color mt10 mb20"> 
+                <div>温馨提示：</div>
+                <div>1、 [ 用户 ]、[ 角色 ] 两项只需要填写其中一项进行对经办人设置。</div>
+                <div>2、勾选[提交申请人] 表示在[ 用户 ]、[ 角色 ]都不填的情况下，流程的发起人就是办理候选人。</div>
+                <div>3、如果以上都不设置的情况下，系统默认不限定候选人，即采用弹出面板方式供用户选择。</div>
+              </div>
+
+             
+              </form>
+             
+              <div class="t_c">
+                <a class="btn btn-primary mr20">保存</a>
+                <a class="btn btn-default" href="oa_flowmange_gzldyadd_four.html">返回</a>
+              </div>
+           </div>
+           
+
+         </div>
+         <div class="pt20"></div>                  
+     </div>    
+     
+
+        
+    <script src="../dist/jq/1.11.1/jquery.min.js"></script>
+    <!--模块化js-->
+    <script src="../dist/sea.js"></script>
+    <script src="../dist/seaconfig.js"></script>
+    <script src="../dist/laydate/laydate.js"></script>
+    <script>
+	 seajs.use(["bs","oascd/folwmange","d-dw","d-ra_ch"],
+	 function(bs,fm,d,rc){
+		 rc.rach_run(function(u){
+			u.parents("tbody").find(".radio-qky").not(u).removeClass("select");	 
+		},function(u){});
+	 });
+    </script>
+  </body>
+</html>
