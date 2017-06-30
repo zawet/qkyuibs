@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="qky2.ico">
+    <title>全课云—毕业生网上报到系统</title>
+    <!-- Bootstrap 基础样式 CSS -->
+    <link href="dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+    
+    <!--全课云基础样式覆盖-->
+    <link href="css/iconfont.css" rel="stylesheet">
+    <link href="css/qkybase1.3.css" rel="stylesheet">
+    <link href="css/quickcss.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="qkybody ff_background">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="qkynav"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container_left col-sm-4">
+                <div class="row">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <ul class="container_left_nav">
+                        <li class="nav_title">报到步骤</li>
+                        <li >
+                            <a href="index.html">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td><div class="xu">1</div></td><td><label>第一步</label></td><td><span>阅读注意事项填写身份证号</span></td></tr>
+                            </table>
+                            </a>
+                        </li>
+                        <li><a href="index_dj.html">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td><div class="xu">2</div></td><td><label>第二步</label></td><td><span>毕业生报到情况登记表</span></td></tr>
+                            </table></a>
+                        </li>
+                        <li><a href="index_qr.html">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td><div class="xu">3</div></td><td><label>第三步</label></td><td><span>确认您所填写资料的正确性</span></td></tr>
+                            </table></a>
+                        </li>
+                        <li class=" active"><a href="index_cy.html">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td><div class="xu">4</div></td><td><label>第四步</label></td><td><span>参与问卷调查</span></td></tr>
+                            </table></a>
+                        </li>
+                        <li><a href="index_wc.html">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                            <tr><td><div class="xu">5</div></td><td><label>第五步</label></td><td><span>完成报道</span></td></tr>
+                            </table></a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container_right col-sm-8 col-sm-offset-4">
+            <div class="wj_pull">
+            <label>问卷调查</label>
+            <p class="one"></p><p></p><p></p><p></p><p></p><p></p><p></p><p class="wei"></p>
+            <p class="one"></p><p></p><p></p><p></p><p></p><p></p><p class="wei"></p>
+            <p class="one"></p><p></p><p></p><p class="wei"></p>
+            
+            <div class="t_c">
+            <a class="btn btn-success goto_wj" data-toggle="modal" data-target="#goto_wj">点击参与调查</a>
+            <a class="btn btn-default disabled ispass">我已参与</a>
+            </div>
+            </div>
+            
+                
+                
+            </div>
+        </div> 
+    </div>
+    <div class="footer inverse">全通教育集团（广东）股份有限公司  版权所有  ©2007-2015</div>
+    
+    
+    <!--模态窗口 Modal -->
+    <div class="modal fade" id="goto_wj" tabindex="-1" role="dialog" aria-labelledby="dbtit" aria-hidden="true">
+      <div class="modal-dialog modal-xs">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title fz_we" id="dbtit">提示</h4>
+          </div>
+          <div class="modal-body modal_auto">
+              您还没参与调查问卷，请先前往参与问卷调查
+          </div>
+          <div class="modal-footer">
+          	<button type="button" class="btn  btn-success"  data-dismiss="modal">前往参与</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="dist/jq/1.11.1/jquery.min.js"></script>
+    <!--模块化js-->
+    <script src="dist/sea.js"></script>
+    <script src="dist/seaconfig.js"></script>
+    <script>
+     seajs.use(["bs","nav","navicon"],function(){
+		 $("#qkynav").qkynav({isinfo:false,morebtn:false});
+	 	$(".goto_wj").on("click",function(){
+			$(".ispass").removeClass("disabled").removeClass("btn-default").addClass("btn-success");
+		})
+	 });
+    </script>
+  </body>
+</html>

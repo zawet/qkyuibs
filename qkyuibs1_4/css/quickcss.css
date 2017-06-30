@@ -12,6 +12,7 @@
 .po_r{ position:relative;}
 .po_ab{ position:absolute; top:0; left:0;}
 .po_ab_r{ position:absolute; top:0; right:0;}
+.po_ab_rb{position:absolute; top:100%; right:0;}
 .zindex{ z-index:10}
 .kuai{ display:block;}
 .kuai_line{ display:inline-block;}
@@ -28,14 +29,27 @@
 .t_c{ text-align:center !important;}
 .t_l{ text-align:left !important;}
 .t_r{ text-align:right !important;}
+
+.bor_b{ border-bottom:1px solid;}
+.bor_t{ border-top:1px solid;}
+.bor_r{ border-right:1px solid;}
+.bor_l{ border-left:1px solid;}
+.bor_a{border:1px solid;}
 .bor_nb{ border-bottom:none !important;}
 .bor_nt{ border-top:none !important;}
+.bor_nr{ border-right:none !important;}
+.bor_nl{ border-left:none !important;}
 .atd a:hover,.atd:hover{ text-decoration:inherit; cursor:pointer;}
 .wd100{ width:100%;}
 .maxw{margin:0 auto; max-width:96%;}
 @media (min-width: 768px) {
 .maxw{ max-width:80%; }
 }
+
+.wd50{width:50%;}
+.wd80{width:80%;}
+.wd100{ width:100%;}
+
 .co_a3{ color:#a3a3a3!important;}
 .co_93{ color:#939393!important;}
 .co_83{ color:#838383!important;}
@@ -93,6 +107,7 @@
 .ma10{ margin:10px!important;}
 .ma15{ margin:15px!important;}
 .ma20{ margin:20px!important;}
+.mauto{ margin-left:auto!important;margin-right:auto!important;}
 
 
 .pt0{ padding-top:0px!important;}

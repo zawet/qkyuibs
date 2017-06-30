@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="qky2.ico">
+<title>全课云UI</title>
+<link href="js/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+
+<!--全课云基础样式覆盖-->
+<link href="css/iconfont2.0.css" rel="stylesheet">
+<link href="css/qkybase2.0.css" rel="stylesheet">
+<link href="css/gzglbase.css" rel="stylesheet">
+<link href="css/quickcss2.0.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="qkybody">
+<div id="qkynav"></div>
+<div class="container-xl">
+  <div class="qkycadr pa20 mt20 mb20">
+    <h4 class="page-header mt0 pb10 mb0 clear">
+        <span class="height30_line fl">导入数据</span>
+    </h4>
+
+      <div class="steps steps_l">
+      <a class="active" toshow="one"><b></b><em>1</em><span>上传文件</span></a>
+      <a toshow="two"><b></b><em>2</em><span>验证数据</span></a>
+      <a toshow="three"><b></b><em>3</em><span>数据重复</span></a>
+      <a toshow="four"><em>4</em><span>查看结果</span></a>
+      </div>
+
+	<div class="steps_mian wd80 mauto open" isid="one">
+      <form class="form-horizontal mt20">
+        <div class="row">
+         <div class="col-sm-8 col-sm-offset-2">
+            <div class="form-group ">
+              <label class="col-sm-2 control-label pa0 lh30">工资模板：</label>
+              <div class="col-sm-10 ">
+                <div class="dropdown qkydropdown havechoose">
+                  <a class="btn btn-default dropdown-toggle auto" id="dropdownMenu1" data-toggle="dropdown">
+                    <span class="value">请选择模板</span>
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation"><a>请选择模板</a></li>
+                    <li role="presentation"><a>2017年工资模板</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="form-group ">
+              <label class="col-sm-2 control-label pa0 lh30">模板下载：</label>
+              <div class="col-sm-10 ">
+                <a class="btn btn-primary">点击下载</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="form-group ">
+              <label class="col-sm-2 control-label pa0 lh30">选择导入文件：</label>
+              <div class="col-sm-10 ">
+                 <div class="input-group"> 
+                  <input type="text" class="form-control file">
+                  <span class="input-group-btn">
+                  <a class="btn btn-primary po_r btn_file" role="button">浏览上传<input type="file" class="ycfile"></a>
+                  </span>
+                 </div>
+              </div>
+              
+            </div>
+          </div>
+          
+        <div class="col-sm-7 col-sm-offset-3 error_color mb15 lh22">
+            <span class="kuai">温馨提示：</span>
+            <span class="kuai">1、如果没能找到合适的模板,请到“工资模板管理”处进行添加；</span>
+            <span class="kuai">2、模板的标题部分需要分成两行,有且只能分成两行；</span>
+            <span class="kuai">3、工资模板必须包含五个标准项目（年月、姓名、应发合计、应扣合计、实发金额）和其他自定义项目; 特别指出：五个标准项目（年月、姓名、应发合计、应扣合计、实发金额）必须各自独立一列，具体见模板</span> 
+            <span class="kuai">4、列表表头项目名称不能重复</span>
+            <span class="kuai">5、同名同姓的用户的手机号项目必填</span>
+        </div>
+
+          <div class="col-sm-12 t_c">
+            <a class="btn btn-primary mr20 next_step" data-toggle="modal" data-target="#data_tips" >下一步</a>
+            <a class="btn btn-default" href="javascript:history.go(-1)">退出导入</a>
+          </div>
+        </div>
+      </form>
+	</div>
+    <div class="steps_mian wd80 mauto" isid="two">
+      <form class="form-horizontal mt20">
+        <div class="row">
+         <div class="col-sm-8 col-sm-offset-2">
+            <div class="form-group ">
+              <label class="col-sm-2 control-label pa0 lh30">标准项目验证：</label>
+              <div class="col-sm-10 ">
+                <div class="lh30 mian_color">共包括五个标准项目：年月、姓名、应发合计、应扣合计、实发金额，已经验证成功。</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="form-group ">
+              <label class="col-sm-2 control-label pa0 lh30">自定义项目验证：</label>
+              <div class="col-sm-10 ">
+                <div class="lh30 mian_color">共包括【4】个自定义项目，已经成功验证。</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="form-group ">
+              <label class="col-sm-2 control-label pa0 lh30">数据验证结果：</label>
+              <div class="col-sm-10 ">
+                <div class="lh30 mian_color">共包括14条数据，<span class="error_color">其中错误数据2条</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="form-group ">
+              <label class="col-sm-2 control-label pa0 lh30">错误数据：</label>
+              <div class="col-sm-10 ">
+                <div class="lh30 error_color">陈奇错误信息 : 陈奇不存在;</div>
+                <div class="lh30 error_color">刘微姗错误信息 : 刘微姗不存在;</div>
+              </div>
+            </div>
+          </div>
+          
+        <div class="col-sm-7 col-sm-offset-3 error_color mb15 lh22">
+            <span class="kuai">温馨提示：</span>
+            <span class="kuai">1、数据验证主要是验证数据的格式、类型是否正确，不对数据之间的逻辑进行验证。验证有误无法继续导入数据</span>
+        </div>
+
+          <div class="col-sm-12 t_c"> 
+            <a class="btn btn-primary mr20 next_step">下一步</a>
+            <a class="btn btn-default" href="javascript:history.go(-1)">退出导入</a>
+          </div>
+        </div>
+      </form>
+	</div>
+    <div class="steps_mian wd80 mauto" isid="three">
+      <form class="form-horizontal mt20">
+        <div class="row">
+         <div class="col-sm-8 col-sm-offset-2">
+            <div class="form-group ">
+              <label class="col-sm-2 control-label pa0 lh30">数据验证结果：</label>
+              <div class="col-sm-10 ">
+                <div class="lh30 mian_color">共包括14条数据，<span class="error_color">其中错误数据2条</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="form-group ">
+              <label class="col-sm-2 control-label pa0 lh30">模板：</label>
+              <div class="col-sm-10 ">
+                <div class="lh30 co_53">2017年5月工资模板</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="form-group ">
+              <label class="col-sm-2 control-label pa0 lh30">重复数据：</label>
+              <div class="col-sm-10 ">
+                <div class="lh30 error_color">共计2条</div>
+              </div>
+              <div class="col-sm-10 col-sm-offset-2">
+                <select multiple class="form-control">
+                  <option>2017-05 陈奇</option>
+                  <option>2017-05 刘微删</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+        <div class="col-sm-7 col-sm-offset-3 error_color mb15 lh22">
+            <span class="kuai">温馨提示：</span>
+            <span class="kuai">1、数据验证重复指的是同一模板，同个月份，同一用户的数据已经存在，导入数据中有相同的内容</span>
+        </div>
+
+          <div class="col-sm-12 t_c">
+            <a class="btn btn-primary mr20 next_step">下一步</a>
+            <a class="btn btn-default" href="javascript:history.go(-1)">退出导入</a>
+          </div>
+        </div>
+      </form>
+	</div>
+    <div class="steps_mian wd80 mauto" isid="four">
+      
+            <div class=" t_c lh26 pa20">
+            <div class="fz_16 fz_we">数据导入结果：数据导入完成！</div>
+            <div>文件中包括【14】条数据；</div>
+            <div class="mian_color">已经成功导入【14】条数据。</div>
+            </div>
+         
+
+          <div class=" t_c">
+            <a class="btn btn-primary mr20"> 完成</a>
+            
+          </div>  
+	</div>
+
+  </div>
+</div>
+<div class="footer default">全通教育集团（广东）股份有限公司  版权所有  ©2007-2015</div>
+
+
+<div class="modal fade" id="data_tips" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="group_deleteLabel">数据验证</h4>
+              </div>
+              <div class="modal-body modal_auto t_c error_color">
+                模板验证错误，请重新上传文件
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!--模块化js--> 
+<script src="js/sea.js"></script> 
+<script src="js/seaconfig2.0.js"></script> 
+<script>
+     seajs.use(["jq","bs","nav","upfile","steps"],function(j,b,n){
+		 opt.navli_j[1].isactive=true;
+		 $("#qkynav").qkynav(opt);
+	});
+    </script>
+</body>
+</html>

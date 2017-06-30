@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="qky2.ico">
+    <link rel="icon" href="../qky2.ico">
     <title>全课云UI</title>
     <!-- Bootstrap 基础样式 CSS -->
     <link href="../dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
@@ -23,13 +23,14 @@
     <![endif]-->
   </head>
   <body class="oabasebg">
-     <div class="scrrol_box pl15"> 
+     <div class="scrrol_box pl15">
+     				
                         <div class="setting_box qkycadr">
                             <h3>个人设置</h3>
-                            
-                            <form>
+                            <form class="form-horizontal"> 
                               <div class="form-group">
-                                <label >姓名：</label>
+                              
+                                <label>姓名：</label>
                                 <input type="text" class="form-control"  value="王霖" readonly>
                               </div>
                               <div class="form-group">
@@ -39,36 +40,35 @@
                               <div class="form-group">
                                 <label>职位：</label>
                                 <input type="text" class="form-control"  value="教师" readonly>
-                              </div>
-                            </form>
-                           
+                              </div>    
+                              </form>
                         </div>
                         <div class="setting_box qkycadr">
                             <h3>常用审批意见</h3>
-                            
-                            <form>
+                            <form class="form-horizontal"> 
                               <div class="form-group tips_box"> 
                                   <label class="mr10 po_r"><span>同意</span></label>
                                   <label  class="mr10 po_r"><span>不同意</span></label>
                               </div>
                               <div class="form-group">
-                                <label>新增审批意见：</label>
-                                <textarea class="form-control" rows="4" id="tips_create"></textarea>
+                                <label >新增审批意见：</label>
+                                
+                                <textarea class="form-control po_r" rows="4" id="tips_create"></textarea>
+                                
                               </div>
                               <div class="form-group">
-                                  <button type="submit" class="btn btn-primary">保存</button>
+                                  <button type="button" class="btn btn-primary">保存</button>
                               </div>
-                            </form>
-                            
+                              </form>    
                         </div>
                         
                         <div class="setting_box qkycadr">
                             <h3>工作流签名</h3>
-                            
-                            <form>
-                              <div class="signed_box"><img src="../images/timg.jpg"></div>
+                            <div class="signed_box"><img src="../images/timg.jpg"></div>
+                            <form class="form-horizontal"> 
+                              
                               <div class="form-group">
-                                <label>生成签名方式（本地签名图片上传）：</label>
+                                 <label>生成签名方式（本地签名图片上传）：</label>
                                  <div class="input-group"> 
                                   <input type="text" class="form-control file">
                                   <span class="input-group-btn">
@@ -77,9 +77,9 @@
                                  </div>
                               </div>
                               <div class="form-group">
-                                  <button type="submit" class="btn btn-primary">确定</button>
+                                  <button type="button" class="btn btn-primary">确定</button>
                               </div>
-                            </form> 
+                             </form>
                         </div>
                         <div class="pt20"></div>
                     </div>

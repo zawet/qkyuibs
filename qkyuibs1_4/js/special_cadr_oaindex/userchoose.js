@@ -6,7 +6,7 @@ define(function(require,exports) {
 	
 	var activeModal="";//缓存哪个元素点击弹窗的
 	var comfun=require("../common_cadr/com_function");
-	var rach_run=require("../common_cadr/radio_checkbox1.2");
+	var rach_run=require("../common_cadr/radio_checkbox1.4");
 	
 	//异步获取弹框
 	exports.userChoose_ajaxrun=function(radio,checkbox){

@@ -26,4 +26,22 @@ define(function(require,exports) {
 			$(".search_box").slideToggle(200);
 		});
 	}
+	
+	//简易小弹窗
+	exports.mask_poptips=function(clickid,text){
+		if($("body .mask_poptips").length<=0){
+		$("body").append('<div class="mask_poptips"><div></div></div>');
+		}
+		$("body").on("click",clickid,function(){
+			$(".mask_poptips").show().find("div").html(text);
+			setTimeout(function(){$(".mask_poptips").hide()},2000);
+		})
+	}
+	exports.tips=function(text){
+		if($("body .mask_poptips").length<=0)
+		$("body").append('<div class="mask_poptips"><div></div></div>');
+		$(".mask_poptips").show().find("div").html(text);
+		setTimeout(function(){$(".mask_poptips").hide()},2000);
+		
+	}
 });

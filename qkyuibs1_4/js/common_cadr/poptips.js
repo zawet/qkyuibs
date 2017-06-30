@@ -16,9 +16,9 @@ define(function(require,exports) {
 		"modalcontent_color":"mian_color",
 		"buttons":true,
 		"buttons_name":["确定","取消"],
-		"okeybutton_click":function(){},
+		"okeybutton_click":function(i){},
 		"modalsrc":	"../mould/poptips_mould.html"	
-	}
+	     }
 		if (!isValid(options))return this;
 		opts = $.extend({}, opts, options);//有传值进来后，进行对默认覆盖
 		
@@ -31,10 +31,15 @@ define(function(require,exports) {
 			$("#poptips_hc .modal-body").html(opts.modalcontent).addClass(opts.modalcontent_color);
 			
 			if(opts.buttons){
+				if(opts.buttons_name.lenght>1){
 				$("#poptips_hc .btn").eq(0).html(opts.buttons_name[0]);
 				$("#poptips_hc .btn").eq(1).html(opts.buttons_name[1]);
-				$("#poptips_hc #okeybtn").on("click",function(){
-					okeybutton_click();
+				}else{
+					$("#poptips_hc .btn").eq(0).html(opts.buttons_name[0]);
+					$("#poptips_hc .btn").eq(1).hide();
+				}
+				$("body").on("click","#"+opts.modalid+" .okeybtn",function(){
+					opts.okeybutton_click($(this));
 				});
 			}else{
 				$("#poptips_hc .modal-footer").addClass("yc");
