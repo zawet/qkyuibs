@@ -26,26 +26,47 @@
     <div class="container">
       
         <div class="box_ff pl20 pr20 pt10 pb10 mt10">
-          <h4 class="page-header mt5 mb10 clear">处理反馈</h4>
-          <div class="box_ff  pt20  pl20 pr20 mb20 cadr_hbg">
+			<h4 class="page-header mt5 mb0  clear"><span class="height30_line">处理反馈</span> <a class="btn btn-primary fr seachBtn">高级搜索</a></h4>
+			
+          <div class="seachBox">
               <form class="form-horizontal" role="form">
                   
                   <div class="form-group">
                     <label class="col-sm-3  col-lg-2 control-label">时间周期</label>
                     <div class="col-sm-8 col-lg-9">
+						<div class="row">
+						<div class="col-sm-6 col-xs-6">
+						<input type="text" class="form-control height30 laydate-icon" onClick="laydate()">  
+						</div>
+						<div class="col-sm-6 col-xs-6">
+						<input type="text" class="form-control height30 laydate-icon" onClick="laydate()">  
+						</div>
+						</div>
+                    </div>
+                    
+                    <label class="col-sm-3 col-lg-2 control-label mt15">处理状态</label>
+                    <div class="col-sm-8 col-lg-9 mt15">
                     <div class="row">
-                    <div class="col-sm-6 col-xs-6">
-                    <input type="text" class="form-control height30 laydate-icon" onClick="laydate()">  
-                    </div>
-                    <div class="col-sm-6 col-xs-6">
-                    <input type="text" class="form-control height30 laydate-icon" onClick="laydate()">  
-                    </div>
+						<div class="col-sm-6 col-xs-6">
+						 <div class="dropdown qkydropdown havechoose">
+							<a class="btn btn-default dropdown-toggle auto" data-toggle="dropdown">
+							 <span class="value">全部</span>
+							 <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							 <li role="presentation"><a>全部</a></li>
+							 <li role="presentation"><a>已处理</a></li>
+							 <li role="presentation"><a>未处理</a></li>
+							 <li role="presentation"><a>回退事件</a></li>
+							</ul>
+						   </div>
+						</div>
                     </div>
                     </div>
                   </div>
                   
                   <div class="form-group">
-                    <div class="col-sm-offset-3 col-sm-8 col-lg-9 col-lg-offset-2 ">
+                    <div class="col-sm-offset-3 col-sm-8 col-lg-9 col-lg-offset-2 t_c">
                       <a type="submit" class="btn btn-success">查询</a>
                       <a type="reset" class="btn btn-default ml15">重置</a>
                     </div>
@@ -54,25 +75,48 @@
           </div>
           
           
-          <div class="qkytable">
-          <div class="table-responsive  pt10 pb10">
+
+          <div class="pt10 pb10">
             <table class="table  table-hover table-bordered table-condensed" id="seache_end">
-            <thead><tr><th>序号</th><th>时间</th><th>内容</th><th>发现问题</th><th>反馈部门</th><th>处理结果</th><th>操作</th><th>值班人员</th></tr></thead>
+            <thead><tr><th width="5%">序号</th><th>反馈时间</th><th>内容</th><th>发现问题</th><th width="8%">反馈部门</th><th width="26%">处理措施</th><th width="8%">值班人员</th><th width="14%">处理状态</th></tr></thead>
             <tbody>
-                <tr>
-                    <td>1</td><td>2016-07-23 10：00</td><td>其他</td><td>外来领导访问接待</td><td>行政部</td><td>待处理</td>
-                    <td><a class="table_btn mr5" data-toggle="modal" data-target="#cljl_modal" ><i class="qkyicon_14 mr5">&#xe60f;</i>处理</a></td>
-                    <td>季新明</td>
+               <tr>
+                    <td>1</td><td>2017-06-30 11:34:00</td><td>校园环境</td><td>大操场有垃圾未清扫干净</td><td>物理组</td><td class="threeHang">已派遣人员清理</td><td>陈启泰</td>
+                    <td >
+						<span class="app_color">回退事件</span>
+                    	<a class="table_btn  fr" data-toggle="modal" data-target="#ckht_modal" ><i class="qkyicon_14 ml5 mr5">&#xe6b0;</i>查看</a>
+                    </td>
                 </tr>
                 <tr>
-                    <td>2</td><td>2016-07-21 10：00</td><td>其他</td><td>人员接待</td><td>行政部</td><td>已作出安排</td>
-                    <td><a class="table_btn mr5" data-toggle="modal" data-target="#editjl_modal" ><i class="qkyicon_14 mr5">&#xe60f;</i>编辑</a></td>
-                    <td>王曙光</td>
+                    <td>2</td><td>2017-05-24 10:00:00</td><td>午休</td><td>喧闹</td><td>物理组</td><td class="threeHang">已处理</td><td>陈启泰</td>
+                    <td>
+                        <span class="mian_color">已处理</span>
+                        <a class="table_btn  fr" data-toggle="modal" data-target="#editjl_modal" ><i class="qkyicon_14 ml5 mr5">&#xe60f;</i>编辑</a>
+                    </td>
+                    
                 </tr>
+                <tr>
+                    <td>3</td><td>2017-05-18 18:00:00</td><td>食堂秩序</td><td>新增一条</td><td>综合组</td><td class="threeHang">未处理</td><td>陈启泰</td>
+                    <td >
+                        <span class="error_color">未处理</span>
+                        <a class="table_btn fr" data-toggle="modal" data-target="#cljl_modal" ><i class="qkyicon_14 ml5 mr5">&#xe60f;</i>处理</a>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>4</td><td>2017-05-24 10:00:00</td><td>午休</td><td>喧闹</td><td>物理组</td>
+                    <td ><div class="threeHang">人生有很多个路口，我们会遇到很多人，有时候，以为某个人就是我们的终点，其实不然，或许我们也只是萍水相逢的过客而已，在彼此的生命长河中泛起点点涟漪，最后又悄然离去，走向不同的远方，遇见未知的人和事。</div></td>
+                    <td>陈启泰</td>
+                    <td >
+                        <span class="error_color">未处理</span>
+                        <a class="table_btn fr" data-toggle="modal" data-target="#cljl_modal" ><i class="qkyicon_14 ml5 mr5">&#xe60f;</i>处理</a>
+                    </td>
+                </tr>
+                
             </tbody>
             </table>
           </div>
-          </div>
+
           <div class="qkypage row mt10 mb10" >
               <div class="col-md-2 col-sm-3 pageinfo">1-10 of 48 项目</div>
               <div class="col-md-8 col-sm-7 col-md-offset-2 col-sm-offset-2 col-xs-8 col-xs-offset-4">
@@ -98,45 +142,105 @@
     
 <!--模态窗口 Modal -->
 
-<div class="modal fade" id="cljl_modal" tabindex="-1" role="dialog" aria-labelledby="dbtit" aria-hidden="true">
+    <div class="modal fade" id="cljl_modal" tabindex="-1" role="dialog" aria-labelledby="dbtit" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             <h4 class="modal-title" id="dbtit">处理记录</h4>
           </div>
-          <div class="modal-body modal_auto">
+          <div class="modal-body modal_auto pb0">
               <form class="form-horizontal" role="form">
               	 <div class="form-group">
                     <label class="col-sm-4  col-lg-3 control-label">时间：</label>
-                    <div class="col-sm-6 col-lg-8">
+                    <div class="col-sm-6 col-lg-8 pl0">
                     <input type="text" class="form-control height30 " value="2016-07-23 10:00" readonly>  
                     </div>
                   </div>
                    <div class="form-group">
                       <label class="col-sm-4 col-lg-3 control-label">内容：</label>
-                      <div class="col-sm-6 col-lg-8">
+                      <div class="col-sm-6 col-lg-8 pl0">
                     <input type="text" class="form-control height30 " value="其他" readonly>  
                     </div>
                   </div>
                   
                   <div class="form-group ">
                     <label class="col-sm-4  col-lg-3 control-label">发现问题：</label>
-                    <div class="col-sm-6 col-lg-8">
-                    <input type="text" class="form-control height30" value="外来领导访问接待" readonly>  
+                    <div class="col-sm-6 col-lg-8 pl0">
+                    <textarea class="form-control" rows="3" readonly>外来领导访问接待</textarea>
                     </div>
                   </div>
                   <div class="form-group mb0">
-                    <label class="col-sm-4  col-lg-3 control-label">处理结果：</label>
-                    <div class="col-sm-6 col-lg-8">
-                    <textarea type="text" class="form-control" rows="6"></textarea>
+                    <label class="col-sm-4  col-lg-3 control-label">处理措施：</label>
+                    <div class="col-sm-6 col-lg-8 pl0">
+                    <textarea type="text" class="form-control textBox" rows="4"></textarea>
                     </div>
+					<div class="t_r col-sm-10 col-lg-11"><span class="textNum">0</span>/200</div>
                   </div>
                   
               </form>
           </div>
           <div class="modal-footer">
           	<button type="button" class="btn  btn-success">确定处理</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button> 
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="ckht_modal" tabindex="-1" role="dialog"  aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">查看回退</h4>
+          </div>
+          <div class="modal-body modal_auto pb0">
+              <form class="form-horizontal" role="form">
+              	 <div class="form-group">
+                    <label class="col-sm-4  col-lg-3 control-label">反馈人员：</label>
+                    <div class="col-sm-6 col-lg-8  pl0">
+                    <input type="text" class="form-control height30 " value="陈启泰" readonly>  
+                    </div>
+                  </div>
+                   <div class="form-group">
+                      <label class="col-sm-4 col-lg-3 control-label">处理人员：</label>
+                      <div class="col-sm-6 col-lg-8 pl0">
+                    <input type="text" class="form-control height30 " value="陈启泰" readonly>  
+                    </div>
+                  </div>
+                  
+                  <div class="form-group ">
+                    <label class="col-sm-4  col-lg-3 control-label">内容：</label>
+                    <div class="col-sm-6 col-lg-8 pl0">
+                    <input type="text" class="form-control height30" value="校园环监" readonly>  
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <label class="col-sm-4  col-lg-3 control-label">发现问题：</label>
+                    <div class="col-sm-6 col-lg-8 pl0">
+                    <input type="text" class="form-control height30" value="大操场有垃圾未清扫干净" readonly>  
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <label class="col-sm-4  col-lg-3 control-label">回退审评：</label>
+                    <div class="col-sm-6 col-lg-8 pl0">
+                    <textarea type="text" class="form-control " rows="3" readonly>要把具体派遣了谁说清楚，不然责任没办法落实。</textarea> 
+                    
+                    </div>
+                  </div>
+                  <div class="form-group mb0">
+                    
+                    <div class="col-sm-10 col-sm-offset-1">
+                    <textarea type="text" class="form-control textBox" rows="4">已派遣人员清理</textarea>
+                    </div>
+                    <div class="t_r col-sm-10 col-sm-offset-1"><span class="textNum">7</span>/200</div>
+                  </div>
+                  
+              </form>
+          </div>
+          <div class="modal-footer">
+          	<button type="button" class="btn  btn-success" id="okey">确定处理</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">取消</button> 
           </div>
         </div>
@@ -150,32 +254,33 @@
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             <h4 class="modal-title">编辑记录</h4>
           </div>
-          <div class="modal-body modal_auto">
+          <div class="modal-body modal_auto pb0">
               <form class="form-horizontal" role="form">
               	 <div class="form-group">
                     <label class="col-sm-4  col-lg-3 control-label">时间：</label>
-                    <div class="col-sm-6 col-lg-8">
+                    <div class="col-sm-6 col-lg-8 pl0">
                     <input type="text" class="form-control height30 " value="2016-07-23 10:00" readonly>  
                     </div>
                   </div>
                    <div class="form-group">
                       <label class="col-sm-4 col-lg-3 control-label">内容：</label>
-                      <div class="col-sm-6 col-lg-8">
+                      <div class="col-sm-6 col-lg-8 pl0">
                     <input type="text" class="form-control height30" value="其他" readonly>  
                     </div>
                   </div>
                   
                   <div class="form-group ">
                     <label class="col-sm-4  col-lg-3 control-label">发现问题：</label>
-                    <div class="col-sm-6 col-lg-8">
-                    <input type="text" class="form-control height30 " value="外来领导访问接待" readonly>  
+                    <div class="col-sm-6 col-lg-8 pl0">
+                    <textarea class="form-control" rows="3" readonly>外来领导访问接待</textarea>
                     </div>
                   </div>
                   <div class="form-group mb0">
-                    <label class="col-sm-4  col-lg-3 control-label">处理结果：</label>
-                    <div class="col-sm-6 col-lg-8">
-                    <textarea type="text" class="form-control" rows="6">已处理</textarea>
+                    <label class="col-sm-4  col-lg-3 control-label">处理措施：</label>
+                    <div class="col-sm-6 col-lg-8 pl0">
+                    <textarea type="text" class="form-control textBox" rows="4">已处理</textarea>
                     </div>
+                    <div class="t_r col-sm-10 col-lg-11"><span class="textNum">0</span>/200</div>
                   </div>
                   
               </form>
@@ -197,6 +302,40 @@
      seajs.use(["jq","bs","nav","dw"],function(){
 	  $("#qkynav").qkynav({navli_active:2});
 	  laydate.skin('zwt');
+		 $(".seachBtn").click(function(){
+			$(".seachBox").slideToggle(200);
+		 });
+		 $(".textBox").keyup(function(){
+			 
+			 var thisNumber=$(this).val().length;
+			 if(thisNumber>0)$(this).parents(".modal").find("#okey").removeClass("disabled"); else $(this).parents(".modal").find("#okey").addClass("disabled");
+			 if(thisNumber>200){$(this).val($(this).val().substring(0,200));thisNumber=200}
+		 	$(this).parents(".form-group").find(".textNum").html(thisNumber);
+		 })
+		 
+		 $(".threeHang").each(function(i) {
+            var thist=$(this).text();
+			$(this).attr("title",thist);
+			var thisHangNumber=Math.floor($(this).width()/14);
+			var haveShowNumber=thisHangNumber*3;
+			if(thist.length>haveShowNumber){
+				var temt1,temt2;
+				temt1=thist.substring(0,haveShowNumber-3);
+				$(this).html(temt1+"...");
+				//temt2=thist.substring(haveShowNumber-3);
+				//$(this).before("<div class='titleBox'>"+thist+"</div>").parent().addClass("po_r");
+				/*$(this).hover(function(){
+					$(this).addClass("open");
+					$(this).html(thist);
+					},function(){
+					 $(this).addClass("open");
+					 $(this).html(temt1+"...");
+				 })
+				*/
+			//console.log(thist.length,thisHangNumber,haveShowNumber,temt1,temt2);
+			}
+			
+        });
 	 });
 	
     </script>
