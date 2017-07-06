@@ -222,8 +222,9 @@
                   <div class="form-group">
                     <label class="col-sm-3  col-lg-2 control-label">发现问题：</label>
                     <div class="col-sm-8 col-lg-9">
-                    <textarea type="text" class="form-control" rows="6"></textarea>
+                    <textarea type="text" class="form-control textBox" rows="5"></textarea>
                     </div>
+                    <div class="t_r col-sm-8 col-sm-offset-3"><span class="textNum">0</span>/200</div>
                   </div>
                   <div class="form-group mb0">
                     <label class="col-sm-3  col-lg-2 control-label">处理人：</label>
@@ -291,6 +292,11 @@
      seajs.use(["jq","bs","nav","dw","sc2/btn_changeday","sc2/choose_avt"],function(j,b,rach){
 	  $("#qkynav").qkynav({navli_active:1});
 	  laydate.skin('zwt');
+	  $(".textBox").keyup(function(){
+			 var thisNumber=$(this).val().length;
+			 if(thisNumber>200){$(this).val($(this).val().substring(0,200));thisNumber=200}
+		 	$(this).parents(".form-group").find(".textNum").html(thisNumber);
+		 })
 
 	 });  
     </script>
