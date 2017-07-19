@@ -327,3 +327,7 @@ h4.header_title{ border-bottom:1px dashed #d8d8d8; padding:10px 0; margin:0; lin
 
 .bds_box{ border:1px dashed #d8d8d8; border-radius:4px; padding:10px; background:#f9f9f9; }
 .bds_libtn{ float:left; padding:5px 10px; background:#fff; border-radius:4px; margin-right:10px;}
+
+.nav-btnDlink .btn{ color:#333; border:none;border-bottom:2px solid #fff; padding:6px 15px 4px; font-size:16px; box-shadow:none; border-radius:0;}
+.nav-btnDlink .btn.active,.nav-btnDlink .btn:hover{ border-color:#2baf2b; color:#2baf2b;}
+

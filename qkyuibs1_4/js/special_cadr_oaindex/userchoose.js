@@ -99,7 +99,11 @@ define(function(require,exports) {
 					$("#userlist tbody").append($("#userlist_mould tbody").html());
 				}
 			}
-			$("input[showid='"+activeModal+"']").val(usertext);
+			if(activeModal=="userText"){
+				$("textarea."+activeModal).val(usertext);
+			}else{
+				$("input[showid='"+activeModal+"']").val(usertext);
+			}
 		})
 	}
 	

@@ -31,9 +31,10 @@ define(function(require,exports) {
 			$("#poptips_hc .modal-body").html(opts.modalcontent).addClass(opts.modalcontent_color);
 			
 			if(opts.buttons){
-				if(opts.buttons_name.lenght>1){
-				$("#poptips_hc .btn").eq(0).html(opts.buttons_name[0]);
-				$("#poptips_hc .btn").eq(1).html(opts.buttons_name[1]);
+				//console.log(opts.buttons_name);
+				if(opts.buttons_name.length>1){
+					$("#poptips_hc .btn").eq(0).html(opts.buttons_name[0]);
+					$("#poptips_hc .btn").eq(1).html(opts.buttons_name[1]).show();
 				}else{
 					$("#poptips_hc .btn").eq(0).html(opts.buttons_name[0]);
 					$("#poptips_hc .btn").eq(1).hide();

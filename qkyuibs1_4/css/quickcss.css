@@ -29,7 +29,7 @@
 .t_c{ text-align:center !important;}
 .t_l{ text-align:left !important;}
 .t_r{ text-align:right !important;}
-
+.mh300{ min-height:300px;}
 .bor_b{ border-bottom:1px solid;}
 .bor_t{ border-top:1px solid;}
 .bor_r{ border-right:1px solid;}
@@ -60,6 +60,7 @@
 .co_33{ color:#333333!important;}
 
 .fz_we{ font-weight:bold!important;}
+.fz_nw{ font-weight: normal!important;}
 .fz_12{ font-size:12px!important;}
 .fz_14{ font-size:14px!important;}
 .fz_16{ font-size:16px!important;}
