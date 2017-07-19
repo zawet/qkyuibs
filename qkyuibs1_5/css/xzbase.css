@@ -66,3 +66,10 @@
 .OA_calendar_times .times_control:hover .time_chooseicon{ display:block;}
 .OA_calendar_times .times_control i{ display:block; line-height:15px; height:15px; font-size:16px; cursor:pointer; color:#2baf2b;}
 .OA_calendar_times .times_control i:hover{ color:#737373;color:#72D572;}
+
+
+.seachBox{ background:#f4f4f4; border: 1px solid #d8d8d8; display: none; padding: 20px 20px 0;  margin-bottom: 15px;}
+.threeHang{ max-height:60px; overflow:hidden;}
+.threeHang.open{ max-height: none; overflow: auto;}
+.titleBox{ position:absolute; top:0; left:0; display:none; width:100%; padding:15px; z-index:5; background:#f5f5f5; border-radius:4px;}
+td.po_r:hover .titleBox{ display:block;}
