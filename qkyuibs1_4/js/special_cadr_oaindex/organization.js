@@ -92,7 +92,7 @@ define(function(require,exports) {
 				errorNumber++;
 			}
         });
-		console.log(errorNumber);
+		//console.log(errorNumber);
 		if(errorNumber<=0){isPass=true;}else{isPass=false;}
 		return isPass;
 	}	
