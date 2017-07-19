@@ -24,8 +24,8 @@
 
 /*窗口右边框架*/
 .windows_mian_right{height:100%; position:absolute; right:0; overflow: hidden; padding-bottom:101px;}
-.right_box{ width:100%; height:100%;position:absolute; right:0;padding-bottom:101px; z-index:1001;transform:translateY(100%);}
-.right_box.open{ z-index:1002;transform:translateY(0);}
+.right_box{ width:100%; height:100%;position:absolute; right:0;padding-bottom:101px; z-index:1001;}
+.right_box.open{ z-index:1002;}
 
 /*窗口标签转换*/
 .windows_bar{ padding-left:0; position:fixed; top:51px; right:0; z-index:1002; overflow-y:auto; min-height:100%;}
@@ -90,9 +90,9 @@
 .OA_calendar_mian .table>tbody>tr>td a,
 .group_changebox,
 .userChoose_list{
-	-webkit-transition: all 0.25s ease-out 0s;
-	-moz-transition: all 0.25s ease-out 0s;
-	transition: all 0.25s ease-out 0s;
+	-webkit-transition: all  0.25s ease-out 0s;
+	-moz-transition: all  0.25s ease-out 0s;
+	transition: all  0.25s ease-out 0s;
 }
 
 /*透明度0%*/
@@ -317,8 +317,8 @@ h4.header_title{ border-bottom:1px dashed #d8d8d8; padding:10px 0; margin:0; lin
 
 
 
-.tips_box{ padding:15px; display: inline-block;background:#f5f5f5; border:1px solid #d8d8d8; border-radius:4px; position:absolute; z-index:99; top:100%; left:15px; display:none;}
-.tips_:hover .tips_box{ display:block;}
+.tips_ul{ padding:15px; display: inline-block;background:#f5f5f5; border:1px solid #d8d8d8; border-radius:4px; position:absolute; z-index:99; top:100%; left:15px; display:none;}
+.tips_:hover .tips_ul{ display:block;}
 
 .saveState{ padding:8% 0;  }
 
