@@ -28,7 +28,7 @@
 .right_box.open{ z-index:1002;}
 
 /*窗口标签转换*/
-.windows_bar{ padding-left:0; position:fixed; top:51px; right:0; z-index:1002; overflow-y:auto; min-height:100%;}
+.windows_bar{ padding-left:0; position:fixed; top:51px; right:0; z-index:1002; overflow: hidden; min-height:100%;}
 .windows_bar a{ display:block; width:90%; margin-left:5%; background:#f1f1f1; text-align:center; color:#737373; padding:15px 0; margin-top:10px; cursor:pointer;  border-radius:8px;position:relative;}
 .windows_bar a:hover,.windows_bar a:focus{ background:#fff;text-decoration:inherit;}
 .windows_bar a.active{ text-decoration:inherit; background:#eaf3e3; margin-left:-1px; border-left:none; border-radius:0 8px 8px 0; color:#2baf2b;}
