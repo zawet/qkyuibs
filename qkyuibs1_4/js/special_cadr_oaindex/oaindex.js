@@ -19,7 +19,7 @@ define(function(require,exports) {
 				$("#windows_mian_mould .windows_mian").attr("mould_id",mould_id);
 				$("#windows_bar_a_mould a").attr("bar_id",mould_id);
 				$("#windows_bar_a_mould span").html(mould_name);
-				$(".windows_bar").before($("#windows_mian_mould").html()).append($("#windows_bar_a_mould").html());
+				$(".windows_bar").before($("#windows_mian_mould").html()).find(".scrrol_box").append($("#windows_bar_a_mould").html());
 				$("#windows_mian_mould .windows_mian").attr("mould_id","");
 				$("#windows_bar_a_mould a").attr("bar_id","");
 				//对应模板叠加对于id的模块
