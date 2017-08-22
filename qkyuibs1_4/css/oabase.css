@@ -331,3 +331,4 @@ h4.header_title{ border-bottom:1px dashed #d8d8d8; padding:10px 0; margin:0; lin
 .nav-btnDlink .btn{ color:#333; border:none;border-bottom:2px solid #fff; padding:6px 15px 4px; font-size:16px; box-shadow:none; border-radius:0;}
 .nav-btnDlink .btn.active,.nav-btnDlink .btn:hover{ border-color:#2baf2b; color:#2baf2b;}
 
+.text_cue{ position:absolute; right:15px; top:0; line-height:30px; color:#939393; padding:0 10px;}
