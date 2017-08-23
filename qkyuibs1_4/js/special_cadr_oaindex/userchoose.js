@@ -87,6 +87,7 @@ define(function(require,exports) {
 	//点击确认选择按钮的事件
 	 function  userChoose_submit(id){
 		$("#userChoose_submit").on("click",function(){
+			
 			$('#groupuser_choose').modal('hide');
 			var userdata=[];
 			userdata=get_userChoose();
@@ -100,6 +101,7 @@ define(function(require,exports) {
 				}
 			}
 			if(activeModal=="userText"){
+				console.log(activeModal,usertext);
 				$("textarea."+activeModal).val(usertext);
 			}else{
 				$("input[showid='"+activeModal+"']").val(usertext);

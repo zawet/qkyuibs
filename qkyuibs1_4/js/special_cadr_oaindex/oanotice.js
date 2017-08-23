@@ -50,6 +50,17 @@ define(function(require,exports) {
 		isSelect("#isDel","#delete","#tipsOnly");
 	}
 	
+	exports.oanotice_lirun3=function(){
+
+		rach_run.rach_run(function(t){},function(t){});
+		
+		//创建弹层
+		poptips.poptips_run($("body"),{modalid:"tipsOnly",modaltitle:"提示",modalcontent:"请至少选择一条记录",buttons:true,buttons_name:["确定"]});
+		poptips.poptips_run($("body"),{modalid:"delete",modaltitle:"提示",modalcontent:"是否确认删除所选记录？",modalcontent_color:"error_color",buttons:true});
+		poptips.poptips_run($("body"),{modalid:"deleteSige",modaltitle:"提示",modalcontent:"是否确认删除？",modalcontent_color:"error_color",buttons:true});
+		isSelect("#isDel","#delete","#tipsOnly");
+	}
+	
 	exports.oanotice_lirun2=function(){
 		comfun.search_box_oc();
 		rach_run.rach_run(function(t){},function(t){});
