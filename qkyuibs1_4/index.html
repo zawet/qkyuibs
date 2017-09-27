@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="qky2.ico">
     <title>全课云OA</title>
     <!-- Bootstrap 基础样式 CSS -->
     <link href="dist/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
-    
+
     <!--全课云基础样式覆盖-->
     <link href="css/iconfont.css" rel="stylesheet">
     <link href="css/qkybase1.4.css" rel="stylesheet">
@@ -21,61 +22,65 @@
       <script src="dist/maxcdn/html5shiv.min.js"></script>
       <script src="dist/maxcdn/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body class="qkybody">
+</head>
+
+<body class="qkybody">
     <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="qkynav"></div>
     <div class="container-fluid">
-            <div class="windows_mian col-sm-11 trn open" mould_id="oa_index">
-                <div class="windows_mian_left col-sm-2 pr0">
-                    <div class="scrrol_box">
-                    
-                    	<div class="qkycadr row mt20 ml0 pb20">
-                            <div class="col-sm-12">
-                                <h3>王霖</h3>
-                                <p>所属部门：校园管理部门</p>
-                                <p>职位：教师</p>
-                            </div>
-                            <div class="col-sm-12 mb10"><button class="btn btn-primary auto  right_button" id="index_setting">个人设置</button></div>
-                            <div class="col-sm-12 mb10 yc"><button class="btn btn-primary auto  right_button" id="index_desktop">返回桌面</button></div>
-                            <div class="col-sm-12 t_r"><button class="btn btn-default auto ">后台管理</button></div> 
-                     	</div>
-                        <div class="pt20"></div>        
+        <div class="windows_mian col-sm-11 trn open" mould_id="oa_index">
+            <div class="windows_mian_left col-sm-2 pr0">
+                <div class="scrrol_box">
+
+                    <div class="qkycadr row mt20 ml0 pb20">
+                        <div class="col-sm-12">
+                            <h3>王霖</h3>
+                            <p>所属部门：校园管理部门</p>
+                            <p>职位：教师</p>
+
+                        </div>
+                        <div class="col-sm-12 mb10"><button class="btn btn-primary auto  right_button" id="index_setting">个人设置</button></div>
+                        <div class="col-sm-12 mb10 yc"><button class="btn btn-primary auto  right_button" id="index_desktop">返回桌面</button></div>
+                        <div class="col-sm-12 t_r"><button class="btn btn-default auto ">后台管理</button></div>
                     </div>
-                </div>
-                <div class="windows_mian_right index_ open col-sm-10 col-sm-offset-2">
-                   <div class="right_box open" box_id="index_desktop">
-                   		<iframe src="index/index_one.html" width="100%" height="100%" scrolling="no" frameborder=0 name="index_desktop"></iframe>
-                   </div>
-                   <div class="right_box" box_id="index_setting">
-                       <iframe src="index/index_two.html" width="100%" height="100%" scrolling="no" frameborder=0 name="index_setting"></iframe>
-                   </div>
+                    <div class="pt20"></div>
                 </div>
             </div>
-            
-            <div class="windows_bar col-sm-1 col-sm-offset-11">
+            <div class="windows_mian_right index_ open col-sm-10 col-sm-offset-2">
+                <div class="right_box open" box_id="index_desktop">
+                    <iframe src="index/index_one.html" width="100%" height="100%" scrolling="no" frameborder=0 name="index_desktop"></iframe>
+                </div>
+                <div class="right_box" box_id="index_setting">
+                    <iframe src="index/index_two.html" width="100%" height="100%" scrolling="no" frameborder=0 name="index_setting"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="windows_bar col-sm-1 col-sm-offset-11">
             <div class="scrrol_box po_ab" style=" padding-bottom:115px;">
-                <a class="active" bar_id="oa_index"><span>首页</span></a> 
-                </div>
+                <a class="active" bar_id="oa_index"><span>首页</span></a>
             </div>
+        </div>
     </div>
-    <div class="footer default">全通教育集团（广东）股份有限公司  版权所有  ©2007-2015</div>
-    
+    <div class="footer default">全通教育集团（广东）股份有限公司 版权所有 ©2007-2015</div>
+
 
     <!--窗口标签模版暂存-->
     <div class="yc" id="windows_bar_a_mould">
-    	<a><span></span><i class="qkyicon_14">&#xe618;</i></a>
+        <a><span></span><i class="qkyicon_14">&#xe618;</i></a>
     </div>
-    
+
     <!--整体窗口模版暂存-->
     <div class="yc" id="windows_mian_mould">
-    	<div class="windows_mian col-sm-11 trn">
-            <div class="windows_mian_left col-sm-2 pr0"><div class="scrrol_box pt15"></div></div>
+        <div class="windows_mian col-sm-11 trn">
+            <div class="windows_mian_left col-sm-2 pr0">
+                <div class="scrrol_box pt15"></div>
+            </div>
             <div class="windows_mian_right col-sm-10 col-sm-offset-2"></div>
         </div>
     </div>
-    
-    
-    
+
+
+
     <!--通讯录模块存放-->
     <div class="yc" id="oa_contacts_cadr">
         <!--左边模块存放-->
@@ -83,24 +88,24 @@
             <div class="menu_box qkycadr">
                 <h3>通讯录</h3>
                 <div class="menu_list">
-                  <a id="oa_contacts_in" class="menu_list_item active" ifsrc="contacts/contacts_in.html"><i class="qkyicon_14_">&#xe678;</i>内部通讯录</a>
-                  <a id="oa_contacts_groupset" class="menu_list_item" ifsrc="contacts/contacts_groupset.html"><i class="qkyicon_14_">&#xe606;</i>群组设置</a> 
+                    <a id="oa_contacts_in" class="menu_list_item active" ifsrc="contacts/contacts_in.html"><i class="qkyicon_14_">&#xe678;</i>内部通讯录</a>
+                    <a id="oa_contacts_groupset" class="menu_list_item" ifsrc="contacts/contacts_groupset.html"><i class="qkyicon_14_">&#xe606;</i>群组设置</a>
                 </div>
             </div>
-            <div class="pt20"></div>  
+            <div class="pt20"></div>
         </div>
         <!--右边边模块存放-->
         <div class="right_cadr">
             <div class="right_box open" box_id="oa_contacts_in">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_contacts_in"></iframe> 
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_contacts_in"></iframe>
             </div>
             <div class="right_box" box_id="oa_contacts_groupset">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_contacts_groupset"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_contacts_groupset"></iframe>
             </div>
             <div class="pt20"></div>
         </div>
     </div>
-    
+
     <!--公文模块存放-->
     <div class="yc" id="oa_document_cadr">
         <!--左边模块存放-->
@@ -108,36 +113,36 @@
             <div class="menu_box qkycadr">
                 <h3>公文</h3>
                 <div class="menu_list">
-                  <a id="oa_document_adddoc" class="menu_list_item active" ifsrc="document/oa_document_adddoc.html"><i class="qkyicon_14_">&#xe696;</i>新建公文</a>
-                  <a id="oa_document_waitdoc" class="menu_list_item" ifsrc="document/oa_document_waitdoc.html"><i class="qkyicon_14_">&#xe67a;</i>公文待办</a>
-                  <a id="oa_document_overdoc" class="menu_list_item" ifsrc="document/oa_document_overdoc.html"><i class="qkyicon_14_">&#xe69a;</i>公文已办</a>
-                  <a id="oa_document_mydoc" class="menu_list_item" ifsrc="document/oa_document_mydoc.html"><i class="qkyicon_14_">&#xe6a0;</i>我的公文</a>
-                  <a id="oa_document_logindoc" class="menu_list_item" ifsrc="document/oa_document_logindoc.html"><i class="qkyicon_14_">&#xe6a4;</i>收文登记</a>
+                    <a id="oa_document_adddoc" class="menu_list_item active" ifsrc="document/oa_document_adddoc.html"><i class="qkyicon_14_">&#xe696;</i>新建公文</a>
+                    <a id="oa_document_waitdoc" class="menu_list_item" ifsrc="document/oa_document_waitdoc.html"><i class="qkyicon_14_">&#xe67a;</i>公文待办</a>
+                    <a id="oa_document_overdoc" class="menu_list_item" ifsrc="document/oa_document_overdoc.html"><i class="qkyicon_14_">&#xe69a;</i>公文已办</a>
+                    <a id="oa_document_mydoc" class="menu_list_item" ifsrc="document/oa_document_mydoc.html"><i class="qkyicon_14_">&#xe6a0;</i>我的公文</a>
+                    <a id="oa_document_logindoc" class="menu_list_item" ifsrc="document/oa_document_logindoc.html"><i class="qkyicon_14_">&#xe6a4;</i>收文登记</a>
                 </div>
             </div>
-            <div class="pt20"></div>  
+            <div class="pt20"></div>
         </div>
         <!--右边边模块存放-->
         <div class="right_cadr">
             <div class="right_box open" box_id="oa_document_adddoc">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_document_adddoc"></iframe> 
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_document_adddoc"></iframe>
             </div>
             <div class="right_box" box_id="oa_document_waitdoc">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_document_waitdoc"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_document_waitdoc"></iframe>
             </div>
             <div class="right_box" box_id="oa_document_overdoc">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_document_overdoc"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_document_overdoc"></iframe>
             </div>
             <div class="right_box" box_id="oa_document_mydoc">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_document_mydoc"></iframe> 
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_document_mydoc"></iframe>
             </div>
             <div class="right_box" box_id="oa_document_logindoc">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_document_logindoc"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_document_logindoc"></iframe>
             </div>
             <div class="pt20"></div>
         </div>
     </div>
-    
+
     <!--流程模块存放-->
     <div class="yc" id="oa_flow_cadr">
         <!--左边模块存放-->
@@ -145,40 +150,40 @@
             <div class="menu_box qkycadr">
                 <h3>流程</h3>
                 <div class="menu_list">
-                  <a id="oa_flow_addflow" class="menu_list_item active" ifsrc="flow/oa_flow_addflow.html"><i class="qkyicon_14_">&#xe696;</i>新建流程</a>
-                  <a id="oa_flow_waitflow" class="menu_list_item" ifsrc="flow/oa_flow_waitflow.html"><i class="qkyicon_14_">&#xe67a;</i>待办流程</a>
-                  <a id="oa_flow_waitreadflow" class="menu_list_item" ifsrc="flow/oa_flow_waitreadflow.html"><i class="qkyicon_14_">&#xe679;</i>待阅流程</a>
-                  <a id="oa_flow_overflow" class="menu_list_item" ifsrc="flow/oa_flow_overflow.html"><i class="qkyicon_14_">&#xe69a;</i>已办流程</a>
-                  <a id="oa_flow_myflow" class="menu_list_item" ifsrc="flow/oa_flow_myflow.html"><i class="qkyicon_14_">&#xe6a0;</i>我的流程</a>
-                  <a id="oa_flow_flowcheck" class="menu_list_item" ifsrc="flow/oa_flow_flowcheck.html"><i class="qkyicon_14_">&#xe6a4;</i>流程查询</a>
+                    <a id="oa_flow_addflow" class="menu_list_item active" ifsrc="flow/oa_flow_addflow.html"><i class="qkyicon_14_">&#xe696;</i>新建流程</a>
+                    <a id="oa_flow_waitflow" class="menu_list_item" ifsrc="flow/oa_flow_waitflow.html"><i class="qkyicon_14_">&#xe67a;</i>待办流程</a>
+                    <a id="oa_flow_waitreadflow" class="menu_list_item" ifsrc="flow/oa_flow_waitreadflow.html"><i class="qkyicon_14_">&#xe679;</i>待阅流程</a>
+                    <a id="oa_flow_overflow" class="menu_list_item" ifsrc="flow/oa_flow_overflow.html"><i class="qkyicon_14_">&#xe69a;</i>已办流程</a>
+                    <a id="oa_flow_myflow" class="menu_list_item" ifsrc="flow/oa_flow_myflow.html"><i class="qkyicon_14_">&#xe6a0;</i>我的流程</a>
+                    <a id="oa_flow_flowcheck" class="menu_list_item" ifsrc="flow/oa_flow_flowcheck.html"><i class="qkyicon_14_">&#xe6a4;</i>流程查询</a>
                 </div>
             </div>
-            <div class="pt20"></div>  
+            <div class="pt20"></div>
         </div>
         <!--右边边模块存放-->
         <div class="right_cadr">
             <div class="right_box open" box_id="oa_flow_addflow">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flow_addflow"></iframe> 
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flow_addflow"></iframe>
             </div>
             <div class="right_box" box_id="oa_flow_waitflow">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flow_waitflow"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flow_waitflow"></iframe>
             </div>
             <div class="right_box" box_id="oa_flow_waitreadflow">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flow_waitreadflow"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flow_waitreadflow"></iframe>
             </div>
             <div class="right_box" box_id="oa_flow_overflow">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flow_overflow"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flow_overflow"></iframe>
             </div>
             <div class="right_box" box_id="oa_flow_myflow">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flow_myflow"></iframe> 
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flow_myflow"></iframe>
             </div>
             <div class="right_box" box_id="oa_flow_flowcheck">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flow_flowcheck"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flow_flowcheck"></iframe>
             </div>
             <div class="pt20"></div>
         </div>
     </div>
-    
+
     <!--日程模块存放-->
     <div class="yc" id="oa_schedule_cadr">
         <!--左边模块存放-->
@@ -186,30 +191,30 @@
             <div class="menu_box qkycadr">
                 <h3>日程</h3>
                 <div class="menu_list">
-                  <a id="oa_schedule_add" class="menu_list_item active" ifsrc="schedule/oa_schedule_add.html"><i class="qkyicon_14_">&#xe6d3;</i>新建日程</a>
-                  <a id="oa_schedule_weekview" class="menu_list_item" ifsrc="schedule/oa_schedule_weekview.html"><i class="qkyicon_14_">&#xe62d;</i>周历视图</a>
-                  <a id="oa_schedule_list" class="menu_list_item" ifsrc="schedule/oa_schedule_list.html"><i class="qkyicon_14_">&#xe6d5;</i>日程列表</a>
+                    <a id="oa_schedule_add" class="menu_list_item active" ifsrc="schedule/oa_schedule_add.html"><i class="qkyicon_14_">&#xe6d3;</i>新建日程</a>
+                    <a id="oa_schedule_weekview" class="menu_list_item" ifsrc="schedule/oa_schedule_weekview.html"><i class="qkyicon_14_">&#xe62d;</i>周历视图</a>
+                    <a id="oa_schedule_list" class="menu_list_item" ifsrc="schedule/oa_schedule_list.html"><i class="qkyicon_14_">&#xe6d5;</i>日程列表</a>
 
                 </div>
             </div>
-            <div class="pt20"></div>  
+            <div class="pt20"></div>
         </div>
         <!--右边边模块存放-->
         <div class="right_cadr">
             <div class="right_box open" box_id="oa_schedule_add">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_schedule_add"></iframe> 
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_schedule_add"></iframe>
             </div>
             <div class="right_box" box_id="oa_schedule_weekview">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_schedule_weekview"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_schedule_weekview"></iframe>
             </div>
             <div class="right_box" box_id="oa_schedule_list">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_schedule_list"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_schedule_list"></iframe>
             </div>
-            
+
             <div class="pt20"></div>
         </div>
     </div>
-    
+
     <!--短信模块存放-->
     <div class="yc" id="oa_message_cadr">
         <!--左边模块存放-->
@@ -217,30 +222,30 @@
             <div class="menu_box qkycadr">
                 <h3>短信</h3>
                 <div class="menu_list">
-                  <a id="oa_message_write" class="menu_list_item active" ifsrc="message/oa_message_write.html"><i class="qkyicon_14_">&#xe617;</i>写短信</a>
-                  <a id="oa_message_hassent" class="menu_list_item" ifsrc="message/oa_message_hassent.html"><i class="qkyicon_14_">&#xe759;</i>已发短信</a>
-                  <a id="oa_message_receive" class="menu_list_item" ifsrc="message/oa_message_receive.html"><i class="qkyicon_14_">&#xe6d4;</i>接收短信</a>
+                    <a id="oa_message_write" class="menu_list_item active" ifsrc="message/oa_message_write.html"><i class="qkyicon_14_">&#xe617;</i>写短信</a>
+                    <a id="oa_message_hassent" class="menu_list_item" ifsrc="message/oa_message_hassent.html"><i class="qkyicon_14_">&#xe759;</i>已发短信</a>
+                    <a id="oa_message_receive" class="menu_list_item" ifsrc="message/oa_message_receive.html"><i class="qkyicon_14_">&#xe6d4;</i>接收短信</a>
 
                 </div>
             </div>
-            <div class="pt20"></div>  
+            <div class="pt20"></div>
         </div>
         <!--右边边模块存放-->
         <div class="right_cadr">
             <div class="right_box open" box_id="oa_message_write">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_message_write"></iframe> 
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_message_write"></iframe>
             </div>
             <div class="right_box" box_id="oa_message_hassent">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_message_hassent"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_message_hassent"></iframe>
             </div>
             <div class="right_box" box_id="oa_message_receive">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_message_receive"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_message_receive"></iframe>
             </div>
-            
+
             <div class="pt20"></div>
         </div>
     </div>
-    
+
     <!--邮箱模块存放-->
     <div class="yc" id="oa_mail_cadr">
         <!--左边模块存放-->
@@ -248,40 +253,40 @@
             <div class="menu_box qkycadr">
                 <h3>邮件</h3>
                 <div class="menu_list">
-                  <a id="oa_mail_send" class="menu_list_item active" ifsrc="mail/oa_mail_send.html"><i class="qkyicon_14_">&#xe70f;</i>写邮件</a>
-                  <a id="oa_mail_collect" class="menu_list_item" ifsrc="mail/oa_mail_collect.html"><i class="qkyicon_14_">&#xe62f;</i>收件箱</a>
-                  <a id="oa_mail_hassent" class="menu_list_item" ifsrc="mail/oa_mail_hassent.html"><i class="qkyicon_14_">&#xe60a;</i>已发送</a>
-                  <a id="oa_mail_draft" class="menu_list_item" ifsrc="mail/oa_mail_draft.html"><i class="qkyicon_14_">&#xe62a;</i>草稿箱</a>
-                  <a id="oa_mail_dustbin" class="menu_list_item" ifsrc="mail/oa_mail_dustbin.html"><i class="qkyicon_14_">&#xe62c;</i>垃圾箱</a>
-                  <a id="oa_mail_myfile" class="menu_list_item" ifsrc="mail/oa_mail_myfile.html"><i class="qkyicon_14_">&#xe625;</i>我的文件</a>
+                    <a id="oa_mail_send" class="menu_list_item active" ifsrc="mail/oa_mail_send.html"><i class="qkyicon_14_">&#xe70f;</i>写邮件</a>
+                    <a id="oa_mail_collect" class="menu_list_item" ifsrc="mail/oa_mail_collect.html"><i class="qkyicon_14_">&#xe62f;</i>收件箱</a>
+                    <a id="oa_mail_hassent" class="menu_list_item" ifsrc="mail/oa_mail_hassent.html"><i class="qkyicon_14_">&#xe60a;</i>已发送</a>
+                    <a id="oa_mail_draft" class="menu_list_item" ifsrc="mail/oa_mail_draft.html"><i class="qkyicon_14_">&#xe62a;</i>草稿箱</a>
+                    <a id="oa_mail_dustbin" class="menu_list_item" ifsrc="mail/oa_mail_dustbin.html"><i class="qkyicon_14_">&#xe62c;</i>垃圾箱</a>
+                    <a id="oa_mail_myfile" class="menu_list_item" ifsrc="mail/oa_mail_myfile.html"><i class="qkyicon_14_">&#xe625;</i>我的文件</a>
                 </div>
             </div>
-            <div class="pt20"></div>  
+            <div class="pt20"></div>
         </div>
         <!--右边边模块存放-->
         <div class="right_cadr">
             <div class="right_box open" box_id="oa_mail_send">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_mail_send"></iframe> 
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_mail_send"></iframe>
             </div>
             <div class="right_box" box_id="oa_mail_collect">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_mail_collect"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_mail_collect"></iframe>
             </div>
             <div class="right_box" box_id="oa_mail_hassent">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_mail_hassent"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_mail_hassent"></iframe>
             </div>
             <div class="right_box" box_id="oa_mail_draft">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_mail_draft"></iframe> 
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_mail_draft"></iframe>
             </div>
             <div class="right_box" box_id="oa_mail_dustbin">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_mail_dustbin"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_mail_dustbin"></iframe>
             </div>
             <div class="right_box" box_id="oa_mail_myfile">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_mail_myfile"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_mail_myfile"></iframe>
             </div>
             <div class="pt20"></div>
         </div>
     </div>
-    
+
     <!--流程管理模块存放-->
     <div class="yc" id="oa_flowmange_cadr">
         <!--左边模块存放-->
@@ -289,36 +294,36 @@
             <div class="menu_box qkycadr">
                 <h3>流程管理</h3>
                 <div class="menu_list">
-                  <a id="oa_flowmange_mbgl" class="menu_list_item active" ifsrc="flowmange/oa_flowmange_mbgl.html"><i class="qkyicon_14_">&#xe694;</i>表单模板管理</a>
-                  <a id="oa_flowmange_gzldy" class="menu_list_item" ifsrc="flowmange/oa_flowmange_gzldy.html"><i class="qkyicon_14_">&#xe698;</i>工作流定义</a>
-                  <a id="oa_flowmange_lcfl" class="menu_list_item" ifsrc="flowmange/oa_flowmange_lcfl.html"><i class="qkyicon_14_">&#xe61d;</i>流程分类</a>
-                  <a id="oa_flowmange_gwzhgl" class="menu_list_item" ifsrc="flowmange/oa_flowmange_gwzhgl.html"><i class="qkyicon_14_">&#xe67b;</i>公文字号管理</a>
-                  <a id="oa_flowmange_gwmbgl" class="menu_list_item" ifsrc="flowmange/oa_flowmange_gwmbgl.html"><i class="qkyicon_14_">&#xe608;</i>公文模板管理</a>
+                    <a id="oa_flowmange_mbgl" class="menu_list_item active" ifsrc="flowmange/oa_flowmange_mbgl.html"><i class="qkyicon_14_">&#xe694;</i>表单模板管理</a>
+                    <a id="oa_flowmange_gzldy" class="menu_list_item" ifsrc="flowmange/oa_flowmange_gzldy.html"><i class="qkyicon_14_">&#xe698;</i>工作流定义</a>
+                    <a id="oa_flowmange_lcfl" class="menu_list_item" ifsrc="flowmange/oa_flowmange_lcfl.html"><i class="qkyicon_14_">&#xe61d;</i>流程分类</a>
+                    <a id="oa_flowmange_gwzhgl" class="menu_list_item" ifsrc="flowmange/oa_flowmange_gwzhgl.html"><i class="qkyicon_14_">&#xe67b;</i>公文字号管理</a>
+                    <a id="oa_flowmange_gwmbgl" class="menu_list_item" ifsrc="flowmange/oa_flowmange_gwmbgl.html"><i class="qkyicon_14_">&#xe608;</i>公文模板管理</a>
                 </div>
             </div>
-            <div class="pt20"></div>  
+            <div class="pt20"></div>
         </div>
         <!--右边边模块存放-->
         <div class="right_cadr">
             <div class="right_box open" box_id="oa_flowmange_mbgl">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flowmange_mbgl"></iframe> 
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flowmange_mbgl"></iframe>
             </div>
             <div class="right_box" box_id="oa_flowmange_gzldy">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flowmange_gzldy"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flowmange_gzldy"></iframe>
             </div>
             <div class="right_box" box_id="oa_flowmange_lcfl">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flowmange_lcfl"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flowmange_lcfl"></iframe>
             </div>
             <div class="right_box" box_id="oa_flowmange_gwzhgl">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flowmange_gwzhgl"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flowmange_gwzhgl"></iframe>
             </div>
             <div class="right_box" box_id="oa_flowmange_gwmbgl">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flowmange_gwmbgl"></iframe> 
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_flowmange_gwmbgl"></iframe>
             </div>
             <div class="pt20"></div>
         </div>
     </div>
-    
+
     <!--组织管理(对接uc)模块存放-->
     <div class="yc" id="oa_organizationUc_cadr">
         <!--左边模块存放-->
@@ -326,33 +331,33 @@
             <div class="menu_box qkycadr">
                 <h3>组织管理</h3>
                 <div class="menu_list">
-                  <a id="oa_organizationUc_user" class="menu_list_item active" ifsrc="organization_uc/oa_organization_user.html"><i class="qkyicon_14_">&#xe60c;</i>用户管理</a>
-                  <a id="oa_organizationUc_group" class="menu_list_item" ifsrc="organization_uc/oa_organization_group.html"><i class="qkyicon_14_">&#xe60b;</i>部门管理</a>
-                  <a id="oa_organizationUc_job" class="menu_list_item" ifsrc="organization_uc/oa_organization_job.html"><i class="qkyicon_14_">&#xe670;</i>职位管理</a>
-                  <a id="oa_organizationUc_out" class="menu_list_item" ifsrc="organization_uc/oa_organization_out.html"><i class="qkyicon_14_">&#xe684;</i>机构管理</a>
+                    <a id="oa_organizationUc_user" class="menu_list_item active" ifsrc="organization_uc/oa_organization_user.html"><i class="qkyicon_14_">&#xe60c;</i>用户管理</a>
+                    <a id="oa_organizationUc_group" class="menu_list_item" ifsrc="organization_uc/oa_organization_group.html"><i class="qkyicon_14_">&#xe60b;</i>部门管理</a>
+                    <a id="oa_organizationUc_job" class="menu_list_item" ifsrc="organization_uc/oa_organization_job.html"><i class="qkyicon_14_">&#xe670;</i>职位管理</a>
+                    <a id="oa_organizationUc_out" class="menu_list_item" ifsrc="organization_uc/oa_organization_out.html"><i class="qkyicon_14_">&#xe684;</i>机构管理</a>
 
                 </div>
             </div>
-            <div class="pt20"></div>  
+            <div class="pt20"></div>
         </div>
         <!--右边边模块存放-->
         <div class="right_cadr">
             <div class="right_box open" box_id="oa_organizationUc_user">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_organization_user"></iframe> 
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_organization_user"></iframe>
             </div>
             <div class="right_box" box_id="oa_organizationUc_group">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_organization_group"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_organization_group"></iframe>
             </div>
             <div class="right_box" box_id="oa_organizationUc_job">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_organization_job"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_organization_job"></iframe>
             </div>
             <div class="right_box" box_id="oa_organizationUc_out">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_organization_out"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_organization_out"></iframe>
             </div>
             <div class="pt20"></div>
         </div>
     </div>
-    
+
     <!--组织管理模块存放-->
     <div class="yc" id="oa_organization_cadr">
         <!--左边模块存放-->
@@ -360,33 +365,33 @@
             <div class="menu_box qkycadr">
                 <h3>组织管理</h3>
                 <div class="menu_list">
-                  <a id="oa_organization_user" class="menu_list_item active" ifsrc="organization/oa_organization_user.html"><i class="qkyicon_14_">&#xe60c;</i>用户管理</a>
-                  <a id="oa_organization_group" class="menu_list_item" ifsrc="organization/oa_organization_group.html"><i class="qkyicon_14_">&#xe60b;</i>部门管理</a>
-                  <a id="oa_organization_job" class="menu_list_item" ifsrc="organization/oa_organization_job.html"><i class="qkyicon_14_">&#xe670;</i>职位管理</a>
-                  <a id="oa_organization_out" class="menu_list_item" ifsrc="organization/oa_organization_out.html"><i class="qkyicon_14_">&#xe684;</i>机构管理</a>
+                    <a id="oa_organization_user" class="menu_list_item active" ifsrc="organization/oa_organization_user.html"><i class="qkyicon_14_">&#xe60c;</i>用户管理</a>
+                    <a id="oa_organization_group" class="menu_list_item" ifsrc="organization/oa_organization_group.html"><i class="qkyicon_14_">&#xe60b;</i>部门管理</a>
+                    <a id="oa_organization_job" class="menu_list_item" ifsrc="organization/oa_organization_job.html"><i class="qkyicon_14_">&#xe670;</i>职位管理</a>
+                    <a id="oa_organization_out" class="menu_list_item" ifsrc="organization/oa_organization_out.html"><i class="qkyicon_14_">&#xe684;</i>机构管理</a>
 
                 </div>
             </div>
-            <div class="pt20"></div>  
+            <div class="pt20"></div>
         </div>
         <!--右边边模块存放-->
         <div class="right_cadr">
             <div class="right_box open" box_id="oa_organization_user">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_organization_user"></iframe> 
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_organization_user"></iframe>
             </div>
             <div class="right_box" box_id="oa_organization_group">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_organization_group"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_organization_group"></iframe>
             </div>
             <div class="right_box" box_id="oa_organization_job">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_organization_job"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_organization_job"></iframe>
             </div>
             <div class="right_box" box_id="oa_organization_out">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_organization_out"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_organization_out"></iframe>
             </div>
             <div class="pt20"></div>
         </div>
     </div>
-    
+
     <!--通知公告模块存放-->
     <div class="yc" id="oa_notice_cadr">
         <!--左边模块存放-->
@@ -394,50 +399,51 @@
             <div class="menu_box qkycadr">
                 <h3>通知公告</h3>
                 <div class="menu_list">
-                  <a id="oa_notice_send" class="menu_list_item active" ifsrc="notice/oa_notice_send.html"><i class="qkyicon_14_">&#xe622;</i>发布公告</a>
-                  <a id="oa_notice_hassent" class="menu_list_item" ifsrc="notice/oa_notice_hassent.html"><i class="qkyicon_14_">&#xe60d;</i>已发公告</a>
-                  <a id="oa_notice_received" class="menu_list_item" ifsrc="notice/oa_notice_received.html"><i class="qkyicon_14_">&#xe629;</i>收到公告</a>
-                  <a id="oa_notice_draft" class="menu_list_item" ifsrc="notice/oa_notice_draft.html"><i class="qkyicon_14_">&#xe665;</i>草稿公告</a>
+                    <a id="oa_notice_send" class="menu_list_item active" ifsrc="notice/oa_notice_send.html"><i class="qkyicon_14_">&#xe622;</i>发布公告</a>
+                    <a id="oa_notice_hassent" class="menu_list_item" ifsrc="notice/oa_notice_hassent.html"><i class="qkyicon_14_">&#xe60d;</i>已发公告</a>
+                    <a id="oa_notice_received" class="menu_list_item" ifsrc="notice/oa_notice_received.html"><i class="qkyicon_14_">&#xe629;</i>收到公告</a>
+                    <a id="oa_notice_draft" class="menu_list_item" ifsrc="notice/oa_notice_draft.html"><i class="qkyicon_14_">&#xe665;</i>草稿公告</a>
                 </div>
             </div>
-            <div class="pt20"></div>  
+            <div class="pt20"></div>
         </div>
         <!--右边边模块存放-->
         <div class="right_cadr">
             <div class="right_box open" box_id="oa_notice_send">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_notice_send"></iframe> 
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_notice_send"></iframe>
             </div>
             <div class="right_box" box_id="oa_notice_hassent">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_notice_hassent"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_notice_hassent"></iframe>
             </div>
             <div class="right_box" box_id="oa_notice_received">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_notice_received"></iframe>
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_notice_received"></iframe>
             </div>
             <div class="right_box" box_id="oa_notice_draft">
-            <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_notice_draft"></iframe> 
+                <iframe src="" width="100%" height="100%" scrolling="no" frameborder=0 name="oa_notice_draft"></iframe>
             </div>
             <div class="pt20"></div>
         </div>
     </div>
-    
-    
-    
-    
-   <!-- <script src="dist/jq/1.11.1/jquery.min.js"></script>-->
+
+
+
+
+    <!-- <script src="dist/jq/1.11.1/jquery.min.js"></script>-->
     <!--模块化js-->
     <script src="dist/sea.js"></script>
     <script src="dist/seaconfig.js"></script>
     <script>
-     seajs.use(["jq","bs","nav","oasc/oaindex"],
-	 function(jq,bs,nav,oaindex){
-		$("#qkynav").qkynav({
-			qkynavafter:function(){
-				oaindex.windows_qkynav();//主导航条点击事件
-				oaindex.right_boxoc();//首页窗口右侧开关
-			}
-		});//执行主导航条
-		
-	 });
+        seajs.use(["jq", "bs", "nav", "oasc/oaindex"],
+            function(jq, bs, nav, oaindex) {
+                $("#qkynav").qkynav({
+                    qkynavafter: function() {
+                        oaindex.windows_qkynav(); //主导航条点击事件
+                        oaindex.right_boxoc(); //首页窗口右侧开关
+                    }
+                }); //执行主导航条
+
+            });
     </script>
-  </body>
+</body>
+
 </html>
